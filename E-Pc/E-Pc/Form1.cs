@@ -24,6 +24,16 @@ namespace E_Pc
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void LogInButton_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -37,6 +47,7 @@ namespace E_Pc
                 if (usernameTxt.Text.Equals(username) && passwordTxt.Text.Equals(password))
                 {
                     isLogin = true;
+                    
                 }
             }
             conn.Close();

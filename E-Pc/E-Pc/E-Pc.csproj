@@ -73,6 +73,12 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerOrderCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerOrderCode.Designer.cs">
+      <DependentUpon>CustomerOrderCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerOrderCode.resx">
+      <DependentUpon>CustomerOrderCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -131,6 +140,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\VERIFY CODE.png" />
+    <None Include="Resources\Unique_code-removebg-preview.png" />
+    <None Include="Resources\Inventory MAnagement.png" />
+    <None Include="Resources\verify costumers code.png" />
+    <None Include="Resources\InventoryManagement.png" />
+    <None Include="Resources\Verification.png" />
+    <None Include="Resources\user-removebg-preview.png" />
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

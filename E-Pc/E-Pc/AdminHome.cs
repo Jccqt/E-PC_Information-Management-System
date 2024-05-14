@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace E_Pc
 {
+   
     public partial class AdminHome : Form
     {
+        static CustomerOrderCode verify;
         public AdminHome()
         {
             InitializeComponent();
@@ -35,6 +37,18 @@ namespace E_Pc
         private void AdminHome_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VerificationButton_Click(object sender, EventArgs e)
+        {
+            verify = new CustomerOrderCode();
+            verify.Show();
+            this.Hide();
         }
     }
 }
