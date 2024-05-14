@@ -31,5 +31,10 @@ namespace E_Pc
         {
 
         }
+
+        private void AdminHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
