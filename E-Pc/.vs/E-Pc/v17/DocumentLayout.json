@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jcbca\\source\\repos\\E-PC_Information-Management-System\\EpC\\E-Pc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\jcbca\\source\\repos\\e-pc_information-management-system\\epc\\e-pc\\e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\jcbca\\source\\repos\\e-pc_information-management-system\\epc\\e-pc\\e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\jcbca\\source\\repos\\e-pc_information-management-system\\epc\\e-pc\\e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminHome.cs",
+              "DocumentMoniker": "C:\\Users\\jcbca\\source\\repos\\E-PC_Information-Management-System\\EpC\\E-Pc\\E-Pc\\AdminHome.cs",
+              "RelativeDocumentMoniker": "E-Pc\\AdminHome.cs",
+              "ToolTip": "C:\\Users\\jcbca\\source\\repos\\E-PC_Information-Management-System\\EpC\\E-Pc\\E-Pc\\AdminHome.cs",
+              "RelativeToolTip": "E-Pc\\AdminHome.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAQwIIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T14:32:53.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\jcbca\\Source\\Repos\\E-PC_Information-Management-System\\EpC\\E-Pc\\E-Pc\\Login.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Login.cs",
+              "ToolTip": "C:\\Users\\jcbca\\Source\\Repos\\E-PC_Information-Management-System\\EpC\\E-Pc\\E-Pc\\Login.cs",
+              "RelativeToolTip": "E-Pc\\Login.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T14:29:52.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jcbca\\Source\\Repos\\E-PC_Information-Management-System\\EpC\\E-Pc\\E-Pc\\Login.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Login.cs",
+              "ToolTip": "C:\\Users\\jcbca\\Source\\Repos\\E-PC_Information-Management-System\\EpC\\E-Pc\\E-Pc\\Login.cs [Design]",
+              "RelativeToolTip": "E-Pc\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T14:24:50.083Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

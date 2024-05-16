@@ -28,21 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.SidePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Profile = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.VerificationLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.VerificationButton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuButton = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.VerifyLogo = new System.Windows.Forms.PictureBox();
+            this.VerifyButton = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.inventoryLogo = new System.Windows.Forms.PictureBox();
+            this.inventoryButton = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.SalesLogo = new System.Windows.Forms.PictureBox();
+            this.salesButton = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.OrderLogo = new System.Windows.Forms.PictureBox();
+            this.OrderButton = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.EmployeeLogo = new System.Windows.Forms.PictureBox();
+            this.EmployeeManagementButton = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.LogoutLogo = new System.Windows.Forms.PictureBox();
+            this.LogoutButton = new System.Windows.Forms.Button();
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.SidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Profile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VerificationLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.sidebar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VerifyLogo)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalesLogo)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderLogo)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PictureBox1
@@ -87,103 +116,258 @@
             this.guna2PictureBox2.UseTransparentBackground = true;
             this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
-            // SidePanel
+            // sidebar
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.Transparent;
-            this.SidePanel.BorderColor = System.Drawing.Color.LightGray;
-            this.SidePanel.BorderThickness = 1;
-            this.SidePanel.Controls.Add(this.Profile);
-            this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidePanel.FillColor = System.Drawing.Color.White;
-            this.SidePanel.Location = new System.Drawing.Point(0, 33);
-            this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(174, 552);
-            this.SidePanel.TabIndex = 9;
+            this.sidebar.BackColor = System.Drawing.Color.White;
+            this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel2);
+            this.sidebar.Controls.Add(this.panel3);
+            this.sidebar.Controls.Add(this.panel4);
+            this.sidebar.Controls.Add(this.panel5);
+            this.sidebar.Controls.Add(this.panel6);
+            this.sidebar.Controls.Add(this.panel7);
+            this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebar.Location = new System.Drawing.Point(0, 33);
+            this.sidebar.MaximumSize = new System.Drawing.Size(232, 552);
+            this.sidebar.MinimumSize = new System.Drawing.Size(78, 552);
+            this.sidebar.Name = "sidebar";
+            this.sidebar.Size = new System.Drawing.Size(232, 552);
+            this.sidebar.TabIndex = 13;
+            this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
             // 
-            // Profile
+            // panel1
             // 
-            this.Profile.FillColor = System.Drawing.Color.Transparent;
-            this.Profile.Image = global::E_Pc.Properties.Resources.user_removebg_preview;
-            this.Profile.ImageRotate = 0F;
-            this.Profile.Location = new System.Drawing.Point(51, 42);
-            this.Profile.Name = "Profile";
-            this.Profile.Size = new System.Drawing.Size(59, 54);
-            this.Profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Profile.TabIndex = 0;
-            this.Profile.TabStop = false;
-            this.Profile.UseTransparentBackground = true;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.menuButton);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(229, 73);
+            this.panel1.TabIndex = 0;
             // 
-            // VerificationLogo
+            // label1
             // 
-            this.VerificationLogo.BackColor = System.Drawing.Color.Transparent;
-            this.VerificationLogo.FillColor = System.Drawing.Color.Transparent;
-            this.VerificationLogo.Image = global::E_Pc.Properties.Resources.Verification;
-            this.VerificationLogo.ImageRotate = 0F;
-            this.VerificationLogo.Location = new System.Drawing.Point(282, 223);
-            this.VerificationLogo.Name = "VerificationLogo";
-            this.VerificationLogo.Size = new System.Drawing.Size(233, 159);
-            this.VerificationLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.VerificationLogo.TabIndex = 1;
-            this.VerificationLogo.TabStop = false;
-            this.VerificationLogo.UseTransparentBackground = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(86, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name";
             // 
-            // guna2PictureBox3
+            // menuButton
             // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::E_Pc.Properties.Resources.InventoryManagement;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(577, 206);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(270, 176);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 10;
-            this.guna2PictureBox3.TabStop = false;
-            this.guna2PictureBox3.UseTransparentBackground = true;
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::E_Pc.Properties.Resources.user_removebg_preview;
+            this.menuButton.Location = new System.Drawing.Point(13, 14);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(52, 47);
+            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuButton.TabIndex = 0;
+            this.menuButton.TabStop = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
-            // VerificationButton
+            // panel2
             // 
-            this.VerificationButton.Animated = true;
-            this.VerificationButton.AutoRoundedCorners = true;
-            this.VerificationButton.BackColor = System.Drawing.Color.Transparent;
-            this.VerificationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.VerificationButton.BorderRadius = 10;
-            this.VerificationButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.VerificationButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.VerificationButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.VerificationButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.VerificationButton.FillColor = System.Drawing.Color.White;
-            this.VerificationButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.VerificationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
-            this.VerificationButton.Image = global::E_Pc.Properties.Resources.verify_costumers_code;
-            this.VerificationButton.ImageSize = new System.Drawing.Size(140, 20);
-            this.VerificationButton.Location = new System.Drawing.Point(308, 409);
-            this.VerificationButton.Name = "VerificationButton";
-            this.VerificationButton.Size = new System.Drawing.Size(180, 74);
-            this.VerificationButton.TabIndex = 11;
-            this.VerificationButton.Click += new System.EventHandler(this.VerificationButton_Click);
+            this.panel2.Controls.Add(this.VerifyLogo);
+            this.panel2.Controls.Add(this.VerifyButton);
+            this.panel2.Location = new System.Drawing.Point(3, 82);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(229, 68);
+            this.panel2.TabIndex = 1;
             // 
-            // guna2Button1
+            // VerifyLogo
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
-            this.guna2Button1.Image = global::E_Pc.Properties.Resources.Inventory_MAnagement;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(110, 20);
-            this.guna2Button1.Location = new System.Drawing.Point(644, 409);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 74);
-            this.guna2Button1.TabIndex = 12;
+            this.VerifyLogo.BackColor = System.Drawing.Color.Transparent;
+            this.VerifyLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.VerifyLogo.Image = global::E_Pc.Properties.Resources.Verification;
+            this.VerifyLogo.Location = new System.Drawing.Point(3, 9);
+            this.VerifyLogo.Name = "VerifyLogo";
+            this.VerifyLogo.Size = new System.Drawing.Size(62, 51);
+            this.VerifyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.VerifyLogo.TabIndex = 15;
+            this.VerifyLogo.TabStop = false;
+            this.VerifyLogo.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // VerifyButton
+            // 
+            this.VerifyButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VerifyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.VerifyButton.Location = new System.Drawing.Point(-6, 0);
+            this.VerifyButton.Name = "VerifyButton";
+            this.VerifyButton.Size = new System.Drawing.Size(242, 68);
+            this.VerifyButton.TabIndex = 14;
+            this.VerifyButton.Text = "     Verify  Order";
+            this.VerifyButton.UseMnemonic = false;
+            this.VerifyButton.UseVisualStyleBackColor = true;
+            this.VerifyButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.inventoryLogo);
+            this.panel3.Controls.Add(this.inventoryButton);
+            this.panel3.Location = new System.Drawing.Point(3, 156);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(229, 68);
+            this.panel3.TabIndex = 15;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // inventoryLogo
+            // 
+            this.inventoryLogo.BackColor = System.Drawing.Color.Transparent;
+            this.inventoryLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inventoryLogo.Image = global::E_Pc.Properties.Resources.InventoryManagement;
+            this.inventoryLogo.Location = new System.Drawing.Point(3, 11);
+            this.inventoryLogo.Name = "inventoryLogo";
+            this.inventoryLogo.Size = new System.Drawing.Size(62, 42);
+            this.inventoryLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inventoryLogo.TabIndex = 15;
+            this.inventoryLogo.TabStop = false;
+            // 
+            // inventoryButton
+            // 
+            this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.inventoryButton.Location = new System.Drawing.Point(-7, 0);
+            this.inventoryButton.Name = "inventoryButton";
+            this.inventoryButton.Size = new System.Drawing.Size(242, 68);
+            this.inventoryButton.TabIndex = 14;
+            this.inventoryButton.Text = " Inventory";
+            this.inventoryButton.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.SalesLogo);
+            this.panel4.Controls.Add(this.salesButton);
+            this.panel4.Location = new System.Drawing.Point(3, 230);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(229, 68);
+            this.panel4.TabIndex = 16;
+            // 
+            // SalesLogo
+            // 
+            this.SalesLogo.BackColor = System.Drawing.Color.Transparent;
+            this.SalesLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SalesLogo.Image = global::E_Pc.Properties.Resources.sales;
+            this.SalesLogo.Location = new System.Drawing.Point(3, 7);
+            this.SalesLogo.Name = "SalesLogo";
+            this.SalesLogo.Size = new System.Drawing.Size(62, 54);
+            this.SalesLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SalesLogo.TabIndex = 15;
+            this.SalesLogo.TabStop = false;
+            // 
+            // salesButton
+            // 
+            this.salesButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salesButton.Location = new System.Drawing.Point(-7, 0);
+            this.salesButton.Name = "salesButton";
+            this.salesButton.Size = new System.Drawing.Size(242, 68);
+            this.salesButton.TabIndex = 14;
+            this.salesButton.Text = "Sales";
+            this.salesButton.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.OrderLogo);
+            this.panel5.Controls.Add(this.OrderButton);
+            this.panel5.Location = new System.Drawing.Point(3, 304);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(229, 68);
+            this.panel5.TabIndex = 17;
+            // 
+            // OrderLogo
+            // 
+            this.OrderLogo.BackColor = System.Drawing.Color.Transparent;
+            this.OrderLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OrderLogo.Image = global::E_Pc.Properties.Resources.orderIcon;
+            this.OrderLogo.Location = new System.Drawing.Point(3, 7);
+            this.OrderLogo.Name = "OrderLogo";
+            this.OrderLogo.Size = new System.Drawing.Size(62, 54);
+            this.OrderLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.OrderLogo.TabIndex = 15;
+            this.OrderLogo.TabStop = false;
+            // 
+            // OrderButton
+            // 
+            this.OrderButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OrderButton.Location = new System.Drawing.Point(-7, 0);
+            this.OrderButton.Name = "OrderButton";
+            this.OrderButton.Size = new System.Drawing.Size(242, 68);
+            this.OrderButton.TabIndex = 14;
+            this.OrderButton.Text = "Order";
+            this.OrderButton.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.EmployeeLogo);
+            this.panel6.Controls.Add(this.EmployeeManagementButton);
+            this.panel6.Location = new System.Drawing.Point(3, 378);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(229, 68);
+            this.panel6.TabIndex = 18;
+            // 
+            // EmployeeLogo
+            // 
+            this.EmployeeLogo.BackColor = System.Drawing.Color.Transparent;
+            this.EmployeeLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmployeeLogo.Image = global::E_Pc.Properties.Resources.Employee_managemen;
+            this.EmployeeLogo.Location = new System.Drawing.Point(3, 7);
+            this.EmployeeLogo.Name = "EmployeeLogo";
+            this.EmployeeLogo.Size = new System.Drawing.Size(62, 54);
+            this.EmployeeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EmployeeLogo.TabIndex = 15;
+            this.EmployeeLogo.TabStop = false;
+            // 
+            // EmployeeManagementButton
+            // 
+            this.EmployeeManagementButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeManagementButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmployeeManagementButton.Location = new System.Drawing.Point(-7, 0);
+            this.EmployeeManagementButton.Name = "EmployeeManagementButton";
+            this.EmployeeManagementButton.Size = new System.Drawing.Size(242, 68);
+            this.EmployeeManagementButton.TabIndex = 14;
+            this.EmployeeManagementButton.Text = "                        Employee Management";
+            this.EmployeeManagementButton.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.LogoutLogo);
+            this.panel7.Controls.Add(this.LogoutButton);
+            this.panel7.Location = new System.Drawing.Point(3, 452);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(229, 68);
+            this.panel7.TabIndex = 19;
+            // 
+            // LogoutLogo
+            // 
+            this.LogoutLogo.BackColor = System.Drawing.Color.Transparent;
+            this.LogoutLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoutLogo.Image = global::E_Pc.Properties.Resources.LogOut;
+            this.LogoutLogo.Location = new System.Drawing.Point(3, 13);
+            this.LogoutLogo.Name = "LogoutLogo";
+            this.LogoutLogo.Size = new System.Drawing.Size(62, 43);
+            this.LogoutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoutLogo.TabIndex = 15;
+            this.LogoutLogo.TabStop = false;
+            this.LogoutLogo.Click += new System.EventHandler(this.LogoutLogo_Click);
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutButton.Location = new System.Drawing.Point(-7, 0);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(242, 68);
+            this.LogoutButton.TabIndex = 14;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 1;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
             // AdminHome
             // 
@@ -193,11 +377,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.VerificationButton);
-            this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.VerificationLogo);
-            this.Controls.Add(this.SidePanel);
+            this.Controls.Add(this.sidebar);
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel1);
@@ -209,10 +389,22 @@
             this.Load += new System.EventHandler(this.AdminHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            this.SidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Profile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VerificationLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.sidebar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VerifyLogo)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalesLogo)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OrderLogo)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).EndInit();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,11 +414,28 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Panel SidePanel;
-        private Guna.UI2.WinForms.Guna2PictureBox Profile;
-        private Guna.UI2.WinForms.Guna2PictureBox VerificationLogo;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2Button VerificationButton;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.FlowLayoutPanel sidebar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button VerifyButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox menuButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button inventoryButton;
+        private System.Windows.Forms.PictureBox inventoryLogo;
+        private System.Windows.Forms.PictureBox VerifyLogo;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox SalesLogo;
+        private System.Windows.Forms.Button salesButton;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox OrderLogo;
+        private System.Windows.Forms.Button OrderButton;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox EmployeeLogo;
+        private System.Windows.Forms.Button EmployeeManagementButton;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox LogoutLogo;
+        private System.Windows.Forms.Button LogoutButton;
     }
 }

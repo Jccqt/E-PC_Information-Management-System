@@ -12,6 +12,7 @@ namespace E_Pc
 {
     public partial class CustomerOrderCode : Form
     {
+        string code = "code";
         public CustomerOrderCode()
         {
             InitializeComponent();
@@ -24,7 +25,21 @@ namespace E_Pc
 
         private void CodeTextBox_TextChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void VerifyButton_Click(object sender, EventArgs e)
+        {
+            if (code == CodeTextBox.Text)
+            {
+               VerifyPopup.Visible = true;
+                ContinueButton.Visible = true;
+                VerifiedLogo.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Code Invalid");
+            }
         }
     }
 }

@@ -13,7 +13,10 @@ namespace E_Pc
    
     public partial class AdminHome : Form
     {
+        static Login login = new Login();
+        static DialogResult diag = new DialogResult();
         static CustomerOrderCode verify;
+        bool sidebarExpand;
         public AdminHome()
         {
             InitializeComponent();
@@ -44,11 +47,89 @@ namespace E_Pc
 
         }
 
-        private void VerificationButton_Click(object sender, EventArgs e)
+        
+
+        private void button1_Click(object sender, EventArgs e)
         {
             verify = new CustomerOrderCode();
             verify.Show();
             this.Hide();
+        }
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            // if sidebar expand, minimize
+            if (sidebarExpand)
+            {
+
+                sidebar.Width -= 10;
+
+
+                if (sidebar.Width == sidebar.MinimumSize.Width)
+                {
+
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+
+                }
+            }
+            else
+            {
+                sidebar.Width += 10;
+
+                if (sidebar.Width == sidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            verify = new CustomerOrderCode();
+            verify.Show();
+            this.Hide();
+        }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LogoutLogo_Click(object sender, EventArgs e)
+        {
+            // will show a logout prompt when the user click the Logout icon
+            diag = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (diag == DialogResult.Yes)
+            {
+                // will go back to Login page when the user logs out
+                Login.isLogin = false;
+                login.Show();
+                this.Close();
+            }
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            // will show a logout prompt when the user click the Logout button
+            diag = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (diag == DialogResult.Yes)
+            {
+                // will go back to Login page when the user logs out
+                Login.isLogin = false;
+                login.Show();
+                this.Close();
+            }
         }
     }
 }
