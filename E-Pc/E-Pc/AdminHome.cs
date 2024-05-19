@@ -14,6 +14,7 @@ namespace E_Pc
     public partial class AdminHome : Form
     {
         static Login login = new Login();
+        static Inventory inventoryPage = new Inventory();
         static DialogResult diag = new DialogResult();
         static CustomerOrderCode verify;
         bool sidebarExpand;
@@ -39,7 +40,7 @@ namespace E_Pc
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
-
+            DateTimer.Start();
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -130,6 +131,27 @@ namespace E_Pc
                 login.Show();
                 this.Close();
             }
+        }
+
+        private void inventoryButton_Click_1(object sender, EventArgs e)
+        {
+            inventoryPage.Show();
+            this.Hide();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); // will close/terminate the application
+        }
+
+        private void DateTimer_Tick(object sender, EventArgs e)
+        {
+            DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss");
         }
     }
 }
