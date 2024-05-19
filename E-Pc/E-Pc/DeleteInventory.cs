@@ -13,7 +13,7 @@ namespace E_Pc
 {
     public partial class DeleteInventory : Form
     {
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
         static DataTable deletedTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
@@ -39,18 +39,22 @@ namespace E_Pc
 
             if (isExisting)
             {
+                // will show a deletion message
                 DialogResult delDiag = MessageBox.Show("Are you sure you want to delete this item?", "Delete Item", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (delDiag == DialogResult.OK)
                 {
+                    // will insert select records from Products table to Deleted_Products table
                     cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType)"
                     + "SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType FROM Products WHERE ItemId = '" + ItemIdBox.Text + "'", conn);
                     cmd.ExecuteNonQuery();
 
+                    // will update the selected record in Deleted_Products table
                     cmd = new SqlCommand("UPDATE Deleted_Products SET ItemMemo = @memo, Date = @date WHERE ItemId = '" + ItemIdBox.Text + "'", conn);
                     cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
                     cmd.Parameters.AddWithValue("@date", localDate);
                     cmd.ExecuteNonQuery();
 
+                    // will delete the specific record in Products table
                     cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = '" + ItemIdBox.Text + "'", conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Item has been deleted successfully!");
@@ -60,14 +64,16 @@ namespace E_Pc
             }
             else
             {
+                // will show a message if the item is not verified as existing
                 MessageBox.Show("Please verify the item first!","Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             isExisting = false;
             ShowData();
             conn.Close();
+            pictureBox1.Visible = false;
         }
 
-        public void ShowData()
+        void ShowData()
         {
             cmd = new SqlCommand("SELECT * FROM Deleted_Products", conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -100,6 +106,7 @@ namespace E_Pc
             if (reader.HasRows)
             {
                 isExisting = true;
+                pictureBox1.Visible = true;
                 MessageBox.Show("Item found!");
             }
             else

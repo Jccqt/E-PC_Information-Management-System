@@ -508,6 +508,7 @@
             this.UpdateBtn.Size = new System.Drawing.Size(180, 73);
             this.UpdateBtn.TabIndex = 23;
             this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // DeleteBtn
             // 

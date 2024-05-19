@@ -13,11 +13,12 @@ namespace E_Pc
 {
     public partial class Inventory : Form
     {
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static AddInventory addInventoryPage = new AddInventory();
         static DeleteInventory delInventoryPage = new DeleteInventory();
+        static UpdateInventory updateInventoryPage = new UpdateInventory();
 
         public Inventory()
         {
@@ -58,6 +59,12 @@ namespace E_Pc
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             delInventoryPage.Show();
+            this.Hide();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            updateInventoryPage.Show();
             this.Hide();
         }
     }

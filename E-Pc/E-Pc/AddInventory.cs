@@ -14,7 +14,7 @@ namespace E_Pc
     public partial class AddInventory : Form
     {
         static Inventory inventoryPage = new Inventory();
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static string idToCheck;
@@ -39,14 +39,16 @@ namespace E_Pc
             cmd = new SqlCommand("SELECT ItemId FROM Products WHERE ItemId = '"+ItemIdBox.Text+"'", conn);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            // will check if the Item ID is already existing
-            idToCheck = reader.GetValue(0).ToString();
-
-            if (idToCheck.Equals(ItemIdBox.Text.ToString()))
+            if (reader.Read())
             {
-                isExisting = true;
+                // will check if the Item ID is already existing
+                idToCheck = reader.GetValue(0).ToString();
+                if (idToCheck.Equals(ItemIdBox.Text.ToString()))
+                {
+                    isExisting = true;
+                }
             }
-
+            reader.Close();
             if (!isExisting)
             {
                 cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);

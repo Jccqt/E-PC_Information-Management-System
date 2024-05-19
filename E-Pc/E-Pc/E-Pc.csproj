@@ -137,11 +137,11 @@
     <Compile Include="UpdateEmployeePage.Designer.cs">
       <DependentUpon>UpdateEmployeePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateItem.cs">
+    <Compile Include="UpdateInventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateItem.Designer.cs">
-      <DependentUpon>UpdateItem.cs</DependentUpon>
+    <Compile Include="UpdateInventory.Designer.cs">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="_E_PCdbDataSet_Products.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -157,6 +157,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_E_PCdbDataSet_ProductsEdit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_PCdbDataSet_ProductsEdit.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
@@ -201,8 +206,8 @@
     <EmbeddedResource Include="UpdateEmployeePage.resx">
       <DependentUpon>UpdateEmployeePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateItem.resx">
-      <DependentUpon>UpdateItem.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateInventory.resx">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -246,6 +251,17 @@
     </None>
     <None Include="_E_PCdbDataSet_ProductsDel.xss">
       <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsEdit.xsc">
+      <DependentUpon>_E_PCdbDataSet_ProductsEdit.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsEdit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_PCdbDataSet_ProductsEdit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsEdit.xss">
+      <DependentUpon>_E_PCdbDataSet_ProductsEdit.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
