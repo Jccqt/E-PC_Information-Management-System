@@ -51,27 +51,29 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.DateLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.ClearBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.MemoBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PriceBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.BrandBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.QuantityBox = new System.Windows.Forms.TextBox();
+            this.QuantityLabel = new System.Windows.Forms.Label();
+            this.NameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ItemIdBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ReturnBtn = new System.Windows.Forms.PictureBox();
+            this.TypeBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -86,12 +88,12 @@
             this.panel1.SuspendLayout();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebarTimer
@@ -334,15 +336,16 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // ExitBtn
             // 
-            this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(1233, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
+            this.ExitBtn.Location = new System.Drawing.Point(1233, 9);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(27, 26);
+            this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ExitBtn.TabIndex = 0;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // DateLabel
             // 
@@ -361,7 +364,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.pictureBox2);
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -393,70 +396,74 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.guna2Button2);
-            this.panel2.Controls.Add(this.guna2Button1);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.TypeBox);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.ClearBtn);
+            this.panel2.Controls.Add(this.AddBtn);
+            this.panel2.Controls.Add(this.MemoBox);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.PriceBox);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.BrandBox);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.QuantityBox);
+            this.panel2.Controls.Add(this.QuantityLabel);
+            this.panel2.Controls.Add(this.NameBox);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(325, 121);
+            this.panel2.Location = new System.Drawing.Point(325, 107);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(935, 225);
+            this.panel2.Size = new System.Drawing.Size(935, 258);
             this.panel2.TabIndex = 22;
             // 
-            // guna2Button2
+            // ClearBtn
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 35;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(719, 124);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 73);
-            this.guna2Button2.TabIndex = 24;
-            this.guna2Button2.Text = "Clear";
+            this.ClearBtn.Animated = true;
+            this.ClearBtn.AutoRoundedCorners = true;
+            this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ClearBtn.BorderRadius = 36;
+            this.ClearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ClearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ClearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ClearBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ClearBtn.FillColor = System.Drawing.Color.White;
+            this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.ClearBtn.ForeColor = System.Drawing.Color.Black;
+            this.ClearBtn.Location = new System.Drawing.Point(755, 123);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(144, 74);
+            this.ClearBtn.TabIndex = 24;
+            this.ClearBtn.Text = "Clear";
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
-            // guna2Button1
+            // AddBtn
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 35;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(719, 34);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 73);
-            this.guna2Button1.TabIndex = 23;
-            this.guna2Button1.Text = "Add";
+            this.AddBtn.Animated = true;
+            this.AddBtn.AutoRoundedCorners = true;
+            this.AddBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AddBtn.BorderRadius = 31;
+            this.AddBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.AddBtn.ForeColor = System.Drawing.Color.White;
+            this.AddBtn.Location = new System.Drawing.Point(755, 42);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(144, 65);
+            this.AddBtn.TabIndex = 23;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // textBox6
+            // MemoBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(265, 103);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(405, 94);
-            this.textBox6.TabIndex = 11;
+            this.MemoBox.Location = new System.Drawing.Point(265, 103);
+            this.MemoBox.Multiline = true;
+            this.MemoBox.Name = "MemoBox";
+            this.MemoBox.Size = new System.Drawing.Size(405, 139);
+            this.MemoBox.TabIndex = 11;
             // 
             // label7
             // 
@@ -467,109 +474,126 @@
             this.label7.Size = new System.Drawing.Size(45, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "Memo";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox5
+            // PriceBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(476, 41);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(194, 33);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.PriceBox.Location = new System.Drawing.Point(476, 27);
+            this.PriceBox.Multiline = true;
+            this.PriceBox.Name = "PriceBox";
+            this.PriceBox.Size = new System.Drawing.Size(194, 33);
+            this.PriceBox.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(473, 22);
+            this.label6.Location = new System.Drawing.Point(473, 8);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Price";
             // 
-            // textBox4
+            // BrandBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(22, 164);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(194, 33);
-            this.textBox4.TabIndex = 7;
+            this.BrandBox.Location = new System.Drawing.Point(22, 151);
+            this.BrandBox.Multiline = true;
+            this.BrandBox.Name = "BrandBox";
+            this.BrandBox.Size = new System.Drawing.Size(194, 33);
+            this.BrandBox.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(19, 145);
+            this.label5.Location = new System.Drawing.Point(19, 132);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 16);
+            this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Quantity";
+            this.label5.Text = "Item Brand";
             // 
-            // textBox3
+            // QuantityBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(265, 41);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(194, 33);
-            this.textBox3.TabIndex = 5;
+            this.QuantityBox.Location = new System.Drawing.Point(265, 27);
+            this.QuantityBox.Multiline = true;
+            this.QuantityBox.Name = "QuantityBox";
+            this.QuantityBox.Size = new System.Drawing.Size(194, 33);
+            this.QuantityBox.TabIndex = 5;
             // 
-            // label4
+            // QuantityLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(262, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Item Brand";
+            this.QuantityLabel.AutoSize = true;
+            this.QuantityLabel.ForeColor = System.Drawing.Color.White;
+            this.QuantityLabel.Location = new System.Drawing.Point(262, 8);
+            this.QuantityLabel.Name = "QuantityLabel";
+            this.QuantityLabel.Size = new System.Drawing.Size(55, 16);
+            this.QuantityLabel.TabIndex = 4;
+            this.QuantityLabel.Text = "Quantity";
             // 
-            // textBox2
+            // NameBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(22, 103);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 33);
-            this.textBox2.TabIndex = 3;
+            this.NameBox.Location = new System.Drawing.Point(22, 90);
+            this.NameBox.Multiline = true;
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(194, 33);
+            this.NameBox.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(19, 84);
+            this.label3.Location = new System.Drawing.Point(19, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Item Name";
             // 
-            // textBox1
+            // ItemIdBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 42);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 33);
-            this.textBox1.TabIndex = 1;
+            this.ItemIdBox.Location = new System.Drawing.Point(22, 29);
+            this.ItemIdBox.Multiline = true;
+            this.ItemIdBox.Name = "ItemIdBox";
+            this.ItemIdBox.Size = new System.Drawing.Size(194, 33);
+            this.ItemIdBox.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(19, 23);
+            this.label2.Location = new System.Drawing.Point(19, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 16);
+            this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Item Code";
+            this.label2.Text = "Item ID";
             // 
-            // pictureBox4
+            // ReturnBtn
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
-            this.pictureBox4.Location = new System.Drawing.Point(1196, 54);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 23;
-            this.pictureBox4.TabStop = false;
+            this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
+            this.ReturnBtn.Location = new System.Drawing.Point(1196, 54);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(50, 50);
+            this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ReturnBtn.TabIndex = 23;
+            this.ReturnBtn.TabStop = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
+            // 
+            // TypeBox
+            // 
+            this.TypeBox.Location = new System.Drawing.Point(22, 209);
+            this.TypeBox.Multiline = true;
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.Size = new System.Drawing.Size(194, 33);
+            this.TypeBox.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(19, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Item Type";
             // 
             // AddInventory
             // 
@@ -578,7 +602,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox3);
@@ -588,6 +612,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPage";
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
             this.panel7.ResumeLayout(false);
@@ -604,13 +629,13 @@
             this.panel1.PerformLayout();
             this.sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,26 +665,28 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ExitBtn;
         private System.Windows.Forms.Label DateLabel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox BrandBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label QuantityLabel;
+        private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ItemIdBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PriceBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox MemoBox;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI2.WinForms.Guna2Button ClearBtn;
+        private Guna.UI2.WinForms.Guna2Button AddBtn;
+        private System.Windows.Forms.PictureBox ReturnBtn;
+        private System.Windows.Forms.TextBox QuantityBox;
+        private System.Windows.Forms.TextBox TypeBox;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -8,14 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace E_Pc
 {
     public partial class Inventory : Form
     {
-
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\E-PCdb.mdf;Integrated Security=True");
+        static string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
+        static string path = System.IO.Path.GetDirectoryName(executable);
+        
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static AddInventory addInventoryPage = new AddInventory();
@@ -23,6 +24,7 @@ namespace E_Pc
         public Inventory()
         {
             InitializeComponent();
+            AppDomain.CurrentDomain.SetData("DataDirectory", path);
         }
 
         private void Inventory_Load(object sender, EventArgs e)
@@ -32,6 +34,8 @@ namespace E_Pc
 
         public void ShowInventory()
         {
+            
+            
             cmd = new SqlCommand("SELECT * FROM Products", conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(inventoryTable);

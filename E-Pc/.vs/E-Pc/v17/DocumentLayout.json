@@ -1,30 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\",
+  "WorkspaceRootPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\source\\repos\\e-pc_information-management-system\\e-pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\source\\repos\\e-pc_information-management-system\\e-pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:E-Pc\\Login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:E-Pc\\Login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\addinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\addinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\source\\repos\\e-pc_information-management-system\\e-pc\\e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\source\\repos\\e-pc_information-management-system\\e-pc\\e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\addinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\addinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,78 +34,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
               "RelativeDocumentMoniker": "E-Pc\\Inventory.cs",
-              "ToolTip": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
               "RelativeToolTip": "E-Pc\\Inventory.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAABMAAAA6AAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T02:35:47.845Z",
+              "WhenOpened": "2024-05-19T06:30:38.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Inventory.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
               "RelativeDocumentMoniker": "E-Pc\\Inventory.cs",
-              "ToolTip": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs [Design]",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs [Design]",
               "RelativeToolTip": "E-Pc\\Inventory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T05:40:52.91Z",
+              "WhenOpened": "2024-05-19T06:30:35.497Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminHome.cs",
-              "DocumentMoniker": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminHome.cs",
-              "RelativeDocumentMoniker": "E-Pc\\AdminHome.cs",
-              "ToolTip": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminHome.cs",
-              "RelativeToolTip": "E-Pc\\AdminHome.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAIkAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T10:43:42.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs",
-              "RelativeDocumentMoniker": "E-Pc\\Login.cs",
-              "ToolTip": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs",
-              "RelativeToolTip": "E-Pc\\Login.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAADYAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T14:29:52.061Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs",
-              "RelativeDocumentMoniker": "E-Pc\\Login.cs",
-              "ToolTip": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs [Design]",
-              "RelativeToolTip": "E-Pc\\Login.cs [Design]",
+              "Title": "AddInventory.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\AddInventory.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs [Design]",
+              "RelativeToolTip": "E-Pc\\AddInventory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T14:24:50.083Z",
+              "WhenOpened": "2024-05-19T05:57:45.174Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminHome.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminHome.cs",
-              "RelativeDocumentMoniker": "E-Pc\\AdminHome.cs",
-              "ToolTip": "C:\\Users\\Nicol\\source\\repos\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminHome.cs [Design]",
-              "RelativeToolTip": "E-Pc\\AdminHome.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "AddInventory.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\AddInventory.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs",
+              "RelativeToolTip": "E-Pc\\AddInventory.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAC0AAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T01:36:14.325Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-19T06:01:19.624Z",
+              "EditorCaption": ""
             }
           ]
         }
