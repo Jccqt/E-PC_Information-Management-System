@@ -24,3 +24,4 @@ May 19, 2024
 May 20, 2024
 - Add and Delete Inventory Items functionalities (New)
 - EmployeeManagement form (New)
+- Update Inventory Items functionality (New)
