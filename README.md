@@ -20,3 +20,7 @@ May 19, 2024
 - Time and Date in Admin homepage (New)
 - Inventory form (New)
 - Add, Delete, Update form inside Inventory form (New)
+
+May 20, 2024
+- Add and Delete Inventory Items functionalities (New)
+- EmployeeManagement form (New)
