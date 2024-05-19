@@ -15,3 +15,8 @@ May 15, 2024
 May 16, 2024
 - Logout functionality (New)
 - Login form functionalities (Updated)
+
+May 19, 2024
+- Time and Date in Admin homepage (New)
+- Inventory form (New)
+- Add, Delete, Update form inside Inventory form (New)
