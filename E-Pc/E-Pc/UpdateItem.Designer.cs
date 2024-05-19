@@ -494,6 +494,7 @@
             // 
             // inventoryButton
             // 
+            this.inventoryButton.BackColor = System.Drawing.Color.DarkGray;
             this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryButton.Location = new System.Drawing.Point(-9, 0);
@@ -502,7 +503,7 @@
             this.inventoryButton.Size = new System.Drawing.Size(323, 84);
             this.inventoryButton.TabIndex = 14;
             this.inventoryButton.Text = " Inventory";
-            this.inventoryButton.UseVisualStyleBackColor = true;
+            this.inventoryButton.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 

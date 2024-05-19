@@ -13,34 +13,24 @@ namespace E_Pc
 {
     public partial class Inventory : Form
     {
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\E-PCdb.mdf;Integrated Security=True");
-        static string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
-        static string path = System.IO.Path.GetDirectoryName(executable);
-        
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static AddInventory addInventoryPage = new AddInventory();
+        static DeleteInventory delInventoryPage = new DeleteInventory();
 
         public Inventory()
         {
             InitializeComponent();
-            AppDomain.CurrentDomain.SetData("DataDirectory", path);
         }
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            ShowInventory();
+            // TODO: This line of code loads data into the '_E_PCdbDataSet_Products.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this._E_PCdbDataSet_Products.Products);
+            ShowTable();
         }
 
-        public void ShowInventory()
-        {
-            
-            
-            cmd = new SqlCommand("SELECT * FROM Products", conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(inventoryTable);
-            InventoryGrid.DataSource = inventoryTable;
-        }
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
@@ -54,6 +44,20 @@ namespace E_Pc
         private void AddBtn_Click(object sender, EventArgs e)
         {
             addInventoryPage.Show();
+            this.Hide();
+        }
+        public void ShowTable()
+        {
+            cmd = new SqlCommand("SELECT * FROM Products", conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            inventoryTable.Clear();
+            adapter.Fill(inventoryTable);
+            InventoryGrid.DataSource = inventoryTable;
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            delInventoryPage.Show();
             this.Hide();
         }
     }

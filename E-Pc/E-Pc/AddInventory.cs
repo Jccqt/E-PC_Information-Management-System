@@ -14,8 +14,11 @@ namespace E_Pc
     public partial class AddInventory : Form
     {
         static Inventory inventoryPage = new Inventory();
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
+        static DataTable inventoryTable = new DataTable();
+        static string idToCheck;
+        static bool isExisting = false;
         
         public AddInventory()
         {
@@ -33,22 +36,43 @@ namespace E_Pc
             var date = DateTime.Now;
 
             conn.Open();
-            cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
-            cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
-            cmd.Parameters.AddWithValue("@name", NameBox.Text);
-            cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
-            cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
-            cmd.Parameters.AddWithValue("@price", PriceBox.Text);
-            cmd.Parameters.AddWithValue("@type", TypeBox.Text);
-            cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
-            cmd.Parameters.AddWithValue("@date", date);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Item has been added successfully!");
+            cmd = new SqlCommand("SELECT ItemId FROM Products WHERE ItemId = '"+ItemIdBox.Text+"'", conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            // will check if the Item ID is already existing
+            idToCheck = reader.GetValue(0).ToString();
+
+            if (idToCheck.Equals(ItemIdBox.Text.ToString()))
+            {
+                isExisting = true;
+            }
+
+            if (!isExisting)
+            {
+                cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
+                cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
+                cmd.Parameters.AddWithValue("@name", NameBox.Text);
+                cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
+                cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
+                cmd.Parameters.AddWithValue("@price", PriceBox.Text);
+                cmd.Parameters.AddWithValue("@type", TypeBox.Text);
+                cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.ExecuteNonQuery();
+                ShowTable();
+                MessageBox.Show("Item has been added successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Item was already existing!");
+            }
+            isExisting = false;
             conn.Close();
         }
 
         void ClearTextBox()
         {
+            // will clear all the textbox in AddInventory form
             ItemIdBox.Clear();
             NameBox.Clear();
             BrandBox.Clear();
@@ -69,6 +93,21 @@ namespace E_Pc
             {
                 Application.Exit();
             }
+        }
+
+        private void AddInventory_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsAdd.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this._E_PCdbDataSet_ProductsAdd.Products);
+        }
+
+        public void ShowTable()
+        {
+            cmd = new SqlCommand("SELECT * FROM Products", conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            inventoryTable.Clear();
+            adapter.Fill(inventoryTable);
+            InventoryGrid.DataSource = inventoryTable;
         }
     }
 }

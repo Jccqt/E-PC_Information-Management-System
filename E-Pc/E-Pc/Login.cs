@@ -30,6 +30,11 @@ namespace E_Pc
 
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void LogInButton_Click(object sender, EventArgs e)
         {
             conn.Open();

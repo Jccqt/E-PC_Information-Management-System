@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="DeleteInventory.Designer.cs">
       <DependentUpon>DeleteInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeManagementPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeManagementPage.Designer.cs">
+      <DependentUpon>EmployeeManagementPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +125,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveEmployee.Designer.cs">
+      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployeePage.Designer.cs">
+      <DependentUpon>UpdateEmployeePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateItem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdateItem.Designer.cs">
       <DependentUpon>UpdateItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="_E_PCdbDataSet_Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_PCdbDataSet_Products.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_E_PCdbDataSet_ProductsAdd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_PCdbDataSet_ProductsAdd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_E_PCdbDataSet_ProductsDel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddInventory.resx">
       <DependentUpon>AddInventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteInventory.resx">
       <DependentUpon>DeleteInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeManagementPage.resx">
+      <DependentUpon>EmployeeManagementPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
@@ -150,6 +195,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RemoveEmployee.resx">
+      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployeePage.resx">
+      <DependentUpon>UpdateEmployeePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateItem.resx">
       <DependentUpon>UpdateItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +214,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_E_PCdbDataSet_Products.xsc">
+      <DependentUpon>_E_PCdbDataSet_Products.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_Products.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_PCdbDataSet_Products.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_PCdbDataSet_Products.xss">
+      <DependentUpon>_E_PCdbDataSet_Products.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsAdd.xsc">
+      <DependentUpon>_E_PCdbDataSet_ProductsAdd.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsAdd.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_PCdbDataSet_ProductsAdd.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsAdd.xss">
+      <DependentUpon>_E_PCdbDataSet_ProductsAdd.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsDel.xsc">
+      <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsDel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_PCdbDataSet_ProductsDel.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_PCdbDataSet_ProductsDel.xss">
+      <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -187,6 +271,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Remove_Employee-removebg-preview.png" />
+    <None Include="Resources\Update_Employee-removebg-preview.png" />
+    <None Include="Resources\Add_Employee-removebg-preview.png" />
+    <None Include="Resources\EmployeeManagementHeader-removebg-preview.png" />
     <None Include="Resources\Update_Inventory-removebg-preview1.png" />
     <None Include="Resources\Update_Inventory-removebg-preview.png" />
     <None Include="Resources\Delete_Inventory-removebg-preview.png" />

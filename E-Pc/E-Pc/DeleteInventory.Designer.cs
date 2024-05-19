@@ -33,13 +33,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.VerifyBtn = new System.Windows.Forms.Button();
+            this.ClearBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.MemoBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ItemIdBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DeletedProductsGrid = new System.Windows.Forms.DataGridView();
+            this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemBrandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemMemoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deletedProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._E_PCdbDataSet_ProductsDel = new E_Pc._E_PCdbDataSet_ProductsDel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.inventoryLogo = new System.Windows.Forms.PictureBox();
@@ -56,18 +67,21 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.LogoutLogo = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
-            this.DateTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.DateLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
+            this.ReturnBtn = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.deleted_ProductsTableAdapter = new E_Pc._E_PCdbDataSet_ProductsDelTableAdapters.Deleted_ProductsTableAdapter();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeletedProductsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deletedProductsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_ProductsDel)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).BeginInit();
@@ -81,9 +95,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,62 +137,74 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.guna2Button2);
-            this.panel2.Controls.Add(this.guna2Button1);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.VerifyBtn);
+            this.panel2.Controls.Add(this.ClearBtn);
+            this.panel2.Controls.Add(this.DeleteBtn);
+            this.panel2.Controls.Add(this.MemoBox);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(435, 126);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(728, 225);
             this.panel2.TabIndex = 29;
             // 
-            // guna2Button2
+            // VerifyBtn
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 35;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(509, 135);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 73);
-            this.guna2Button2.TabIndex = 24;
-            this.guna2Button2.Text = "Clear";
+            this.VerifyBtn.Location = new System.Drawing.Point(346, 42);
+            this.VerifyBtn.Name = "VerifyBtn";
+            this.VerifyBtn.Size = new System.Drawing.Size(98, 34);
+            this.VerifyBtn.TabIndex = 26;
+            this.VerifyBtn.Text = "Verify";
+            this.VerifyBtn.UseVisualStyleBackColor = true;
+            this.VerifyBtn.Click += new System.EventHandler(this.VerifyBtn_Click);
             // 
-            // guna2Button1
+            // ClearBtn
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 35;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Red;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(509, 45);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 73);
-            this.guna2Button1.TabIndex = 23;
-            this.guna2Button1.Text = "Delete";
+            this.ClearBtn.Animated = true;
+            this.ClearBtn.AutoRoundedCorners = true;
+            this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ClearBtn.BorderRadius = 35;
+            this.ClearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ClearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ClearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ClearBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ClearBtn.FillColor = System.Drawing.Color.White;
+            this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.ClearBtn.ForeColor = System.Drawing.Color.Black;
+            this.ClearBtn.Location = new System.Drawing.Point(509, 135);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(180, 73);
+            this.ClearBtn.TabIndex = 24;
+            this.ClearBtn.Text = "Clear";
             // 
-            // textBox6
+            // DeleteBtn
             // 
-            this.textBox6.Location = new System.Drawing.Point(22, 114);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(422, 94);
-            this.textBox6.TabIndex = 11;
+            this.DeleteBtn.Animated = true;
+            this.DeleteBtn.AutoRoundedCorners = true;
+            this.DeleteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DeleteBtn.BorderRadius = 35;
+            this.DeleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DeleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DeleteBtn.FillColor = System.Drawing.Color.Red;
+            this.DeleteBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteBtn.Location = new System.Drawing.Point(509, 45);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(180, 73);
+            this.DeleteBtn.TabIndex = 23;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // MemoBox
+            // 
+            this.MemoBox.Location = new System.Drawing.Point(22, 114);
+            this.MemoBox.Multiline = true;
+            this.MemoBox.Name = "MemoBox";
+            this.MemoBox.Size = new System.Drawing.Size(422, 94);
+            this.MemoBox.TabIndex = 11;
             // 
             // label7
             // 
@@ -189,13 +216,13 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Memo";
             // 
-            // textBox1
+            // ItemIdBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 42);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 33);
-            this.textBox1.TabIndex = 1;
+            this.ItemIdBox.Location = new System.Drawing.Point(22, 42);
+            this.ItemIdBox.Multiline = true;
+            this.ItemIdBox.Name = "ItemIdBox";
+            this.ItemIdBox.Size = new System.Drawing.Size(318, 33);
+            this.ItemIdBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -203,19 +230,113 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(19, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 16);
+            this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Item Code";
+            this.label2.Text = "Item ID";
             // 
-            // dataGridView1
+            // DeletedProductsGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(325, 362);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(935, 302);
-            this.dataGridView1.TabIndex = 28;
+            this.DeletedProductsGrid.AutoGenerateColumns = false;
+            this.DeletedProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DeletedProductsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemIdDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.itemBrandDataGridViewTextBoxColumn,
+            this.itemPriceDataGridViewTextBoxColumn,
+            this.itemQuantityDataGridViewTextBoxColumn,
+            this.itemTypeDataGridViewTextBoxColumn,
+            this.itemMemoDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn});
+            this.DeletedProductsGrid.DataSource = this.deletedProductsBindingSource;
+            this.DeletedProductsGrid.Location = new System.Drawing.Point(325, 418);
+            this.DeletedProductsGrid.Name = "DeletedProductsGrid";
+            this.DeletedProductsGrid.ReadOnly = true;
+            this.DeletedProductsGrid.RowHeadersWidth = 51;
+            this.DeletedProductsGrid.RowTemplate.Height = 24;
+            this.DeletedProductsGrid.Size = new System.Drawing.Size(935, 302);
+            this.DeletedProductsGrid.TabIndex = 28;
+            // 
+            // itemIdDataGridViewTextBoxColumn
+            // 
+            this.itemIdDataGridViewTextBoxColumn.DataPropertyName = "ItemId";
+            this.itemIdDataGridViewTextBoxColumn.HeaderText = "Item ID";
+            this.itemIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemIdDataGridViewTextBoxColumn.Name = "itemIdDataGridViewTextBoxColumn";
+            this.itemIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.itemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemBrandDataGridViewTextBoxColumn
+            // 
+            this.itemBrandDataGridViewTextBoxColumn.DataPropertyName = "ItemBrand";
+            this.itemBrandDataGridViewTextBoxColumn.HeaderText = "Brand";
+            this.itemBrandDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemBrandDataGridViewTextBoxColumn.Name = "itemBrandDataGridViewTextBoxColumn";
+            this.itemBrandDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemBrandDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemPriceDataGridViewTextBoxColumn
+            // 
+            this.itemPriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPrice";
+            this.itemPriceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.itemPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemPriceDataGridViewTextBoxColumn.Name = "itemPriceDataGridViewTextBoxColumn";
+            this.itemPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemPriceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemQuantityDataGridViewTextBoxColumn
+            // 
+            this.itemQuantityDataGridViewTextBoxColumn.DataPropertyName = "ItemQuantity";
+            this.itemQuantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.itemQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemQuantityDataGridViewTextBoxColumn.Name = "itemQuantityDataGridViewTextBoxColumn";
+            this.itemQuantityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemQuantityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemTypeDataGridViewTextBoxColumn
+            // 
+            this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "ItemType";
+            this.itemTypeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.itemTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
+            this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemMemoDataGridViewTextBoxColumn
+            // 
+            this.itemMemoDataGridViewTextBoxColumn.DataPropertyName = "ItemMemo";
+            this.itemMemoDataGridViewTextBoxColumn.HeaderText = "Memo";
+            this.itemMemoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemMemoDataGridViewTextBoxColumn.Name = "itemMemoDataGridViewTextBoxColumn";
+            this.itemMemoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemMemoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // deletedProductsBindingSource
+            // 
+            this.deletedProductsBindingSource.DataMember = "Deleted_Products";
+            this.deletedProductsBindingSource.DataSource = this._E_PCdbDataSet_ProductsDel;
+            // 
+            // _E_PCdbDataSet_ProductsDel
+            // 
+            this._E_PCdbDataSet_ProductsDel.DataSetName = "_E_PCdbDataSet_ProductsDel";
+            this._E_PCdbDataSet_ProductsDel.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sidebar
             // 
@@ -260,6 +381,7 @@
             // 
             // inventoryButton
             // 
+            this.inventoryButton.BackColor = System.Drawing.Color.DarkGray;
             this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryButton.Location = new System.Drawing.Point(-9, 0);
@@ -268,7 +390,7 @@
             this.inventoryButton.Size = new System.Drawing.Size(323, 84);
             this.inventoryButton.TabIndex = 14;
             this.inventoryButton.Text = " Inventory";
-            this.inventoryButton.UseVisualStyleBackColor = true;
+            this.inventoryButton.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -414,24 +536,12 @@
             // 
             this.sidebarTimer.Interval = 1;
             // 
-            // DateLabel
-            // 
-            this.DateLabel.AutoSize = true;
-            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.White;
-            this.DateLabel.Location = new System.Drawing.Point(983, 682);
-            this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(70, 29);
-            this.DateLabel.TabIndex = 26;
-            this.DateLabel.Text = "Date";
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.pictureBox2);
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -449,26 +559,28 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // ExitBtn
             // 
-            this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(1233, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
+            this.ExitBtn.Location = new System.Drawing.Point(1233, 9);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(27, 26);
+            this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ExitBtn.TabIndex = 0;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // pictureBox4
+            // ReturnBtn
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
-            this.pictureBox4.Location = new System.Drawing.Point(1196, 54);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 30;
-            this.pictureBox4.TabStop = false;
+            this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
+            this.ReturnBtn.Location = new System.Drawing.Point(1196, 54);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(50, 50);
+            this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ReturnBtn.TabIndex = 30;
+            this.ReturnBtn.TabStop = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // pictureBox3
             // 
@@ -481,6 +593,29 @@
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
             // 
+            // deleted_ProductsTableAdapter
+            // 
+            this.deleted_ProductsTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Location = new System.Drawing.Point(325, 384);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(935, 35);
+            this.panel8.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(348, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(195, 26);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Deleted Products";
+            // 
             // DeleteInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,24 +623,27 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ReturnBtn);
+            this.Controls.Add(this.DeletedProductsGrid);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DeleteInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete";
+            this.Load += new System.EventHandler(this.DeleteInventory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeletedProductsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deletedProductsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_ProductsDel)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).EndInit();
@@ -519,11 +657,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -533,16 +672,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox menuButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ExitBtn;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.TextBox textBox6;
+        private Guna.UI2.WinForms.Guna2Button ClearBtn;
+        private Guna.UI2.WinForms.Guna2Button DeleteBtn;
+        private System.Windows.Forms.TextBox MemoBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ItemIdBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox ReturnBtn;
+        private System.Windows.Forms.DataGridView DeletedProductsGrid;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox inventoryLogo;
@@ -559,10 +698,22 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
-        private System.Windows.Forms.Timer DateTimer;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label DateLabel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private _E_PCdbDataSet_ProductsDel _E_PCdbDataSet_ProductsDel;
+        private System.Windows.Forms.BindingSource deletedProductsBindingSource;
+        private _E_PCdbDataSet_ProductsDelTableAdapters.Deleted_ProductsTableAdapter deleted_ProductsTableAdapter;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemBrandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemQuantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemMemoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button VerifyBtn;
     }
 }

@@ -54,9 +54,20 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.InventoryGrid = new System.Windows.Forms.DataGridView();
+            this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemBrandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemMemoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._E_PCdbDataSet_Products = new E_Pc._E_PCdbDataSet_Products();
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.productsTableAdapter = new E_Pc._E_PCdbDataSet_ProductsTableAdapters.ProductsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -75,6 +86,8 @@
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebarTimer
@@ -236,6 +249,7 @@
             // 
             // inventoryButton
             // 
+            this.inventoryButton.BackColor = System.Drawing.Color.DarkGray;
             this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryButton.Location = new System.Drawing.Point(-9, 0);
@@ -244,7 +258,7 @@
             this.inventoryButton.Size = new System.Drawing.Size(323, 84);
             this.inventoryButton.TabIndex = 14;
             this.inventoryButton.Text = " Inventory";
-            this.inventoryButton.UseVisualStyleBackColor = true;
+            this.inventoryButton.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -354,13 +368,107 @@
             // 
             // InventoryGrid
             // 
+            this.InventoryGrid.AutoGenerateColumns = false;
             this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InventoryGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemIdDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.itemBrandDataGridViewTextBoxColumn,
+            this.itemPriceDataGridViewTextBoxColumn,
+            this.itemQuantityDataGridViewTextBoxColumn,
+            this.itemTypeDataGridViewTextBoxColumn,
+            this.itemMemoDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn});
+            this.InventoryGrid.DataSource = this.productsBindingSource;
             this.InventoryGrid.Location = new System.Drawing.Point(325, 169);
             this.InventoryGrid.Name = "InventoryGrid";
+            this.InventoryGrid.ReadOnly = true;
             this.InventoryGrid.RowHeadersWidth = 51;
             this.InventoryGrid.RowTemplate.Height = 24;
             this.InventoryGrid.Size = new System.Drawing.Size(943, 386);
             this.InventoryGrid.TabIndex = 21;
+            // 
+            // itemIdDataGridViewTextBoxColumn
+            // 
+            this.itemIdDataGridViewTextBoxColumn.DataPropertyName = "ItemId";
+            this.itemIdDataGridViewTextBoxColumn.HeaderText = "ItemId";
+            this.itemIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemIdDataGridViewTextBoxColumn.Name = "itemIdDataGridViewTextBoxColumn";
+            this.itemIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemBrandDataGridViewTextBoxColumn
+            // 
+            this.itemBrandDataGridViewTextBoxColumn.DataPropertyName = "ItemBrand";
+            this.itemBrandDataGridViewTextBoxColumn.HeaderText = "ItemBrand";
+            this.itemBrandDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemBrandDataGridViewTextBoxColumn.Name = "itemBrandDataGridViewTextBoxColumn";
+            this.itemBrandDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemBrandDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemPriceDataGridViewTextBoxColumn
+            // 
+            this.itemPriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPrice";
+            this.itemPriceDataGridViewTextBoxColumn.HeaderText = "ItemPrice";
+            this.itemPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemPriceDataGridViewTextBoxColumn.Name = "itemPriceDataGridViewTextBoxColumn";
+            this.itemPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemPriceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemQuantityDataGridViewTextBoxColumn
+            // 
+            this.itemQuantityDataGridViewTextBoxColumn.DataPropertyName = "ItemQuantity";
+            this.itemQuantityDataGridViewTextBoxColumn.HeaderText = "ItemQuantity";
+            this.itemQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemQuantityDataGridViewTextBoxColumn.Name = "itemQuantityDataGridViewTextBoxColumn";
+            this.itemQuantityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemQuantityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemTypeDataGridViewTextBoxColumn
+            // 
+            this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "ItemType";
+            this.itemTypeDataGridViewTextBoxColumn.HeaderText = "ItemType";
+            this.itemTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
+            this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // itemMemoDataGridViewTextBoxColumn
+            // 
+            this.itemMemoDataGridViewTextBoxColumn.DataPropertyName = "ItemMemo";
+            this.itemMemoDataGridViewTextBoxColumn.HeaderText = "ItemMemo";
+            this.itemMemoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemMemoDataGridViewTextBoxColumn.Name = "itemMemoDataGridViewTextBoxColumn";
+            this.itemMemoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemMemoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this._E_PCdbDataSet_Products;
+            // 
+            // _E_PCdbDataSet_Products
+            // 
+            this._E_PCdbDataSet_Products.DataSetName = "_E_PCdbDataSet_Products";
+            this._E_PCdbDataSet_Products.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // AddBtn
             // 
@@ -419,6 +527,11 @@
             this.DeleteBtn.Size = new System.Drawing.Size(180, 73);
             this.DeleteBtn.TabIndex = 24;
             this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
             // 
             // Inventory
             // 
@@ -459,6 +572,8 @@
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,5 +607,16 @@
         private Guna.UI2.WinForms.Guna2Button UpdateBtn;
         private Guna.UI2.WinForms.Guna2Button DeleteBtn;
         public System.Windows.Forms.DataGridView InventoryGrid;
+        private _E_PCdbDataSet_Products _E_PCdbDataSet_Products;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private _E_PCdbDataSet_ProductsTableAdapters.ProductsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemBrandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemQuantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemMemoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
     }
 }
