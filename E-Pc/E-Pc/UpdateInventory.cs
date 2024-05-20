@@ -13,7 +13,7 @@ namespace E_Pc
 {
     public partial class UpdateInventory : Form
     {
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
@@ -45,7 +45,6 @@ namespace E_Pc
                     PriceBox.Text = reader.GetValue(3).ToString();
                     QuantityBox.Text = reader.GetValue(4).ToString();
                     TypeBox.Text = reader.GetString(5);
-                    MemoBox.Text = reader.GetString(6);
                 }
             }
             else
@@ -69,6 +68,7 @@ namespace E_Pc
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             var localDate = DateTime.Now;
+            var time = DateTime.Now.ToString("HH:mm tt");
 
             conn.Open();
 
@@ -85,19 +85,24 @@ namespace E_Pc
                     cmd.Parameters.AddWithValue("@price", PriceBox.Text);
                     cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
                     cmd.Parameters.AddWithValue("@type", TypeBox.Text);
-                    cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
+                    cmd.Parameters.AddWithValue("@memo", $"Updated on {time} - " + MemoBox.Text);
                     cmd.Parameters.AddWithValue("@date", localDate);
                     cmd.ExecuteNonQuery();
                     ShowData();
                     MessageBox.Show("Item has been updated!");
+
+                    // will clear all text box in UpdateInventory page
+                    ItemIdBox.Clear();
+                    ClearTextBox(); 
+                    isExisting = false;
                 }
+
             }
             else
             {
                 // will show a message if the item is not verified as existing
                 MessageBox.Show("Please verify the item first!", "Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            isExisting = false;
             conn.Close();
         }
 
@@ -122,6 +127,34 @@ namespace E_Pc
             inventoryTable.Clear();
             adapter.Fill(inventoryTable);
             InventoryGrid.DataSource = inventoryTable;
+        }
+
+        private void ItemIdBox_TextChanged(object sender, EventArgs e)
+        {
+            if (isExisting)
+            {
+                isExisting = false;
+                CheckPic.Visible = false;
+                ClearTextBox(); // will clear all text box in UpdateInventory page
+
+            }
+        }
+
+        void ClearTextBox()
+        {
+            NameBox.Clear();
+            BrandBox.Clear();
+            PriceBox.Clear();
+            QuantityBox.Clear();
+            TypeBox.Clear();
+            MemoBox.Clear();
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            // will clear all text box in UpdateInventory page
+            ItemIdBox.Clear();
+            ClearTextBox();
         }
     }
 }

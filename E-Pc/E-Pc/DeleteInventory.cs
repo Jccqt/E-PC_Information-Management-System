@@ -13,7 +13,7 @@ namespace E_Pc
 {
     public partial class DeleteInventory : Form
     {
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
         static DataTable deletedTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
