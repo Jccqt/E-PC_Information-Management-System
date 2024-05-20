@@ -25,3 +25,7 @@ May 20, 2024
 - Add and Delete Inventory Items functionalities (New)
 - EmployeeManagement form (New)
 - Update Inventory Items functionality (New)
+
+May 21, 2024
+- Bugs on update inventory when the user change the texbox data after verifying the ItemId (Fixed)
+- Added automatic date memo on update inventory (Update)
