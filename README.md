@@ -29,3 +29,6 @@ May 20, 2024
 May 21, 2024
 - Bug fixed on update inventory when the user changed the texbox data after verifying the ItemId (Update)
 - Added automatic date memo on update inventory (Update)
+- Added automatic date memo on delete inventory (Update)
+- Added quantity input on delete inventory (Update)
+- Bug fixed on delete inventory where the quantity of the deleted item become same on all same item (Update)
