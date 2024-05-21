@@ -25,6 +25,7 @@ namespace E_Pc
 
         private void VerifyBtn_Click(object sender, EventArgs e)
         {
+            var localDateTime = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
             conn.Open();
             cmd = new SqlCommand("SELECT * FROM Products WHERE ItemId = @id", conn);
             cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
@@ -45,6 +46,7 @@ namespace E_Pc
                     PriceBox.Text = reader.GetValue(3).ToString();
                     QuantityBox.Text = reader.GetValue(4).ToString();
                     TypeBox.Text = reader.GetString(5);
+                    MemoBox.Text = $"Updated on {localDateTime} - ";
                 }
             }
             else
@@ -85,7 +87,7 @@ namespace E_Pc
                     cmd.Parameters.AddWithValue("@price", PriceBox.Text);
                     cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
                     cmd.Parameters.AddWithValue("@type", TypeBox.Text);
-                    cmd.Parameters.AddWithValue("@memo", $"Updated on {time} - " + MemoBox.Text);
+                    cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
                     cmd.Parameters.AddWithValue("@date", localDate);
                     cmd.ExecuteNonQuery();
                     ShowData();

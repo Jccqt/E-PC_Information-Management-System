@@ -279,6 +279,8 @@ namespace E_Pc {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Deleted_ProductsDataTable : global::System.Data.TypedTableBase<Deleted_ProductsRow> {
             
+            private global::System.Data.DataColumn columnDeletionId;
+            
             private global::System.Data.DataColumn columnItemId;
             
             private global::System.Data.DataColumn columnItemName;
@@ -326,6 +328,14 @@ namespace E_Pc {
             protected Deleted_ProductsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DeletionIdColumn {
+                get {
+                    return this.columnDeletionId;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -432,6 +442,7 @@ namespace E_Pc {
             public Deleted_ProductsRow AddDeleted_ProductsRow(string ItemId, string ItemName, string ItemBrand, int ItemPrice, int ItemQuantity, string ItemType, string ItemMemo, System.DateTime Date) {
                 Deleted_ProductsRow rowDeleted_ProductsRow = ((Deleted_ProductsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
                         ItemId,
                         ItemName,
                         ItemBrand,
@@ -447,8 +458,9 @@ namespace E_Pc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Deleted_ProductsRow FindByItemId(string ItemId) {
+            public Deleted_ProductsRow FindByDeletionIdItemId(int DeletionId, string ItemId) {
                 return ((Deleted_ProductsRow)(this.Rows.Find(new object[] {
+                            DeletionId,
                             ItemId})));
             }
             
@@ -469,6 +481,7 @@ namespace E_Pc {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnDeletionId = base.Columns["DeletionId"];
                 this.columnItemId = base.Columns["ItemId"];
                 this.columnItemName = base.Columns["ItemName"];
                 this.columnItemBrand = base.Columns["ItemBrand"];
@@ -482,6 +495,8 @@ namespace E_Pc {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnDeletionId = new global::System.Data.DataColumn("DeletionId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDeletionId);
                 this.columnItemId = new global::System.Data.DataColumn("ItemId", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItemId);
                 this.columnItemName = new global::System.Data.DataColumn("ItemName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -499,9 +514,14 @@ namespace E_Pc {
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnDeletionId,
                                 this.columnItemId}, true));
+                this.columnDeletionId.AutoIncrement = true;
+                this.columnDeletionId.AutoIncrementSeed = -1;
+                this.columnDeletionId.AutoIncrementStep = -1;
+                this.columnDeletionId.AllowDBNull = false;
+                this.columnDeletionId.ReadOnly = true;
                 this.columnItemId.AllowDBNull = false;
-                this.columnItemId.Unique = true;
                 this.columnItemId.MaxLength = 50;
                 this.columnItemName.AllowDBNull = false;
                 this.columnItemName.MaxLength = 50;
@@ -512,7 +532,6 @@ namespace E_Pc {
                 this.columnItemType.AllowDBNull = false;
                 this.columnItemType.MaxLength = 99;
                 this.columnItemMemo.MaxLength = 250;
-                this.columnDate.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -655,6 +674,17 @@ namespace E_Pc {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int DeletionId {
+                get {
+                    return ((int)(this[this.tableDeleted_Products.DeletionIdColumn]));
+                }
+                set {
+                    this[this.tableDeleted_Products.DeletionIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string ItemId {
                 get {
                     return ((string)(this[this.tableDeleted_Products.ItemIdColumn]));
@@ -739,7 +769,12 @@ namespace E_Pc {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime Date {
                 get {
-                    return ((global::System.DateTime)(this[this.tableDeleted_Products.DateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableDeleted_Products.DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Date\' in table \'Deleted_Products\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDeleted_Products.DateColumn] = value;
@@ -756,6 +791,18 @@ namespace E_Pc {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetItemMemoNull() {
                 this[this.tableDeleted_Products.ItemMemoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDateNull() {
+                return this.IsNull(this.tableDeleted_Products.DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDateNull() {
+                this[this.tableDeleted_Products.DateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -918,6 +965,7 @@ namespace E_Pc._E_PCdbDataSet_ProductsDelTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Deleted_Products";
+            tableMapping.ColumnMappings.Add("DeletionId", "DeletionId");
             tableMapping.ColumnMappings.Add("ItemId", "ItemId");
             tableMapping.ColumnMappings.Add("ItemName", "ItemName");
             tableMapping.ColumnMappings.Add("ItemBrand", "ItemBrand");
@@ -929,8 +977,9 @@ namespace E_Pc._E_PCdbDataSet_ProductsDelTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Deleted_Products] WHERE (([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ([ItemBrand] = @Original_ItemBrand) AND ([ItemPrice] = @Original_ItemPrice) AND ([ItemQuantity] = @Original_ItemQuantity) AND ([ItemType] = @Original_ItemType) AND ((@IsNull_ItemMemo = 1 AND [ItemMemo] IS NULL) OR ([ItemMemo] = @Original_ItemMemo)) AND ([Date] = @Original_Date))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Deleted_Products] WHERE (([DeletionId] = @Original_DeletionId) AND ([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ([ItemBrand] = @Original_ItemBrand) AND ([ItemPrice] = @Original_ItemPrice) AND ([ItemQuantity] = @Original_ItemQuantity) AND ([ItemType] = @Original_ItemType) AND ((@IsNull_ItemMemo = 1 AND [ItemMemo] IS NULL) OR ([ItemMemo] = @Original_ItemMemo)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletionId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletionId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemBrand", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemBrand", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -939,11 +988,12 @@ namespace E_Pc._E_PCdbDataSet_ProductsDelTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemMemo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemMemo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemMemo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemMemo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Deleted_Products] ([ItemId], [ItemName], [ItemBrand], [ItemPrice], [ItemQuantity], [ItemType], [ItemMemo], [Date]) VALUES (@ItemId, @ItemName, @ItemBrand, @ItemPrice, @ItemQuantity, @ItemType, @ItemMemo, @Date);
-SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo, Date FROM Deleted_Products WHERE (ItemId = @ItemId)";
+SELECT DeletionId, ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo, Date FROM Deleted_Products WHERE (DeletionId = SCOPE_IDENTITY()) AND (ItemId = @ItemId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -955,8 +1005,8 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Deleted_Products] SET [ItemId] = @ItemId, [ItemName] = @ItemName, [ItemBrand] = @ItemBrand, [ItemPrice] = @ItemPrice, [ItemQuantity] = @ItemQuantity, [ItemType] = @ItemType, [ItemMemo] = @ItemMemo, [Date] = @Date WHERE (([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ([ItemBrand] = @Original_ItemBrand) AND ([ItemPrice] = @Original_ItemPrice) AND ([ItemQuantity] = @Original_ItemQuantity) AND ([ItemType] = @Original_ItemType) AND ((@IsNull_ItemMemo = 1 AND [ItemMemo] IS NULL) OR ([ItemMemo] = @Original_ItemMemo)) AND ([Date] = @Original_Date));
-SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo, Date FROM Deleted_Products WHERE (ItemId = @ItemId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Deleted_Products] SET [ItemId] = @ItemId, [ItemName] = @ItemName, [ItemBrand] = @ItemBrand, [ItemPrice] = @ItemPrice, [ItemQuantity] = @ItemQuantity, [ItemType] = @ItemType, [ItemMemo] = @ItemMemo, [Date] = @Date WHERE (([DeletionId] = @Original_DeletionId) AND ([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ([ItemBrand] = @Original_ItemBrand) AND ([ItemPrice] = @Original_ItemPrice) AND ([ItemQuantity] = @Original_ItemQuantity) AND ([ItemType] = @Original_ItemType) AND ((@IsNull_ItemMemo = 1 AND [ItemMemo] IS NULL) OR ([ItemMemo] = @Original_ItemMemo)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)));
+SELECT DeletionId, ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo, Date FROM Deleted_Products WHERE (DeletionId = @DeletionId) AND (ItemId = @ItemId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -966,6 +1016,7 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemMemo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemMemo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletionId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletionId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemId", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemBrand", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemBrand", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -974,7 +1025,9 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemMemo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemMemo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemMemo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemMemo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletionId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DeletionId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -990,8 +1043,8 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo, " +
-                "Date FROM dbo.Deleted_Products";
+            this._commandCollection[0].CommandText = "SELECT DeletionId, ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType" +
+                ", ItemMemo, Date FROM dbo.Deleted_Products";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1052,42 +1105,50 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ItemId, string Original_ItemName, string Original_ItemBrand, int Original_ItemPrice, int Original_ItemQuantity, string Original_ItemType, string Original_ItemMemo, System.DateTime Original_Date) {
+        public virtual int Delete(int Original_DeletionId, string Original_ItemId, string Original_ItemName, string Original_ItemBrand, int Original_ItemPrice, int Original_ItemQuantity, string Original_ItemType, string Original_ItemMemo, global::System.Nullable<global::System.DateTime> Original_Date) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_DeletionId));
             if ((Original_ItemId == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemId");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_ItemId));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ItemId));
             }
             if ((Original_ItemName == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemName");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ItemName));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ItemName));
             }
             if ((Original_ItemBrand == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemBrand");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ItemBrand));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_ItemBrand));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_ItemPrice));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_ItemQuantity));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_ItemPrice));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_ItemQuantity));
             if ((Original_ItemType == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemType");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_ItemType));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_ItemType));
             }
             if ((Original_ItemMemo == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_ItemMemo));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_ItemMemo));
             }
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_Date));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1108,7 +1169,7 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ItemId, string ItemName, string ItemBrand, int ItemPrice, int ItemQuantity, string ItemType, string ItemMemo, System.DateTime Date) {
+        public virtual int Insert(string ItemId, string ItemName, string ItemBrand, int ItemPrice, int ItemQuantity, string ItemType, string ItemMemo, global::System.Nullable<global::System.DateTime> Date) {
             if ((ItemId == null)) {
                 throw new global::System.ArgumentNullException("ItemId");
             }
@@ -1141,7 +1202,12 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ItemMemo));
             }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(Date));
+            if ((Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1170,7 +1236,8 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
                     int ItemQuantity, 
                     string ItemType, 
                     string ItemMemo, 
-                    System.DateTime Date, 
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    int Original_DeletionId, 
                     string Original_ItemId, 
                     string Original_ItemName, 
                     string Original_ItemBrand, 
@@ -1178,7 +1245,8 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
                     int Original_ItemQuantity, 
                     string Original_ItemType, 
                     string Original_ItemMemo, 
-                    System.DateTime Original_Date) {
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
+                    int DeletionId) {
             if ((ItemId == null)) {
                 throw new global::System.ArgumentNullException("ItemId");
             }
@@ -1211,42 +1279,56 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ItemMemo));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Date));
+            if ((Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_DeletionId));
             if ((Original_ItemId == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemId");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ItemId));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ItemId));
             }
             if ((Original_ItemName == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ItemName));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_ItemName));
             }
             if ((Original_ItemBrand == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemBrand");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_ItemBrand));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_ItemBrand));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ItemPrice));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ItemQuantity));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ItemPrice));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_ItemQuantity));
             if ((Original_ItemType == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ItemType));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_ItemType));
             }
             if ((Original_ItemMemo == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_ItemMemo));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_ItemMemo));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_Date));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(DeletionId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1267,8 +1349,24 @@ SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ItemName, string ItemBrand, int ItemPrice, int ItemQuantity, string ItemType, string ItemMemo, System.DateTime Date, string Original_ItemId, string Original_ItemName, string Original_ItemBrand, int Original_ItemPrice, int Original_ItemQuantity, string Original_ItemType, string Original_ItemMemo, System.DateTime Original_Date) {
-            return this.Update(Original_ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo, Date, Original_ItemId, Original_ItemName, Original_ItemBrand, Original_ItemPrice, Original_ItemQuantity, Original_ItemType, Original_ItemMemo, Original_Date);
+        public virtual int Update(
+                    string ItemName, 
+                    string ItemBrand, 
+                    int ItemPrice, 
+                    int ItemQuantity, 
+                    string ItemType, 
+                    string ItemMemo, 
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    int Original_DeletionId, 
+                    string Original_ItemId, 
+                    string Original_ItemName, 
+                    string Original_ItemBrand, 
+                    int Original_ItemPrice, 
+                    int Original_ItemQuantity, 
+                    string Original_ItemType, 
+                    string Original_ItemMemo, 
+                    global::System.Nullable<global::System.DateTime> Original_Date) {
+            return this.Update(Original_ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, ItemMemo, Date, Original_DeletionId, Original_ItemId, Original_ItemName, Original_ItemBrand, Original_ItemPrice, Original_ItemQuantity, Original_ItemType, Original_ItemMemo, Original_Date, Original_DeletionId);
         }
     }
     
