@@ -19,6 +19,7 @@ namespace E_Pc
         static AddInventory addInventoryPage = new AddInventory();
         static DeleteInventory delInventoryPage = new DeleteInventory();
         static UpdateInventory updateInventoryPage = new UpdateInventory();
+        static string searchType;
 
         public Inventory()
         {
@@ -66,6 +67,26 @@ namespace E_Pc
         {
             updateInventoryPage.Show();
             this.Hide();
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchBox.Text.Equals("Search here.."))
+            {
+                SearchBox.Clear();
+            }
+            cmd = new SqlCommand($"SELECT * FROM Products WHERE {searchType} LIKE '{SearchBox.Text}%'", conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            inventoryTable.Clear();
+            adapter.Fill(inventoryTable);
+            InventoryGrid.DataSource = inventoryTable;
+        }
+
+        private void SearchTypeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SearchBox.Text = "Search here...";
+            searchType = SearchTypeBox.SelectedItem.ToString();
+            ShowTable();
         }
     }
 }

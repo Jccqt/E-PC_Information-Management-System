@@ -34,16 +34,29 @@ namespace E_Pc
         private void AddBtn_Click(object sender, EventArgs e)
         {
             var date = DateTime.Now;
+            int idCount = 2000;
 
             conn.Open();
-            cmd = new SqlCommand("SELECT ItemId FROM Products WHERE ItemId = '"+ItemIdBox.Text+"'", conn);
+            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemType = @type", conn);
+            cmd.Parameters.AddWithValue("@type", TypeBox.Text);
             SqlDataReader reader = cmd.ExecuteReader();
 
+            while (reader.Read())
+            {
+                idCount++;
+            }
+
+            reader.Close();
+
+            cmd = new SqlCommand("SELECT ItemName FROM Products WHERE ItemName = @name", conn);
+            cmd.Parameters.AddWithValue("@name", NameBox.Text);
+            reader = cmd.ExecuteReader();
+  
             if (reader.Read())
             {
                 // will check if the Item ID is already existing
-                idToCheck = reader.GetValue(0).ToString();
-                if (idToCheck.Equals(ItemIdBox.Text.ToString()))
+                idToCheck = reader.GetValue(0).ToString().ToUpper();
+                if (idToCheck.Equals(NameBox.Text.ToString().ToUpper()))
                 {
                     isExisting = true;
                 }
@@ -52,16 +65,17 @@ namespace E_Pc
             if (!isExisting)
             {
                 cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
-                cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
+                cmd.Parameters.AddWithValue("@id", $"{TypeBox.Text.ToUpper()}{idCount+1}");
                 cmd.Parameters.AddWithValue("@name", NameBox.Text);
                 cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
                 cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
                 cmd.Parameters.AddWithValue("@price", PriceBox.Text);
-                cmd.Parameters.AddWithValue("@type", TypeBox.Text);
+                cmd.Parameters.AddWithValue("@type", TypeBox.Text.ToUpper());
                 cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
                 cmd.Parameters.AddWithValue("@date", date);
                 cmd.ExecuteNonQuery();
                 ShowTable();
+                ClearTextBox();
                 MessageBox.Show("Item has been added successfully!");
             }
             else
@@ -75,7 +89,6 @@ namespace E_Pc
         void ClearTextBox()
         {
             // will clear all the textbox in AddInventory form
-            ItemIdBox.Clear();
             NameBox.Clear();
             BrandBox.Clear();
             QuantityBox.Clear();
@@ -102,7 +115,7 @@ namespace E_Pc
             // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsAdd.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this._E_PCdbDataSet_ProductsAdd.Products);
             ShowTable();
-            ItemIdBox.Focus();
+            NameBox.Focus();
         }
 
         public void ShowTable()

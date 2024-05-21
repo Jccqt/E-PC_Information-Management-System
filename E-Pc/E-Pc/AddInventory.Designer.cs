@@ -71,11 +71,7 @@
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ItemIdBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
-            this._E_PCdbDataSet_Products = new E_Pc._E_PCdbDataSet_Products();
-            this.ePCdbDataSetProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new E_Pc._E_PCdbDataSet_ProductsAddTableAdapters.ProductsTableAdapter();
             this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,8 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_ProductsAdd)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ePCdbDataSetProductsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebarTimer
@@ -327,7 +321,7 @@
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
             this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -338,7 +332,7 @@
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 21);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -354,7 +348,7 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
             this.guna2Panel1.TabIndex = 15;
@@ -364,7 +358,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.Add_Inventory_removebg_preview;
             this.pictureBox3.Location = new System.Drawing.Point(250, 53);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(326, 18);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -386,7 +380,7 @@
             this.dateDataGridViewTextBoxColumn});
             this.InventoryGrid.DataSource = this.productsBindingSource;
             this.InventoryGrid.Location = new System.Drawing.Point(244, 294);
-            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2);
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
             this.InventoryGrid.RowHeadersWidth = 51;
@@ -421,10 +415,8 @@
             this.panel2.Controls.Add(this.QuantityLabel);
             this.panel2.Controls.Add(this.NameBox);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.ItemIdBox);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(244, 87);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(701, 210);
             this.panel2.TabIndex = 22;
@@ -432,8 +424,8 @@
             // TypeBox
             // 
             this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TypeBox.Location = new System.Drawing.Point(16, 170);
-            this.TypeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TypeBox.Location = new System.Drawing.Point(16, 139);
+            this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
             this.TypeBox.Multiline = true;
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(146, 28);
@@ -443,12 +435,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 154);
+            this.label4.Location = new System.Drawing.Point(14, 123);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Item Type";
+            this.label4.Text = "Item Type*";
             // 
             // ClearBtn
             // 
@@ -464,7 +456,7 @@
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
             this.ClearBtn.Location = new System.Drawing.Point(566, 100);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(108, 60);
             this.ClearBtn.TabIndex = 9;
@@ -486,7 +478,7 @@
             this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(566, 34);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(108, 53);
             this.AddBtn.TabIndex = 8;
@@ -495,29 +487,29 @@
             // 
             // MemoBox
             // 
-            this.MemoBox.Location = new System.Drawing.Point(199, 84);
-            this.MemoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MemoBox.Location = new System.Drawing.Point(199, 102);
+            this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
             this.MemoBox.Multiline = true;
             this.MemoBox.Name = "MemoBox";
-            this.MemoBox.Size = new System.Drawing.Size(305, 114);
+            this.MemoBox.Size = new System.Drawing.Size(305, 65);
             this.MemoBox.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(196, 68);
+            this.label7.Location = new System.Drawing.Point(196, 86);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.Size = new System.Drawing.Size(138, 13);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Memo";
+            this.label7.Text = "Memo (250 max characters)";
             // 
             // PriceBox
             // 
             this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PriceBox.Location = new System.Drawing.Point(357, 22);
-            this.PriceBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PriceBox.Location = new System.Drawing.Point(357, 40);
+            this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceBox.Multiline = true;
             this.PriceBox.Name = "PriceBox";
             this.PriceBox.Size = new System.Drawing.Size(146, 28);
@@ -527,18 +519,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(355, 6);
+            this.label6.Location = new System.Drawing.Point(355, 24);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Price";
+            this.label6.Text = "Price*";
             // 
             // BrandBox
             // 
             this.BrandBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BrandBox.Location = new System.Drawing.Point(16, 123);
-            this.BrandBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BrandBox.Location = new System.Drawing.Point(16, 92);
+            this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
             this.BrandBox.Size = new System.Drawing.Size(146, 28);
@@ -548,18 +540,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(14, 107);
+            this.label5.Location = new System.Drawing.Point(14, 76);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Item Brand";
+            this.label5.Text = "Item Brand*";
             // 
             // QuantityBox
             // 
             this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuantityBox.Location = new System.Drawing.Point(199, 22);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuantityBox.Location = new System.Drawing.Point(199, 40);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
             this.QuantityBox.Size = new System.Drawing.Size(146, 28);
@@ -569,18 +561,18 @@
             // 
             this.QuantityLabel.AutoSize = true;
             this.QuantityLabel.ForeColor = System.Drawing.Color.White;
-            this.QuantityLabel.Location = new System.Drawing.Point(196, 6);
+            this.QuantityLabel.Location = new System.Drawing.Point(196, 24);
             this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QuantityLabel.Name = "QuantityLabel";
-            this.QuantityLabel.Size = new System.Drawing.Size(46, 13);
+            this.QuantityLabel.Size = new System.Drawing.Size(50, 13);
             this.QuantityLabel.TabIndex = 4;
-            this.QuantityLabel.Text = "Quantity";
+            this.QuantityLabel.Text = "Quantity*";
             // 
             // NameBox
             // 
             this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NameBox.Location = new System.Drawing.Point(16, 73);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameBox.Location = new System.Drawing.Point(16, 42);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(146, 28);
@@ -590,56 +582,25 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 58);
+            this.label3.Location = new System.Drawing.Point(14, 27);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Item Name";
-            // 
-            // ItemIdBox
-            // 
-            this.ItemIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemIdBox.Location = new System.Drawing.Point(16, 24);
-            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ItemIdBox.Multiline = true;
-            this.ItemIdBox.Name = "ItemIdBox";
-            this.ItemIdBox.Size = new System.Drawing.Size(146, 28);
-            this.ItemIdBox.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(14, 8);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Item ID";
+            this.label3.Text = "Item Name*";
             // 
             // ReturnBtn
             // 
             this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
             this.ReturnBtn.Location = new System.Drawing.Point(897, 44);
-            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ReturnBtn.TabIndex = 23;
             this.ReturnBtn.TabStop = false;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
-            // 
-            // _E_PCdbDataSet_Products
-            // 
-            this._E_PCdbDataSet_Products.DataSetName = "_E_PCdbDataSet_Products";
-            this._E_PCdbDataSet_Products.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ePCdbDataSetProductsBindingSource
-            // 
-            this.ePCdbDataSetProductsBindingSource.DataSource = this._E_PCdbDataSet_Products;
-            this.ePCdbDataSetProductsBindingSource.Position = 0;
             // 
             // productsTableAdapter
             // 
@@ -648,74 +609,64 @@
             // itemIdDataGridViewTextBoxColumn
             // 
             this.itemIdDataGridViewTextBoxColumn.DataPropertyName = "ItemId";
-            this.itemIdDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.itemIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemIdDataGridViewTextBoxColumn.HeaderText = "Item ID";
             this.itemIdDataGridViewTextBoxColumn.Name = "itemIdDataGridViewTextBoxColumn";
             this.itemIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemIdDataGridViewTextBoxColumn.Width = 125;
+            this.itemIdDataGridViewTextBoxColumn.Width = 150;
             // 
             // itemNameDataGridViewTextBoxColumn
             // 
             this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
             this.itemNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.itemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
             this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemNameDataGridViewTextBoxColumn.Width = 125;
+            this.itemNameDataGridViewTextBoxColumn.Width = 250;
             // 
             // itemBrandDataGridViewTextBoxColumn
             // 
             this.itemBrandDataGridViewTextBoxColumn.DataPropertyName = "ItemBrand";
             this.itemBrandDataGridViewTextBoxColumn.HeaderText = "Brand";
-            this.itemBrandDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemBrandDataGridViewTextBoxColumn.Name = "itemBrandDataGridViewTextBoxColumn";
             this.itemBrandDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemBrandDataGridViewTextBoxColumn.Width = 125;
+            this.itemBrandDataGridViewTextBoxColumn.Width = 150;
             // 
             // itemPriceDataGridViewTextBoxColumn
             // 
             this.itemPriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPrice";
             this.itemPriceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.itemPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemPriceDataGridViewTextBoxColumn.Name = "itemPriceDataGridViewTextBoxColumn";
             this.itemPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemPriceDataGridViewTextBoxColumn.Width = 125;
             // 
             // itemQuantityDataGridViewTextBoxColumn
             // 
             this.itemQuantityDataGridViewTextBoxColumn.DataPropertyName = "ItemQuantity";
             this.itemQuantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.itemQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemQuantityDataGridViewTextBoxColumn.Name = "itemQuantityDataGridViewTextBoxColumn";
             this.itemQuantityDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemQuantityDataGridViewTextBoxColumn.Width = 125;
+            this.itemQuantityDataGridViewTextBoxColumn.Width = 75;
             // 
             // itemTypeDataGridViewTextBoxColumn
             // 
             this.itemTypeDataGridViewTextBoxColumn.DataPropertyName = "ItemType";
             this.itemTypeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.itemTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemTypeDataGridViewTextBoxColumn.Name = "itemTypeDataGridViewTextBoxColumn";
             this.itemTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemTypeDataGridViewTextBoxColumn.Width = 125;
+            this.itemTypeDataGridViewTextBoxColumn.Width = 150;
             // 
             // itemMemoDataGridViewTextBoxColumn
             // 
             this.itemMemoDataGridViewTextBoxColumn.DataPropertyName = "ItemMemo";
             this.itemMemoDataGridViewTextBoxColumn.HeaderText = "Memo";
-            this.itemMemoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemMemoDataGridViewTextBoxColumn.Name = "itemMemoDataGridViewTextBoxColumn";
             this.itemMemoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemMemoDataGridViewTextBoxColumn.Width = 250;
+            this.itemMemoDataGridViewTextBoxColumn.Width = 300;
             // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.Width = 125;
             // 
             // AddInventory
             // 
@@ -732,7 +683,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPage";
@@ -761,8 +712,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ePCdbDataSetProductsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -799,8 +748,6 @@
         private System.Windows.Forms.Label QuantityLabel;
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ItemIdBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox PriceBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox MemoBox;
@@ -811,8 +758,6 @@
         private System.Windows.Forms.TextBox QuantityBox;
         private System.Windows.Forms.TextBox TypeBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.BindingSource ePCdbDataSetProductsBindingSource;
-        private _E_PCdbDataSet_Products _E_PCdbDataSet_Products;
         private _E_PCdbDataSet_ProductsAdd _E_PCdbDataSet_ProductsAdd;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private _E_PCdbDataSet_ProductsAddTableAdapters.ProductsTableAdapter productsTableAdapter;
