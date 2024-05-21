@@ -13,7 +13,7 @@ namespace E_Pc
 {
     public partial class Inventory : Form
     {
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static AddInventory addInventoryPage = new AddInventory();

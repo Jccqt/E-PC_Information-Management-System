@@ -114,7 +114,6 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.Inventory.res
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.Login.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.OrdersPage.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.Properties.Resources.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateItem.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.GenerateResource.cache
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CoreCompileInputs.cache
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.Up2Date
@@ -154,3 +153,4 @@ E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CoreCompil
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.Up2Date
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.pdb
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateInventory.resources

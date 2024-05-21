@@ -13,7 +13,7 @@ namespace E_Pc
 {
     public partial class DeleteInventory : Form
     {
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
         static DataTable deletedTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
@@ -27,10 +27,8 @@ namespace E_Pc
         {
             // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsDel.Deleted_Products' table. You can move, or remove it, as needed.
             this.deleted_ProductsTableAdapter.Fill(this._E_PCdbDataSet_ProductsDel.Deleted_Products);
-            // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsDel.Deleted_Products' table. You can move, or remove it, as needed.
-            this.deleted_ProductsTableAdapter.Fill(this._E_PCdbDataSet_ProductsDel.Deleted_Products);
-            // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsDel.Deleted_Products' table. You can move, or remove it, as needed.
             ShowData();
+            ItemIdBox.Focus();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -91,14 +89,15 @@ namespace E_Pc
                     {
                         // will remove the item if the quantity input is same to the available quantity of the item
 
-                        // will delete the specific record in Products table
-                        cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = '" + ItemIdBox.Text + "'", conn);
-                        cmd.ExecuteNonQuery();
-
                         // will insert select records from Products table to Deleted_Products table
                         cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType)"
                         + "SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType FROM Products WHERE ItemId = @id", conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
+                        cmd.ExecuteNonQuery();
+
+
+                        // will delete the specific record in Products table
+                        cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = '" + ItemIdBox.Text + "'", conn);
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Item has been deleted successfully!");

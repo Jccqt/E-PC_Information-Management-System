@@ -14,7 +14,7 @@ namespace E_Pc
     public partial class AddInventory : Form
     {
         static Inventory inventoryPage = new Inventory();
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static string idToCheck;
@@ -102,6 +102,7 @@ namespace E_Pc
             // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsAdd.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this._E_PCdbDataSet_ProductsAdd.Products);
             ShowTable();
+            ItemIdBox.Focus();
         }
 
         public void ShowTable()

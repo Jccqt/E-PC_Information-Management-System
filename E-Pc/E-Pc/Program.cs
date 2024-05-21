@@ -22,4 +22,10 @@ namespace E_Pc
             Application.Run(new Login());
         }
     }
+
+    public class DataConnection
+    {
+        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True";
+
+    }
 }

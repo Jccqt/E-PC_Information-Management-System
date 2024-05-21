@@ -143,6 +143,11 @@
     <Compile Include="UpdateInventory.Designer.cs">
       <DependentUpon>UpdateInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="_E_PCdbDataSet_Employees.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_E_PCdbDataSet_Products.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -219,6 +224,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_E_PCdbDataSet_Employees.xsc">
+      <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
+    </None>
+    <None Include="_E_PCdbDataSet_Employees.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_PCdbDataSet_Employees.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_PCdbDataSet_Employees.xss">
+      <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
+    </None>
     <None Include="_E_PCdbDataSet_Products.xsc">
       <DependentUpon>_E_PCdbDataSet_Products.xsd</DependentUpon>
     </None>
