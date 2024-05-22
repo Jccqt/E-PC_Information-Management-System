@@ -40,3 +40,6 @@ May 22, 2024
 - Search type to easily sort search result in Inventory page (Update)
 - Removed search type in Inventory page (Update)
 - Improved the search bar in inventory page (Update)
+
+May 23, 2024
+- Bug fixed on add inventory page where the item can be added to the inventory with missing details (Update)
