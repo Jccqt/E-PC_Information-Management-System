@@ -40,13 +40,11 @@
             this.PasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.DateTimer = new System.Windows.Forms.Timer(this.components);
             this.DateLabel = new System.Windows.Forms.Label();
-            this._E_PCdbDataSet_Products = new E_Pc._E_PCdbDataSet_Products();
             this.ePCdbDataSetProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ePCdbDataSetProductsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,15 +210,6 @@
             this.DateLabel.TabIndex = 15;
             this.DateLabel.Text = "Date";
             // 
-            // _E_PCdbDataSet_Products
-            // 
-            this._E_PCdbDataSet_Products.DataSetName = "_E_PCdbDataSet_Products";
-            this._E_PCdbDataSet_Products.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ePCdbDataSetProductsBindingSource
-            // 
-            this.ePCdbDataSetProductsBindingSource.DataSource = this._E_PCdbDataSet_Products;
-            this.ePCdbDataSetProductsBindingSource.Position = 0;
             // 
             // Login
             // 
@@ -248,7 +237,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ePCdbDataSetProductsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,7 +256,6 @@
         private System.Windows.Forms.PictureBox ExitBtn;
         private System.Windows.Forms.Timer DateTimer;
         private System.Windows.Forms.Label DateLabel;
-        private _E_PCdbDataSet_Products _E_PCdbDataSet_Products;
         private System.Windows.Forms.BindingSource ePCdbDataSetProductsBindingSource;
     }
 }

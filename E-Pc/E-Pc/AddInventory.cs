@@ -64,19 +64,26 @@ namespace E_Pc
             reader.Close();
             if (!isExisting)
             {
-                cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
-                cmd.Parameters.AddWithValue("@id", $"{TypeBox.Text.ToUpper()}{idCount+1}");
-                cmd.Parameters.AddWithValue("@name", NameBox.Text);
-                cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
-                cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
-                cmd.Parameters.AddWithValue("@price", PriceBox.Text);
-                cmd.Parameters.AddWithValue("@type", TypeBox.Text.ToUpper());
-                cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.ExecuteNonQuery();
-                ShowTable();
-                ClearTextBox();
-                MessageBox.Show("Item has been added successfully!");
+                try
+                {
+                    cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
+                    cmd.Parameters.AddWithValue("@id", $"{TypeBox.Text.ToUpper()}{idCount + 1}");
+                    cmd.Parameters.AddWithValue("@name", NameBox.Text);
+                    cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
+                    cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
+                    cmd.Parameters.AddWithValue("@price", PriceBox.Text);
+                    cmd.Parameters.AddWithValue("@type", TypeBox.Text.ToUpper());
+                    cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.ExecuteNonQuery();
+                    ShowTable();
+                    ClearTextBox();
+                    MessageBox.Show("Item has been added successfully!");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Invalid input on Price or Quantity.", "Invalid Input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -112,8 +119,6 @@ namespace E_Pc
 
         private void AddInventory_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsAdd.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this._E_PCdbDataSet_ProductsAdd.Products);
             ShowTable();
             NameBox.Focus();
         }

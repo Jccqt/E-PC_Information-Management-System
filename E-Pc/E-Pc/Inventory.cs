@@ -28,8 +28,6 @@ namespace E_Pc
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_E_PCdbDataSet_Products.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this._E_PCdbDataSet_Products.Products);
             ShowTable();
         }
 

@@ -172,26 +172,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_E_PCdbDataSet_Products.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_E_PCdbDataSet_Products.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_E_PCdbDataSet_ProductsAdd.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_E_PCdbDataSet_ProductsAdd.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_E_PCdbDataSet_ProductsDel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_E_PCdbDataSet_ProductsEdit.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_E_PCdbDataSet_ProductsEdit.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,50 +250,6 @@
     </None>
     <None Include="_E_PCdbDataSet_Employees.xss">
       <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_Products.xsc">
-      <DependentUpon>_E_PCdbDataSet_Products.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_Products.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_E_PCdbDataSet_Products.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_E_PCdbDataSet_Products.xss">
-      <DependentUpon>_E_PCdbDataSet_Products.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsAdd.xsc">
-      <DependentUpon>_E_PCdbDataSet_ProductsAdd.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsAdd.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_E_PCdbDataSet_ProductsAdd.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsAdd.xss">
-      <DependentUpon>_E_PCdbDataSet_ProductsAdd.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsDel.xsc">
-      <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsDel.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_E_PCdbDataSet_ProductsDel.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsDel.xss">
-      <DependentUpon>_E_PCdbDataSet_ProductsDel.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsEdit.xsc">
-      <DependentUpon>_E_PCdbDataSet_ProductsEdit.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsEdit.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_E_PCdbDataSet_ProductsEdit.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_E_PCdbDataSet_ProductsEdit.xss">
-      <DependentUpon>_E_PCdbDataSet_ProductsEdit.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

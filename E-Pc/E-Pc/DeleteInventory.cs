@@ -25,9 +25,7 @@ namespace E_Pc
 
         private void DeleteInventory_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_E_PCdbDataSet_ProductsDel.Deleted_Products' table. You can move, or remove it, as needed.
-            this.deleted_ProductsTableAdapter.Fill(this._E_PCdbDataSet_ProductsDel.Deleted_Products);
-            ShowData();
+            ShowDeletedData();
             ItemIdBox.Focus();
         }
 
@@ -58,8 +56,8 @@ namespace E_Pc
                         // will decrease the quantity of the item
 
                         // will insert select records from Products table to Deleted_Products table
-                        cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemPrice, ItemType)"
-                        + "SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemType FROM Products WHERE ItemId = @id", conn);
+                        cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId)"
+                        + "SELECT ItemId FROM Products WHERE ItemId = @id", conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
@@ -113,13 +111,22 @@ namespace E_Pc
                 // will show a message if the item is not verified as existing
                 MessageBox.Show("Please verify the item first!","Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            ShowData();
+            ShowDeletedData();
             conn.Close();
         }
 
-        void ShowData()
+        void ShowDeletedData()
         {
-            cmd = new SqlCommand("SELECT * FROM Deleted_Products", conn);
+            cmd = new SqlCommand("SELECT Deleted_Products.DeletionId," +
+                "Deleted_Products.ItemQuantity," +
+                "Products.ItemId," +
+                "Products.ItemName," +
+                "Products.ItemPrice," +
+                "Products.ItemType, " +
+                "Deleted_Products.ItemMemo," +
+                "Deleted_Products.Date " +
+                "FROM Products RIGHT JOIN Deleted_Products " +
+                "ON Products.ItemId = Deleted_Products.ItemId", conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             deletedTable.Clear();
             adapter.Fill(deletedTable);
@@ -146,7 +153,7 @@ namespace E_Pc
             var localDateTime = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
             conn.Open();
             cmd = new SqlCommand("SELECT ItemId FROM Products WHERE ItemId = @id", conn);
-            cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
+            cmd.Parameters.AddWithValue("@id", ItemIdBox.Text.ToUpper());
             SqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.HasRows)
@@ -182,5 +189,11 @@ namespace E_Pc
             QuantityBox.Clear();
             MemoBox.Clear();
         }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }
