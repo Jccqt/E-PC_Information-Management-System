@@ -38,3 +38,5 @@ May 21, 2024
 May 22, 2024
 - Search bar on Inventory page (Update)
 - Search type to easily sort search result in Inventory page (Update)
+- Removed search type in Inventory page (Update)
+- Improved the search bar in inventory page (Update)
