@@ -28,24 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ExitBtn = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.usernameTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.passwordTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UsernameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PasswordLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DateTimer = new System.Windows.Forms.Timer(this.components);
+            this.DateLabel = new System.Windows.Forms.Label();
+            this._E_PCdbDataSet_Products = new E_Pc._E_PCdbDataSet_Products();
+            this.ePCdbDataSetProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ePCdbDataSetProductsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Controls.Add(this.pictureBox2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -53,6 +60,27 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1019, 41);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
+            this.ExitBtn.Location = new System.Drawing.Point(977, 10);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(27, 26);
+            this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ExitBtn.TabIndex = 7;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(35, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(154, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // guna2PictureBox1
             // 
@@ -168,25 +196,31 @@
             this.PasswordLabel.TabIndex = 6;
             this.PasswordLabel.Text = "Password";
             // 
-            // pictureBox2
+            // DateTimer
             // 
-            this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(154, 26);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.DateTimer.Tick += new System.EventHandler(this.DateTimer_Tick);
             // 
-            // pictureBox1
+            // DateLabel
             // 
-            this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(977, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.ForeColor = System.Drawing.Color.White;
+            this.DateLabel.Location = new System.Drawing.Point(69, 405);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(70, 29);
+            this.DateLabel.TabIndex = 15;
+            this.DateLabel.Text = "Date";
+            // 
+            // _E_PCdbDataSet_Products
+            // 
+            this._E_PCdbDataSet_Products.DataSetName = "_E_PCdbDataSet_Products";
+            this._E_PCdbDataSet_Products.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ePCdbDataSetProductsBindingSource
+            // 
+            this.ePCdbDataSetProductsBindingSource.DataSource = this._E_PCdbDataSet_Products;
+            this.ePCdbDataSetProductsBindingSource.Position = 0;
             // 
             // Login
             // 
@@ -195,6 +229,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1019, 469);
+            this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.LoginBtn);
@@ -210,9 +245,11 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._E_PCdbDataSet_Products)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ePCdbDataSetProductsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,7 +265,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel UsernameLabel;
         private Guna.UI2.WinForms.Guna2HtmlLabel PasswordLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ExitBtn;
+        private System.Windows.Forms.Timer DateTimer;
+        private System.Windows.Forms.Label DateLabel;
+        private _E_PCdbDataSet_Products _E_PCdbDataSet_Products;
+        private System.Windows.Forms.BindingSource ePCdbDataSetProductsBindingSource;
     }
 }
 

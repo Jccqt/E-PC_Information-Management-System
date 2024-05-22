@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\E-PC_Information-Management-System\\E-Pc\\",
+  "WorkspaceRootPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|E:\\E-PC_Information-Management-System\\E-Pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +27,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
-              "RelativeDocumentMoniker": "E-Pc\\Inventory.cs",
-              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
-              "RelativeToolTip": "E-Pc\\Inventory.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAjwFUAAAAMAAAA",
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Login.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs",
+              "RelativeToolTip": "E-Pc\\Login.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAIAzwC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T15:46:16.451Z",
+              "WhenOpened": "2024-05-22T05:15:21.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Inventory.cs [Design]",
-              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
-              "RelativeDocumentMoniker": "E-Pc\\Inventory.cs",
-              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs [Design]",
-              "RelativeToolTip": "E-Pc\\Inventory.cs [Design]",
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Login.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Login.cs [Design]",
+              "RelativeToolTip": "E-Pc\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T15:44:08.682Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-22T05:14:57.641Z"
             }
           ]
         },

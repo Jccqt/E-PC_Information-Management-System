@@ -75,22 +75,17 @@ namespace E_Pc
             {
                 SearchBox.Clear();
             }
-            if(!SearchTypeBox.Text.Equals("Search Type"))
-            {
-                cmd = new SqlCommand($"SELECT * FROM Products WHERE {searchType} LIKE '{SearchBox.Text}%'", conn);
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                inventoryTable.Clear();
-                adapter.Fill(inventoryTable);
-                InventoryGrid.DataSource = inventoryTable;
-            }
-            
-        }
-
-        private void SearchTypeBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SearchBox.Text = "Search here...";
-            searchType = SearchTypeBox.SelectedItem.ToString();
-            ShowTable();
+            cmd = new SqlCommand($"SELECT * FROM Products WHERE " +
+                $"ItemId LIKE '%{SearchBox.Text}%' " +
+                $"OR ItemName LIKE '%{SearchBox.Text}%'" +
+                $"OR ItemBrand LIKE '%{SearchBox.Text}%'" +
+                $"OR ItemType LIKE '%{SearchBox.Text}%'" +
+                $"OR ItemPrice LIKE '{SearchBox.Text}%'" +
+                $"OR ItemQuantity LIKE '{SearchBox.Text}%'", conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            inventoryTable.Clear();
+            adapter.Fill(inventoryTable);
+            InventoryGrid.DataSource = inventoryTable;
         }
     }
 }

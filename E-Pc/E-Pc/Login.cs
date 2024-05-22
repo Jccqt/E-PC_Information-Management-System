@@ -32,8 +32,19 @@ namespace E_Pc
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            DateTimer.Start();
         }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); // will terminate the application
+        }
+
+        private void DateTimer_Tick(object sender, EventArgs e)
+        {
+            DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt");
+        }
+
 
         private void LogInButton_Click(object sender, EventArgs e)
         {

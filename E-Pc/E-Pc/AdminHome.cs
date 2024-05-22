@@ -151,7 +151,7 @@ namespace E_Pc
 
         private void DateTimer_Tick(object sender, EventArgs e)
         {
-            DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss");
+            DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt");
         }
     }
 }

@@ -158,3 +158,7 @@ E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierHomepage.r
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentPage.resources
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.SummarizationPage.resources
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.VerificationCodePage.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierHomepage.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentPage.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.SummarizationPage.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.VerificationCodePage.resources
