@@ -18,7 +18,7 @@ namespace E_Pc
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static string idToCheck;
-        static bool isExisting = false;
+        static bool isExisting = false, isTextEmpty = false;
         
         public AddInventory()
         {
@@ -62,7 +62,13 @@ namespace E_Pc
                 }
             }
             reader.Close();
-            if (!isExisting)
+
+            if (NameBox.Text.Equals("") || BrandBox.Text.Equals("") || PriceBox.Text.Equals("") || QuantityBox.Text.Equals("") || TypeBox.Text.Equals(""))
+            {
+                isTextEmpty = true;
+            }
+
+            if (!isExisting && !isTextEmpty)
             {
                 try
                 {
@@ -85,10 +91,16 @@ namespace E_Pc
                     MessageBox.Show("Invalid input on Price or Quantity.", "Invalid Input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else if(isTextEmpty)
+            {
+               
+                MessageBox.Show("Please make sure that input box/es is not empty.", "Empty input box/es.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-                MessageBox.Show("Item was already existing!");
+                MessageBox.Show("You cannot add the item because it is already existing.", "Item existing already!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            isTextEmpty = false;
             isExisting = false;
             conn.Close();
         }
@@ -123,6 +135,7 @@ namespace E_Pc
             NameBox.Focus();
         }
 
+
         public void ShowTable()
         {
             cmd = new SqlCommand("SELECT * FROM Products", conn);
@@ -131,5 +144,6 @@ namespace E_Pc
             adapter.Fill(inventoryTable);
             InventoryGrid.DataSource = inventoryTable;
         }
+    
     }
 }

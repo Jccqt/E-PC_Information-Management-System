@@ -17,7 +17,7 @@ namespace E_Pc
         static SqlCommand cmd;
         static DataTable deletedTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
-        static bool isExisting = false;
+        static bool isExisting = false, isTextEmpty = false;
         public DeleteInventory()
         {
             InitializeComponent();
@@ -41,7 +41,11 @@ namespace E_Pc
             cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
             Quantity = Convert.ToInt32(cmd.ExecuteScalar());
 
-            if (isExisting)
+            if (QuantityBox.Text.Equals(""))
+            {
+                isTextEmpty = true;
+            }
+            if (isExisting && !isTextEmpty)
             {
                 // will show a deletion message
                 DialogResult delDiag = MessageBox.Show("Are you sure you want to delete this item?", "Delete Item", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -79,9 +83,6 @@ namespace E_Pc
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Item has been decreased successfully!");
-                        ItemIdBox.Clear();
-                        MemoBox.Clear();
-                        isExisting = false;
                     }
                     else if(Quantity == Convert.ToInt32(QuantityBox.Text))
                     {
@@ -99,18 +100,23 @@ namespace E_Pc
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Item has been deleted successfully!");
-                        ItemIdBox.Clear();
-                        MemoBox.Clear();
-                        isExisting = false;
                     }
 
                 }
+            }
+            else if (isTextEmpty)
+            {
+                MessageBox.Show("Quantity box is empty!", "Empty box.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 // will show a message if the item is not verified as existing
                 MessageBox.Show("Please verify the item first!","Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            ItemIdBox.Clear();
+            MemoBox.Clear();
+            isExisting = false;
+            isTextEmpty = false;
             ShowDeletedData();
             conn.Close();
         }
@@ -160,6 +166,7 @@ namespace E_Pc
             {
                 isExisting = true;
                 CheckPic.Visible = true;
+                QuantityBox.Clear();
                 MemoBox.Text = $"Deleted on {localDateTime} - ";
                 MessageBox.Show("Item found!");
             }
