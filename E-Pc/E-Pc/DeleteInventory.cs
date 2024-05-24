@@ -47,8 +47,12 @@ namespace E_Pc
                 isTextEmpty = true;
 
             }
+            else
+            {
+                isTextEmpty = false;
+            }
 
-            if (isExisting && !isTextEmpty)
+            if (isExisting && !isTextEmpty && Regex.IsMatch(QuantityBox.Text,  InputValidation.numberPattern))
             {
                 // will show a deletion message
                 DialogResult delDiag = MessageBox.Show("Are you sure you want to delete this item?", "Delete Item", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -86,6 +90,11 @@ namespace E_Pc
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Item has been decreased successfully!");
+
+                        ItemIdBox.Clear();
+                        MemoBox.Clear();
+                        isExisting = false;
+                        isTextEmpty = false;
                     }
                     else if(Quantity == Convert.ToInt32(QuantityBox.Text))
                     {
@@ -97,12 +106,16 @@ namespace E_Pc
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
-
                         // will delete the specific record in Products table
                         cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = '" + ItemIdBox.Text + "'", conn);
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Item has been deleted successfully!");
+
+                        ItemIdBox.Clear();
+                        MemoBox.Clear();
+                        isExisting = false;
+                        isTextEmpty = false;
                     }
 
                 }
@@ -111,15 +124,15 @@ namespace E_Pc
             {
                 MessageBox.Show("Quantity box is empty!", "Empty box.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (!Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern))
+            {
+                MessageBox.Show("Invalid input! Please enter a valid quantity.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 // will show a message if the item is not verified as existing
                 MessageBox.Show("Please verify the item first!","Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            ItemIdBox.Clear();
-            MemoBox.Clear();
-            isExisting = false;
-            isTextEmpty = false;
             ShowDeletedData();
             conn.Close();
         }

@@ -17,7 +17,7 @@ namespace E_Pc
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
-        static bool isExisting = false;
+        static bool isExisting = false, isTextBox = false;
         public UpdateInventory()
         {
             InitializeComponent();
