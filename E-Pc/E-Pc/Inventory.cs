@@ -13,14 +13,8 @@ namespace E_Pc
 {
     public partial class Inventory : Form
     {
-        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
-        static DataTable inventoryTable = new DataTable();
-        static AddInventory addInventoryPage = new AddInventory();
-        static DeleteInventory delInventoryPage = new DeleteInventory();
-        static UpdateInventory updateInventoryPage = new UpdateInventory();
         static string searchType;
-
         public Inventory()
         {
             InitializeComponent();
@@ -43,27 +37,27 @@ namespace E_Pc
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            addInventoryPage.Show();
+            PageObjects.addInventoryPage.Show();
             this.Hide();
         }
         public void ShowTable()
         {
-            cmd = new SqlCommand("SELECT * FROM Products", conn);
+            cmd = new SqlCommand("SELECT * FROM Products", DataConnection.conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            inventoryTable.Clear();
-            adapter.Fill(inventoryTable);
-            InventoryGrid.DataSource = inventoryTable;
+            PageObjects.inventoryTable.Clear();
+            adapter.Fill(PageObjects.inventoryTable);
+            InventoryGrid.DataSource = PageObjects.inventoryTable;
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            delInventoryPage.Show();
+            PageObjects.deleteInventoryPage.Show();
             this.Hide();
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            updateInventoryPage.Show();
+            PageObjects.updateInventoryPage.Show();
             this.Hide();
         }
 
@@ -79,11 +73,17 @@ namespace E_Pc
                 $"OR ItemBrand LIKE '%{SearchBox.Text}%'" +
                 $"OR ItemType LIKE '%{SearchBox.Text}%'" +
                 $"OR ItemPrice LIKE '{SearchBox.Text}%'" +
-                $"OR ItemQuantity LIKE '{SearchBox.Text}%'", conn);
+                $"OR ItemQuantity LIKE '{SearchBox.Text}%'", DataConnection.conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            inventoryTable.Clear();
-            adapter.Fill(inventoryTable);
-            InventoryGrid.DataSource = inventoryTable;
+            PageObjects.inventoryTable.Clear();
+            adapter.Fill(PageObjects.inventoryTable);
+            InventoryGrid.DataSource = PageObjects.inventoryTable;
+        }
+
+        private void EmployeeManagementButton_Click(object sender, EventArgs e)
+        {
+            PageObjects.employeePage.Show();
+            this.Hide();
         }
     }
 }

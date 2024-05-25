@@ -14,7 +14,7 @@ namespace E_Pc
     public partial class AdminHome : Form
     {
         static Login login = new Login();
-        static Inventory inventoryPage = new Inventory();
+        static Employee employeePage = new Employee();
         static DialogResult diag = new DialogResult();
         static CustomerOrderCode verify;
         bool sidebarExpand;
@@ -135,7 +135,7 @@ namespace E_Pc
 
         private void inventoryButton_Click_1(object sender, EventArgs e)
         {
-            inventoryPage.Show();
+            PageObjects.inventoryPage.Show();
             this.Hide();
         }
 
@@ -152,6 +152,12 @@ namespace E_Pc
         private void DateTimer_Tick(object sender, EventArgs e)
         {
             DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt");
+        }
+
+        private void EmployeeManagementButton_Click(object sender, EventArgs e)
+        {
+            employeePage.Show();
+            this.Hide();
         }
     }
 }

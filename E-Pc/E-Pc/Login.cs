@@ -13,8 +13,6 @@ namespace E_Pc
 {
     public partial class Login : Form
     {
-
-        static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\E-PCdb.mdf;Integrated Security=True");
         static SqlCommand cmd;
         static AdminHome home;
         public static bool isLogin = false;
@@ -48,8 +46,8 @@ namespace E_Pc
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            cmd = new SqlCommand("SELECT Username, Password FROM Credentials", conn);
+            DataConnection.conn.Open();
+            cmd = new SqlCommand("SELECT Username, Password FROM Credentials", DataConnection.conn);
             SqlDataReader reader = cmd.ExecuteReader();
            
             while(reader.Read())
@@ -62,7 +60,7 @@ namespace E_Pc
                     
                 }
             }
-            conn.Close();
+            DataConnection.conn.Close();
             if(isLogin)
             {
                 MessageBox.Show("Login successfully!");

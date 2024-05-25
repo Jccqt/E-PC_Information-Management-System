@@ -12,12 +12,19 @@ namespace E_Pc
 {
     public partial class AddEmployee : Form
     {
+        
+
         public AddEmployee()
         {
             InitializeComponent();
         }
 
         private void QuantityBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
         {
 
         }

@@ -105,11 +105,11 @@
     <Compile Include="DeleteInventory.Designer.cs">
       <DependentUpon>DeleteInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeManagementPage.cs">
+    <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeManagementPage.Designer.cs">
-      <DependentUpon>EmployeeManagementPage.cs</DependentUpon>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
@@ -149,11 +149,11 @@
     <Compile Include="SummarizationPage.Designer.cs">
       <DependentUpon>SummarizationPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateEmployeePage.cs">
+    <Compile Include="UpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateEmployeePage.Designer.cs">
-      <DependentUpon>UpdateEmployeePage.cs</DependentUpon>
+    <Compile Include="UpdateEmployee.Designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateInventory.cs">
       <SubType>Form</SubType>
@@ -166,11 +166,6 @@
     </Compile>
     <Compile Include="VerificationCodePage.Designer.cs">
       <DependentUpon>VerificationCodePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="_E_PCdbDataSet_Employees.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
@@ -190,8 +185,8 @@
     <EmbeddedResource Include="DeleteInventory.resx">
       <DependentUpon>DeleteInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeManagementPage.resx">
-      <DependentUpon>EmployeeManagementPage.cs</DependentUpon>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
@@ -221,8 +216,8 @@
     <EmbeddedResource Include="SummarizationPage.resx">
       <DependentUpon>SummarizationPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateEmployeePage.resx">
-      <DependentUpon>UpdateEmployeePage.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateInventory.resx">
       <DependentUpon>UpdateInventory.cs</DependentUpon>
@@ -240,17 +235,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_E_PCdbDataSet_Employees.xsc">
-      <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
-    </None>
-    <None Include="_E_PCdbDataSet_Employees.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_E_PCdbDataSet_Employees.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_E_PCdbDataSet_Employees.xss">
-      <DependentUpon>_E_PCdbDataSet_Employees.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

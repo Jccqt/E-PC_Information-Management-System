@@ -14,7 +14,6 @@ namespace E_Pc
 {
     public partial class UpdateInventory : Form
     {
-        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
@@ -27,8 +26,8 @@ namespace E_Pc
         private void VerifyBtn_Click(object sender, EventArgs e)
         {
             var localDateTime = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
-            conn.Open();
-            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemId = @id", conn);
+            DataConnection.conn.Open();
+            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemId = @id", DataConnection.conn);
             cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
             cmd.ExecuteNonQuery();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -57,7 +56,7 @@ namespace E_Pc
                 CheckPic.Visible = false;
                 MessageBox.Show("Item has not been found!");
             }
-            conn.Close();
+            DataConnection.conn.Close();
         }
 
         private void UpdateInventory_Load(object sender, EventArgs e)
@@ -72,7 +71,7 @@ namespace E_Pc
             var localDate = DateTime.Now;
             var time = DateTime.Now.ToString("HH:mm tt");
 
-            conn.Open();
+            DataConnection.conn.Open();
 
             if(ItemIdBox.Text.Equals("") || NameBox.Text.Equals("") || BrandBox.Text.Equals("") || PriceBox.Text.Equals("")
                 || QuantityBox.Text.Equals("") || TypeBox.Text.Equals(""))
@@ -90,7 +89,7 @@ namespace E_Pc
                 if(updateDiag == DialogResult.Yes)
                 {
                     cmd = new SqlCommand("UPDATE Products SET ItemName = @name, ItemBrand = @brand," +
-                        "ItemPrice = @price, ItemQuantity = @quantity, ItemType = @type, ItemMemo = @memo, Date = @date WHERE ItemId = @id", conn);
+                        "ItemPrice = @price, ItemQuantity = @quantity, ItemType = @type, ItemMemo = @memo, Date = @date WHERE ItemId = @id", DataConnection.conn);
                     cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                     cmd.Parameters.AddWithValue("@name", NameBox.Text);
                     cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
@@ -124,7 +123,7 @@ namespace E_Pc
                 // will show a message if the item is not verified as existing
                 MessageBox.Show("Please verify the item first!", "Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            conn.Close();
+            DataConnection.conn.Close();
         }
 
         private void ReturnBtn_Click(object sender, EventArgs e)
@@ -143,7 +142,7 @@ namespace E_Pc
         }
         void ShowData()
         {
-            cmd = new SqlCommand("SELECT * FROM Products", conn);
+            cmd = new SqlCommand("SELECT * FROM Products", DataConnection.conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             inventoryTable.Clear();
             adapter.Fill(inventoryTable);

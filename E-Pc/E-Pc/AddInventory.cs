@@ -15,10 +15,7 @@ namespace E_Pc
 {
     public partial class AddInventory : Form
     {
-        static Inventory inventoryPage = new Inventory();
-        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
-        static DataTable inventoryTable = new DataTable();
         static string idToCheck;
         static bool isExisting = false, isTextEmpty = false;
         
@@ -29,7 +26,7 @@ namespace E_Pc
 
         private void ReturnBtn_Click(object sender, EventArgs e)
         {
-            inventoryPage.Show();
+            PageObjects.inventoryPage.Show();
             this.Hide();
         }
 
@@ -38,8 +35,8 @@ namespace E_Pc
             var date = DateTime.Now;
             int idCount = 2000;
 
-            conn.Open();
-            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemType = @type", conn);
+            DataConnection.conn.Open();
+            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemType = @type", DataConnection.conn);
             cmd.Parameters.AddWithValue("@type", TypeBox.Text);
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -50,7 +47,7 @@ namespace E_Pc
 
             reader.Close();
 
-            cmd = new SqlCommand("SELECT ItemName FROM Products WHERE ItemName = @name", conn);
+            cmd = new SqlCommand("SELECT ItemName FROM Products WHERE ItemName = @name", DataConnection.conn);
             cmd.Parameters.AddWithValue("@name", NameBox.Text);
             reader = cmd.ExecuteReader();
   
@@ -77,7 +74,7 @@ namespace E_Pc
             if (!isExisting && !isTextEmpty && Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern) && Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
             {
 
-                cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
+                cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", DataConnection.conn);
                 cmd.Parameters.AddWithValue("@id", $"{TypeBox.Text.ToUpper()}{idCount + 1}");
                 cmd.Parameters.AddWithValue("@name", NameBox.Text);
                 cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
@@ -109,7 +106,7 @@ namespace E_Pc
                 MessageBox.Show("You cannot add the item because it is already existing.", "Item existing already!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             ShowTable();
-            conn.Close();
+            DataConnection.conn.Close();
         }
 
         void ClearTextBox()
@@ -146,11 +143,11 @@ namespace E_Pc
 
         public void ShowTable()
         {
-            cmd = new SqlCommand("SELECT * FROM Products", conn);
+            cmd = new SqlCommand("SELECT * FROM Products", DataConnection.conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            inventoryTable.Clear();
-            adapter.Fill(inventoryTable);
-            InventoryGrid.DataSource = inventoryTable;
+            PageObjects.inventoryTable.Clear();
+            adapter.Fill(PageObjects.inventoryTable);
+            InventoryGrid.DataSource = PageObjects.inventoryTable;
         }
 
     

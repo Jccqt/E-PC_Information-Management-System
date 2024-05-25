@@ -14,10 +14,7 @@ namespace E_Pc
 {
     public partial class DeleteInventory : Form
     {
-        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
-        static DataTable deletedTable = new DataTable();
-        static Inventory inventoryPage = new Inventory();
         static bool isExisting = false, isTextEmpty = false;
         public DeleteInventory()
         {
@@ -36,9 +33,9 @@ namespace E_Pc
             string deletionId = "";
             int Quantity = 0;
 
-            conn.Open();
+            DataConnection.conn.Open();
 
-            cmd = new SqlCommand("SELECT ItemQuantity FROM Products WHERE ItemId = @id", conn);
+            cmd = new SqlCommand("SELECT ItemQuantity FROM Products WHERE ItemId = @id", DataConnection.conn);
             cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
             Quantity = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -68,16 +65,16 @@ namespace E_Pc
 
                         // will insert selected records from Products table to Deleted_Products table
                         cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemType) " +
-                            "SELECT ItemId, ItemName, ItemBrand, ItemType FROM Products Where ItemId = @id", conn);
+                            "SELECT ItemId, ItemName, ItemBrand, ItemType FROM Products Where ItemId = @id", DataConnection.conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
                         // will select the latest deletion ID from Deleted_Products table
-                        cmd = new SqlCommand("SELECT * FROM Deleted_Products ORDER BY DeletionId DESC", conn);
+                        cmd = new SqlCommand("SELECT * FROM Deleted_Products ORDER BY DeletionId DESC", DataConnection.conn);
                         deletionId = cmd.ExecuteScalar().ToString();
 
                         // will update the selected record in Deleted_Products table
-                        cmd = new SqlCommand("UPDATE Deleted_Products SET DeletedQuantity = @quantity, ItemMemo = @memo, Date = @date WHERE DeletionId = @id", conn);
+                        cmd = new SqlCommand("UPDATE Deleted_Products SET DeletedQuantity = @quantity, ItemMemo = @memo, Date = @date WHERE DeletionId = @id", DataConnection.conn);
                         cmd.Parameters.AddWithValue("@id", deletionId);
                         cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
                         cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
@@ -85,7 +82,7 @@ namespace E_Pc
                         cmd.ExecuteNonQuery();
 
                         // will update the quantity of of the selected record in Products table
-                        cmd = new SqlCommand("UPDATE Products SET ItemQuantity = @quantity WHERE ItemId = @id", conn);
+                        cmd = new SqlCommand("UPDATE Products SET ItemQuantity = @quantity WHERE ItemId = @id", DataConnection.conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.Parameters.AddWithValue("@quantity", Quantity -  Convert.ToInt32(QuantityBox.Text));
                         cmd.ExecuteNonQuery();
@@ -103,16 +100,16 @@ namespace E_Pc
 
                         // will insert selected records from Products table to Deleted_Products table
                         cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemType) " +
-                            "SELECT ItemId, ItemName, ItemBrand, ItemType FROM Products Where ItemId = @id", conn);
+                            "SELECT ItemId, ItemName, ItemBrand, ItemType FROM Products Where ItemId = @id", DataConnection.conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
                         // will select the latest deletion ID from Deleted_Products table
-                        cmd = new SqlCommand("SELECT * FROM Deleted_Products ORDER BY DeletionId DESC", conn);
+                        cmd = new SqlCommand("SELECT * FROM Deleted_Products ORDER BY DeletionId DESC", DataConnection.conn);
                         deletionId = cmd.ExecuteScalar().ToString();
 
                         // will update the selected record in Deleted_Products table
-                        cmd = new SqlCommand("UPDATE Deleted_Products SET DeletedQuantity = @quantity, ItemMemo = @memo, Date = @date WHERE DeletionId = @delId", conn);
+                        cmd = new SqlCommand("UPDATE Deleted_Products SET DeletedQuantity = @quantity, ItemMemo = @memo, Date = @date WHERE DeletionId = @delId", DataConnection.conn);
                         cmd.Parameters.AddWithValue("@delId", deletionId);
                         cmd.Parameters.AddWithValue("@quantity", Quantity);
                         cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
@@ -120,7 +117,7 @@ namespace E_Pc
                         cmd.ExecuteNonQuery();
 
                         // will delete the specific record in Products table
-                        cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = @id", conn);
+                        cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = @id", DataConnection.conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
@@ -150,21 +147,21 @@ namespace E_Pc
                 MessageBox.Show("Please verify the item first!","Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ShowDeletedData();
-            conn.Close();
+            DataConnection.conn.Close();
         }
 
         void ShowDeletedData()
         {
-            cmd = new SqlCommand("SELECT * FROM Deleted_Products", conn);
+            cmd = new SqlCommand("SELECT * FROM Deleted_Products", DataConnection.conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            deletedTable.Clear();
-            adapter.Fill(deletedTable);
-            DeletedProductsGrid.DataSource = deletedTable;
+            PageObjects.deletedInventoryTable.Clear();
+            adapter.Fill(PageObjects.deletedInventoryTable);
+            DeletedProductsGrid.DataSource = PageObjects.deletedInventoryTable;
         }
 
         private void ReturnBtn_Click(object sender, EventArgs e)
         {
-            inventoryPage.Show();
+            PageObjects.inventoryPage.Show();
             this.Hide();
         }
 
@@ -180,8 +177,8 @@ namespace E_Pc
         private void VerifyBtn_Click(object sender, EventArgs e)
         {
             var localDateTime = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
-            conn.Open();
-            cmd = new SqlCommand("SELECT ItemId FROM Products WHERE ItemId = @id", conn);
+            DataConnection.conn.Open();
+            cmd = new SqlCommand("SELECT ItemId FROM Products WHERE ItemId = @id", DataConnection.conn);
             cmd.Parameters.AddWithValue("@id", ItemIdBox.Text.ToUpper());
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -200,7 +197,7 @@ namespace E_Pc
                 MessageBox.Show("Item has not been found!");
             }
             reader.Close();
-            conn.Close();
+            DataConnection.conn.Close();
         }
 
         private void DeletionIdBox_TextChanged(object sender, EventArgs e)
