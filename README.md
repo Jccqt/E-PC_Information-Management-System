@@ -43,3 +43,6 @@ May 22, 2024
 
 May 23, 2024
 - Bug fixed on add inventory page where the item can be added to the inventory with missing details (Update)
+
+May 25, 2024
+- Bug fixed on delete inventory page where the deleted item details will be blank on the table if the quantity selected is same as the current item quantity (Update)
