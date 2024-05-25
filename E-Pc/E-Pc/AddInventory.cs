@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -68,41 +69,46 @@ namespace E_Pc
             {
                 isTextEmpty = true;
             }
-
-            if (!isExisting && !isTextEmpty)
+            else
             {
-                try
-                {
-                    cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
-                    cmd.Parameters.AddWithValue("@id", $"{TypeBox.Text.ToUpper()}{idCount + 1}");
-                    cmd.Parameters.AddWithValue("@name", NameBox.Text);
-                    cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
-                    cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
-                    cmd.Parameters.AddWithValue("@price", PriceBox.Text);
-                    cmd.Parameters.AddWithValue("@type", TypeBox.Text.ToUpper());
-                    cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
-                    cmd.Parameters.AddWithValue("@date", date);
-                    cmd.ExecuteNonQuery();
-                    ShowTable();
-                    ClearTextBox();
-                    MessageBox.Show("Item has been added successfully!");
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Invalid input on Price or Quantity.", "Invalid Input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                isTextEmpty = false;
+            }
+
+            if (!isExisting && !isTextEmpty && Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern) && Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
+            {
+
+                cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", conn);
+                cmd.Parameters.AddWithValue("@id", $"{TypeBox.Text.ToUpper()}{idCount + 1}");
+                cmd.Parameters.AddWithValue("@name", NameBox.Text);
+                cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
+                cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
+                cmd.Parameters.AddWithValue("@price", PriceBox.Text);
+                cmd.Parameters.AddWithValue("@type", TypeBox.Text.ToUpper());
+                cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.ExecuteNonQuery();
+                ClearTextBox();
+                isTextEmpty = false;
+                isExisting = false;
+
+                MessageBox.Show("The item has been successfully added!", "New item added.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if(isTextEmpty)
             {
-               
-                MessageBox.Show("Please make sure that input box/es is not empty.", "Empty input box/es.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // will show an error message is there's an empty box
+                MessageBox.Show("Please make sure that input boxes is not empty.", "Empty input.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern) || !Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
+            {   
+                // will show an error message if the input for Quantity or Price has a character included
+                MessageBox.Show("Invalid input on Quantity or Price! Please enter a valid input.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                // will show an warning message if the item is already existing on the database
                 MessageBox.Show("You cannot add the item because it is already existing.", "Item existing already!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            isTextEmpty = false;
-            isExisting = false;
+            ShowTable();
             conn.Close();
         }
 
@@ -113,6 +119,7 @@ namespace E_Pc
             BrandBox.Clear();
             QuantityBox.Clear();
             PriceBox.Clear();
+            TypeBox.Clear();
             MemoBox.Clear();
         }
 

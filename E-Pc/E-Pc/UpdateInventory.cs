@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,7 +18,7 @@ namespace E_Pc
         static SqlCommand cmd;
         static DataTable inventoryTable = new DataTable();
         static Inventory inventoryPage = new Inventory();
-        static bool isExisting = false, isTextBox = false;
+        static bool isExisting = false, isTextEmpty = false;
         public UpdateInventory()
         {
             InitializeComponent();
@@ -73,7 +74,17 @@ namespace E_Pc
 
             conn.Open();
 
-            if (isExisting)
+            if(ItemIdBox.Text.Equals("") || NameBox.Text.Equals("") || BrandBox.Text.Equals("") || PriceBox.Text.Equals("")
+                || QuantityBox.Text.Equals("") || TypeBox.Text.Equals(""))
+            {
+                isTextEmpty = true;
+            }
+            else
+            {
+                isTextEmpty = false;
+            }
+
+            if (isExisting && !isTextEmpty && Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern) && Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern))
             {
                 DialogResult updateDiag = MessageBox.Show("Do you want to save changes?", "Save details", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if(updateDiag == DialogResult.Yes)
@@ -96,8 +107,17 @@ namespace E_Pc
                     ItemIdBox.Clear();
                     ClearTextBox(); 
                     isExisting = false;
+                    isTextEmpty = false;
                 }
 
+            }
+            else if (isTextEmpty == true)
+            {
+                MessageBox.Show("Please complete the empty details!", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern) || Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern))
+            {
+                MessageBox.Show("Invalid input on Price or Quantity.", "Invalid Input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

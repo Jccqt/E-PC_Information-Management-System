@@ -25,11 +25,11 @@ namespace E_Pc
 
     public class DataConnection
     {
-        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True"; 
+        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True"; 
     }
 
     public class InputValidation
     {
-        public static string numberPattern = @"^[0-9][0-9,\.]+$";
+        public static string numberPattern = @"^[0-9,\.]+$";
     }
 }

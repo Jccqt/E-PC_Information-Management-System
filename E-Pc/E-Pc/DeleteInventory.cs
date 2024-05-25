@@ -66,17 +66,18 @@ namespace E_Pc
                     {
                         // will decrease the quantity of the item
 
-                        // will insert select records from Products table to Deleted_Products table
-                        cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId)"
-                        + "SELECT ItemId FROM Products WHERE ItemId = @id", conn);
+                        // will insert selected records from Products table to Deleted_Products table
+                        cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemType) " +
+                            "SELECT ItemId, ItemName, ItemBrand, ItemType FROM Products Where ItemId = @id", conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
+                        // will select the latest deletion ID from Deleted_Products table
                         cmd = new SqlCommand("SELECT * FROM Deleted_Products ORDER BY DeletionId DESC", conn);
                         deletionId = cmd.ExecuteScalar().ToString();
 
                         // will update the selected record in Deleted_Products table
-                        cmd = new SqlCommand("UPDATE Deleted_Products SET ItemQuantity = @quantity, ItemMemo = @memo, Date = @date WHERE DeletionId = @id", conn);
+                        cmd = new SqlCommand("UPDATE Deleted_Products SET DeletedQuantity = @quantity, ItemMemo = @memo, Date = @date WHERE DeletionId = @id", conn);
                         cmd.Parameters.AddWithValue("@id", deletionId);
                         cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
                         cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
@@ -100,14 +101,27 @@ namespace E_Pc
                     {
                         // will remove the item if the quantity input is same to the available quantity of the item
 
-                        // will insert select records from Products table to Deleted_Products table
-                        cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType)"
-                        + "SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType FROM Products WHERE ItemId = @id", conn);
+                        // will insert selected records from Products table to Deleted_Products table
+                        cmd = new SqlCommand("INSERT INTO Deleted_Products (ItemId, ItemName, ItemBrand, ItemType) " +
+                            "SELECT ItemId, ItemName, ItemBrand, ItemType FROM Products Where ItemId = @id", conn);
                         cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
+                        // will select the latest deletion ID from Deleted_Products table
+                        cmd = new SqlCommand("SELECT * FROM Deleted_Products ORDER BY DeletionId DESC", conn);
+                        deletionId = cmd.ExecuteScalar().ToString();
+
+                        // will update the selected record in Deleted_Products table
+                        cmd = new SqlCommand("UPDATE Deleted_Products SET DeletedQuantity = @quantity, ItemMemo = @memo, Date = @date WHERE DeletionId = @delId", conn);
+                        cmd.Parameters.AddWithValue("@delId", deletionId);
+                        cmd.Parameters.AddWithValue("@quantity", Quantity);
+                        cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
+                        cmd.Parameters.AddWithValue("date", localDate);
+                        cmd.ExecuteNonQuery();
+
                         // will delete the specific record in Products table
-                        cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = '" + ItemIdBox.Text + "'", conn);
+                        cmd = new SqlCommand("DELETE FROM Products WHERE ItemId = @id", conn);
+                        cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Item has been deleted successfully!");
@@ -122,15 +136,17 @@ namespace E_Pc
             }
             else if (isTextEmpty)
             {
+                // will show an error message if the Quantity box is empty
                 MessageBox.Show("Quantity box is empty!", "Empty box.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (!Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern))
             {
+                // will show an error message if the Quantity input has a character included
                 MessageBox.Show("Invalid input! Please enter a valid quantity.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                // will show a message if the item is not verified as existing
+                // will show an error message if the item is not verified as existing
                 MessageBox.Show("Please verify the item first!","Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ShowDeletedData();
@@ -139,16 +155,7 @@ namespace E_Pc
 
         void ShowDeletedData()
         {
-            cmd = new SqlCommand("SELECT Deleted_Products.DeletionId," +
-                "Deleted_Products.ItemQuantity," +
-                "Products.ItemId," +
-                "Products.ItemName," +
-                "Products.ItemPrice," +
-                "Products.ItemType, " +
-                "Deleted_Products.ItemMemo," +
-                "Deleted_Products.Date " +
-                "FROM Products RIGHT JOIN Deleted_Products " +
-                "ON Products.ItemId = Deleted_Products.ItemId", conn);
+            cmd = new SqlCommand("SELECT * FROM Deleted_Products", conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             deletedTable.Clear();
             adapter.Fill(deletedTable);

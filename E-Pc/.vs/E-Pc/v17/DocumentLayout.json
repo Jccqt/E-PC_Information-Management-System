@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\",
+  "WorkspaceRootPath": "E:\\E-PC_Information-Management-System\\E-Pc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\sti-student\\documents\\e-pc_information-management-system\\e-pc\\e-pc\\addinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\addinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\addinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\e-pc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +30,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddInventory.cs",
-              "DocumentMoniker": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs",
-              "RelativeDocumentMoniker": "E-Pc\\AddInventory.cs",
-              "ToolTip": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs",
-              "RelativeToolTip": "E-Pc\\AddInventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJMAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Inventory.cs",
+              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "RelativeToolTip": "E-Pc\\Inventory.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T00:13:07.601Z",
+              "WhenOpened": "2024-05-25T00:35:42.866Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateInventory.cs",
-              "DocumentMoniker": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs",
-              "RelativeDocumentMoniker": "E-Pc\\UpdateInventory.cs",
-              "ToolTip": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs",
-              "RelativeToolTip": "E-Pc\\UpdateInventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAxAAAA",
+              "Title": "AddInventory.cs",
+              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\AddInventory.cs",
+              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddInventory.cs",
+              "RelativeToolTip": "E-Pc\\AddInventory.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAIwG4AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T00:09:48.413Z",
+              "WhenOpened": "2024-05-25T00:35:14.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Program.cs",
-              "RelativeDocumentMoniker": "E-Pc\\Program.cs",
-              "ToolTip": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Program.cs",
-              "RelativeToolTip": "E-Pc\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAgAAAA",
+              "DocumentIndex": 0,
+              "Title": "DeleteInventory.cs",
+              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\DeleteInventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\DeleteInventory.cs",
+              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\DeleteInventory.cs",
+              "RelativeToolTip": "E-Pc\\DeleteInventory.cs",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAuwJQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T22:07:19.667Z",
+              "WhenOpened": "2024-05-25T00:32:41.982Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateInventory.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs",
-              "RelativeDocumentMoniker": "E-Pc\\UpdateInventory.cs",
-              "ToolTip": "C:\\Users\\STI-STUDENT\\Documents\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs [Design]",
-              "RelativeToolTip": "E-Pc\\UpdateInventory.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T22:05:28.147Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },
