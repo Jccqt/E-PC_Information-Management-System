@@ -47,3 +47,6 @@ May 23, 2024
 May 25, 2024
 - Bug fixed on delete inventory page where the deleted item details will be blank on the table if the quantity selected is same as the current item quantity (Update)
 - Optimized the RAM consumption while in Inventory and Employee pages (Update)
+
+May 26, 2024
+- Added functionalities to Employee Management page and Add Employee page (New)
