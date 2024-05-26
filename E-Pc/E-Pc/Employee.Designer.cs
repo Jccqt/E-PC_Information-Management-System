@@ -96,7 +96,7 @@
             this.RemoveBtn.Size = new System.Drawing.Size(135, 59);
             this.RemoveBtn.TabIndex = 31;
             this.RemoveBtn.Text = "Remove";
-            this.RemoveBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            this.RemoveBtn.Click += new System.EventHandler(this.RemoveBtn_Click);
             // 
             // ExitBtn
             // 

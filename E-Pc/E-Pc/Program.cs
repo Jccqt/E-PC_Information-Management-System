@@ -33,6 +33,8 @@ namespace E_Pc
     public class InputValidation
     {
         public static string numberPattern = @"^[0-9,\.]+$";
+        public static string numericPattern = @"^[0-9]+$";
+        public static string datePattern = @"^[0-9]{4}-[0-9]{2}-[0-9]{2}$";
     }
 
     public class PageObjects

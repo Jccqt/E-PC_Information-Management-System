@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PositionBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.ContactBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.AddressBox = new System.Windows.Forms.TextBox();
@@ -70,8 +72,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.EmployeeGrid = new System.Windows.Forms.DataGridView();
-            this.PositionBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
@@ -114,15 +114,35 @@
             this.panel2.Controls.Add(this.FirstNameBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(244, 87);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(701, 210);
             this.panel2.TabIndex = 29;
             // 
+            // PositionBox
+            // 
+            this.PositionBox.Location = new System.Drawing.Point(236, 74);
+            this.PositionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PositionBox.Multiline = true;
+            this.PositionBox.Name = "PositionBox";
+            this.PositionBox.Size = new System.Drawing.Size(171, 28);
+            this.PositionBox.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(234, 58);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Position*";
+            // 
             // ContactBox
             // 
             this.ContactBox.Location = new System.Drawing.Point(237, 24);
-            this.ContactBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ContactBox.Margin = new System.Windows.Forms.Padding(2);
             this.ContactBox.Multiline = true;
             this.ContactBox.Name = "ContactBox";
             this.ContactBox.Size = new System.Drawing.Size(171, 28);
@@ -135,14 +155,14 @@
             this.label6.Location = new System.Drawing.Point(235, 8);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Contact number";
+            this.label6.Text = "Contact number*";
             // 
             // AddressBox
             // 
             this.AddressBox.Location = new System.Drawing.Point(237, 122);
-            this.AddressBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddressBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddressBox.Multiline = true;
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(171, 78);
@@ -155,9 +175,9 @@
             this.label4.Location = new System.Drawing.Point(235, 107);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.Size = new System.Drawing.Size(151, 13);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Address";
+            this.label4.Text = "Address* (250 max characters)";
             // 
             // ClearBtn
             // 
@@ -173,7 +193,7 @@
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
             this.ClearBtn.Location = new System.Drawing.Point(566, 100);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(108, 60);
             this.ClearBtn.TabIndex = 24;
@@ -193,16 +213,17 @@
             this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(566, 34);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(108, 53);
             this.AddBtn.TabIndex = 23;
             this.AddBtn.Text = "Add";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // AgeBox
             // 
             this.AgeBox.Location = new System.Drawing.Point(16, 123);
-            this.AgeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AgeBox.Margin = new System.Windows.Forms.Padding(2);
             this.AgeBox.Multiline = true;
             this.AgeBox.Name = "AgeBox";
             this.AgeBox.Size = new System.Drawing.Size(171, 28);
@@ -215,19 +236,18 @@
             this.label5.Location = new System.Drawing.Point(14, 107);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Age";
+            this.label5.Text = "Age*";
             // 
             // BirthdateBox
             // 
             this.BirthdateBox.Location = new System.Drawing.Point(16, 172);
-            this.BirthdateBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BirthdateBox.Margin = new System.Windows.Forms.Padding(2);
             this.BirthdateBox.Multiline = true;
             this.BirthdateBox.Name = "BirthdateBox";
             this.BirthdateBox.Size = new System.Drawing.Size(171, 28);
             this.BirthdateBox.TabIndex = 5;
-            this.BirthdateBox.TextChanged += new System.EventHandler(this.QuantityBox_TextChanged);
             // 
             // QuantityLabel
             // 
@@ -236,14 +256,14 @@
             this.QuantityLabel.Location = new System.Drawing.Point(14, 157);
             this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QuantityLabel.Name = "QuantityLabel";
-            this.QuantityLabel.Size = new System.Drawing.Size(49, 13);
+            this.QuantityLabel.Size = new System.Drawing.Size(130, 13);
             this.QuantityLabel.TabIndex = 4;
-            this.QuantityLabel.Text = "Birthdate";
+            this.QuantityLabel.Text = "Birthdate* (YYYY-MM-DD)";
             // 
             // LastNameBox
             // 
             this.LastNameBox.Location = new System.Drawing.Point(16, 73);
-            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameBox.Multiline = true;
             this.LastNameBox.Name = "LastNameBox";
             this.LastNameBox.Size = new System.Drawing.Size(171, 28);
@@ -256,14 +276,14 @@
             this.label3.Location = new System.Drawing.Point(14, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Last Name";
+            this.label3.Text = "Last Name*";
             // 
             // FirstNameBox
             // 
             this.FirstNameBox.Location = new System.Drawing.Point(16, 24);
-            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameBox.Multiline = true;
             this.FirstNameBox.Name = "FirstNameBox";
             this.FirstNameBox.Size = new System.Drawing.Size(171, 28);
@@ -276,16 +296,16 @@
             this.label2.Location = new System.Drawing.Point(14, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "First Name";
+            this.label2.Text = "First Name*";
             // 
             // ReturnBtn
             // 
             this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
             this.ReturnBtn.Location = new System.Drawing.Point(897, 44);
-            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -509,7 +529,7 @@
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
             this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -520,19 +540,20 @@
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 21);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.Add_Employee_removebg_preview;
             this.pictureBox3.Location = new System.Drawing.Point(250, 53);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(326, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -547,7 +568,7 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
             this.guna2Panel1.TabIndex = 24;
@@ -557,32 +578,12 @@
             this.EmployeeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.EmployeeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EmployeeGrid.Location = new System.Drawing.Point(244, 319);
-            this.EmployeeGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmployeeGrid.Margin = new System.Windows.Forms.Padding(2);
             this.EmployeeGrid.Name = "EmployeeGrid";
             this.EmployeeGrid.RowHeadersWidth = 51;
             this.EmployeeGrid.RowTemplate.Height = 24;
             this.EmployeeGrid.Size = new System.Drawing.Size(701, 259);
             this.EmployeeGrid.TabIndex = 31;
-            // 
-            // PositionBox
-            // 
-            this.PositionBox.Location = new System.Drawing.Point(236, 74);
-            this.PositionBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PositionBox.Multiline = true;
-            this.PositionBox.Name = "PositionBox";
-            this.PositionBox.Size = new System.Drawing.Size(171, 28);
-            this.PositionBox.TabIndex = 30;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(234, 58);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Position";
             // 
             // AddEmployee
             // 
@@ -599,10 +600,11 @@
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddEmployee";
+            this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();

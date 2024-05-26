@@ -14,9 +14,7 @@ namespace E_Pc
     public partial class Employee : Form
     {
 
-        static SqlConnection conn = new SqlConnection(DataConnection.sqlCon);
         static SqlCommand cmd;
-        static DataTable employeeTable = new DataTable();
         public Employee()
         {
             InitializeComponent();
@@ -30,16 +28,16 @@ namespace E_Pc
 
         private void EmployeeManagementPage_Load(object sender, EventArgs e)
         {
-            ShowData();
+            ShowTable();
         }
 
-        void ShowData()
+        void ShowTable()
         {
-            cmd = new SqlCommand("SELECT * FROM Employees", conn);
+            cmd = new SqlCommand("SELECT * FROM Employees", DataConnection.conn);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            employeeTable.Clear();
-            adapter.Fill(employeeTable);
-            EmployeeGrid.DataSource = employeeTable;
+            PageObjects.employeeTable.Clear();
+            adapter.Fill(PageObjects.employeeTable);
+            EmployeeGrid.DataSource = PageObjects.employeeTable;
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
