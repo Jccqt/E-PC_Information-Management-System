@@ -66,5 +66,27 @@ namespace E_Pc
             PageObjects.removeEmployeePage.Show();
             this.Hide();
         }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchBox.Text.Equals("Search here.."))
+            {
+                SearchBox.Clear();
+            }
+
+            cmd = new SqlCommand("SELECT * FROM Employees WHERE " +
+                $"EmpId LIKE '%{SearchBox.Text}' " +
+                $"OR FirstName LIKE '%{SearchBox.Text}%' " +
+                $"OR LastName LIKE '%{SearchBox.Text}%' " +
+                $"OR Age LIKE '{SearchBox.Text}%' " +
+                $"OR Birthdate LIKE '%{SearchBox.Text}%' " +
+                $"OR ContactNum LIKE '{SearchBox.Text}%' " +
+                $"OR Position LIKE '%{SearchBox.Text}%' " +
+                $"OR Address LIKE '%{SearchBox.Text}%'", DataConnection.conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            PageObjects.employeeTable.Clear();
+            adapter.Fill(PageObjects.employeeTable);
+            EmployeeGrid.DataSource = PageObjects.employeeTable;
+        }
     }
 }

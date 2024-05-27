@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "E:\\E-PC_Information-Management-System\\E-Pc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\removeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\removeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\updateemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\updateemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\addemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\addemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\e-pc_information-management-system\\e-pc\\e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,14 +30,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RemoveEmployee.cs [Design]",
-              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\RemoveEmployee.cs",
-              "RelativeDocumentMoniker": "E-Pc\\RemoveEmployee.cs",
-              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\RemoveEmployee.cs [Design]",
-              "RelativeToolTip": "E-Pc\\RemoveEmployee.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "AddEmployee.cs [Design]",
+              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddEmployee.cs",
+              "RelativeDocumentMoniker": "E-Pc\\AddEmployee.cs",
+              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddEmployee.cs [Design]",
+              "RelativeToolTip": "E-Pc\\AddEmployee.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T13:55:31.811Z",
+              "WhenOpened": "2024-05-26T22:34:50.025Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateEmployee.cs [Design]",
+              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateEmployee.cs",
+              "RelativeDocumentMoniker": "E-Pc\\UpdateEmployee.cs",
+              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateEmployee.cs [Design]",
+              "RelativeToolTip": "E-Pc\\UpdateEmployee.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T22:33:57.405Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateInventory.cs [Design]",
+              "DocumentMoniker": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\UpdateInventory.cs",
+              "ToolTip": "E:\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs [Design]",
+              "RelativeToolTip": "E-Pc\\UpdateInventory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T22:33:53.01Z",
               "EditorCaption": " [Design]"
             }
           ]

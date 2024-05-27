@@ -57,6 +57,7 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.EmployeeGrid = new System.Windows.Forms.DataGridView();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -414,6 +415,17 @@
             this.EmployeeGrid.Size = new System.Drawing.Size(707, 327);
             this.EmployeeGrid.TabIndex = 32;
             // 
+            // SearchBox
+            // 
+            this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBox.Location = new System.Drawing.Point(499, 97);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(237, 22);
+            this.SearchBox.TabIndex = 33;
+            this.SearchBox.Text = "Search here...";
+            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +433,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.EmployeeGrid);
             this.Controls.Add(this.RemoveBtn);
             this.Controls.Add(this.pictureBox3);
@@ -455,6 +468,7 @@
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -488,5 +502,6 @@
         private System.Windows.Forms.Timer sidebarTimer;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.DataGridView EmployeeGrid;
+        private System.Windows.Forms.TextBox SearchBox;
     }
 }

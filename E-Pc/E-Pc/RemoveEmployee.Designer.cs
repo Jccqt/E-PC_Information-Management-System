@@ -57,12 +57,13 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CheckPic = new System.Windows.Forms.PictureBox();
+            this.EmpIdBox = new System.Windows.Forms.TextBox();
+            this.VerifyBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.MemoBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.ItemIdBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sidebar.SuspendLayout();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +168,7 @@
             this.inventoryButton.TabIndex = 14;
             this.inventoryButton.Text = " Inventory";
             this.inventoryButton.UseVisualStyleBackColor = true;
+            this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
             // 
             // panel4
             // 
@@ -308,7 +311,7 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(946, 33);
             this.guna2Panel1.TabIndex = 32;
@@ -317,7 +320,7 @@
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
             this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,7 +331,7 @@
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 21);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -339,20 +342,21 @@
             // 
             this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
-            this.ReturnBtn.Location = new System.Drawing.Point(897, 31);
-            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnBtn.Location = new System.Drawing.Point(862, 41);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ReturnBtn.TabIndex = 37;
             this.ReturnBtn.TabStop = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.Remove_Employee_removebg_preview;
             this.pictureBox3.Location = new System.Drawing.Point(250, 37);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(347, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -364,7 +368,7 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label3);
             this.panel8.Location = new System.Drawing.Point(244, 292);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(694, 29);
             this.panel8.TabIndex = 38;
@@ -383,28 +387,54 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.CheckPic);
+            this.panel2.Controls.Add(this.EmpIdBox);
+            this.panel2.Controls.Add(this.VerifyBtn);
             this.panel2.Controls.Add(this.ClearBtn);
             this.panel2.Controls.Add(this.DeleteBtn);
             this.panel2.Controls.Add(this.MemoBox);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(326, 83);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(546, 183);
             this.panel2.TabIndex = 36;
             // 
-            // button1
+            // CheckPic
             // 
-            this.button1.Location = new System.Drawing.Point(260, 33);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 28);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Verify";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CheckPic.BackColor = System.Drawing.Color.White;
+            this.CheckPic.Image = global::E_Pc.Properties.Resources.Verification;
+            this.CheckPic.Location = new System.Drawing.Point(130, 40);
+            this.CheckPic.Margin = new System.Windows.Forms.Padding(2);
+            this.CheckPic.Name = "CheckPic";
+            this.CheckPic.Size = new System.Drawing.Size(22, 15);
+            this.CheckPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CheckPic.TabIndex = 33;
+            this.CheckPic.TabStop = false;
+            this.CheckPic.Visible = false;
+            // 
+            // EmpIdBox
+            // 
+            this.EmpIdBox.BackColor = System.Drawing.Color.White;
+            this.EmpIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmpIdBox.Location = new System.Drawing.Point(16, 34);
+            this.EmpIdBox.Margin = new System.Windows.Forms.Padding(2);
+            this.EmpIdBox.Multiline = true;
+            this.EmpIdBox.Name = "EmpIdBox";
+            this.EmpIdBox.Size = new System.Drawing.Size(136, 28);
+            this.EmpIdBox.TabIndex = 26;
+            // 
+            // VerifyBtn
+            // 
+            this.VerifyBtn.Location = new System.Drawing.Point(156, 34);
+            this.VerifyBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.VerifyBtn.Name = "VerifyBtn";
+            this.VerifyBtn.Size = new System.Drawing.Size(74, 28);
+            this.VerifyBtn.TabIndex = 25;
+            this.VerifyBtn.Text = "Verify";
+            this.VerifyBtn.UseVisualStyleBackColor = true;
+            this.VerifyBtn.Click += new System.EventHandler(this.VerifyBtn_Click);
             // 
             // ClearBtn
             // 
@@ -420,7 +450,7 @@
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
             this.ClearBtn.Location = new System.Drawing.Point(382, 110);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(135, 59);
             this.ClearBtn.TabIndex = 24;
@@ -440,16 +470,17 @@
             this.DeleteBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
             this.DeleteBtn.Location = new System.Drawing.Point(382, 37);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(135, 59);
             this.DeleteBtn.TabIndex = 23;
             this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // MemoBox
             // 
             this.MemoBox.Location = new System.Drawing.Point(16, 93);
-            this.MemoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
             this.MemoBox.Multiline = true;
             this.MemoBox.Name = "MemoBox";
             this.MemoBox.Size = new System.Drawing.Size(318, 77);
@@ -466,15 +497,6 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Memo";
             // 
-            // ItemIdBox
-            // 
-            this.ItemIdBox.Location = new System.Drawing.Point(16, 34);
-            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ItemIdBox.Multiline = true;
-            this.ItemIdBox.Name = "ItemIdBox";
-            this.ItemIdBox.Size = new System.Drawing.Size(240, 28);
-            this.ItemIdBox.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -490,7 +512,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(244, 320);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -513,8 +535,9 @@
             this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RemoveEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemoveEmployee";
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -539,6 +562,7 @@
             this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -578,9 +602,10 @@
         private Guna.UI2.WinForms.Guna2Button DeleteBtn;
         private System.Windows.Forms.TextBox MemoBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox ItemIdBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button VerifyBtn;
+        private System.Windows.Forms.TextBox EmpIdBox;
+        private System.Windows.Forms.PictureBox CheckPic;
     }
 }

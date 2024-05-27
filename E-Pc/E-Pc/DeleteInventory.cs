@@ -188,13 +188,13 @@ namespace E_Pc
                 CheckPic.Visible = true;
                 QuantityBox.Clear();
                 MemoBox.Text = $"Deleted on {localDateTime} - ";
-                MessageBox.Show("Item found!");
+                MessageBox.Show("Item has been found!", "Item exist", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 isExisting = false;
                 CheckPic.Visible = false;
-                MessageBox.Show("Item has not been found!");
+                MessageBox.Show("Item is not existing", "Item do not exist", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             reader.Close();
             DataConnection.conn.Close();
