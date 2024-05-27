@@ -64,7 +64,7 @@
             this.MemoBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RemovedEmployeeGrid = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -86,7 +86,7 @@
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemovedEmployeeGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -336,6 +336,7 @@
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // ReturnBtn
             // 
@@ -411,6 +412,7 @@
             this.EmpIdBox.Name = "EmpIdBox";
             this.EmpIdBox.Size = new System.Drawing.Size(136, 28);
             this.EmpIdBox.TabIndex = 26;
+            this.EmpIdBox.TextChanged += new System.EventHandler(this.EmpIdBox_TextChanged);
             // 
             // VerifyBtn
             // 
@@ -495,16 +497,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Employee ID";
             // 
-            // dataGridView1
+            // RemovedEmployeeGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 320);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 254);
-            this.dataGridView1.TabIndex = 39;
+            this.RemovedEmployeeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RemovedEmployeeGrid.Location = new System.Drawing.Point(243, 320);
+            this.RemovedEmployeeGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.RemovedEmployeeGrid.Name = "RemovedEmployeeGrid";
+            this.RemovedEmployeeGrid.RowHeadersWidth = 51;
+            this.RemovedEmployeeGrid.RowTemplate.Height = 24;
+            this.RemovedEmployeeGrid.Size = new System.Drawing.Size(702, 254);
+            this.RemovedEmployeeGrid.TabIndex = 39;
             // 
             // label4
             // 
@@ -526,7 +528,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.RemovedEmployeeGrid);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.ReturnBtn);
@@ -538,6 +540,7 @@
             this.Name = "RemoveEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemoveEmployee";
+            this.Load += new System.EventHandler(this.RemoveEmployee_Load);
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -561,7 +564,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RemovedEmployeeGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,7 +604,7 @@
         private System.Windows.Forms.TextBox MemoBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView RemovedEmployeeGrid;
         private System.Windows.Forms.Button VerifyBtn;
         private System.Windows.Forms.TextBox EmpIdBox;
         private System.Windows.Forms.PictureBox CheckPic;

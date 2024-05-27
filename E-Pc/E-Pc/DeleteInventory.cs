@@ -144,7 +144,7 @@ namespace E_Pc
             else
             {
                 // will show an error message if the item is not verified as existing
-                MessageBox.Show("Please verify the item first!","Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please verify the item first!","Item not verified", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ShowDeletedData();
             DataConnection.conn.Close();
