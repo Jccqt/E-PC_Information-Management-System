@@ -1,4 +1,4 @@
-# E-PC_Information-Management-System
+# E-PC: Computer parts Information Management System
 
 May 14, 2024
 - Login page (New)
@@ -50,3 +50,6 @@ May 25, 2024
 
 May 26, 2024
 - Added functionalities to Employee Management page and Add Employee page (New)
+
+May 27, 2024
+- Added smart search on Employee page (New)
