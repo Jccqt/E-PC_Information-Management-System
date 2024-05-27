@@ -55,3 +55,6 @@ May 27, 2024
 - Added smart search on Employee page (New)
 - Removed Search type on Inventory page (Update)
 - Changed the search bar to smart search in Inventory page (Update)
+
+May 28, 2024
+- Added functionalities to Remove Employee page (New)
