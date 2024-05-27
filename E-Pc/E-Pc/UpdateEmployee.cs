@@ -16,5 +16,10 @@ namespace E_Pc
         {
             InitializeComponent();
         }
+
+        private void UpdateEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

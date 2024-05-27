@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.RemoveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,8 +57,8 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.EmployeeGrid = new System.Windows.Forms.DataGridView();
             this.SearchBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,7 +90,7 @@
             this.RemoveBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.RemoveBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.RemoveBtn.ForeColor = System.Drawing.Color.White;
-            this.RemoveBtn.Location = new System.Drawing.Point(729, 476);
+            this.RemoveBtn.Location = new System.Drawing.Point(729, 501);
             this.RemoveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveBtn.Name = "RemoveBtn";
             this.RemoveBtn.Size = new System.Drawing.Size(135, 59);
@@ -111,18 +110,6 @@
             this.ExitBtn.TabStop = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::E_Pc.Properties.Resources.EmployeeManagementHeader_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(402, 64);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(448, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            // 
             // UpdateBtn
             // 
             this.UpdateBtn.Animated = true;
@@ -136,7 +123,7 @@
             this.UpdateBtn.FillColor = System.Drawing.Color.White;
             this.UpdateBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.UpdateBtn.ForeColor = System.Drawing.Color.Black;
-            this.UpdateBtn.Location = new System.Drawing.Point(554, 476);
+            this.UpdateBtn.Location = new System.Drawing.Point(554, 501);
             this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(135, 59);
@@ -157,7 +144,7 @@
             this.AddBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(377, 476);
+            this.AddBtn.Location = new System.Drawing.Point(377, 501);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(135, 59);
@@ -406,7 +393,7 @@
             // 
             this.EmployeeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.EmployeeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeeGrid.Location = new System.Drawing.Point(244, 128);
+            this.EmployeeGrid.Location = new System.Drawing.Point(243, 156);
             this.EmployeeGrid.Margin = new System.Windows.Forms.Padding(2);
             this.EmployeeGrid.Name = "EmployeeGrid";
             this.EmployeeGrid.ReadOnly = true;
@@ -419,12 +406,24 @@
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.Location = new System.Drawing.Point(499, 97);
+            this.SearchBox.Location = new System.Drawing.Point(497, 125);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(237, 22);
             this.SearchBox.TabIndex = 33;
             this.SearchBox.Text = "Search here...";
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(397, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(423, 45);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Employee Management";
             // 
             // Employee
             // 
@@ -433,10 +432,10 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.EmployeeGrid);
             this.Controls.Add(this.RemoveBtn);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.sidebar);
@@ -449,7 +448,6 @@
             this.Text = "EmployeeManagementPage";
             this.Load += new System.EventHandler(this.EmployeeManagementPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -476,7 +474,6 @@
 
         private Guna.UI2.WinForms.Guna2Button RemoveBtn;
         private System.Windows.Forms.PictureBox ExitBtn;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button UpdateBtn;
         private Guna.UI2.WinForms.Guna2Button AddBtn;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -503,5 +500,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.DataGridView EmployeeGrid;
         private System.Windows.Forms.TextBox SearchBox;
+        private System.Windows.Forms.Label label4;
     }
 }

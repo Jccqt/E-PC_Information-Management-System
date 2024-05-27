@@ -65,9 +65,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,8 +134,8 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(326, 102);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(326, 106);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(546, 206);
             this.panel2.TabIndex = 29;
@@ -146,7 +145,7 @@
             this.CheckPic.BackColor = System.Drawing.Color.White;
             this.CheckPic.Image = global::E_Pc.Properties.Resources.Verification;
             this.CheckPic.Location = new System.Drawing.Point(130, 39);
-            this.CheckPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckPic.Margin = new System.Windows.Forms.Padding(2);
             this.CheckPic.Name = "CheckPic";
             this.CheckPic.Size = new System.Drawing.Size(22, 15);
             this.CheckPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +157,7 @@
             // 
             this.Quantity.AutoSize = true;
             this.Quantity.ForeColor = System.Drawing.Color.White;
-            this.Quantity.Location = new System.Drawing.Point(19, 72);
+            this.Quantity.Location = new System.Drawing.Point(14, 69);
             this.Quantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(46, 13);
@@ -169,8 +168,8 @@
             // 
             this.QuantityBox.BackColor = System.Drawing.SystemColors.Window;
             this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuantityBox.Location = new System.Drawing.Point(17, 87);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuantityBox.Location = new System.Drawing.Point(17, 84);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
             this.QuantityBox.Size = new System.Drawing.Size(135, 28);
@@ -178,8 +177,8 @@
             // 
             // VerifyBtn
             // 
-            this.VerifyBtn.Location = new System.Drawing.Point(154, 35);
-            this.VerifyBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VerifyBtn.Location = new System.Drawing.Point(156, 33);
+            this.VerifyBtn.Margin = new System.Windows.Forms.Padding(2);
             this.VerifyBtn.Name = "VerifyBtn";
             this.VerifyBtn.Size = new System.Drawing.Size(74, 28);
             this.VerifyBtn.TabIndex = 26;
@@ -200,8 +199,8 @@
             this.ClearBtn.FillColor = System.Drawing.Color.White;
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
-            this.ClearBtn.Location = new System.Drawing.Point(382, 110);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearBtn.Location = new System.Drawing.Point(382, 109);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(135, 59);
             this.ClearBtn.TabIndex = 24;
@@ -220,8 +219,8 @@
             this.DeleteBtn.FillColor = System.Drawing.Color.Red;
             this.DeleteBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(382, 37);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteBtn.Location = new System.Drawing.Point(382, 36);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(135, 59);
             this.DeleteBtn.TabIndex = 23;
@@ -233,7 +232,7 @@
             this.MemoBox.BackColor = System.Drawing.SystemColors.Window;
             this.MemoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MemoBox.Location = new System.Drawing.Point(16, 133);
-            this.MemoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
             this.MemoBox.Multiline = true;
             this.MemoBox.Name = "MemoBox";
             this.MemoBox.Size = new System.Drawing.Size(328, 68);
@@ -255,7 +254,7 @@
             this.ItemIdBox.BackColor = System.Drawing.Color.White;
             this.ItemIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ItemIdBox.Location = new System.Drawing.Point(16, 34);
-            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2);
             this.ItemIdBox.Multiline = true;
             this.ItemIdBox.Name = "ItemIdBox";
             this.ItemIdBox.Size = new System.Drawing.Size(136, 28);
@@ -277,13 +276,13 @@
             // 
             this.DeletedProductsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DeletedProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DeletedProductsGrid.Location = new System.Drawing.Point(250, 340);
-            this.DeletedProductsGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeletedProductsGrid.Location = new System.Drawing.Point(243, 340);
+            this.DeletedProductsGrid.Margin = new System.Windows.Forms.Padding(2);
             this.DeletedProductsGrid.Name = "DeletedProductsGrid";
             this.DeletedProductsGrid.ReadOnly = true;
             this.DeletedProductsGrid.RowHeadersWidth = 51;
             this.DeletedProductsGrid.RowTemplate.Height = 24;
-            this.DeletedProductsGrid.Size = new System.Drawing.Size(695, 245);
+            this.DeletedProductsGrid.Size = new System.Drawing.Size(702, 234);
             this.DeletedProductsGrid.TabIndex = 28;
             // 
             // sidebar
@@ -476,7 +475,7 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
             this.guna2Panel1.TabIndex = 24;
@@ -485,7 +484,7 @@
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
             this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -496,7 +495,7 @@
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 21);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -509,7 +508,7 @@
             this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
             this.ReturnBtn.Location = new System.Drawing.Point(897, 44);
-            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -517,26 +516,14 @@
             this.ReturnBtn.TabStop = false;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::E_Pc.Properties.Resources.Delete_Inventory_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(250, 53);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(326, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label3);
-            this.panel8.Location = new System.Drawing.Point(250, 312);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Location = new System.Drawing.Point(243, 312);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(696, 29);
+            this.panel8.Size = new System.Drawing.Size(703, 29);
             this.panel8.TabIndex = 31;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
@@ -551,6 +538,18 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Deleted Products";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(246, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(233, 33);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "Delete Inventory";
+            // 
             // DeleteInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,16 +557,16 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.DeletedProductsGrid);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeleteInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete";
@@ -594,10 +593,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -634,7 +633,6 @@
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Timer sidebarTimer;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label3;
@@ -642,5 +640,6 @@
         private System.Windows.Forms.Label Quantity;
         private System.Windows.Forms.TextBox QuantityBox;
         private System.Windows.Forms.PictureBox CheckPic;
+        private System.Windows.Forms.Label label8;
     }
 }
