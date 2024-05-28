@@ -50,8 +50,10 @@
             this.LogoutButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CheckPic = new System.Windows.Forms.PictureBox();
-            this.VerifyBtn = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -64,6 +66,8 @@
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.BrandBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.QuantityBox = new System.Windows.Forms.TextBox();
+            this.QuantityLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ItemIdBox = new System.Windows.Forms.TextBox();
@@ -74,12 +78,10 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.QuantityLabel = new System.Windows.Forms.Label();
-            this.QuantityBox = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.OrderLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalesLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).BeginInit();
@@ -95,11 +97,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // OrderLogo
@@ -312,23 +314,23 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(244, 344);
+            this.dataGridView1.Location = new System.Drawing.Point(244, 372);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(701, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(701, 202);
             this.dataGridView1.TabIndex = 37;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.CheckPic);
-            this.panel2.Controls.Add(this.VerifyBtn);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.textBox2);
@@ -347,38 +349,55 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(244, 82);
+            this.panel2.Location = new System.Drawing.Point(244, 87);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(701, 258);
+            this.panel2.Size = new System.Drawing.Size(701, 244);
             this.panel2.TabIndex = 35;
             // 
-            // CheckPic
+            // textBox5
             // 
-            this.CheckPic.BackColor = System.Drawing.Color.White;
-            this.CheckPic.Image = global::E_Pc.Properties.Resources.Verification;
-            this.CheckPic.Location = new System.Drawing.Point(165, 30);
-            this.CheckPic.Margin = new System.Windows.Forms.Padding(2);
-            this.CheckPic.Name = "CheckPic";
-            this.CheckPic.Size = new System.Drawing.Size(22, 15);
-            this.CheckPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CheckPic.TabIndex = 34;
-            this.CheckPic.TabStop = false;
-            this.CheckPic.Visible = false;
+            this.textBox5.Location = new System.Drawing.Point(461, 130);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(171, 28);
+            this.textBox5.TabIndex = 38;
             // 
-            // VerifyBtn
+            // label11
             // 
-            this.VerifyBtn.Location = new System.Drawing.Point(193, 23);
-            this.VerifyBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.VerifyBtn.Name = "VerifyBtn";
-            this.VerifyBtn.Size = new System.Drawing.Size(43, 28);
-            this.VerifyBtn.TabIndex = 33;
-            this.VerifyBtn.Text = "Verify";
-            this.VerifyBtn.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(459, 115);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Password";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(461, 78);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(171, 28);
+            this.textBox4.TabIndex = 36;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(459, 63);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Username";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(242, 25);
+            this.textBox3.Location = new System.Drawing.Point(242, 83);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -389,7 +408,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(240, 9);
+            this.label9.Location = new System.Drawing.Point(240, 67);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 13);
@@ -398,7 +417,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(242, 78);
+            this.textBox2.Location = new System.Drawing.Point(242, 139);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -409,7 +428,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(240, 60);
+            this.label8.Location = new System.Drawing.Point(240, 121);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
@@ -418,7 +437,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(242, 130);
+            this.textBox1.Location = new System.Drawing.Point(242, 191);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -429,7 +448,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(240, 115);
+            this.label6.Location = new System.Drawing.Point(240, 176);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
@@ -438,18 +457,18 @@
             // 
             // TypeBox
             // 
-            this.TypeBox.Location = new System.Drawing.Point(242, 181);
+            this.TypeBox.Location = new System.Drawing.Point(461, 183);
             this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
             this.TypeBox.Multiline = true;
             this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(390, 43);
+            this.TypeBox.Size = new System.Drawing.Size(219, 41);
             this.TypeBox.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(240, 166);
+            this.label4.Location = new System.Drawing.Point(459, 168);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
@@ -498,7 +517,7 @@
             // 
             // BrandBox
             // 
-            this.BrandBox.Location = new System.Drawing.Point(18, 130);
+            this.BrandBox.Location = new System.Drawing.Point(242, 29);
             this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
@@ -509,16 +528,36 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(16, 114);
+            this.label5.Location = new System.Drawing.Point(240, 13);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Last Name";
             // 
+            // QuantityBox
+            // 
+            this.QuantityBox.Location = new System.Drawing.Point(462, 24);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
+            this.QuantityBox.Multiline = true;
+            this.QuantityBox.Name = "QuantityBox";
+            this.QuantityBox.Size = new System.Drawing.Size(171, 28);
+            this.QuantityBox.TabIndex = 5;
+            // 
+            // QuantityLabel
+            // 
+            this.QuantityLabel.AutoSize = true;
+            this.QuantityLabel.ForeColor = System.Drawing.Color.White;
+            this.QuantityLabel.Location = new System.Drawing.Point(460, 9);
+            this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.QuantityLabel.Name = "QuantityLabel";
+            this.QuantityLabel.Size = new System.Drawing.Size(26, 13);
+            this.QuantityLabel.TabIndex = 4;
+            this.QuantityLabel.Text = "Age";
+            // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(18, 76);
+            this.NameBox.Location = new System.Drawing.Point(18, 83);
             this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
@@ -529,7 +568,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 61);
+            this.label3.Location = new System.Drawing.Point(16, 68);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
@@ -538,7 +577,7 @@
             // 
             // ItemIdBox
             // 
-            this.ItemIdBox.Location = new System.Drawing.Point(18, 24);
+            this.ItemIdBox.Location = new System.Drawing.Point(18, 29);
             this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2);
             this.ItemIdBox.Multiline = true;
             this.ItemIdBox.Name = "ItemIdBox";
@@ -549,7 +588,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(16, 8);
+            this.label2.Location = new System.Drawing.Point(16, 13);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
@@ -619,65 +658,50 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "Update Employee";
             // 
-            // QuantityLabel
+            // panel8
             // 
-            this.QuantityLabel.AutoSize = true;
-            this.QuantityLabel.ForeColor = System.Drawing.Color.White;
-            this.QuantityLabel.Location = new System.Drawing.Point(460, 9);
-            this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.QuantityLabel.Name = "QuantityLabel";
-            this.QuantityLabel.Size = new System.Drawing.Size(26, 13);
-            this.QuantityLabel.TabIndex = 4;
-            this.QuantityLabel.Text = "Age";
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label12);
+            this.panel8.Location = new System.Drawing.Point(244, 344);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(701, 29);
+            this.panel8.TabIndex = 44;
             // 
-            // QuantityBox
+            // label12
             // 
-            this.QuantityBox.Location = new System.Drawing.Point(462, 24);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
-            this.QuantityBox.Multiline = true;
-            this.QuantityBox.Name = "QuantityBox";
-            this.QuantityBox.Size = new System.Drawing.Size(171, 28);
-            this.QuantityBox.TabIndex = 5;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(264, 3);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(190, 22);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Updated Information";
             // 
-            // textBox4
+            // radioButton2
             // 
-            this.textBox4.Location = new System.Drawing.Point(461, 78);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 28);
-            this.textBox4.TabIndex = 36;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.Color.White;
+            this.radioButton2.Location = new System.Drawing.Point(17, 164);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(63, 17);
+            this.radioButton2.TabIndex = 40;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Inactive";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // radioButton1
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(459, 63);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Username";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(461, 130);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 28);
-            this.textBox5.TabIndex = 38;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(459, 115);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 13);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Password";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(17, 135);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(55, 17);
+            this.radioButton1.TabIndex = 39;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Active";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // UpdateEmployee
             // 
@@ -686,6 +710,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.sidebar);
@@ -715,11 +740,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,13 +795,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox CheckPic;
-        private System.Windows.Forms.Button VerifyBtn;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox QuantityBox;
         private System.Windows.Forms.Label QuantityLabel;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

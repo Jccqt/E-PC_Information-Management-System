@@ -33,6 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.inventoryLogo = new System.Windows.Forms.PictureBox();
             this.inventoryButton = new System.Windows.Forms.Button();
@@ -69,6 +72,8 @@
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).BeginInit();
             this.panel4.SuspendLayout();
@@ -93,6 +98,7 @@
             // 
             this.sidebar.BackColor = System.Drawing.Color.White;
             this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel9);
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Controls.Add(this.panel5);
@@ -112,14 +118,14 @@
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 73);
+            this.panel1.Size = new System.Drawing.Size(229, 98);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 28);
+            this.label1.Location = new System.Drawing.Point(92, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 1;
@@ -128,19 +134,51 @@
             // menuButton
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::E_Pc.Properties.Resources.user_removebg_preview;
-            this.menuButton.Location = new System.Drawing.Point(13, 14);
+            this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
+            this.menuButton.Location = new System.Drawing.Point(59, -1);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(52, 47);
+            this.menuButton.Size = new System.Drawing.Size(103, 86);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox3);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Location = new System.Drawing.Point(3, 107);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(229, 68);
+            this.panel9.TabIndex = 21;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage3;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 52);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(-7, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(242, 68);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Dashboard";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.inventoryLogo);
             this.panel3.Controls.Add(this.inventoryButton);
-            this.panel3.Location = new System.Drawing.Point(3, 82);
+            this.panel3.Location = new System.Drawing.Point(3, 181);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 68);
             this.panel3.TabIndex = 15;
@@ -173,7 +211,7 @@
             // 
             this.panel4.Controls.Add(this.SalesLogo);
             this.panel4.Controls.Add(this.salesButton);
-            this.panel4.Location = new System.Drawing.Point(3, 156);
+            this.panel4.Location = new System.Drawing.Point(3, 255);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 68);
             this.panel4.TabIndex = 16;
@@ -205,7 +243,7 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 230);
+            this.panel5.Location = new System.Drawing.Point(3, 329);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 68);
             this.panel5.TabIndex = 17;
@@ -237,7 +275,7 @@
             // 
             this.panel6.Controls.Add(this.EmployeeLogo);
             this.panel6.Controls.Add(this.EmployeeManagementButton);
-            this.panel6.Location = new System.Drawing.Point(3, 304);
+            this.panel6.Location = new System.Drawing.Point(3, 403);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(229, 68);
             this.panel6.TabIndex = 18;
@@ -270,7 +308,7 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 378);
+            this.panel7.Location = new System.Drawing.Point(3, 477);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(229, 68);
             this.panel7.TabIndex = 19;
@@ -355,7 +393,7 @@
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label3);
-            this.panel8.Location = new System.Drawing.Point(243, 292);
+            this.panel8.Location = new System.Drawing.Point(244, 344);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(702, 29);
@@ -500,12 +538,12 @@
             // RemovedEmployeeGrid
             // 
             this.RemovedEmployeeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RemovedEmployeeGrid.Location = new System.Drawing.Point(243, 320);
+            this.RemovedEmployeeGrid.Location = new System.Drawing.Point(244, 372);
             this.RemovedEmployeeGrid.Margin = new System.Windows.Forms.Padding(2);
             this.RemovedEmployeeGrid.Name = "RemovedEmployeeGrid";
             this.RemovedEmployeeGrid.RowHeadersWidth = 51;
             this.RemovedEmployeeGrid.RowTemplate.Height = 24;
-            this.RemovedEmployeeGrid.Size = new System.Drawing.Size(702, 254);
+            this.RemovedEmployeeGrid.Size = new System.Drawing.Size(701, 202);
             this.RemovedEmployeeGrid.TabIndex = 39;
             // 
             // label4
@@ -545,6 +583,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -609,5 +649,8 @@
         private System.Windows.Forms.TextBox EmpIdBox;
         private System.Windows.Forms.PictureBox CheckPic;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button3;
     }
 }

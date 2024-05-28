@@ -259,6 +259,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\701, 258.png" />
+    <None Include="Resources\UserPNG.png" />
+    <None Include="Resources\Homepage5.png" />
+    <None Include="Resources\Homepage4.png" />
+    <None Include="Resources\Homepage3.png" />
+    <None Include="Resources\Homepage2.png" />
+    <None Include="Resources\Homepage1.png" />
+    <None Include="Resources\Homepage.png" />
     <None Include="Resources\Exchange-removebg-preview.png" />
     <None Include="Resources\Enter_Payment-removebg-preview.png" />
     <None Include="Resources\CustomerCode-removebg-preview.png" />

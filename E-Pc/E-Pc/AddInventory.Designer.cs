@@ -49,17 +49,22 @@
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.InventoryGrid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TypeBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ClearBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.MemoBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.PriceBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BrandBox = new System.Windows.Forms.TextBox();
@@ -70,6 +75,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -83,12 +90,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel1.SuspendLayout();
             this.sidebar.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebarTimer
@@ -122,7 +133,7 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 378);
+            this.panel7.Location = new System.Drawing.Point(3, 477);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(229, 68);
             this.panel7.TabIndex = 19;
@@ -154,7 +165,7 @@
             // 
             this.panel6.Controls.Add(this.EmployeeLogo);
             this.panel6.Controls.Add(this.EmployeeManagementButton);
-            this.panel6.Location = new System.Drawing.Point(3, 304);
+            this.panel6.Location = new System.Drawing.Point(3, 403);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(229, 68);
             this.panel6.TabIndex = 18;
@@ -186,7 +197,7 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 230);
+            this.panel5.Location = new System.Drawing.Point(3, 329);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 68);
             this.panel5.TabIndex = 17;
@@ -230,7 +241,7 @@
             // 
             this.panel4.Controls.Add(this.SalesLogo);
             this.panel4.Controls.Add(this.salesButton);
-            this.panel4.Location = new System.Drawing.Point(3, 156);
+            this.panel4.Location = new System.Drawing.Point(3, 255);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 68);
             this.panel4.TabIndex = 16;
@@ -251,7 +262,7 @@
             // 
             this.panel3.Controls.Add(this.inventoryLogo);
             this.panel3.Controls.Add(this.inventoryButton);
-            this.panel3.Location = new System.Drawing.Point(3, 82);
+            this.panel3.Location = new System.Drawing.Point(3, 181);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 68);
             this.panel3.TabIndex = 15;
@@ -260,7 +271,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 28);
+            this.label1.Location = new System.Drawing.Point(92, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 1;
@@ -269,10 +280,10 @@
             // menuButton
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::E_Pc.Properties.Resources.user_removebg_preview;
-            this.menuButton.Location = new System.Drawing.Point(13, 14);
+            this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
+            this.menuButton.Location = new System.Drawing.Point(60, 2);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(52, 47);
+            this.menuButton.Size = new System.Drawing.Size(100, 83);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
@@ -283,13 +294,14 @@
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 73);
+            this.panel1.Size = new System.Drawing.Size(229, 98);
             this.panel1.TabIndex = 0;
             // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.White;
             this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel9);
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Controls.Add(this.panel5);
@@ -302,6 +314,38 @@
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(232, 552);
             this.sidebar.TabIndex = 18;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox3);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Location = new System.Drawing.Point(3, 107);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(229, 68);
+            this.panel9.TabIndex = 22;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage2;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 51);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(-7, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(242, 68);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Dashboard";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -343,24 +387,26 @@
             // 
             this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.InventoryGrid.Location = new System.Drawing.Point(244, 294);
+            this.InventoryGrid.Location = new System.Drawing.Point(244, 372);
             this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2);
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
             this.InventoryGrid.RowHeadersWidth = 51;
             this.InventoryGrid.RowTemplate.Height = 24;
-            this.InventoryGrid.Size = new System.Drawing.Size(701, 280);
+            this.InventoryGrid.Size = new System.Drawing.Size(701, 202);
             this.InventoryGrid.TabIndex = 21;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.TypeBox);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.ClearBtn);
             this.panel2.Controls.Add(this.AddBtn);
-            this.panel2.Controls.Add(this.MemoBox);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.PriceBox);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.BrandBox);
@@ -369,16 +415,54 @@
             this.panel2.Controls.Add(this.QuantityLabel);
             this.panel2.Controls.Add(this.NameBox);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(244, 87);
+            this.panel2.Location = new System.Drawing.Point(244, 83);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(701, 210);
+            this.panel2.Size = new System.Drawing.Size(701, 258);
             this.panel2.TabIndex = 22;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(366, 96);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(146, 26);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(364, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Category*";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(554, 181);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Select Image";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox1.Location = new System.Drawing.Point(534, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // TypeBox
             // 
             this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TypeBox.Location = new System.Drawing.Point(16, 139);
+            this.TypeBox.Location = new System.Drawing.Point(197, 93);
             this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
             this.TypeBox.Multiline = true;
             this.TypeBox.Name = "TypeBox";
@@ -389,7 +473,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 123);
+            this.label4.Location = new System.Drawing.Point(195, 78);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
@@ -401,7 +485,7 @@
             this.ClearBtn.Animated = true;
             this.ClearBtn.AutoRoundedCorners = true;
             this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ClearBtn.BorderRadius = 28;
+            this.ClearBtn.BorderRadius = 15;
             this.ClearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -409,10 +493,10 @@
             this.ClearBtn.FillColor = System.Drawing.Color.White;
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
-            this.ClearBtn.Location = new System.Drawing.Point(539, 123);
+            this.ClearBtn.Location = new System.Drawing.Point(102, 191);
             this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(135, 59);
+            this.ClearBtn.Size = new System.Drawing.Size(87, 33);
             this.ClearBtn.TabIndex = 9;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
@@ -422,7 +506,7 @@
             this.AddBtn.Animated = true;
             this.AddBtn.AutoRoundedCorners = true;
             this.AddBtn.BackColor = System.Drawing.Color.Transparent;
-            this.AddBtn.BorderRadius = 28;
+            this.AddBtn.BorderRadius = 15;
             this.AddBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.AddBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AddBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -431,38 +515,18 @@
             this.AddBtn.FocusedColor = System.Drawing.Color.Green;
             this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(539, 50);
+            this.AddBtn.Location = new System.Drawing.Point(11, 191);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(135, 59);
+            this.AddBtn.Size = new System.Drawing.Size(87, 33);
             this.AddBtn.TabIndex = 8;
             this.AddBtn.Text = "Add";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // MemoBox
-            // 
-            this.MemoBox.Location = new System.Drawing.Point(199, 102);
-            this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
-            this.MemoBox.Multiline = true;
-            this.MemoBox.Name = "MemoBox";
-            this.MemoBox.Size = new System.Drawing.Size(305, 65);
-            this.MemoBox.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(196, 86);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Memo (250 max characters)";
-            // 
             // PriceBox
             // 
             this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PriceBox.Location = new System.Drawing.Point(357, 40);
+            this.PriceBox.Location = new System.Drawing.Point(366, 42);
             this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceBox.Multiline = true;
             this.PriceBox.Name = "PriceBox";
@@ -473,7 +537,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(355, 24);
+            this.label6.Location = new System.Drawing.Point(364, 26);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
@@ -483,7 +547,7 @@
             // BrandBox
             // 
             this.BrandBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BrandBox.Location = new System.Drawing.Point(16, 92);
+            this.BrandBox.Location = new System.Drawing.Point(24, 93);
             this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
@@ -494,7 +558,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(14, 76);
+            this.label5.Location = new System.Drawing.Point(22, 77);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
@@ -504,7 +568,7 @@
             // QuantityBox
             // 
             this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuantityBox.Location = new System.Drawing.Point(199, 40);
+            this.QuantityBox.Location = new System.Drawing.Point(198, 43);
             this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
@@ -515,7 +579,7 @@
             // 
             this.QuantityLabel.AutoSize = true;
             this.QuantityLabel.ForeColor = System.Drawing.Color.White;
-            this.QuantityLabel.Location = new System.Drawing.Point(196, 24);
+            this.QuantityLabel.Location = new System.Drawing.Point(195, 28);
             this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QuantityLabel.Name = "QuantityLabel";
             this.QuantityLabel.Size = new System.Drawing.Size(50, 13);
@@ -525,7 +589,7 @@
             // NameBox
             // 
             this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NameBox.Location = new System.Drawing.Point(16, 42);
+            this.NameBox.Location = new System.Drawing.Point(24, 43);
             this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
@@ -536,7 +600,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 27);
+            this.label3.Location = new System.Drawing.Point(22, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
@@ -568,6 +632,27 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Add Inventory";
             // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label11);
+            this.panel8.Location = new System.Drawing.Point(244, 344);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(701, 29);
+            this.panel8.TabIndex = 43;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(264, 3);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(155, 22);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Added Inventory";
+            // 
             // AddInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -575,6 +660,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.panel2);
@@ -602,13 +688,18 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.sidebar.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,8 +737,6 @@
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox MemoBox;
-        private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button ClearBtn;
         private Guna.UI2.WinForms.Guna2Button AddBtn;
         private System.Windows.Forms.PictureBox ReturnBtn;
@@ -656,5 +745,14 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox PriceBox;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button3;
     }
 }

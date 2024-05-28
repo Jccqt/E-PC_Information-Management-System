@@ -73,6 +73,16 @@ namespace E_Pc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _701__258 {
+            get {
+                object obj = ResourceManager.GetObject("701, 258", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_Employee_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Add_Employee-removebg-preview", resourceCulture);
@@ -206,6 +216,66 @@ namespace E_Pc.Properties {
         internal static System.Drawing.Bitmap Exchange_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Exchange-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage {
+            get {
+                object obj = ResourceManager.GetObject("Homepage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage1 {
+            get {
+                object obj = ResourceManager.GetObject("Homepage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage2 {
+            get {
+                object obj = ResourceManager.GetObject("Homepage2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage3 {
+            get {
+                object obj = ResourceManager.GetObject("Homepage3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage4 {
+            get {
+                object obj = ResourceManager.GetObject("Homepage4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Homepage5 {
+            get {
+                object obj = ResourceManager.GetObject("Homepage5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -476,6 +546,16 @@ namespace E_Pc.Properties {
         internal static System.Drawing.Bitmap user_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("user-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserPNG {
+            get {
+                object obj = ResourceManager.GetObject("UserPNG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
