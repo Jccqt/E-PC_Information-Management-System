@@ -72,6 +72,10 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.EmployeeGrid = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
@@ -96,6 +100,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.PositionBox);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.ContactBox);
@@ -115,12 +123,12 @@
             this.panel2.Location = new System.Drawing.Point(244, 87);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(701, 210);
+            this.panel2.Size = new System.Drawing.Size(701, 244);
             this.panel2.TabIndex = 29;
             // 
             // PositionBox
             // 
-            this.PositionBox.Location = new System.Drawing.Point(236, 74);
+            this.PositionBox.Location = new System.Drawing.Point(242, 130);
             this.PositionBox.Margin = new System.Windows.Forms.Padding(2);
             this.PositionBox.Multiline = true;
             this.PositionBox.Name = "PositionBox";
@@ -131,7 +139,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(234, 58);
+            this.label7.Location = new System.Drawing.Point(240, 115);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
@@ -140,7 +148,7 @@
             // 
             // ContactBox
             // 
-            this.ContactBox.Location = new System.Drawing.Point(237, 24);
+            this.ContactBox.Location = new System.Drawing.Point(244, 19);
             this.ContactBox.Margin = new System.Windows.Forms.Padding(2);
             this.ContactBox.Multiline = true;
             this.ContactBox.Name = "ContactBox";
@@ -151,7 +159,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(235, 8);
+            this.label6.Location = new System.Drawing.Point(242, 3);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
@@ -160,18 +168,18 @@
             // 
             // AddressBox
             // 
-            this.AddressBox.Location = new System.Drawing.Point(237, 122);
+            this.AddressBox.Location = new System.Drawing.Point(243, 181);
             this.AddressBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddressBox.Multiline = true;
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(171, 78);
+            this.AddressBox.Size = new System.Drawing.Size(390, 41);
             this.AddressBox.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(235, 107);
+            this.label4.Location = new System.Drawing.Point(240, 166);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 13);
@@ -183,7 +191,7 @@
             this.ClearBtn.Animated = true;
             this.ClearBtn.AutoRoundedCorners = true;
             this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ClearBtn.BorderRadius = 28;
+            this.ClearBtn.BorderRadius = 15;
             this.ClearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -191,10 +199,10 @@
             this.ClearBtn.FillColor = System.Drawing.Color.White;
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
-            this.ClearBtn.Location = new System.Drawing.Point(539, 123);
+            this.ClearBtn.Location = new System.Drawing.Point(102, 191);
             this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(135, 59);
+            this.ClearBtn.Size = new System.Drawing.Size(87, 33);
             this.ClearBtn.TabIndex = 24;
             this.ClearBtn.Text = "Clear";
             // 
@@ -203,7 +211,7 @@
             this.AddBtn.Animated = true;
             this.AddBtn.AutoRoundedCorners = true;
             this.AddBtn.BackColor = System.Drawing.Color.Transparent;
-            this.AddBtn.BorderRadius = 28;
+            this.AddBtn.BorderRadius = 15;
             this.AddBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.AddBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AddBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -211,17 +219,17 @@
             this.AddBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(539, 50);
+            this.AddBtn.Location = new System.Drawing.Point(11, 191);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(135, 59);
+            this.AddBtn.Size = new System.Drawing.Size(87, 33);
             this.AddBtn.TabIndex = 23;
             this.AddBtn.Text = "Add";
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // AgeBox
             // 
-            this.AgeBox.Location = new System.Drawing.Point(16, 123);
+            this.AgeBox.Location = new System.Drawing.Point(462, 19);
             this.AgeBox.Margin = new System.Windows.Forms.Padding(2);
             this.AgeBox.Multiline = true;
             this.AgeBox.Name = "AgeBox";
@@ -232,7 +240,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(14, 107);
+            this.label5.Location = new System.Drawing.Point(460, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 13);
@@ -241,7 +249,7 @@
             // 
             // BirthdateBox
             // 
-            this.BirthdateBox.Location = new System.Drawing.Point(16, 172);
+            this.BirthdateBox.Location = new System.Drawing.Point(242, 78);
             this.BirthdateBox.Margin = new System.Windows.Forms.Padding(2);
             this.BirthdateBox.Multiline = true;
             this.BirthdateBox.Name = "BirthdateBox";
@@ -252,7 +260,7 @@
             // 
             this.QuantityLabel.AutoSize = true;
             this.QuantityLabel.ForeColor = System.Drawing.Color.White;
-            this.QuantityLabel.Location = new System.Drawing.Point(14, 157);
+            this.QuantityLabel.Location = new System.Drawing.Point(240, 60);
             this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.QuantityLabel.Name = "QuantityLabel";
             this.QuantityLabel.Size = new System.Drawing.Size(130, 13);
@@ -261,7 +269,7 @@
             // 
             // LastNameBox
             // 
-            this.LastNameBox.Location = new System.Drawing.Point(16, 73);
+            this.LastNameBox.Location = new System.Drawing.Point(18, 76);
             this.LastNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameBox.Multiline = true;
             this.LastNameBox.Name = "LastNameBox";
@@ -272,7 +280,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 58);
+            this.label3.Location = new System.Drawing.Point(16, 61);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
@@ -281,7 +289,7 @@
             // 
             // FirstNameBox
             // 
-            this.FirstNameBox.Location = new System.Drawing.Point(16, 24);
+            this.FirstNameBox.Location = new System.Drawing.Point(18, 24);
             this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameBox.Multiline = true;
             this.FirstNameBox.Name = "FirstNameBox";
@@ -292,7 +300,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(14, 8);
+            this.label2.Location = new System.Drawing.Point(16, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
@@ -564,12 +572,12 @@
             // 
             this.EmployeeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.EmployeeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeeGrid.Location = new System.Drawing.Point(244, 319);
+            this.EmployeeGrid.Location = new System.Drawing.Point(244, 337);
             this.EmployeeGrid.Margin = new System.Windows.Forms.Padding(2);
             this.EmployeeGrid.Name = "EmployeeGrid";
             this.EmployeeGrid.RowHeadersWidth = 51;
             this.EmployeeGrid.RowTemplate.Height = 24;
-            this.EmployeeGrid.Size = new System.Drawing.Size(701, 259);
+            this.EmployeeGrid.Size = new System.Drawing.Size(701, 241);
             this.EmployeeGrid.TabIndex = 31;
             // 
             // label8
@@ -583,6 +591,46 @@
             this.label8.Size = new System.Drawing.Size(202, 33);
             this.label8.TabIndex = 41;
             this.label8.Text = "Add Employee";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(461, 78);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 28);
+            this.textBox1.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(459, 63);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 13);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Username*";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(462, 130);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 28);
+            this.textBox2.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(459, 115);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Password*";
             // 
             // AddEmployee
             // 
@@ -674,5 +722,9 @@
         private System.Windows.Forms.TextBox PositionBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label9;
     }
 }

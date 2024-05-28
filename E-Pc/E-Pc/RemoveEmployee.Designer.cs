@@ -383,10 +383,10 @@
             this.panel2.Controls.Add(this.MemoBox);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(326, 105);
+            this.panel2.Location = new System.Drawing.Point(316, 104);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(546, 183);
+            this.panel2.Size = new System.Drawing.Size(579, 165);
             this.panel2.TabIndex = 36;
             // 
             // CheckPic
@@ -430,7 +430,7 @@
             this.ClearBtn.Animated = true;
             this.ClearBtn.AutoRoundedCorners = true;
             this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ClearBtn.BorderRadius = 28;
+            this.ClearBtn.BorderRadius = 15;
             this.ClearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -438,10 +438,10 @@
             this.ClearBtn.FillColor = System.Drawing.Color.White;
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
-            this.ClearBtn.Location = new System.Drawing.Point(382, 110);
+            this.ClearBtn.Location = new System.Drawing.Point(120, 100);
             this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(135, 59);
+            this.ClearBtn.Size = new System.Drawing.Size(87, 33);
             this.ClearBtn.TabIndex = 24;
             this.ClearBtn.Text = "Clear";
             // 
@@ -450,7 +450,7 @@
             this.DeleteBtn.Animated = true;
             this.DeleteBtn.AutoRoundedCorners = true;
             this.DeleteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteBtn.BorderRadius = 28;
+            this.DeleteBtn.BorderRadius = 15;
             this.DeleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DeleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DeleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -458,28 +458,28 @@
             this.DeleteBtn.FillColor = System.Drawing.Color.Red;
             this.DeleteBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(382, 37);
+            this.DeleteBtn.Location = new System.Drawing.Point(23, 100);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(135, 59);
+            this.DeleteBtn.Size = new System.Drawing.Size(87, 33);
             this.DeleteBtn.TabIndex = 23;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // MemoBox
             // 
-            this.MemoBox.Location = new System.Drawing.Point(16, 93);
+            this.MemoBox.Location = new System.Drawing.Point(253, 33);
             this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
             this.MemoBox.Multiline = true;
             this.MemoBox.Name = "MemoBox";
-            this.MemoBox.Size = new System.Drawing.Size(318, 77);
+            this.MemoBox.Size = new System.Drawing.Size(318, 100);
             this.MemoBox.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 77);
+            this.label7.Location = new System.Drawing.Point(251, 17);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 13);
