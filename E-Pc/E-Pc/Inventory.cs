@@ -42,11 +42,7 @@ namespace E_Pc
         }
         public void ShowTable()
         {
-            cmd = new SqlCommand("SELECT * FROM Products", DataConnection.conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            PageObjects.inventoryTable.Clear();
-            adapter.Fill(PageObjects.inventoryTable);
-            InventoryGrid.DataSource = PageObjects.inventoryTable;
+            DataConnection.ShowActiveInventoryTable();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -67,17 +63,7 @@ namespace E_Pc
             {
                 SearchBox.Clear();
             }
-            cmd = new SqlCommand($"SELECT * FROM Products WHERE " +
-                $"ItemId LIKE '%{SearchBox.Text}%' " +
-                $"OR ItemName LIKE '%{SearchBox.Text}%'" +
-                $"OR ItemBrand LIKE '%{SearchBox.Text}%'" +
-                $"OR ItemType LIKE '%{SearchBox.Text}%'" +
-                $"OR ItemPrice LIKE '{SearchBox.Text}%'" +
-                $"OR ItemQuantity LIKE '{SearchBox.Text}%'", DataConnection.conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            PageObjects.inventoryTable.Clear();
-            adapter.Fill(PageObjects.inventoryTable);
-            InventoryGrid.DataSource = PageObjects.inventoryTable;
+            DataConnection.InventorySearch();
         }
 
         private void EmployeeManagementButton_Click(object sender, EventArgs e)

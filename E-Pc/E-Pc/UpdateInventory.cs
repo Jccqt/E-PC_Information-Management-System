@@ -36,7 +36,7 @@ namespace E_Pc
             if (reader.HasRows)
             {
                 isExisting = true;
-                CheckPic.Visible = true;
+                
                 MessageBox.Show("Item found!");
                 if (reader.Read())
                 {
@@ -53,7 +53,7 @@ namespace E_Pc
             {
                 reader.Close();
                 isExisting = false;
-                CheckPic.Visible = false;
+               
                 MessageBox.Show("Item has not been found!");
             }
             DataConnection.conn.Close();
@@ -61,8 +61,9 @@ namespace E_Pc
 
         private void UpdateInventory_Load(object sender, EventArgs e)
         {
-            ShowData();
+            DataConnection.ShowAllInventoryTable();
             ItemIdBox.Focus();
+            DataConnection.GetItemIdList();
 
         }
 
@@ -99,7 +100,7 @@ namespace E_Pc
                     cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
                     cmd.Parameters.AddWithValue("@date", localDate);
                     cmd.ExecuteNonQuery();
-                    ShowData();
+                    DataConnection.ShowAllInventoryTable();
                     MessageBox.Show("Item has been updated!");
 
                     // will clear all text box in UpdateInventory page
@@ -140,25 +141,7 @@ namespace E_Pc
                 Application.Exit();
             }
         }
-        void ShowData()
-        {
-            cmd = new SqlCommand("SELECT * FROM Products", DataConnection.conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            inventoryTable.Clear();
-            adapter.Fill(inventoryTable);
-            InventoryGrid.DataSource = inventoryTable;
-        }
 
-        private void ItemIdBox_TextChanged(object sender, EventArgs e)
-        {
-            if (isExisting)
-            {
-                isExisting = false;
-                CheckPic.Visible = false;
-                ClearTextBox(); // will clear all text box in UpdateInventory page
-
-            }
-        }
 
         void ClearTextBox()
         {
@@ -166,8 +149,15 @@ namespace E_Pc
             BrandBox.Clear();
             PriceBox.Clear();
             QuantityBox.Clear();
-            TypeBox.Clear();
+            TypeBox.ResetText();
             MemoBox.Clear();
+            ActiveBox.ResetText();
+            InactiveBox.ResetText();
+        }
+
+        private void InventoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show($"{DataConnection.ItemIdList[InventoryGrid.CurrentRow.Index]}");
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)

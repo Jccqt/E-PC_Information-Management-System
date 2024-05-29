@@ -48,8 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.InactiveBox = new System.Windows.Forms.RadioButton();
+            this.ActiveBox = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NameBox = new System.Windows.Forms.TextBox();
@@ -109,97 +109,92 @@
             // PriceBox
             // 
             this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PriceBox.Location = new System.Drawing.Point(367, 41);
-            this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PriceBox.Location = new System.Drawing.Point(489, 50);
+            this.PriceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PriceBox.Multiline = true;
             this.PriceBox.Name = "PriceBox";
-            this.PriceBox.Size = new System.Drawing.Size(146, 28);
+            this.PriceBox.Size = new System.Drawing.Size(194, 34);
             this.PriceBox.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(365, 26);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(487, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Price*";
             // 
             // TypeBox
             // 
             this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TypeBox.Location = new System.Drawing.Point(198, 43);
-            this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
+            this.TypeBox.Location = new System.Drawing.Point(264, 53);
+            this.TypeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TypeBox.Multiline = true;
             this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(146, 28);
+            this.TypeBox.Size = new System.Drawing.Size(194, 34);
             this.TypeBox.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(195, 28);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(260, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Item Type*";
             // 
             // QuantityBox
             // 
             this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuantityBox.Location = new System.Drawing.Point(367, 95);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
+            this.QuantityBox.Location = new System.Drawing.Point(489, 117);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
-            this.QuantityBox.Size = new System.Drawing.Size(146, 28);
+            this.QuantityBox.Size = new System.Drawing.Size(194, 34);
             this.QuantityBox.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(365, 79);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(487, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.Size = new System.Drawing.Size(60, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Quantity*";
             // 
             // BrandBox
             // 
             this.BrandBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BrandBox.Location = new System.Drawing.Point(197, 93);
-            this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
+            this.BrandBox.Location = new System.Drawing.Point(263, 114);
+            this.BrandBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
-            this.BrandBox.Size = new System.Drawing.Size(146, 28);
+            this.BrandBox.Size = new System.Drawing.Size(194, 34);
             this.BrandBox.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(195, 78);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(260, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Item Brand*";
             // 
             // ItemIdBox
             // 
             this.ItemIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemIdBox.Location = new System.Drawing.Point(24, 43);
-            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ItemIdBox.Location = new System.Drawing.Point(32, 53);
+            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ItemIdBox.Multiline = true;
             this.ItemIdBox.Name = "ItemIdBox";
-            this.ItemIdBox.Size = new System.Drawing.Size(146, 28);
+            this.ItemIdBox.Size = new System.Drawing.Size(194, 34);
             this.ItemIdBox.TabIndex = 1;
-            this.ItemIdBox.TextChanged += new System.EventHandler(this.ItemIdBox_TextChanged);
             // 
             // guna2Panel1
             // 
@@ -209,18 +204,18 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
+            this.guna2Panel1.Size = new System.Drawing.Size(1280, 41);
             this.guna2Panel1.TabIndex = 24;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(44, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 21);
+            this.pictureBox2.Size = new System.Drawing.Size(155, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -228,10 +223,10 @@
             // ExitBtn
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
-            this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitBtn.Location = new System.Drawing.Point(1233, 9);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(20, 21);
+            this.ExitBtn.Size = new System.Drawing.Size(27, 26);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
@@ -242,7 +237,7 @@
             this.ClearBtn.Animated = true;
             this.ClearBtn.AutoRoundedCorners = true;
             this.ClearBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ClearBtn.BorderRadius = 15;
+            this.ClearBtn.BorderRadius = 19;
             this.ClearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ClearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -250,10 +245,10 @@
             this.ClearBtn.FillColor = System.Drawing.Color.White;
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
-            this.ClearBtn.Location = new System.Drawing.Point(102, 191);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ClearBtn.Location = new System.Drawing.Point(136, 235);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(87, 33);
+            this.ClearBtn.Size = new System.Drawing.Size(116, 41);
             this.ClearBtn.TabIndex = 9;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
@@ -263,7 +258,7 @@
             this.UpdateBtn.Animated = true;
             this.UpdateBtn.AutoRoundedCorners = true;
             this.UpdateBtn.BackColor = System.Drawing.Color.Transparent;
-            this.UpdateBtn.BorderRadius = 15;
+            this.UpdateBtn.BorderRadius = 19;
             this.UpdateBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.UpdateBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.UpdateBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -271,10 +266,10 @@
             this.UpdateBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.UpdateBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(11, 191);
-            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.UpdateBtn.Location = new System.Drawing.Point(15, 235);
+            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(87, 33);
+            this.UpdateBtn.Size = new System.Drawing.Size(116, 41);
             this.UpdateBtn.TabIndex = 8;
             this.UpdateBtn.Text = "Save";
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
@@ -282,21 +277,20 @@
             // MemoBox
             // 
             this.MemoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MemoBox.Location = new System.Drawing.Point(197, 145);
-            this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
+            this.MemoBox.Location = new System.Drawing.Point(263, 178);
+            this.MemoBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MemoBox.Multiline = true;
             this.MemoBox.Name = "MemoBox";
-            this.MemoBox.Size = new System.Drawing.Size(316, 48);
+            this.MemoBox.Size = new System.Drawing.Size(421, 59);
             this.MemoBox.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(194, 129);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(259, 159);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 13);
+            this.label7.Size = new System.Drawing.Size(171, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "Memo (250 max characters)";
             // 
@@ -304,10 +298,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(29, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Item ID*";
             // 
@@ -315,10 +308,10 @@
             // 
             this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
-            this.ReturnBtn.Location = new System.Drawing.Point(897, 44);
-            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ReturnBtn.Location = new System.Drawing.Point(1196, 54);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ReturnBtn.Name = "ReturnBtn";
-            this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
+            this.ReturnBtn.Size = new System.Drawing.Size(51, 50);
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ReturnBtn.TabIndex = 30;
             this.ReturnBtn.TabStop = false;
@@ -327,8 +320,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.InactiveBox);
+            this.panel2.Controls.Add(this.ActiveBox);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.NameBox);
@@ -347,41 +340,44 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(244, 83);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(325, 102);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(701, 258);
+            this.panel2.Size = new System.Drawing.Size(935, 318);
             this.panel2.TabIndex = 29;
             // 
-            // radioButton2
+            // InactiveBox
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(25, 164);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(63, 17);
-            this.radioButton2.TabIndex = 32;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inactive";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.InactiveBox.AutoSize = true;
+            this.InactiveBox.ForeColor = System.Drawing.Color.White;
+            this.InactiveBox.Location = new System.Drawing.Point(33, 202);
+            this.InactiveBox.Margin = new System.Windows.Forms.Padding(4);
+            this.InactiveBox.Name = "InactiveBox";
+            this.InactiveBox.Size = new System.Drawing.Size(74, 20);
+            this.InactiveBox.TabIndex = 32;
+            this.InactiveBox.TabStop = true;
+            this.InactiveBox.Text = "Inactive";
+            this.InactiveBox.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // ActiveBox
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(25, 135);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 17);
-            this.radioButton1.TabIndex = 31;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Active";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.ActiveBox.AutoSize = true;
+            this.ActiveBox.ForeColor = System.Drawing.Color.White;
+            this.ActiveBox.Location = new System.Drawing.Point(33, 166);
+            this.ActiveBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ActiveBox.Name = "ActiveBox";
+            this.ActiveBox.Size = new System.Drawing.Size(65, 20);
+            this.ActiveBox.TabIndex = 31;
+            this.ActiveBox.TabStop = true;
+            this.ActiveBox.Text = "Active";
+            this.ActiveBox.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(554, 181);
+            this.button1.Location = new System.Drawing.Point(739, 223);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 23);
+            this.button1.Size = new System.Drawing.Size(149, 28);
             this.button1.TabIndex = 30;
             this.button1.Text = "Select Image";
             this.button1.UseVisualStyleBackColor = true;
@@ -389,30 +385,30 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.Location = new System.Drawing.Point(534, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(712, 48);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(209, 161);
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
             // NameBox
             // 
             this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NameBox.Location = new System.Drawing.Point(24, 93);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(2);
+            this.NameBox.Location = new System.Drawing.Point(32, 114);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(146, 28);
+            this.NameBox.Size = new System.Drawing.Size(194, 34);
             this.NameBox.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(22, 77);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(29, 95);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.Size = new System.Drawing.Size(77, 16);
             this.label8.TabIndex = 25;
             this.label8.Text = "Item Name*";
             // 
@@ -420,14 +416,16 @@
             // 
             this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.InventoryGrid.Location = new System.Drawing.Point(244, 372);
-            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.InventoryGrid.Location = new System.Drawing.Point(325, 458);
+            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.InventoryGrid.MultiSelect = false;
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
             this.InventoryGrid.RowHeadersWidth = 51;
             this.InventoryGrid.RowTemplate.Height = 24;
-            this.InventoryGrid.Size = new System.Drawing.Size(701, 202);
+            this.InventoryGrid.Size = new System.Drawing.Size(935, 249);
             this.InventoryGrid.TabIndex = 28;
+            this.InventoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InventoryGrid_CellContentClick);
             // 
             // sidebarTimer
             // 
@@ -444,29 +442,32 @@
             this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebar.Location = new System.Drawing.Point(0, 33);
-            this.sidebar.MaximumSize = new System.Drawing.Size(232, 552);
-            this.sidebar.MinimumSize = new System.Drawing.Size(78, 552);
+            this.sidebar.Location = new System.Drawing.Point(0, 41);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4);
+            this.sidebar.MaximumSize = new System.Drawing.Size(309, 679);
+            this.sidebar.MinimumSize = new System.Drawing.Size(104, 679);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(232, 552);
+            this.sidebar.Size = new System.Drawing.Size(309, 679);
             this.sidebar.TabIndex = 31;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.menuButton);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 98);
+            this.panel1.Size = new System.Drawing.Size(305, 121);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 68);
+            this.label1.Location = new System.Drawing.Point(123, 84);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
@@ -474,9 +475,10 @@
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
-            this.menuButton.Location = new System.Drawing.Point(69, 8);
+            this.menuButton.Location = new System.Drawing.Point(92, 10);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(88, 72);
+            this.menuButton.Size = new System.Drawing.Size(117, 89);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
@@ -485,9 +487,10 @@
             // 
             this.panel9.Controls.Add(this.pictureBox3);
             this.panel9.Controls.Add(this.button3);
-            this.panel9.Location = new System.Drawing.Point(3, 107);
+            this.panel9.Location = new System.Drawing.Point(4, 133);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(229, 68);
+            this.panel9.Size = new System.Drawing.Size(305, 84);
             this.panel9.TabIndex = 22;
             // 
             // pictureBox3
@@ -495,9 +498,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage1;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 11);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(62, 51);
+            this.pictureBox3.Size = new System.Drawing.Size(83, 63);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
@@ -506,9 +510,10 @@
             // 
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-7, 0);
+            this.button3.Location = new System.Drawing.Point(-9, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 68);
+            this.button3.Size = new System.Drawing.Size(323, 84);
             this.button3.TabIndex = 14;
             this.button3.Text = "Dashboard";
             this.button3.UseVisualStyleBackColor = true;
@@ -517,9 +522,10 @@
             // 
             this.panel3.Controls.Add(this.inventoryLogo);
             this.panel3.Controls.Add(this.inventoryButton);
-            this.panel3.Location = new System.Drawing.Point(3, 181);
+            this.panel3.Location = new System.Drawing.Point(4, 225);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 68);
+            this.panel3.Size = new System.Drawing.Size(305, 84);
             this.panel3.TabIndex = 15;
             // 
             // inventoryLogo
@@ -527,9 +533,10 @@
             this.inventoryLogo.BackColor = System.Drawing.Color.Transparent;
             this.inventoryLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inventoryLogo.Image = global::E_Pc.Properties.Resources.InventoryManagement;
-            this.inventoryLogo.Location = new System.Drawing.Point(3, 11);
+            this.inventoryLogo.Location = new System.Drawing.Point(4, 14);
+            this.inventoryLogo.Margin = new System.Windows.Forms.Padding(4);
             this.inventoryLogo.Name = "inventoryLogo";
-            this.inventoryLogo.Size = new System.Drawing.Size(62, 42);
+            this.inventoryLogo.Size = new System.Drawing.Size(83, 52);
             this.inventoryLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inventoryLogo.TabIndex = 15;
             this.inventoryLogo.TabStop = false;
@@ -539,9 +546,10 @@
             this.inventoryButton.BackColor = System.Drawing.Color.DarkGray;
             this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inventoryButton.Location = new System.Drawing.Point(-7, 0);
+            this.inventoryButton.Location = new System.Drawing.Point(-9, 0);
+            this.inventoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.inventoryButton.Name = "inventoryButton";
-            this.inventoryButton.Size = new System.Drawing.Size(242, 68);
+            this.inventoryButton.Size = new System.Drawing.Size(323, 84);
             this.inventoryButton.TabIndex = 14;
             this.inventoryButton.Text = " Inventory";
             this.inventoryButton.UseVisualStyleBackColor = false;
@@ -550,9 +558,10 @@
             // 
             this.panel4.Controls.Add(this.SalesLogo);
             this.panel4.Controls.Add(this.salesButton);
-            this.panel4.Location = new System.Drawing.Point(3, 255);
+            this.panel4.Location = new System.Drawing.Point(4, 317);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(229, 68);
+            this.panel4.Size = new System.Drawing.Size(305, 84);
             this.panel4.TabIndex = 16;
             // 
             // SalesLogo
@@ -560,9 +569,10 @@
             this.SalesLogo.BackColor = System.Drawing.Color.Transparent;
             this.SalesLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SalesLogo.Image = global::E_Pc.Properties.Resources.sales;
-            this.SalesLogo.Location = new System.Drawing.Point(3, 7);
+            this.SalesLogo.Location = new System.Drawing.Point(4, 9);
+            this.SalesLogo.Margin = new System.Windows.Forms.Padding(4);
             this.SalesLogo.Name = "SalesLogo";
-            this.SalesLogo.Size = new System.Drawing.Size(62, 54);
+            this.SalesLogo.Size = new System.Drawing.Size(83, 66);
             this.SalesLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SalesLogo.TabIndex = 15;
             this.SalesLogo.TabStop = false;
@@ -571,9 +581,10 @@
             // 
             this.salesButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salesButton.Location = new System.Drawing.Point(-7, 0);
+            this.salesButton.Location = new System.Drawing.Point(-9, 0);
+            this.salesButton.Margin = new System.Windows.Forms.Padding(4);
             this.salesButton.Name = "salesButton";
-            this.salesButton.Size = new System.Drawing.Size(242, 68);
+            this.salesButton.Size = new System.Drawing.Size(323, 84);
             this.salesButton.TabIndex = 14;
             this.salesButton.Text = "Sales";
             this.salesButton.UseVisualStyleBackColor = true;
@@ -582,9 +593,10 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 329);
+            this.panel5.Location = new System.Drawing.Point(4, 409);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(229, 68);
+            this.panel5.Size = new System.Drawing.Size(305, 84);
             this.panel5.TabIndex = 17;
             // 
             // OrderLogo
@@ -592,9 +604,10 @@
             this.OrderLogo.BackColor = System.Drawing.Color.Transparent;
             this.OrderLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OrderLogo.Image = global::E_Pc.Properties.Resources.orderIcon;
-            this.OrderLogo.Location = new System.Drawing.Point(3, 7);
+            this.OrderLogo.Location = new System.Drawing.Point(4, 9);
+            this.OrderLogo.Margin = new System.Windows.Forms.Padding(4);
             this.OrderLogo.Name = "OrderLogo";
-            this.OrderLogo.Size = new System.Drawing.Size(62, 54);
+            this.OrderLogo.Size = new System.Drawing.Size(83, 66);
             this.OrderLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.OrderLogo.TabIndex = 15;
             this.OrderLogo.TabStop = false;
@@ -603,9 +616,10 @@
             // 
             this.OrderButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OrderButton.Location = new System.Drawing.Point(-7, 0);
+            this.OrderButton.Location = new System.Drawing.Point(-9, 0);
+            this.OrderButton.Margin = new System.Windows.Forms.Padding(4);
             this.OrderButton.Name = "OrderButton";
-            this.OrderButton.Size = new System.Drawing.Size(242, 68);
+            this.OrderButton.Size = new System.Drawing.Size(323, 84);
             this.OrderButton.TabIndex = 14;
             this.OrderButton.Text = "Order";
             this.OrderButton.UseVisualStyleBackColor = true;
@@ -614,9 +628,10 @@
             // 
             this.panel6.Controls.Add(this.EmployeeLogo);
             this.panel6.Controls.Add(this.EmployeeManagementButton);
-            this.panel6.Location = new System.Drawing.Point(3, 403);
+            this.panel6.Location = new System.Drawing.Point(4, 501);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(229, 68);
+            this.panel6.Size = new System.Drawing.Size(305, 84);
             this.panel6.TabIndex = 18;
             // 
             // EmployeeLogo
@@ -624,9 +639,10 @@
             this.EmployeeLogo.BackColor = System.Drawing.Color.Transparent;
             this.EmployeeLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmployeeLogo.Image = global::E_Pc.Properties.Resources.Employee_managemen;
-            this.EmployeeLogo.Location = new System.Drawing.Point(3, 7);
+            this.EmployeeLogo.Location = new System.Drawing.Point(4, 9);
+            this.EmployeeLogo.Margin = new System.Windows.Forms.Padding(4);
             this.EmployeeLogo.Name = "EmployeeLogo";
-            this.EmployeeLogo.Size = new System.Drawing.Size(62, 54);
+            this.EmployeeLogo.Size = new System.Drawing.Size(83, 66);
             this.EmployeeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EmployeeLogo.TabIndex = 15;
             this.EmployeeLogo.TabStop = false;
@@ -635,9 +651,10 @@
             // 
             this.EmployeeManagementButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeManagementButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EmployeeManagementButton.Location = new System.Drawing.Point(-7, 0);
+            this.EmployeeManagementButton.Location = new System.Drawing.Point(-9, 0);
+            this.EmployeeManagementButton.Margin = new System.Windows.Forms.Padding(4);
             this.EmployeeManagementButton.Name = "EmployeeManagementButton";
-            this.EmployeeManagementButton.Size = new System.Drawing.Size(242, 68);
+            this.EmployeeManagementButton.Size = new System.Drawing.Size(323, 84);
             this.EmployeeManagementButton.TabIndex = 14;
             this.EmployeeManagementButton.Text = "                        Employee Management";
             this.EmployeeManagementButton.UseVisualStyleBackColor = true;
@@ -646,9 +663,10 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 477);
+            this.panel7.Location = new System.Drawing.Point(4, 593);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(229, 68);
+            this.panel7.Size = new System.Drawing.Size(305, 84);
             this.panel7.TabIndex = 19;
             // 
             // LogoutLogo
@@ -656,9 +674,10 @@
             this.LogoutLogo.BackColor = System.Drawing.Color.Transparent;
             this.LogoutLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutLogo.Image = global::E_Pc.Properties.Resources.LogOut;
-            this.LogoutLogo.Location = new System.Drawing.Point(3, 13);
+            this.LogoutLogo.Location = new System.Drawing.Point(4, 16);
+            this.LogoutLogo.Margin = new System.Windows.Forms.Padding(4);
             this.LogoutLogo.Name = "LogoutLogo";
-            this.LogoutLogo.Size = new System.Drawing.Size(62, 43);
+            this.LogoutLogo.Size = new System.Drawing.Size(83, 53);
             this.LogoutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LogoutLogo.TabIndex = 15;
             this.LogoutLogo.TabStop = false;
@@ -667,9 +686,10 @@
             // 
             this.LogoutButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButton.Location = new System.Drawing.Point(-7, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(-9, 0);
+            this.LogoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(242, 68);
+            this.LogoutButton.Size = new System.Drawing.Size(323, 84);
             this.LogoutButton.TabIndex = 14;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
@@ -680,9 +700,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(246, 48);
+            this.label9.Location = new System.Drawing.Point(328, 59);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(242, 33);
+            this.label9.Size = new System.Drawing.Size(299, 42);
             this.label9.TabIndex = 39;
             this.label9.Text = "Update Inventory";
             // 
@@ -690,30 +711,29 @@
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label12);
-            this.panel8.Location = new System.Drawing.Point(244, 344);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Location = new System.Drawing.Point(325, 423);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(701, 29);
+            this.panel8.Size = new System.Drawing.Size(934, 35);
             this.panel8.TabIndex = 45;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(264, 3);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(352, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(173, 22);
+            this.label12.Size = new System.Drawing.Size(206, 26);
             this.label12.TabIndex = 0;
             this.label12.Text = "Updated Inventory";
             // 
             // UpdateInventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(960, 585);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.sidebar);
@@ -723,7 +743,7 @@
             this.Controls.Add(this.InventoryGrid);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UpdateInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateItem";
@@ -780,7 +800,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox ReturnBtn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView InventoryGrid;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label8;
@@ -806,12 +825,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton InactiveBox;
+        private System.Windows.Forms.RadioButton ActiveBox;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.DataGridView InventoryGrid;
     }
 }

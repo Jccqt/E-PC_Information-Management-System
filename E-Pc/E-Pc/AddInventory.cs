@@ -32,35 +32,22 @@ namespace E_Pc
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            var date = DateTime.Now;
-            int idCount = 2000;
+            
 
             DataConnection.conn.Open();
-            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemType = @type", DataConnection.conn);
-            cmd.Parameters.AddWithValue("@type", TypeBox.Text);
-            SqlDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read())
-            {
-                idCount++;
-            }
-
-            reader.Close();
-
-            cmd = new SqlCommand("SELECT ItemName FROM Products WHERE ItemName = @name", DataConnection.conn);
-            cmd.Parameters.AddWithValue("@name", NameBox.Text);
-            reader = cmd.ExecuteReader();
+            DataConnection.CheckDuplicateProduct();
   
-            if (reader.Read())
+            if (DataConnection.reader.Read())
             {
                 // will check if the Item ID is already existing
-                idToCheck = reader.GetValue(0).ToString().ToUpper();
+                idToCheck = DataConnection.reader.GetValue(0).ToString().ToUpper();
                 if (idToCheck.Equals(NameBox.Text.ToString().ToUpper()))
                 {
                     isExisting = true;
                 }
             }
-            reader.Close();
+            DataConnection.reader.Close();
 
             if (NameBox.Text.Equals("") || BrandBox.Text.Equals("") || PriceBox.Text.Equals("") || QuantityBox.Text.Equals("") || TypeBox.Text.Equals(""))
             {
@@ -74,16 +61,7 @@ namespace E_Pc
             if (!isExisting && !isTextEmpty && Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern) && Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
             {
 
-                cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @memo, @date)", DataConnection.conn);
-                cmd.Parameters.AddWithValue("@id", $"{TypeBox.Text.ToUpper()}{idCount + 1}");
-                cmd.Parameters.AddWithValue("@name", NameBox.Text);
-                cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
-                cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
-                cmd.Parameters.AddWithValue("@price", PriceBox.Text);
-                cmd.Parameters.AddWithValue("@type", TypeBox.Text.ToUpper());
-                cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.ExecuteNonQuery();
+                DataConnection.AddProduct();
                 ClearTextBox();
                 isTextEmpty = false;
                 isExisting = false;
@@ -105,7 +83,7 @@ namespace E_Pc
                 // will show an warning message if the item is already existing on the database
                 MessageBox.Show("You cannot add the item because it is already existing.", "Item existing already!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            ShowTable();
+            DataConnection.ShowActiveInventoryTable();
             DataConnection.conn.Close();
         }
 
@@ -116,8 +94,7 @@ namespace E_Pc
             BrandBox.Clear();
             QuantityBox.Clear();
             PriceBox.Clear();
-            TypeBox.Clear();
-            MemoBox.Clear();
+            TypeBox.ResetText();
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)
@@ -136,20 +113,9 @@ namespace E_Pc
 
         private void AddInventory_Load(object sender, EventArgs e)
         {
-            ShowTable();
+            DataConnection.ShowActiveInventoryTable();
             NameBox.Focus();
         }
-
-
-        public void ShowTable()
-        {
-            cmd = new SqlCommand("SELECT * FROM Products", DataConnection.conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            PageObjects.inventoryTable.Clear();
-            adapter.Fill(PageObjects.inventoryTable);
-            InventoryGrid.DataSource = PageObjects.inventoryTable;
-        }
-
     
     }
 }

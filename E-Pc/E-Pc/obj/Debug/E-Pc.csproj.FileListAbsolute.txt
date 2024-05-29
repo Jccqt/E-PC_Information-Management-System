@@ -124,9 +124,7 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.EmployeeManag
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.RemoveEmployee.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateEmployeePage.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddEmployee.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EmployeeManagementPage.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RemoveEmployee.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateEmployeePage.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateInventory.resources
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb.mdf
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb_log.ldf
@@ -220,3 +218,5 @@ D:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CoreCompil
 D:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CopyComplete
 D:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe
 D:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.pdb
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Employee.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateEmployee.resources
