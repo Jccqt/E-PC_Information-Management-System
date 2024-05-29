@@ -47,6 +47,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TypeBox = new System.Windows.Forms.ComboBox();
+            this.DescriptionBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CategoryBox = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.InactiveBox = new System.Windows.Forms.RadioButton();
             this.ActiveBox = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
@@ -80,11 +85,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.CategoryBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
@@ -320,8 +320,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.TypeBox);
+            this.panel2.Controls.Add(this.DescriptionBox);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.CategoryBox);
             this.panel2.Controls.Add(this.label10);
@@ -349,6 +349,62 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(701, 266);
             this.panel2.TabIndex = 29;
+            // 
+            // TypeBox
+            // 
+            this.TypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypeBox.FormattingEnabled = true;
+            this.TypeBox.Items.AddRange(new object[] {
+            "Gaming and Rendering",
+            "Office and Study"});
+            this.TypeBox.Location = new System.Drawing.Point(193, 19);
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.Size = new System.Drawing.Size(146, 26);
+            this.TypeBox.TabIndex = 37;
+            // 
+            // DescriptionBox
+            // 
+            this.DescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DescriptionBox.Location = new System.Drawing.Point(192, 201);
+            this.DescriptionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.DescriptionBox.Multiline = true;
+            this.DescriptionBox.Name = "DescriptionBox";
+            this.DescriptionBox.Size = new System.Drawing.Size(316, 52);
+            this.DescriptionBox.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(190, 185);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Description";
+            // 
+            // CategoryBox
+            // 
+            this.CategoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryBox.FormattingEnabled = true;
+            this.CategoryBox.Items.AddRange(new object[] {
+            "Gaming and Rendering",
+            "Office and Study"});
+            this.CategoryBox.Location = new System.Drawing.Point(193, 72);
+            this.CategoryBox.Name = "CategoryBox";
+            this.CategoryBox.Size = new System.Drawing.Size(146, 26);
+            this.CategoryBox.TabIndex = 34;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(191, 55);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Category*";
             // 
             // InactiveBox
             // 
@@ -415,6 +471,8 @@
             // 
             // InventoryGrid
             // 
+            this.InventoryGrid.AllowUserToResizeColumns = false;
+            this.InventoryGrid.AllowUserToResizeRows = false;
             this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InventoryGrid.Location = new System.Drawing.Point(244, 372);
@@ -423,7 +481,9 @@
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
             this.InventoryGrid.RowHeadersWidth = 51;
+            this.InventoryGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.InventoryGrid.RowTemplate.Height = 24;
+            this.InventoryGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.InventoryGrid.Size = new System.Drawing.Size(701, 202);
             this.InventoryGrid.TabIndex = 28;
             this.InventoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InventoryGrid_CellContentClick);
@@ -708,63 +768,6 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Inventory";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(191, 55);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 13);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Category*";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // CategoryBox
-            // 
-            this.CategoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryBox.FormattingEnabled = true;
-            this.CategoryBox.Items.AddRange(new object[] {
-            "Gaming and Rendering",
-            "Office and Study"});
-            this.CategoryBox.Location = new System.Drawing.Point(193, 72);
-            this.CategoryBox.Name = "CategoryBox";
-            this.CategoryBox.Size = new System.Drawing.Size(146, 26);
-            this.CategoryBox.TabIndex = 34;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(192, 201);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 52);
-            this.textBox1.TabIndex = 35;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(190, 185);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Description";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Gaming and Rendering",
-            "Office and Study"});
-            this.comboBox1.Location = new System.Drawing.Point(193, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 26);
-            this.comboBox1.TabIndex = 37;
-            // 
             // UpdateInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -855,24 +858,24 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton InactiveBox;
-        private System.Windows.Forms.RadioButton ActiveBox;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
         public System.Windows.Forms.DataGridView InventoryGrid;
-        private System.Windows.Forms.TextBox PriceBox;
-        private System.Windows.Forms.TextBox QuantityBox;
-        private System.Windows.Forms.TextBox BrandBox;
-        private System.Windows.Forms.TextBox ItemIdBox;
-        private System.Windows.Forms.TextBox MemoBox;
-        private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.ComboBox CategoryBox;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.RadioButton InactiveBox;
+        public System.Windows.Forms.RadioButton ActiveBox;
+        public System.Windows.Forms.TextBox PriceBox;
+        public System.Windows.Forms.TextBox QuantityBox;
+        public System.Windows.Forms.TextBox BrandBox;
+        public System.Windows.Forms.TextBox ItemIdBox;
+        public System.Windows.Forms.TextBox MemoBox;
+        public System.Windows.Forms.TextBox NameBox;
+        public System.Windows.Forms.TextBox DescriptionBox;
+        public System.Windows.Forms.ComboBox TypeBox;
     }
 }

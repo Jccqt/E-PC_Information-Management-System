@@ -74,7 +74,8 @@ namespace E_Pc
             var date = DateTime.Now;
             idCount = 2000;
 
-            cmd = new SqlCommand("INSERT INTO Products VALUES (@id, @name, @brand, @quantity, @price, @type, @category , @date, @flag)", conn);
+            cmd = new SqlCommand("INSERT INTO Products (ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, Category, ItemDescription, DateCreation, ItemImage, Active_flag) " +
+                "VALUES (@id, @name, @brand, @quantity, @price, @type, @category, @description, @date, @image, @flag)", conn);
             cmd.Parameters.AddWithValue("@id", $"{PageObjects.addInventoryPage.TypeBox.SelectedItem.ToString().ToUpper()}{idCount + 1}");
             cmd.Parameters.AddWithValue("@name", PageObjects.addInventoryPage.NameBox.Text);
             cmd.Parameters.AddWithValue("@brand", PageObjects.addInventoryPage.BrandBox.Text);
@@ -82,7 +83,9 @@ namespace E_Pc
             cmd.Parameters.AddWithValue("@price", PageObjects.addInventoryPage.PriceBox.Text);
             cmd.Parameters.AddWithValue("@type", PageObjects.addInventoryPage.TypeBox.SelectedItem);
             cmd.Parameters.AddWithValue("@category", PageObjects.addInventoryPage.CategoryBox.SelectedItem);
+            cmd.Parameters.AddWithValue("@description", PageObjects.addInventoryPage.DescriptionBox.Text);
             cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(date));
+            cmd.Parameters.AddWithValue("@image", PageObjects.addInventoryPage.getImageBinary());
             cmd.Parameters.AddWithValue("@flag", 1);
             cmd.ExecuteNonQuery();
         }
@@ -108,7 +111,7 @@ namespace E_Pc
         {
             ItemIdList.Clear();
             conn.Open();
-            cmd = new SqlCommand("SELECT ItemId FROM Products WHERE Active_flag = 1", conn);
+            cmd = new SqlCommand("SELECT ItemId FROM Products", conn);
             reader = cmd.ExecuteReader();
 
             if (reader.HasRows)
@@ -125,13 +128,35 @@ namespace E_Pc
 
         public static void InventoryDataInsert()
         {
-            cmd = new SqlCommand("SELECT * FROM Products", conn);
+            conn.Open();
+            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemId = @id", conn);
+            cmd.Parameters.AddWithValue("@id", ItemIdList[ItemIdCount]);
             reader = cmd.ExecuteReader();
 
-            if(reader.HasRows)
+            if(reader.Read())
             {
-                
+                    PageObjects.updateInventoryPage.ItemIdBox.Text = reader.GetString(0);
+                    PageObjects.updateInventoryPage.NameBox.Text = reader.GetString(1);
+                    PageObjects.updateInventoryPage.BrandBox.Text = reader.GetString(2);
+                    PageObjects.updateInventoryPage.PriceBox.Text = reader.GetValue(3).ToString();
+                    PageObjects.updateInventoryPage.QuantityBox.Text = reader.GetValue(4).ToString();
+                    PageObjects.updateInventoryPage.TypeBox.Text = reader.GetString(5);
+                    PageObjects.updateInventoryPage.CategoryBox.Text = reader.GetString(6);
+                    PageObjects.updateInventoryPage.DescriptionBox.Text = reader.GetString(7);
+
+                    if (reader.GetValue(11).ToString().Equals("1"))
+                    {
+                        PageObjects.updateInventoryPage.ActiveBox.Select();
+                    }
+                    else
+                    {
+                        PageObjects.updateInventoryPage.InactiveBox.Select();
+                    }
+                    
+
             }
+            reader.Close();
+            conn.Close();
         }
     }
 

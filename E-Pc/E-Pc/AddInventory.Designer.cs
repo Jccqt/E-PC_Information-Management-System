@@ -57,7 +57,8 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.InventoryGrid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.TypeBox = new System.Windows.Forms.ComboBox();
+            this.DescriptionBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.CategoryBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SelectImageBtn = new System.Windows.Forms.Button();
@@ -73,16 +74,12 @@
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.TypeBox = new System.Windows.Forms.ComboBox();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.ItemIdBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.MemoBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.SelectImageDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -357,7 +354,7 @@
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
             this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -368,7 +365,7 @@
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 21);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -384,7 +381,7 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
             this.guna2Panel1.TabIndex = 15;
@@ -394,7 +391,7 @@
             this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InventoryGrid.Location = new System.Drawing.Point(244, 372);
-            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2);
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
             this.InventoryGrid.RowHeadersWidth = 51;
@@ -405,11 +402,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.DescriptionBox);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.MemoBox);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.CategoryBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.SelectImageBtn);
@@ -425,29 +419,33 @@
             this.panel2.Controls.Add(this.QuantityLabel);
             this.panel2.Controls.Add(this.NameBox);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.TypeBox);
             this.panel2.Location = new System.Drawing.Point(244, 75);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(701, 266);
             this.panel2.TabIndex = 22;
             // 
-            // TypeBox
+            // DescriptionBox
             // 
-            this.TypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TypeBox.FormattingEnabled = true;
-            this.TypeBox.Items.AddRange(new object[] {
-            "RAM",
-            "CPU",
-            "GPU",
-            "PSU",
-            "Motherboad",
-            "Others"});
-            this.TypeBox.Location = new System.Drawing.Point(193, 19);
-            this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(146, 26);
-            this.TypeBox.TabIndex = 31;
+            this.DescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DescriptionBox.Location = new System.Drawing.Point(193, 125);
+            this.DescriptionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.DescriptionBox.Multiline = true;
+            this.DescriptionBox.Name = "DescriptionBox";
+            this.DescriptionBox.Size = new System.Drawing.Size(316, 52);
+            this.DescriptionBox.TabIndex = 39;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(191, 109);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Description";
             // 
             // CategoryBox
             // 
@@ -480,6 +478,7 @@
             this.SelectImageBtn.TabIndex = 27;
             this.SelectImageBtn.Text = "Select Image";
             this.SelectImageBtn.UseVisualStyleBackColor = true;
+            this.SelectImageBtn.Click += new System.EventHandler(this.SelectImageBtn_Click);
             // 
             // ItemImage
             // 
@@ -515,7 +514,7 @@
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
             this.ClearBtn.Location = new System.Drawing.Point(98, 220);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(87, 33);
             this.ClearBtn.TabIndex = 9;
@@ -537,7 +536,7 @@
             this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(8, 220);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(87, 33);
             this.AddBtn.TabIndex = 8;
@@ -548,7 +547,7 @@
             // 
             this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PriceBox.Location = new System.Drawing.Point(362, 17);
-            this.PriceBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceBox.Multiline = true;
             this.PriceBox.Name = "PriceBox";
             this.PriceBox.Size = new System.Drawing.Size(146, 28);
@@ -568,8 +567,8 @@
             // BrandBox
             // 
             this.BrandBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BrandBox.Location = new System.Drawing.Point(19, 124);
-            this.BrandBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BrandBox.Location = new System.Drawing.Point(19, 73);
+            this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
             this.BrandBox.Size = new System.Drawing.Size(146, 28);
@@ -579,7 +578,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(17, 109);
+            this.label5.Location = new System.Drawing.Point(17, 58);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
@@ -590,7 +589,7 @@
             // 
             this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.QuantityBox.Location = new System.Drawing.Point(362, 72);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
             this.QuantityBox.Size = new System.Drawing.Size(146, 28);
@@ -610,8 +609,8 @@
             // NameBox
             // 
             this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NameBox.Location = new System.Drawing.Point(19, 70);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameBox.Location = new System.Drawing.Point(19, 19);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(146, 28);
@@ -621,19 +620,35 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(17, 54);
+            this.label3.Location = new System.Drawing.Point(17, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Item Name*";
             // 
+            // TypeBox
+            // 
+            this.TypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypeBox.FormattingEnabled = true;
+            this.TypeBox.Items.AddRange(new object[] {
+            "RAM",
+            "CPU",
+            "GPU",
+            "PSU",
+            "Motherboad",
+            "Others"});
+            this.TypeBox.Location = new System.Drawing.Point(193, 19);
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.Size = new System.Drawing.Size(146, 26);
+            this.TypeBox.TabIndex = 31;
+            // 
             // ReturnBtn
             // 
             this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
             this.ReturnBtn.Location = new System.Drawing.Point(897, 36);
-            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -658,7 +673,7 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label11);
             this.panel8.Location = new System.Drawing.Point(244, 344);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(701, 29);
             this.panel8.TabIndex = 43;
@@ -674,68 +689,10 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Inventory";
             // 
-            // ItemIdBox
+            // SelectImageDialog
             // 
-            this.ItemIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemIdBox.Location = new System.Drawing.Point(19, 18);
-            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ItemIdBox.Multiline = true;
-            this.ItemIdBox.Name = "ItemIdBox";
-            this.ItemIdBox.Size = new System.Drawing.Size(146, 28);
-            this.ItemIdBox.TabIndex = 33;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(17, 3);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "Item ID*";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(192, 201);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 52);
-            this.textBox1.TabIndex = 39;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(190, 185);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Description";
-            // 
-            // MemoBox
-            // 
-            this.MemoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MemoBox.Location = new System.Drawing.Point(193, 124);
-            this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
-            this.MemoBox.Multiline = true;
-            this.MemoBox.Name = "MemoBox";
-            this.MemoBox.Size = new System.Drawing.Size(316, 55);
-            this.MemoBox.TabIndex = 37;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(190, 108);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 13);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Memo (250 max characters)";
+            this.SelectImageDialog.FileName = "openFileDialog1";
+            this.SelectImageDialog.Filter = "Image files | *.png; *.jpeg; *.jpg;";
             // 
             // AddInventory
             // 
@@ -753,7 +710,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPage";
@@ -838,11 +795,8 @@
         public System.Windows.Forms.ComboBox CategoryBox;
         public System.Windows.Forms.ComboBox TypeBox;
         public System.Windows.Forms.DataGridView InventoryGrid;
-        private System.Windows.Forms.TextBox ItemIdBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox MemoBox;
-        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox DescriptionBox;
+        public System.Windows.Forms.OpenFileDialog SelectImageDialog;
     }
 }

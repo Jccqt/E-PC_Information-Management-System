@@ -18,7 +18,8 @@ namespace E_Pc
         static SqlCommand cmd;
         static string idToCheck;
         static bool isExisting = false, isTextEmpty = false;
-        
+        static string imageToConvert;
+        static byte[] imageBinary = new byte[0];
         public AddInventory()
         {
             InitializeComponent();
@@ -89,12 +90,15 @@ namespace E_Pc
 
         void ClearTextBox()
         {
-            // will clear all the textbox in AddInventory form
+            // will clear all the details in AddInventory form
             NameBox.Clear();
             BrandBox.Clear();
             QuantityBox.Clear();
             PriceBox.Clear();
             TypeBox.ResetText();
+            CategoryBox.ResetText();
+            DescriptionBox.Clear();
+            ItemImage.Image = null;
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)
@@ -111,10 +115,26 @@ namespace E_Pc
             }
         }
 
+        private void SelectImageBtn_Click(object sender, EventArgs e)
+        {
+            if(SelectImageDialog.ShowDialog() == DialogResult.OK)
+            {
+                ItemImage.Image = Image.FromFile(SelectImageDialog.FileName);
+                ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                imageBinary = System.IO.File.ReadAllBytes(SelectImageDialog.FileName);
+
+            }
+        }
+
         private void AddInventory_Load(object sender, EventArgs e)
         {
             DataConnection.ShowActiveInventoryTable();
             NameBox.Focus();
+        }
+
+        public byte[] getImageBinary()
+        {
+            return imageBinary;
         }
     
     }
