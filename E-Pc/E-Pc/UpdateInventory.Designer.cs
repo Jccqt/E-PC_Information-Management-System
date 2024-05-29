@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.PriceBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TypeBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.QuantityBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -81,6 +80,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.CategoryBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
@@ -109,8 +113,8 @@
             // PriceBox
             // 
             this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PriceBox.Location = new System.Drawing.Point(367, 41);
-            this.PriceBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PriceBox.Location = new System.Drawing.Point(362, 17);
+            this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceBox.Multiline = true;
             this.PriceBox.Name = "PriceBox";
             this.PriceBox.Size = new System.Drawing.Size(146, 28);
@@ -120,28 +124,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(365, 26);
+            this.label6.Location = new System.Drawing.Point(360, 1);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 8;
             this.label6.Text = "Price*";
             // 
-            // TypeBox
-            // 
-            this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TypeBox.Location = new System.Drawing.Point(198, 43);
-            this.TypeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TypeBox.Multiline = true;
-            this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(146, 28);
-            this.TypeBox.TabIndex = 4;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(195, 28);
+            this.label5.Location = new System.Drawing.Point(190, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
@@ -151,8 +145,8 @@
             // QuantityBox
             // 
             this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuantityBox.Location = new System.Drawing.Point(367, 95);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuantityBox.Location = new System.Drawing.Point(362, 72);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
             this.QuantityBox.Size = new System.Drawing.Size(146, 28);
@@ -162,7 +156,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(365, 79);
+            this.label4.Location = new System.Drawing.Point(360, 56);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
@@ -172,8 +166,8 @@
             // BrandBox
             // 
             this.BrandBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BrandBox.Location = new System.Drawing.Point(197, 93);
-            this.BrandBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BrandBox.Location = new System.Drawing.Point(19, 124);
+            this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
             this.BrandBox.Size = new System.Drawing.Size(146, 28);
@@ -183,7 +177,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(195, 78);
+            this.label3.Location = new System.Drawing.Point(17, 109);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
@@ -193,8 +187,8 @@
             // ItemIdBox
             // 
             this.ItemIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemIdBox.Location = new System.Drawing.Point(24, 43);
-            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ItemIdBox.Location = new System.Drawing.Point(19, 18);
+            this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2);
             this.ItemIdBox.Multiline = true;
             this.ItemIdBox.Name = "ItemIdBox";
             this.ItemIdBox.Size = new System.Drawing.Size(146, 28);
@@ -208,7 +202,7 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
             this.guna2Panel1.TabIndex = 24;
@@ -217,7 +211,7 @@
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
             this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,7 +222,7 @@
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 21);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -249,8 +243,8 @@
             this.ClearBtn.FillColor = System.Drawing.Color.White;
             this.ClearBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.ClearBtn.ForeColor = System.Drawing.Color.Black;
-            this.ClearBtn.Location = new System.Drawing.Point(102, 191);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearBtn.Location = new System.Drawing.Point(98, 220);
+            this.ClearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(87, 33);
             this.ClearBtn.TabIndex = 9;
@@ -270,8 +264,8 @@
             this.UpdateBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.UpdateBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.UpdateBtn.ForeColor = System.Drawing.Color.White;
-            this.UpdateBtn.Location = new System.Drawing.Point(11, 191);
-            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UpdateBtn.Location = new System.Drawing.Point(8, 220);
+            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(87, 33);
             this.UpdateBtn.TabIndex = 8;
@@ -281,18 +275,18 @@
             // MemoBox
             // 
             this.MemoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MemoBox.Location = new System.Drawing.Point(197, 145);
-            this.MemoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MemoBox.Location = new System.Drawing.Point(193, 124);
+            this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
             this.MemoBox.Multiline = true;
             this.MemoBox.Name = "MemoBox";
-            this.MemoBox.Size = new System.Drawing.Size(316, 48);
+            this.MemoBox.Size = new System.Drawing.Size(316, 55);
             this.MemoBox.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(194, 129);
+            this.label7.Location = new System.Drawing.Point(190, 108);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 13);
@@ -303,7 +297,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 28);
+            this.label2.Location = new System.Drawing.Point(17, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
@@ -314,8 +308,8 @@
             // 
             this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
             this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
-            this.ReturnBtn.Location = new System.Drawing.Point(897, 44);
-            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReturnBtn.Location = new System.Drawing.Point(897, 36);
+            this.ReturnBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -326,6 +320,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.CategoryBox);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.InactiveBox);
             this.panel2.Controls.Add(this.ActiveBox);
             this.panel2.Controls.Add(this.button1);
@@ -338,7 +337,6 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.PriceBox);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.TypeBox);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.QuantityBox);
             this.panel2.Controls.Add(this.label4);
@@ -346,17 +344,17 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.ItemIdBox);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(244, 83);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(244, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(701, 258);
+            this.panel2.Size = new System.Drawing.Size(701, 266);
             this.panel2.TabIndex = 29;
             // 
             // InactiveBox
             // 
             this.InactiveBox.AutoSize = true;
             this.InactiveBox.ForeColor = System.Drawing.Color.White;
-            this.InactiveBox.Location = new System.Drawing.Point(25, 164);
+            this.InactiveBox.Location = new System.Drawing.Point(102, 165);
             this.InactiveBox.Name = "InactiveBox";
             this.InactiveBox.Size = new System.Drawing.Size(63, 17);
             this.InactiveBox.TabIndex = 32;
@@ -368,7 +366,7 @@
             // 
             this.ActiveBox.AutoSize = true;
             this.ActiveBox.ForeColor = System.Drawing.Color.White;
-            this.ActiveBox.Location = new System.Drawing.Point(25, 135);
+            this.ActiveBox.Location = new System.Drawing.Point(21, 164);
             this.ActiveBox.Name = "ActiveBox";
             this.ActiveBox.Size = new System.Drawing.Size(55, 17);
             this.ActiveBox.TabIndex = 31;
@@ -378,7 +376,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(554, 181);
+            this.button1.Location = new System.Drawing.Point(549, 156);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 23);
             this.button1.TabIndex = 30;
@@ -388,7 +386,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.Location = new System.Drawing.Point(534, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(529, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 131);
             this.pictureBox1.TabIndex = 29;
@@ -397,8 +395,8 @@
             // NameBox
             // 
             this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NameBox.Location = new System.Drawing.Point(24, 93);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameBox.Location = new System.Drawing.Point(19, 70);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(146, 28);
@@ -408,7 +406,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(22, 77);
+            this.label8.Location = new System.Drawing.Point(17, 54);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 13);
@@ -420,7 +418,7 @@
             this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InventoryGrid.Location = new System.Drawing.Point(244, 372);
-            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2);
             this.InventoryGrid.MultiSelect = false;
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
@@ -464,8 +462,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 68);
+            this.label1.Location = new System.Drawing.Point(88, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 1;
@@ -473,11 +472,12 @@
             // 
             // menuButton
             // 
+            this.menuButton.BackColor = System.Drawing.Color.Transparent;
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
-            this.menuButton.Location = new System.Drawing.Point(69, 8);
+            this.menuButton.Location = new System.Drawing.Point(56, 2);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(88, 72);
+            this.menuButton.Size = new System.Drawing.Size(106, 87);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
@@ -681,7 +681,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(246, 48);
+            this.label9.Location = new System.Drawing.Point(246, 40);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(242, 33);
             this.label9.TabIndex = 39;
@@ -692,7 +692,7 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(244, 344);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(701, 29);
             this.panel8.TabIndex = 45;
@@ -707,6 +707,63 @@
             this.label12.Size = new System.Drawing.Size(92, 22);
             this.label12.TabIndex = 0;
             this.label12.Text = "Inventory";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(191, 55);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Category*";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // CategoryBox
+            // 
+            this.CategoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryBox.FormattingEnabled = true;
+            this.CategoryBox.Items.AddRange(new object[] {
+            "Gaming and Rendering",
+            "Office and Study"});
+            this.CategoryBox.Location = new System.Drawing.Point(193, 72);
+            this.CategoryBox.Name = "CategoryBox";
+            this.CategoryBox.Size = new System.Drawing.Size(146, 26);
+            this.CategoryBox.TabIndex = 34;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(192, 201);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(316, 52);
+            this.textBox1.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(190, 185);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Description";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Gaming and Rendering",
+            "Office and Study"});
+            this.comboBox1.Location = new System.Drawing.Point(193, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(146, 26);
+            this.comboBox1.TabIndex = 37;
             // 
             // UpdateInventory
             // 
@@ -724,7 +781,7 @@
             this.Controls.Add(this.InventoryGrid);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpdateInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateItem";
@@ -807,11 +864,15 @@
         private System.Windows.Forms.Button button3;
         public System.Windows.Forms.DataGridView InventoryGrid;
         private System.Windows.Forms.TextBox PriceBox;
-        private System.Windows.Forms.TextBox TypeBox;
         private System.Windows.Forms.TextBox QuantityBox;
         private System.Windows.Forms.TextBox BrandBox;
         private System.Windows.Forms.TextBox ItemIdBox;
         private System.Windows.Forms.TextBox MemoBox;
         private System.Windows.Forms.TextBox NameBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.ComboBox CategoryBox;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }

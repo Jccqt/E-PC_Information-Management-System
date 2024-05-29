@@ -198,6 +198,11 @@ namespace E_Pc
 
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             // will clear all text box in UpdateInventory page
