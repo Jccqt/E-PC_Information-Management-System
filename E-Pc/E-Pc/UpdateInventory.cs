@@ -23,6 +23,43 @@ namespace E_Pc
             InitializeComponent();
         }
 
+        public string ItemId
+        {
+            get { return ItemIdBox.Text; }
+            set { ItemIdBox.Text = value; }
+        }
+
+        public string ItemName
+        {
+            get { return NameBox.Text; }
+            set { NameBox.Text = value; }
+        }
+
+        public string ItemBrand
+        {
+            get { return BrandBox.Text; }
+            set { BrandBox.Text = value; }
+        }
+
+        public string ItemPrice
+        {
+            get { return PriceBox.Text; }
+            set { PriceBox.Text = value; }
+        }
+
+        public string ItemQuantity
+        {
+            get { return QuantityBox.Text; }
+            set { QuantityBox.Text = value; }
+        }
+
+        public string ItemType
+        {
+            get { return TypeBox.Text; }
+            set { TypeBox.Text = value; }
+        }
+
+
         private void VerifyBtn_Click(object sender, EventArgs e)
         {
             var localDateTime = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
@@ -158,6 +195,7 @@ namespace E_Pc
         private void InventoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show($"{DataConnection.ItemIdList[InventoryGrid.CurrentRow.Index]}");
+
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)

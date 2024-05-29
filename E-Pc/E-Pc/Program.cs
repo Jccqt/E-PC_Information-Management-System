@@ -27,7 +27,7 @@ namespace E_Pc
 
     public class DataConnection
     {
-        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True";
+        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True";
         public static SqlConnection conn = new SqlConnection(sqlCon);
         public static SqlCommand cmd;
         public static SqlDataAdapter adapter;
@@ -121,6 +121,17 @@ namespace E_Pc
 
             reader.Close();
             conn.Close();
+        }
+
+        public static void InventoryDataInsert()
+        {
+            cmd = new SqlCommand("SELECT * FROM Products", conn);
+            reader = cmd.ExecuteReader();
+
+            if(reader.HasRows)
+            {
+                
+            }
         }
     }
 
