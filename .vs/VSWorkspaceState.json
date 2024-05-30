@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\E-Pc",
+    "\\E-Pc\\E-Pc"
   ],
-  "SelectedNode": "\\E-Pc.sln",
+  "SelectedNode": "\\E-Pc\\E-Pc\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

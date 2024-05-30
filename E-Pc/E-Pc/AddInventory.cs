@@ -8,10 +8,8 @@ namespace E_Pc
 {
     public partial class AddInventory : Form
     {
-        static SqlCommand cmd;
         static string idToCheck;
         static bool isExisting = false, isTextEmpty = false;
-        static string imageToConvert;
         public AddInventory()
         {
             InitializeComponent();
@@ -27,11 +25,11 @@ namespace E_Pc
         {
             DataConnection.conn.Open();
 
+            // will check if the Item ID is already existing
             DataConnection.CheckDuplicateProduct();
 
             if (DataConnection.reader.Read())
             {
-                // will check if the Item ID is already existing
                 idToCheck = DataConnection.reader.GetValue(0).ToString().ToUpper();
                 if (idToCheck.Equals(NameBox.Text.ToString().ToUpper()))
                 {
@@ -40,6 +38,7 @@ namespace E_Pc
             }
             DataConnection.reader.Close();
 
+            // will check if the details are complete
             if (NameBox.Text.Equals("") || BrandBox.Text.Equals("") || PriceBox.Text.Equals("") || QuantityBox.Text.Equals("") || TypeBox.Text.Equals(""))
             {
                 isTextEmpty = true;
@@ -49,6 +48,7 @@ namespace E_Pc
                 isTextEmpty = false;
             }
 
+            // will proceed to add product if the item is not existing and item details are complete
             if (!isExisting && !isTextEmpty && Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern) && Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
             {
 
@@ -57,7 +57,7 @@ namespace E_Pc
                 isTextEmpty = false;
                 isExisting = false;
                 PageObjects.isNewImage = false;
-                Array.Clear(PageObjects.imageBinary, 0, PageObjects.imageBinary.Length);
+                Array.Clear(PageObjects.imageBinary, 0, PageObjects.imageBinary.Length); // will reset the elements of imageBinary array
 
                 MessageBox.Show("The item has been successfully added!", "New item added.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -76,7 +76,8 @@ namespace E_Pc
                 // will show an warning message if the item is already existing on the database
                 MessageBox.Show("You cannot add the item because it is already existing.", "Item existing already!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            DataConnection.ShowActiveInventoryTable();
+
+            DataConnection.ShowActiveInventoryTable(); // will show the table of active products
             DataConnection.conn.Close();
         }
 
@@ -103,7 +104,7 @@ namespace E_Pc
             DialogResult exitDiag = MessageBox.Show("Are you sure you want to exit the application?", "Exit Application?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (exitDiag == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.Exit(); // will terminate the application
             }
         }
 
@@ -116,6 +117,12 @@ namespace E_Pc
                 PageObjects.imageBinary = System.IO.File.ReadAllBytes(SelectImageDialog.FileName);
                 PageObjects.isNewImage = true;
             }
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            // will refresh and show the table of active products
+            DataConnection.ShowActiveInventoryTable();
         }
 
         private void AddInventory_Load(object sender, EventArgs e)

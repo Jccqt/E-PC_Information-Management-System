@@ -125,6 +125,17 @@ namespace E_Pc
             return PageObjects.imageBinary;
         }
 
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            DataConnection.ItemIdList.Clear();
+            DataConnection.GetItemIdList();
+            DataConnection.ShowAllInventoryTable();
+            foreach (DataGridViewColumn column in InventoryGrid.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             // will clear all text box in UpdateInventory page

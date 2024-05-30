@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
-            this.DeletedProductsGrid = new System.Windows.Forms.DataGridView();
+            this.InventoryGrid = new System.Windows.Forms.DataGridView();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -56,17 +56,17 @@
             this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.InventoryRefresh = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.DescriptionBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.MemoBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -81,14 +81,14 @@
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ItemIdBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DeletedInventoryGrid = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.DeletedRefresh = new System.Windows.Forms.PictureBox();
+            this.TypeBox = new System.Windows.Forms.TextBox();
+            this.CategoryBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeletedProductsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -107,12 +107,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryRefresh)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeletedInventoryGrid)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeletedRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,18 +145,19 @@
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
             // 
-            // DeletedProductsGrid
+            // InventoryGrid
             // 
-            this.DeletedProductsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DeletedProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DeletedProductsGrid.Location = new System.Drawing.Point(241, 372);
-            this.DeletedProductsGrid.Margin = new System.Windows.Forms.Padding(2);
-            this.DeletedProductsGrid.Name = "DeletedProductsGrid";
-            this.DeletedProductsGrid.ReadOnly = true;
-            this.DeletedProductsGrid.RowHeadersWidth = 51;
-            this.DeletedProductsGrid.RowTemplate.Height = 24;
-            this.DeletedProductsGrid.Size = new System.Drawing.Size(353, 202);
-            this.DeletedProductsGrid.TabIndex = 28;
+            this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InventoryGrid.Location = new System.Drawing.Point(241, 372);
+            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.InventoryGrid.Name = "InventoryGrid";
+            this.InventoryGrid.ReadOnly = true;
+            this.InventoryGrid.RowHeadersWidth = 51;
+            this.InventoryGrid.RowTemplate.Height = 24;
+            this.InventoryGrid.Size = new System.Drawing.Size(353, 202);
+            this.InventoryGrid.TabIndex = 28;
+            this.InventoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InventoryGrid_CellContentClick);
             // 
             // sidebar
             // 
@@ -419,13 +420,23 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.pictureBox4);
+            this.panel8.Controls.Add(this.InventoryRefresh);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(241, 344);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(353, 29);
             this.panel8.TabIndex = 31;
+            // 
+            // InventoryRefresh
+            // 
+            this.InventoryRefresh.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
+            this.InventoryRefresh.Location = new System.Drawing.Point(324, 3);
+            this.InventoryRefresh.Name = "InventoryRefresh";
+            this.InventoryRefresh.Size = new System.Drawing.Size(24, 23);
+            this.InventoryRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.InventoryRefresh.TabIndex = 2;
+            this.InventoryRefresh.TabStop = false;
             // 
             // label12
             // 
@@ -464,14 +475,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.CategoryBox);
+            this.panel2.Controls.Add(this.TypeBox);
             this.panel2.Controls.Add(this.guna2Button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.DescriptionBox);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.MemoBox);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label4);
@@ -492,15 +503,37 @@
             this.panel2.Size = new System.Drawing.Size(701, 266);
             this.panel2.TabIndex = 44;
             // 
-            // textBox1
+            // guna2Button1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(192, 124);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 83);
-            this.textBox1.TabIndex = 43;
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.guna2Button1.Location = new System.Drawing.Point(189, 220);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(87, 33);
+            this.guna2Button1.TabIndex = 45;
+            this.guna2Button1.Text = "Retrieve";
+            // 
+            // DescriptionBox
+            // 
+            this.DescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DescriptionBox.Location = new System.Drawing.Point(192, 124);
+            this.DescriptionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.DescriptionBox.Multiline = true;
+            this.DescriptionBox.Name = "DescriptionBox";
+            this.DescriptionBox.ReadOnly = true;
+            this.DescriptionBox.Size = new System.Drawing.Size(147, 83);
+            this.DescriptionBox.TabIndex = 43;
             // 
             // label9
             // 
@@ -520,6 +553,7 @@
             this.MemoBox.Margin = new System.Windows.Forms.Padding(2);
             this.MemoBox.Multiline = true;
             this.MemoBox.Name = "MemoBox";
+            this.MemoBox.ReadOnly = true;
             this.MemoBox.Size = new System.Drawing.Size(145, 83);
             this.MemoBox.TabIndex = 41;
             // 
@@ -534,15 +568,6 @@
             this.label11.TabIndex = 42;
             this.label11.Text = "Memo (250 max characters)";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(193, 19);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(146, 26);
-            this.comboBox2.TabIndex = 35;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -553,15 +578,6 @@
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 34;
             this.label10.Text = "Item ID*";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(193, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 26);
-            this.comboBox1.TabIndex = 30;
             // 
             // label2
             // 
@@ -642,6 +658,7 @@
             this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceBox.Multiline = true;
             this.PriceBox.Name = "PriceBox";
+            this.PriceBox.ReadOnly = true;
             this.PriceBox.Size = new System.Drawing.Size(146, 28);
             this.PriceBox.TabIndex = 6;
             // 
@@ -663,6 +680,7 @@
             this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
+            this.BrandBox.ReadOnly = true;
             this.BrandBox.Size = new System.Drawing.Size(146, 28);
             this.BrandBox.TabIndex = 3;
             // 
@@ -684,6 +702,7 @@
             this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
+            this.QuantityBox.ReadOnly = true;
             this.QuantityBox.Size = new System.Drawing.Size(146, 28);
             this.QuantityBox.TabIndex = 5;
             // 
@@ -705,6 +724,7 @@
             this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
+            this.NameBox.ReadOnly = true;
             this.NameBox.Size = new System.Drawing.Size(146, 28);
             this.NameBox.TabIndex = 2;
             // 
@@ -726,21 +746,23 @@
             this.ItemIdBox.Margin = new System.Windows.Forms.Padding(2);
             this.ItemIdBox.Multiline = true;
             this.ItemIdBox.Name = "ItemIdBox";
+            this.ItemIdBox.ReadOnly = true;
             this.ItemIdBox.Size = new System.Drawing.Size(146, 28);
             this.ItemIdBox.TabIndex = 33;
             // 
-            // dataGridView1
+            // DeletedInventoryGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(600, 372);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(353, 202);
-            this.dataGridView1.TabIndex = 45;
+            this.DeletedInventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DeletedInventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DeletedInventoryGrid.Location = new System.Drawing.Point(600, 372);
+            this.DeletedInventoryGrid.Name = "DeletedInventoryGrid";
+            this.DeletedInventoryGrid.Size = new System.Drawing.Size(353, 202);
+            this.DeletedInventoryGrid.TabIndex = 45;
             // 
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.pictureBox5);
+            this.panel10.Controls.Add(this.DeletedRefresh);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Location = new System.Drawing.Point(600, 344);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
@@ -748,46 +770,37 @@
             this.panel10.Size = new System.Drawing.Size(353, 29);
             this.panel10.TabIndex = 32;
             // 
-            // pictureBox4
+            // DeletedRefresh
             // 
-            this.pictureBox4.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
-            this.pictureBox4.Location = new System.Drawing.Point(324, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 23);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.DeletedRefresh.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
+            this.DeletedRefresh.Location = new System.Drawing.Point(324, 3);
+            this.DeletedRefresh.Name = "DeletedRefresh";
+            this.DeletedRefresh.Size = new System.Drawing.Size(24, 23);
+            this.DeletedRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DeletedRefresh.TabIndex = 3;
+            this.DeletedRefresh.TabStop = false;
             // 
-            // guna2Button1
+            // TypeBox
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.guna2Button1.Location = new System.Drawing.Point(189, 220);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(87, 33);
-            this.guna2Button1.TabIndex = 45;
-            this.guna2Button1.Text = "Retrieve";
+            this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TypeBox.Location = new System.Drawing.Point(189, 18);
+            this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
+            this.TypeBox.Multiline = true;
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.ReadOnly = true;
+            this.TypeBox.Size = new System.Drawing.Size(146, 28);
+            this.TypeBox.TabIndex = 46;
             // 
-            // pictureBox5
+            // CategoryBox
             // 
-            this.pictureBox5.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
-            this.pictureBox5.Location = new System.Drawing.Point(324, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 23);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
+            this.CategoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CategoryBox.Location = new System.Drawing.Point(189, 70);
+            this.CategoryBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CategoryBox.Multiline = true;
+            this.CategoryBox.Name = "CategoryBox";
+            this.CategoryBox.ReadOnly = true;
+            this.CategoryBox.Size = new System.Drawing.Size(146, 28);
+            this.CategoryBox.TabIndex = 47;
             // 
             // DeleteInventory
             // 
@@ -797,12 +810,12 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DeletedInventoryGrid);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.ReturnBtn);
-            this.Controls.Add(this.DeletedProductsGrid);
+            this.Controls.Add(this.InventoryGrid);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
@@ -814,7 +827,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeletedProductsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -834,14 +847,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryRefresh)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeletedInventoryGrid)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeletedRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -855,7 +868,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox ExitBtn;
         private System.Windows.Forms.PictureBox ReturnBtn;
-        private System.Windows.Forms.DataGridView DeletedProductsGrid;
+        private System.Windows.Forms.DataGridView InventoryGrid;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox inventoryLogo;
@@ -877,7 +890,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
@@ -896,16 +908,17 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox ItemIdBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DescriptionBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox MemoBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DeletedInventoryGrid;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox InventoryRefresh;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox DeletedRefresh;
+        private System.Windows.Forms.TextBox CategoryBox;
+        private System.Windows.Forms.TextBox TypeBox;
     }
 }
