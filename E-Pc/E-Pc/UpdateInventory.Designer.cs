@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.PriceBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,12 +53,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.InactiveBox = new System.Windows.Forms.RadioButton();
             this.ActiveBox = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SelectImageBtn = new System.Windows.Forms.Button();
+            this.ItemImage = new System.Windows.Forms.PictureBox();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.InventoryGrid = new System.Windows.Forms.DataGridView();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,12 +83,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.SelectImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -327,8 +326,8 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.InactiveBox);
             this.panel2.Controls.Add(this.ActiveBox);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.SelectImageBtn);
+            this.panel2.Controls.Add(this.ItemImage);
             this.panel2.Controls.Add(this.NameBox);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.ClearBtn);
@@ -379,9 +378,9 @@
             this.label11.Location = new System.Drawing.Point(190, 185);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.Size = new System.Drawing.Size(162, 13);
             this.label11.TabIndex = 36;
-            this.label11.Text = "Description";
+            this.label11.Text = "Description (250 max characters)";
             // 
             // CategoryBox
             // 
@@ -430,23 +429,24 @@
             this.ActiveBox.Text = "Active";
             this.ActiveBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // SelectImageBtn
             // 
-            this.button1.Location = new System.Drawing.Point(549, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Select Image";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SelectImageBtn.Location = new System.Drawing.Point(549, 156);
+            this.SelectImageBtn.Name = "SelectImageBtn";
+            this.SelectImageBtn.Size = new System.Drawing.Size(112, 23);
+            this.SelectImageBtn.TabIndex = 30;
+            this.SelectImageBtn.Text = "Select Image";
+            this.SelectImageBtn.UseVisualStyleBackColor = true;
+            this.SelectImageBtn.Click += new System.EventHandler(this.SelectImageBtn_Click);
             // 
-            // pictureBox1
+            // ItemImage
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.Location = new System.Drawing.Point(529, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
+            this.ItemImage.BackColor = System.Drawing.Color.Silver;
+            this.ItemImage.Location = new System.Drawing.Point(529, 14);
+            this.ItemImage.Name = "ItemImage";
+            this.ItemImage.Size = new System.Drawing.Size(157, 131);
+            this.ItemImage.TabIndex = 29;
+            this.ItemImage.TabStop = false;
             // 
             // NameBox
             // 
@@ -487,10 +487,6 @@
             this.InventoryGrid.Size = new System.Drawing.Size(701, 202);
             this.InventoryGrid.TabIndex = 28;
             this.InventoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InventoryGrid_CellContentClick);
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 1;
             // 
             // sidebar
             // 
@@ -768,6 +764,11 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Inventory";
             // 
+            // SelectImageDialog
+            // 
+            this.SelectImageDialog.FileName = "Select Image";
+            this.SelectImageDialog.Filter = "Image files | *.png; *.jpeg; *.jpg;";
+            // 
             // UpdateInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -795,7 +796,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -834,7 +835,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox ReturnBtn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel1;
@@ -856,8 +856,7 @@
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SelectImageBtn;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel9;
@@ -877,5 +876,7 @@
         public System.Windows.Forms.TextBox NameBox;
         public System.Windows.Forms.TextBox DescriptionBox;
         public System.Windows.Forms.ComboBox TypeBox;
+        public System.Windows.Forms.PictureBox ItemImage;
+        private System.Windows.Forms.OpenFileDialog SelectImageDialog;
     }
 }

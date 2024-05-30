@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.LogoutLogo = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -104,10 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 1;
             // 
             // LogoutLogo
             // 
@@ -443,9 +437,9 @@
             this.label9.Location = new System.Drawing.Point(191, 109);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.Size = new System.Drawing.Size(162, 13);
             this.label9.TabIndex = 40;
-            this.label9.Text = "Description";
+            this.label9.Text = "Description (250 max characters)";
             // 
             // CategoryBox
             // 
@@ -483,6 +477,7 @@
             // ItemImage
             // 
             this.ItemImage.BackColor = System.Drawing.Color.Silver;
+            this.ItemImage.Image = global::E_Pc.Properties.Resources.no_image_icon;
             this.ItemImage.Location = new System.Drawing.Point(529, 14);
             this.ItemImage.Name = "ItemImage";
             this.ItemImage.Size = new System.Drawing.Size(157, 131);
@@ -636,7 +631,7 @@
             "CPU",
             "GPU",
             "PSU",
-            "Motherboad",
+            "Motherboard",
             "Others"});
             this.TypeBox.Location = new System.Drawing.Point(193, 19);
             this.TypeBox.Name = "TypeBox";
@@ -747,7 +742,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Panel panel7;

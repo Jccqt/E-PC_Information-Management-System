@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace E_Pc
 {
@@ -22,14 +16,14 @@ namespace E_Pc
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            ShowTable();
+            DataConnection.ShowAllInventoryTable();
         }
 
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             DialogResult exitDiag = MessageBox.Show("Are you sure you want to exit the application?", "Exit Application?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(exitDiag == DialogResult.Yes)
+            if (exitDiag == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -37,12 +31,9 @@ namespace E_Pc
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+            PageObjects.addInventoryPage.Refresh();
             PageObjects.addInventoryPage.Show();
             this.Hide();
-        }
-        public void ShowTable()
-        {
-            DataConnection.ShowActiveInventoryTable();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -59,7 +50,7 @@ namespace E_Pc
 
         private void SearchBox_TextChanged(object sender, EventArgs e)
         {
-            if(SearchBox.Text.Equals("Search here.."))
+            if (SearchBox.Text.Equals("Search here.."))
             {
                 SearchBox.Clear();
             }

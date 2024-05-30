@@ -259,6 +259,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\no image icon.jpg" />
     <None Include="Resources\701, 258.png" />
     <None Include="Resources\UserPNG.png" />
     <None Include="Resources\Homepage5.png" />

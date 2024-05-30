@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.FirstNameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ReturnBtn = new System.Windows.Forms.PictureBox();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.LogoutLogo = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -367,10 +365,6 @@
             this.ReturnBtn.TabIndex = 30;
             this.ReturnBtn.TabStop = false;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 1;
             // 
             // LogoutLogo
             // 
@@ -760,7 +754,6 @@
         private System.Windows.Forms.TextBox FirstNameBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox ReturnBtn;
-        private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Panel panel7;

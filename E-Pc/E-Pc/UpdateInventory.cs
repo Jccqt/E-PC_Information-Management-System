@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace E_Pc
@@ -15,48 +10,10 @@ namespace E_Pc
     public partial class UpdateInventory : Form
     {
         static SqlCommand cmd;
-        static DataTable inventoryTable = new DataTable();
-        static Inventory inventoryPage = new Inventory();
         static bool isExisting = false, isTextEmpty = false;
         public UpdateInventory()
         {
             InitializeComponent();
-        }
-
-        private void VerifyBtn_Click(object sender, EventArgs e)
-        {
-            var localDateTime = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
-            DataConnection.conn.Open();
-            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemId = @id", DataConnection.conn);
-            cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
-            cmd.ExecuteNonQuery();
-            SqlDataReader reader = cmd.ExecuteReader();
-
-
-            if (reader.HasRows)
-            {
-                isExisting = true;
-                
-                MessageBox.Show("Item found!");
-                if (reader.Read())
-                {
-                    ItemIdBox.Text = reader.GetString(0);
-                    NameBox.Text = reader.GetString(1);
-                    BrandBox.Text = reader.GetString(2);
-                    PriceBox.Text = reader.GetValue(3).ToString();
-                    QuantityBox.Text = reader.GetValue(4).ToString();
-                    TypeBox.Text = reader.GetString(5);
-                    MemoBox.Text = $"Updated on {localDateTime} - ";
-                }
-            }
-            else
-            {
-                reader.Close();
-                isExisting = false;
-               
-                MessageBox.Show("Item has not been found!");
-            }
-            DataConnection.conn.Close();
         }
 
         private void UpdateInventory_Load(object sender, EventArgs e)
@@ -64,7 +21,6 @@ namespace E_Pc
             DataConnection.ItemIdList.Clear();
             DataConnection.GetItemIdList();
             DataConnection.ShowAllInventoryTable();
-            ItemIdBox.Focus();
             foreach (DataGridViewColumn column in InventoryGrid.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -79,8 +35,8 @@ namespace E_Pc
 
             DataConnection.conn.Open();
 
-            if(ItemIdBox.Text.Equals("") || NameBox.Text.Equals("") || BrandBox.Text.Equals("") || PriceBox.Text.Equals("")
-                || QuantityBox.Text.Equals("") || TypeBox.Text.Equals(""))
+            if (ItemIdBox.Text.Equals("") || NameBox.Text.Equals("") || BrandBox.Text.Equals("") || PriceBox.Text.Equals("")
+                || QuantityBox.Text.Equals("") || TypeBox.Text.Equals("") || CategoryBox.Text.Equals(""))
             {
                 isTextEmpty = true;
             }
@@ -88,53 +44,36 @@ namespace E_Pc
             {
                 isTextEmpty = false;
             }
-
-            if (isExisting && !isTextEmpty && Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern) && Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern))
+            
+            if (!isTextEmpty)
             {
                 DialogResult updateDiag = MessageBox.Show("Do you want to save changes?", "Save details", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if(updateDiag == DialogResult.Yes)
+                if (updateDiag == DialogResult.Yes)
                 {
-                    cmd = new SqlCommand("UPDATE Products SET ItemName = @name, ItemBrand = @brand," +
-                        "ItemPrice = @price, ItemQuantity = @quantity, ItemType = @type, ItemMemo = @memo, Date = @date WHERE ItemId = @id", DataConnection.conn);
-                    cmd.Parameters.AddWithValue("@id", ItemIdBox.Text);
-                    cmd.Parameters.AddWithValue("@name", NameBox.Text);
-                    cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
-                    cmd.Parameters.AddWithValue("@price", PriceBox.Text);
-                    cmd.Parameters.AddWithValue("@quantity", QuantityBox.Text);
-                    cmd.Parameters.AddWithValue("@type", TypeBox.Text);
-                    cmd.Parameters.AddWithValue("@memo", MemoBox.Text);
-                    cmd.Parameters.AddWithValue("@date", localDate);
-                    cmd.ExecuteNonQuery();
+                    DataConnection.updateInventory();
                     DataConnection.ShowAllInventoryTable();
                     MessageBox.Show("Item has been updated!");
 
                     // will clear all text box in UpdateInventory page
                     ItemIdBox.Clear();
-                    ClearTextBox(); 
+                    ClearTextBox();
                     isExisting = false;
                     isTextEmpty = false;
+                    Array.Clear(PageObjects.imageBinary, 0, PageObjects.imageBinary.Length);
                 }
 
             }
-            else if (isTextEmpty == true)
+            else
             {
                 MessageBox.Show("Please complete the empty details!", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern) || Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern))
-            {
-                MessageBox.Show("Invalid input on Price or Quantity.", "Invalid Input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // will show a message if the item is not verified as existing
-                MessageBox.Show("Please verify the item first!", "Item Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
             DataConnection.conn.Close();
         }
 
         private void ReturnBtn_Click(object sender, EventArgs e)
         {
-            inventoryPage.Show();
+            PageObjects.inventoryPage.Show();
             this.Hide();
         }
 
@@ -146,8 +85,6 @@ namespace E_Pc
                 Application.Exit();
             }
         }
-
-
         void ClearTextBox()
         {
             NameBox.Clear();
@@ -156,17 +93,37 @@ namespace E_Pc
             QuantityBox.Clear();
             TypeBox.ResetText();
             MemoBox.Clear();
+            DescriptionBox.Clear();
+            CategoryBox.ResetText();
+            ItemImage.Image = null;
             ActiveBox.Checked = false;
             InactiveBox.Checked = false;
         }
 
         private void InventoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataConnection.conn.Open();
             ClearTextBox();
             DataConnection.ItemIdCount = InventoryGrid.CurrentRow.Index;
             DataConnection.InventoryDataInsert();
+            DataConnection.conn.Close();
         }
 
+        private void SelectImageBtn_Click(object sender, EventArgs e)
+        {
+            if (SelectImageDialog.ShowDialog() == DialogResult.OK)
+            {
+                ItemImage.Image = Image.FromFile(SelectImageDialog.FileName);
+                ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                PageObjects.imageBinary = System.IO.File.ReadAllBytes(SelectImageDialog.FileName);
+                PageObjects.isNewImage = true;
+            }
+        }
+
+        public byte[] getImageBinary()
+        {
+            return PageObjects.imageBinary;
+        }
 
         private void ClearBtn_Click(object sender, EventArgs e)
         {

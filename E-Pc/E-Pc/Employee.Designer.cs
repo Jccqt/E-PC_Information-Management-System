@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.RemoveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -53,7 +52,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.LogoutLogo = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.EmployeeGrid = new System.Windows.Forms.DataGridView();
             this.SearchBox = new System.Windows.Forms.TextBox();
@@ -372,10 +370,6 @@
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
             // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 1;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
@@ -496,7 +490,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
-        private System.Windows.Forms.Timer sidebarTimer;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.DataGridView EmployeeGrid;
         private System.Windows.Forms.TextBox SearchBox;

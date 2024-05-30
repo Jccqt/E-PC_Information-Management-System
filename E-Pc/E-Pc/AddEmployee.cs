@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace E_Pc
@@ -63,7 +56,7 @@ namespace E_Pc
                 isTextEmpty = false;
             }
 
-            if(!isExisting && !isTextEmpty && Regex.IsMatch(BirthdateBox.Text, InputValidation.datePattern) &&
+            if (!isExisting && !isTextEmpty && Regex.IsMatch(BirthdateBox.Text, InputValidation.datePattern) &&
                 Regex.IsMatch(ContactBox.Text, InputValidation.numericPattern) && Regex.IsMatch(AgeBox.Text, InputValidation.numericPattern))
             {
                 cmd = new SqlCommand("INSERT INTO Employees Values (@fName, @lName, @age, @birthdate, @contact, @position, @address)", DataConnection.conn);
@@ -82,10 +75,11 @@ namespace E_Pc
                 MessageBox.Show("Employee has been added successfully!", "Employee added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            else if(isExisting)
+            else if (isExisting)
             {
                 MessageBox.Show("Employee is already existing!", "Employee exist", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else if (isTextEmpty)
+            }
+            else if (isTextEmpty)
             {
                 MessageBox.Show("Empty details! Please complete the employee details", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

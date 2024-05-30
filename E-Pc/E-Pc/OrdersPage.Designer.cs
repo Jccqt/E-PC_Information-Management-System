@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.LogoutLogo = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.LogoutButton = new System.Windows.Forms.Button();
@@ -81,10 +79,6 @@
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 1;
             // 
             // LogoutLogo
             // 
@@ -467,8 +461,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button LogoutButton;

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace E_Pc
 {
@@ -30,7 +23,7 @@ namespace E_Pc
 
         private void Login_Load(object sender, EventArgs e)
         {
-            DateTimer.Start();
+            
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -49,19 +42,19 @@ namespace E_Pc
             DataConnection.conn.Open();
             cmd = new SqlCommand("SELECT Username, Password FROM Credentials", DataConnection.conn);
             SqlDataReader reader = cmd.ExecuteReader();
-           
-            while(reader.Read())
+
+            while (reader.Read())
             {
                 username = (string)reader.GetValue(0);
                 password = (string)reader.GetValue(1);
                 if (usernameTxt.Text.Equals(username) && passwordTxt.Text.Equals(password))
                 {
                     isLogin = true;
-                    
+
                 }
             }
             DataConnection.conn.Close();
-            if(isLogin)
+            if (isLogin)
             {
                 MessageBox.Show("Login successfully!");
                 usernameTxt.ResetText();

@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace E_Pc
@@ -19,7 +12,6 @@ namespace E_Pc
         static string idToCheck;
         static bool isExisting = false, isTextEmpty = false;
         static string imageToConvert;
-        static byte[] imageBinary = new byte[0];
         public AddInventory()
         {
             InitializeComponent();
@@ -33,12 +25,10 @@ namespace E_Pc
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            
-
             DataConnection.conn.Open();
 
             DataConnection.CheckDuplicateProduct();
-  
+
             if (DataConnection.reader.Read())
             {
                 // will check if the Item ID is already existing
@@ -66,16 +56,18 @@ namespace E_Pc
                 ClearTextBox();
                 isTextEmpty = false;
                 isExisting = false;
+                PageObjects.isNewImage = false;
+                Array.Clear(PageObjects.imageBinary, 0, PageObjects.imageBinary.Length);
 
                 MessageBox.Show("The item has been successfully added!", "New item added.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if(isTextEmpty)
+            else if (isTextEmpty)
             {
-               // will show an error message is there's an empty box
+                // will show an error message is there's an empty box
                 MessageBox.Show("Please make sure that input boxes is not empty.", "Empty input.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(!Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern) || !Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
-            {   
+            else if (!Regex.IsMatch(QuantityBox.Text, InputValidation.numberPattern) || !Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
+            {
                 // will show an error message if the input for Quantity or Price has a character included
                 MessageBox.Show("Invalid input on Quantity or Price! Please enter a valid input.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -117,25 +109,22 @@ namespace E_Pc
 
         private void SelectImageBtn_Click(object sender, EventArgs e)
         {
-            if(SelectImageDialog.ShowDialog() == DialogResult.OK)
+            if (SelectImageDialog.ShowDialog() == DialogResult.OK)
             {
                 ItemImage.Image = Image.FromFile(SelectImageDialog.FileName);
                 ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageBinary = System.IO.File.ReadAllBytes(SelectImageDialog.FileName);
-
+                PageObjects.imageBinary = System.IO.File.ReadAllBytes(SelectImageDialog.FileName);
+                PageObjects.isNewImage = true;
             }
         }
 
         private void AddInventory_Load(object sender, EventArgs e)
         {
+            ItemImage.Image = Properties.Resources.no_image_icon;
+            ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
             DataConnection.ShowActiveInventoryTable();
             NameBox.Focus();
         }
 
-        public byte[] getImageBinary()
-        {
-            return imageBinary;
-        }
-    
     }
 }

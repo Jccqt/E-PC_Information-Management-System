@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace E_Pc
@@ -36,10 +29,10 @@ namespace E_Pc
                 isTextEmpty = false;
             }
 
-            if(isExisting && !isTextEmpty)
+            if (isExisting && !isTextEmpty)
             {
                 DialogResult removeDialog = MessageBox.Show("Are you sure you want to remove the employee?", "Remove Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(removeDialog == DialogResult.Yes)
+                if (removeDialog == DialogResult.Yes)
                 {
                     cmd = new SqlCommand("INSERT INTO Removed_Employees (EmpId, FirstName, LastName, Age, Birthdate, ContactNum, Position, Address) " +
                         "SELECT EmpId, FirstName, LastName, Age, Birthdate, ContactNum, Position, Address FROM Employees WHERE EmpId = @id", DataConnection.conn);
@@ -85,7 +78,7 @@ namespace E_Pc
             cmd.Parameters.AddWithValue("@id", EmpIdBox.Text);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            if(reader.Read())
+            if (reader.Read())
             {
                 isExisting = true;
                 CheckPic.Visible = true;
