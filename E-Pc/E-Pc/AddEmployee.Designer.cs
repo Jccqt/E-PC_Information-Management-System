@@ -79,6 +79,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
@@ -101,6 +102,7 @@
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -670,12 +672,14 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Controls.Add(this.label11);
             this.panel8.Location = new System.Drawing.Point(244, 344);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(701, 29);
             this.panel8.TabIndex = 42;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label11
             // 
@@ -687,6 +691,16 @@
             this.label11.Size = new System.Drawing.Size(170, 22);
             this.label11.TabIndex = 0;
             this.label11.Text = "Added Employees";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(672, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // AddEmployee
             // 
@@ -734,6 +748,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -791,5 +806,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

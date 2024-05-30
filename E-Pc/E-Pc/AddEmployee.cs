@@ -103,6 +103,11 @@ namespace E_Pc
             ShowTable();
         }
 
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         void ClearTextBox()
         {
             FirstNameBox.Clear();

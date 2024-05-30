@@ -443,6 +443,16 @@ namespace E_Pc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Refresh_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Refresh-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Remove_Employee_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Remove_Employee-removebg-preview", resourceCulture);

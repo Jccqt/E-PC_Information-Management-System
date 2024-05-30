@@ -80,6 +80,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.OrderLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalesLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).BeginInit();
@@ -100,6 +101,7 @@
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderLogo
@@ -679,6 +681,7 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(244, 344);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
@@ -696,6 +699,16 @@
             this.label12.Size = new System.Drawing.Size(190, 22);
             this.label12.TabIndex = 0;
             this.label12.Text = "Updated Information";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(673, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // UpdateEmployee
             // 
@@ -740,6 +753,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -798,5 +812,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

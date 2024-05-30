@@ -84,6 +84,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.SelectImageDialog = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
@@ -107,6 +108,7 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PriceBox
@@ -746,6 +748,7 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(244, 344);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
@@ -768,6 +771,16 @@
             // 
             this.SelectImageDialog.FileName = "Select Image";
             this.SelectImageDialog.Filter = "Image files | *.png; *.jpeg; *.jpg;";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(672, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // UpdateInventory
             // 
@@ -816,6 +829,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -878,5 +892,6 @@
         public System.Windows.Forms.ComboBox TypeBox;
         public System.Windows.Forms.PictureBox ItemImage;
         private System.Windows.Forms.OpenFileDialog SelectImageDialog;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

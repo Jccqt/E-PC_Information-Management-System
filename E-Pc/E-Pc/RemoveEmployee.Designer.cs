@@ -67,6 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.RemovedEmployeeGrid = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -90,6 +91,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemovedEmployeeGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -386,6 +388,7 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Location = new System.Drawing.Point(244, 344);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
@@ -552,6 +555,16 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "Remove Employee";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::E_Pc.Properties.Resources.Refresh_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(673, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // RemoveEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,6 +612,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CheckPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemovedEmployeeGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,5 +659,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
