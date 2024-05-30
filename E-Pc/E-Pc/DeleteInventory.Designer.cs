@@ -61,6 +61,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CategoryBox = new System.Windows.Forms.TextBox();
+            this.TypeBox = new System.Windows.Forms.TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.DescriptionBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,7 +70,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ItemImage = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ClearBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -84,8 +86,6 @@
             this.DeletedInventoryGrid = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.DeletedRefresh = new System.Windows.Forms.PictureBox();
-            this.TypeBox = new System.Windows.Forms.TextBox();
-            this.CategoryBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
@@ -109,7 +109,7 @@
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryRefresh)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeletedInventoryGrid)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DeletedRefresh)).BeginInit();
@@ -416,6 +416,7 @@
             this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ReturnBtn.TabIndex = 30;
             this.ReturnBtn.TabStop = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // panel8
             // 
@@ -484,7 +485,7 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.ItemImage);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.ClearBtn);
             this.panel2.Controls.Add(this.AddBtn);
@@ -502,6 +503,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(701, 266);
             this.panel2.TabIndex = 44;
+            // 
+            // CategoryBox
+            // 
+            this.CategoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CategoryBox.Location = new System.Drawing.Point(189, 70);
+            this.CategoryBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CategoryBox.Multiline = true;
+            this.CategoryBox.Name = "CategoryBox";
+            this.CategoryBox.ReadOnly = true;
+            this.CategoryBox.Size = new System.Drawing.Size(146, 28);
+            this.CategoryBox.TabIndex = 47;
+            // 
+            // TypeBox
+            // 
+            this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TypeBox.Location = new System.Drawing.Point(189, 18);
+            this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
+            this.TypeBox.Multiline = true;
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.ReadOnly = true;
+            this.TypeBox.Size = new System.Drawing.Size(146, 28);
+            this.TypeBox.TabIndex = 46;
             // 
             // guna2Button1
             // 
@@ -590,14 +613,14 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Category*";
             // 
-            // pictureBox1
+            // ItemImage
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.Location = new System.Drawing.Point(529, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 131);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.ItemImage.BackColor = System.Drawing.Color.Silver;
+            this.ItemImage.Location = new System.Drawing.Point(529, 14);
+            this.ItemImage.Name = "ItemImage";
+            this.ItemImage.Size = new System.Drawing.Size(157, 131);
+            this.ItemImage.TabIndex = 26;
+            this.ItemImage.TabStop = false;
             // 
             // label4
             // 
@@ -780,28 +803,6 @@
             this.DeletedRefresh.TabIndex = 3;
             this.DeletedRefresh.TabStop = false;
             // 
-            // TypeBox
-            // 
-            this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TypeBox.Location = new System.Drawing.Point(189, 18);
-            this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
-            this.TypeBox.Multiline = true;
-            this.TypeBox.Name = "TypeBox";
-            this.TypeBox.ReadOnly = true;
-            this.TypeBox.Size = new System.Drawing.Size(146, 28);
-            this.TypeBox.TabIndex = 46;
-            // 
-            // CategoryBox
-            // 
-            this.CategoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CategoryBox.Location = new System.Drawing.Point(189, 70);
-            this.CategoryBox.Margin = new System.Windows.Forms.Padding(2);
-            this.CategoryBox.Multiline = true;
-            this.CategoryBox.Name = "CategoryBox";
-            this.CategoryBox.ReadOnly = true;
-            this.CategoryBox.Size = new System.Drawing.Size(146, 28);
-            this.CategoryBox.TabIndex = 47;
-            // 
             // DeleteInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -824,6 +825,7 @@
             this.Name = "DeleteInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete";
+            this.Load += new System.EventHandler(this.DeleteInventory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
@@ -850,7 +852,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.InventoryRefresh)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeletedInventoryGrid)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -868,7 +870,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox ExitBtn;
         private System.Windows.Forms.PictureBox ReturnBtn;
-        private System.Windows.Forms.DataGridView InventoryGrid;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox inventoryLogo;
@@ -891,26 +892,19 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button ClearBtn;
         private Guna.UI2.WinForms.Guna2Button AddBtn;
         public System.Windows.Forms.TextBox PriceBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox BrandBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox QuantityBox;
         private System.Windows.Forms.Label QuantityLabel;
-        private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox ItemIdBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox DescriptionBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox MemoBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView DeletedInventoryGrid;
@@ -918,7 +912,15 @@
         private System.Windows.Forms.PictureBox InventoryRefresh;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.PictureBox DeletedRefresh;
-        private System.Windows.Forms.TextBox CategoryBox;
-        private System.Windows.Forms.TextBox TypeBox;
+        public System.Windows.Forms.DataGridView InventoryGrid;
+        public System.Windows.Forms.TextBox BrandBox;
+        public System.Windows.Forms.TextBox NameBox;
+        public System.Windows.Forms.TextBox ItemIdBox;
+        public System.Windows.Forms.TextBox CategoryBox;
+        public System.Windows.Forms.TextBox TypeBox;
+        public System.Windows.Forms.TextBox QuantityBox;
+        public System.Windows.Forms.TextBox DescriptionBox;
+        public System.Windows.Forms.TextBox MemoBox;
+        public System.Windows.Forms.PictureBox ItemImage;
     }
 }

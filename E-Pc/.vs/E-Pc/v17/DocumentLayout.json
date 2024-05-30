@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\deleteinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\updateinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateInventory.cs",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\UpdateInventory.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\UpdateInventory.cs",
+              "RelativeToolTip": "E-Pc\\UpdateInventory.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAmwGkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T21:12:11.767Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -36,14 +53,14 @@
               "RelativeDocumentMoniker": "E-Pc\\Program.cs",
               "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Program.cs",
               "RelativeToolTip": "E-Pc\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAIBAAAAAAAAAAAUwAcBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T14:27:47.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DeleteInventory.cs [Design]",
               "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\DeleteInventory.cs",
               "RelativeDocumentMoniker": "E-Pc\\DeleteInventory.cs",
@@ -55,13 +72,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DeleteInventory.cs",
               "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\DeleteInventory.cs",
               "RelativeDocumentMoniker": "E-Pc\\DeleteInventory.cs",
               "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\DeleteInventory.cs",
               "RelativeToolTip": "E-Pc\\DeleteInventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAnwA0AAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAvwCEAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T14:16:25.779Z",
               "EditorCaption": ""

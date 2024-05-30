@@ -18,7 +18,6 @@ namespace E_Pc
 
         private void UpdateInventory_Load(object sender, EventArgs e)
         {
-            DataConnection.ItemIdList.Clear();
             DataConnection.GetItemIdList();
             DataConnection.ShowAllInventoryTable();
             foreach (DataGridViewColumn column in InventoryGrid.Columns)
@@ -102,10 +101,12 @@ namespace E_Pc
 
         private void InventoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var localDate = DateTime.Now.ToString("dd/mm/yyyy hh:mm tt");
+
             DataConnection.conn.Open();
-            ClearTextBox();
             DataConnection.ItemIdCount = InventoryGrid.CurrentRow.Index;
             DataConnection.InventoryDataInsert();
+            MemoBox.Text = $"Updated on {localDate}";
             DataConnection.conn.Close();
         }
 
@@ -127,7 +128,6 @@ namespace E_Pc
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            DataConnection.ItemIdList.Clear();
             DataConnection.GetItemIdList();
             DataConnection.ShowAllInventoryTable();
             foreach (DataGridViewColumn column in InventoryGrid.Columns)

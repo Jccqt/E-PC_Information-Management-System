@@ -32,7 +32,9 @@ namespace E_Pc
         public static SqlDataReader reader;
         public static int idCount = 0;
         public static int ItemIdCount = 0;
+        public static int activeItemIdCount = 0;
         public static ArrayList ItemIdList = new ArrayList();
+        public static ArrayList activeItemIdList = new ArrayList();
 
         public static void InventorySearch()
         {
@@ -86,6 +88,7 @@ namespace E_Pc
             adapter.Fill(PageObjects.inventoryTable);
             PageObjects.updateInventoryPage.InventoryGrid.DataSource = PageObjects.inventoryTable;
             PageObjects.inventoryPage.InventoryGrid.DataSource = PageObjects.inventoryTable;
+            PageObjects.deleteInventoryPage.InventoryGrid.DataSource = PageObjects.inventoryTable;
         }
 
         public static void AddProduct()
@@ -146,10 +149,28 @@ namespace E_Pc
             conn.Close();
         }
 
+        public static void GetActiveItemIdList()
+        {
+            activeItemIdList.Clear();
+            conn.Open();
+            cmd = new SqlCommand("SELECT ItemId FROM Products WHERE Active_flag = 1", conn);
+            reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    activeItemIdList.Add(reader.GetValue(0));
+                }
+            }
+
+            reader.Close();
+            conn.Close();
+        }
+
         public static void InventoryDataInsert()
         {
-            var localDate = DateTime.Now.ToString("dd/mm/yyyy hh:mm tt");
-
+            // Data insert for inventory table on Update Inventory page
             cmd = new SqlCommand("SELECT * FROM Products WHERE ItemId = @id", conn);
             cmd.Parameters.AddWithValue("@id", ItemIdList[ItemIdCount]);
             reader = cmd.ExecuteReader();
@@ -164,7 +185,7 @@ namespace E_Pc
                 PageObjects.updateInventoryPage.TypeBox.Text = reader.GetString(5);
                 PageObjects.updateInventoryPage.CategoryBox.Text = reader.GetString(6);
                 PageObjects.updateInventoryPage.DescriptionBox.Text = reader.GetString(7);
-                PageObjects.updateInventoryPage.MemoBox.Text = $"Updated on {localDate} - ";
+
                 
                 if(!reader.GetValue(10).ToString().Equals(""))
                 {
@@ -186,7 +207,7 @@ namespace E_Pc
                 {
                     PageObjects.updateInventoryPage.ActiveBox.Select();
                 }
-                else
+                else if(reader.GetValue(11).ToString().Equals("0"))
                 {
                     PageObjects.updateInventoryPage.InactiveBox.Select();
                 }
@@ -232,6 +253,46 @@ namespace E_Pc
                 PageObjects.isNewImage = false;
             }
             
+        }
+
+        public static void InventoryToDeleteDataInsert()
+        {
+            //Data insert for inventory table on Delete Inventory page
+            cmd = new SqlCommand("SELECT * FROM Products WHERE ItemId = @id AND Active_flag = 1", conn);
+            cmd.Parameters.AddWithValue("@id", activeItemIdList[activeItemIdCount]);
+            reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                PageObjects.deleteInventoryPage.ItemIdBox.Text = reader.GetString(0);
+                PageObjects.deleteInventoryPage.NameBox.Text = reader.GetString(1);
+                PageObjects.deleteInventoryPage.BrandBox.Text = reader.GetString(2);
+                PageObjects.deleteInventoryPage.PriceBox.Text = reader.GetValue(3).ToString();
+                PageObjects.deleteInventoryPage.QuantityBox.Text = reader.GetValue(4).ToString();
+                PageObjects.deleteInventoryPage.TypeBox.Text = reader.GetString(5);
+                PageObjects.deleteInventoryPage.CategoryBox.Text = reader.GetString(6);
+                PageObjects.deleteInventoryPage.DescriptionBox.Text = reader.GetString(7);
+
+
+                
+
+                if (!reader.GetValue(11).ToString().Equals(""))
+                {
+                    byte[] imageBinary = (byte[])reader.GetValue(10);
+                    using (MemoryStream ms = new MemoryStream(imageBinary))
+                    {
+                        PageObjects.deleteInventoryPage.ItemImage.Image = Image.FromStream(ms);
+                        PageObjects.deleteInventoryPage.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+                else
+                {
+                    PageObjects.deleteInventoryPage.ItemImage.Image = Properties.Resources.no_image_icon;
+                    PageObjects.deleteInventoryPage.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+
+            reader.Close();
         }
     }
 
