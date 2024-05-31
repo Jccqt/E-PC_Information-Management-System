@@ -30,11 +30,14 @@ namespace E_Pc
         public static SqlCommand cmd;
         public static SqlDataAdapter adapter;
         public static SqlDataReader reader;
+        public static int itemQuantity = 0;
         public static int idCount = 0;
         public static int ItemIdCount = 0;
         public static int activeItemIdCount = 0;
+        public static int deletedItemIdCount = 0;
         public static ArrayList ItemIdList = new ArrayList();
         public static ArrayList activeItemIdList = new ArrayList();
+        public static ArrayList deletedItemIdList = new ArrayList();
 
         public static void InventorySearch()
         {
@@ -68,6 +71,7 @@ namespace E_Pc
             PageObjects.activeInventoryTable.Clear();
             adapter.Fill(PageObjects.activeInventoryTable);
             PageObjects.addInventoryPage.InventoryGrid.DataSource = PageObjects.activeInventoryTable;
+            PageObjects.deleteInventoryPage.InventoryGrid.DataSource = PageObjects.activeInventoryTable;
         }
 
         public static void ShowAllInventoryTable()
@@ -88,7 +92,7 @@ namespace E_Pc
             adapter.Fill(PageObjects.inventoryTable);
             PageObjects.updateInventoryPage.InventoryGrid.DataSource = PageObjects.inventoryTable;
             PageObjects.inventoryPage.InventoryGrid.DataSource = PageObjects.inventoryTable;
-            PageObjects.deleteInventoryPage.InventoryGrid.DataSource = PageObjects.inventoryTable;
+           
         }
 
         public static void AddProduct()
@@ -101,12 +105,12 @@ namespace E_Pc
             idCount += int.Parse(cmd.ExecuteScalar().ToString());
 
             cmd = new SqlCommand("INSERT INTO Products (ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, ItemType, Category, ItemDescription, DateCreation, Active_flag) " +
-                "VALUES (@id, @name, @brand, @quantity, @price, @type, @category, @description, @date, @flag)", conn);
+                "VALUES (@id, @name, @brand, @price, @quantity, @type, @category, @description, @date, @flag)", conn);
             cmd.Parameters.AddWithValue("@id", $"{PageObjects.addInventoryPage.TypeBox.SelectedItem.ToString().ToUpper()}{idCount + 1}");
             cmd.Parameters.AddWithValue("@name", PageObjects.addInventoryPage.NameBox.Text);
             cmd.Parameters.AddWithValue("@brand", PageObjects.addInventoryPage.BrandBox.Text);
-            cmd.Parameters.AddWithValue("@quantity", PageObjects.addInventoryPage.QuantityBox.Text);
             cmd.Parameters.AddWithValue("@price", PageObjects.addInventoryPage.PriceBox.Text);
+            cmd.Parameters.AddWithValue("@quantity", PageObjects.addInventoryPage.QuantityBox.Text);
             cmd.Parameters.AddWithValue("@type", PageObjects.addInventoryPage.TypeBox.SelectedItem);
             cmd.Parameters.AddWithValue("@category", PageObjects.addInventoryPage.CategoryBox.SelectedItem);
             cmd.Parameters.AddWithValue("@description", PageObjects.addInventoryPage.DescriptionBox.Text);
@@ -168,6 +172,25 @@ namespace E_Pc
             conn.Close();
         }
 
+        public static void GetDeletedItemIdList()
+        {
+            deletedItemIdList.Clear();
+            conn.Open();
+            cmd = new SqlCommand("SELECT DeletionId FROM Deleted_Products", conn);
+            reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    deletedItemIdList.Add(reader.GetValue(0));
+                }
+            }
+            reader.Close();
+            conn.Close();
+
+        }
+
         public static void InventoryDataInsert()
         {
             // Data insert for inventory table on Update Inventory page
@@ -217,16 +240,17 @@ namespace E_Pc
             reader.Close();
         }
 
-        public static void updateInventory()
+        public static void UpdateInventory()
         {
 
-            cmd = new SqlCommand("UPDATE Products SET ItemName = @name, ItemBrand = @brand, ItemPrice = @price, ItemType = @type" +
+            cmd = new SqlCommand("UPDATE Products SET ItemName = @name, ItemBrand = @brand, ItemPrice = @price, ItemQuantity = @quantity, ItemType = @type" +
                 ", Category = @category, ItemDescription = @description, ItemMemo = @memo" +
                 ", Active_flag = @flag WHERE ItemId = @id", conn);
             cmd.Parameters.AddWithValue("@id", ItemIdList[ItemIdCount]);
             cmd.Parameters.AddWithValue("@name", PageObjects.updateInventoryPage.NameBox.Text);
             cmd.Parameters.AddWithValue("@brand", PageObjects.updateInventoryPage.BrandBox.Text);
             cmd.Parameters.AddWithValue("@price", PageObjects.updateInventoryPage.PriceBox.Text);
+            cmd.Parameters.AddWithValue("@quantity", PageObjects.updateInventoryPage.QuantityBox.Text);
             cmd.Parameters.AddWithValue("@type", PageObjects.updateInventoryPage.TypeBox.Text);
             cmd.Parameters.AddWithValue("@category", PageObjects.updateInventoryPage.CategoryBox.Text);
             cmd.Parameters.AddWithValue("@description", PageObjects.updateInventoryPage.DescriptionBox.Text);
@@ -267,16 +291,11 @@ namespace E_Pc
                 PageObjects.deleteInventoryPage.ItemIdBox.Text = reader.GetString(0);
                 PageObjects.deleteInventoryPage.NameBox.Text = reader.GetString(1);
                 PageObjects.deleteInventoryPage.BrandBox.Text = reader.GetString(2);
-                PageObjects.deleteInventoryPage.PriceBox.Text = reader.GetValue(3).ToString();
                 PageObjects.deleteInventoryPage.QuantityBox.Text = reader.GetValue(4).ToString();
                 PageObjects.deleteInventoryPage.TypeBox.Text = reader.GetString(5);
                 PageObjects.deleteInventoryPage.CategoryBox.Text = reader.GetString(6);
-                PageObjects.deleteInventoryPage.DescriptionBox.Text = reader.GetString(7);
 
-
-                
-
-                if (!reader.GetValue(11).ToString().Equals(""))
+                if (!reader.GetValue(10).ToString().Equals(""))
                 {
                     byte[] imageBinary = (byte[])reader.GetValue(10);
                     using (MemoryStream ms = new MemoryStream(imageBinary))
@@ -292,6 +311,92 @@ namespace E_Pc
                 }
             }
 
+            reader.Close();
+        }
+
+        public static void DeleteInventory()
+        {
+            var localDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
+
+            if(Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityBox.Text) < Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityToDeleteBox.Text))
+            {
+                MessageBox.Show("Invalid delete quantity! Please check the current item quantity", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            } 
+            else if(Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityBox.Text) > Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityToDeleteBox.Text))
+            {
+                cmd = new SqlCommand("UPDATE Products SET ItemQuantity = @quantity WHERE ItemId = @id", conn);
+                cmd.Parameters.AddWithValue("@quantity", (Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityBox.Text) - Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityToDeleteBox.Text)));
+                cmd.Parameters.AddWithValue("@id", activeItemIdList[activeItemIdCount]);
+                cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand("INSERT INTO Deleted_Products (DeletedQuantity, " +
+                    "DeletionDate, ItemId, Status) VALUES (@quantity, @date, @id, @status)", conn);
+                cmd.Parameters.AddWithValue("@quantity", Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityToDeleteBox.Text));
+                cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(localDate));
+                cmd.Parameters.AddWithValue("@id", activeItemIdList[activeItemIdCount]);
+                cmd.Parameters.AddWithValue("@status", "Archived");
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static void ShowDeletedInventory()
+        {
+            cmd = new SqlCommand("SELECT Deleted_Products.DeletionId AS [Deletion ID], " +
+                "Deleted_Products.DeletedQuantity AS [Deleted Quantity], " +
+                "Deleted_Products.DeletionDate AS [Deletion Date], " +
+                "Deleted_Products.ItemId AS [Item ID], " +
+                "Products.ItemName AS [Name], " +
+                "Products.ItemBrand AS [Brand], " +
+                "Products.ItemType AS [Type], " +
+                "Products.Category AS [Category], " +
+                "Products.ItemMemo AS [Memo], " +
+                "Products.Active_flag AS [Flag], " +
+                "Deleted_Products.Status AS [Status] " +
+                "FROM Deleted_Products LEFT JOIN Products ON Deleted_Products.ItemId = Products.ItemId", conn);
+            adapter = new SqlDataAdapter(cmd);
+            PageObjects.deletedInventoryTable.Clear();
+            adapter.Fill(PageObjects.deletedInventoryTable);
+            PageObjects.deleteInventoryPage.DeletedInventoryGrid.DataSource = PageObjects.deletedInventoryTable;
+        }
+
+        public static void DeletedInventoryDataInsert()
+        {
+            cmd = new SqlCommand("SELECT Deleted_Products.DeletionId, Deleted_Products.DeletedQuantity, " +
+                "Deleted_Products.Status, " +
+                "Products.ItemId, Products.ItemName, Products.ItemBrand, Products.ItemType, " +
+                "Products.Category, Products.ItemMemo, Products.ItemImage FROM Deleted_Products LEFT JOIN Products ON " +
+                "Deleted_Products.ItemId = Products.ItemId WHERE DeletionId = @delId", conn);
+            cmd.Parameters.AddWithValue("@delId", deletedItemIdList[deletedItemIdCount]);
+            reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                PageObjects.deleteInventoryPage.DeletionIdBox.Text = reader.GetValue(0).ToString();
+                PageObjects.deleteInventoryPage.DeletedQuantityBox.Text = reader.GetValue(1).ToString();
+                PageObjects.deleteInventoryPage.StatusBox.Text = reader.GetString(2);
+                PageObjects.deleteInventoryPage.ItemIdBox.Text = reader.GetString(3);
+                PageObjects.deleteInventoryPage.NameBox.Text = reader.GetString(4);
+                PageObjects.deleteInventoryPage.BrandBox.Text = reader.GetString(5);
+                PageObjects.deleteInventoryPage.TypeBox.Text = reader.GetString(6);
+                PageObjects.deleteInventoryPage.CategoryBox.Text = reader.GetString(7);
+                PageObjects.deleteInventoryPage.MemoBox.Text = reader.GetString(8);
+
+                if (!reader.GetValue(9).ToString().Equals(""))
+                {
+                    byte[] imageBinary = (byte[])reader.GetValue(9);
+                    using (MemoryStream ms = new MemoryStream(imageBinary))
+                    {
+                        PageObjects.deleteInventoryPage.ItemImage.Image = Image.FromStream(ms);
+                        PageObjects.deleteInventoryPage.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+                else
+                {
+                    PageObjects.deleteInventoryPage.ItemImage.Image = Properties.Resources.no_image_icon;
+                    PageObjects.deleteInventoryPage.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
             reader.Close();
         }
     }

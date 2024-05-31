@@ -30,7 +30,7 @@ namespace E_Pc
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             var localDate = DateTime.Now;
-            var time = DateTime.Now.ToString("HH:mm tt");
+            var time = DateTime.Now.ToString("hh:mm tt");
 
             DataConnection.conn.Open();
 
@@ -49,7 +49,7 @@ namespace E_Pc
                 DialogResult updateDiag = MessageBox.Show("Do you want to save changes?", "Save details", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (updateDiag == DialogResult.Yes)
                 {
-                    DataConnection.updateInventory();
+                    DataConnection.UpdateInventory();
                     DataConnection.ShowAllInventoryTable();
                     MessageBox.Show("Item has been updated!");
 
