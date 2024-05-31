@@ -69,7 +69,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.CategoryBox = new System.Windows.Forms.TextBox();
             this.TypeBox = new System.Windows.Forms.TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.RetrieveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.MemoBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -442,6 +442,7 @@
             this.InventoryRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.InventoryRefresh.TabIndex = 2;
             this.InventoryRefresh.TabStop = false;
+            this.InventoryRefresh.Click += new System.EventHandler(this.InventoryRefresh_Click);
             // 
             // label12
             // 
@@ -488,7 +489,7 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.CategoryBox);
             this.panel2.Controls.Add(this.TypeBox);
-            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Controls.Add(this.RetrieveBtn);
             this.panel2.Controls.Add(this.MemoBox);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
@@ -604,26 +605,27 @@
             this.TypeBox.Size = new System.Drawing.Size(146, 28);
             this.TypeBox.TabIndex = 46;
             // 
-            // guna2Button1
+            // RetrieveBtn
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.guna2Button1.Location = new System.Drawing.Point(99, 220);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(87, 33);
-            this.guna2Button1.TabIndex = 45;
-            this.guna2Button1.Text = "Retrieve";
+            this.RetrieveBtn.Animated = true;
+            this.RetrieveBtn.AutoRoundedCorners = true;
+            this.RetrieveBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RetrieveBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.RetrieveBtn.BorderRadius = 15;
+            this.RetrieveBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RetrieveBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RetrieveBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RetrieveBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RetrieveBtn.FillColor = System.Drawing.Color.DarkGray;
+            this.RetrieveBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.RetrieveBtn.ForeColor = System.Drawing.Color.GhostWhite;
+            this.RetrieveBtn.Location = new System.Drawing.Point(99, 220);
+            this.RetrieveBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.RetrieveBtn.Name = "RetrieveBtn";
+            this.RetrieveBtn.Size = new System.Drawing.Size(87, 33);
+            this.RetrieveBtn.TabIndex = 45;
+            this.RetrieveBtn.Text = "Retrieve";
+            this.RetrieveBtn.Click += new System.EventHandler(this.RetrieveBtn_Click);
             // 
             // MemoBox
             // 
@@ -709,6 +711,7 @@
             this.ClearBtn.Size = new System.Drawing.Size(87, 33);
             this.ClearBtn.TabIndex = 9;
             this.ClearBtn.Text = "Clear";
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -974,7 +977,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox InventoryRefresh;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button RetrieveBtn;
         private System.Windows.Forms.PictureBox DeletedInventoryRefresh;
         public System.Windows.Forms.DataGridView InventoryGrid;
         public System.Windows.Forms.TextBox BrandBox;

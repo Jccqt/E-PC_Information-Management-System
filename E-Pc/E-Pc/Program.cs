@@ -338,6 +338,20 @@ namespace E_Pc
                 cmd.Parameters.AddWithValue("@status", "Archived");
                 cmd.ExecuteNonQuery();
             }
+            else if(Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityBox.Text) == Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityToDeleteBox.Text))
+            {
+                cmd = new SqlCommand("UPDATE Products SET ItemQuantity = 0, Active_flag = 0 WHERE ItemId = @id", conn);
+                cmd.Parameters.AddWithValue("@id", activeItemIdList[activeItemIdCount]);
+                cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand("INSERT INTO Deleted_Products (DeletedQuantity, " +
+                    "DeletionDate, ItemId, Status) VALUES (@quantity, @date, @id, @status)", conn);
+                cmd.Parameters.AddWithValue("@quantity", Convert.ToInt32(PageObjects.deleteInventoryPage.QuantityToDeleteBox.Text));
+                cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(localDate));
+                cmd.Parameters.AddWithValue("@id", activeItemIdList[activeItemIdCount]);
+                cmd.Parameters.AddWithValue("@status", "Archived");
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public static void ShowDeletedInventory()
@@ -351,7 +365,6 @@ namespace E_Pc
                 "Products.ItemType AS [Type], " +
                 "Products.Category AS [Category], " +
                 "Products.ItemMemo AS [Memo], " +
-                "Products.Active_flag AS [Flag], " +
                 "Deleted_Products.Status AS [Status] " +
                 "FROM Deleted_Products LEFT JOIN Products ON Deleted_Products.ItemId = Products.ItemId", conn);
             adapter = new SqlDataAdapter(cmd);
@@ -398,6 +411,25 @@ namespace E_Pc
                 }
             }
             reader.Close();
+        }
+
+        public static void RetrieveItem()
+        {
+            int Quantity = 0;
+            cmd = new SqlCommand("SELECT ItemQuantity FROM Products WHERE ItemId = @id", conn);
+            cmd.Parameters.AddWithValue("@id", PageObjects.deleteInventoryPage.ItemIdBox.Text);
+            Quantity = Convert.ToInt32(cmd.ExecuteScalar());
+
+            cmd = new SqlCommand("UPDATE Products SET ItemQuantity = @quantity, Active_flag = 1 WHERE ItemId = @id", conn);
+            cmd.Parameters.AddWithValue("@id", PageObjects.deleteInventoryPage.ItemIdBox.Text);
+            cmd.Parameters.AddWithValue("@quantity", Quantity + Convert.ToInt32(PageObjects.deleteInventoryPage.DeletedQuantityBox.Text));
+            cmd.ExecuteNonQuery();
+
+            cmd = new SqlCommand("UPDATE Deleted_Products SET Status = @status WHERE DeletionId = @delId", conn);
+            cmd.Parameters.AddWithValue("@status", "Retrieved");
+            cmd.Parameters.AddWithValue("@delId", PageObjects.deleteInventoryPage.DeletionIdBox.Text);
+            cmd.ExecuteNonQuery();
+
         }
     }
 
