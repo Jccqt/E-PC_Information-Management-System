@@ -6,6 +6,8 @@ namespace E_Pc
 {
     public partial class DeleteInventory : Form
     {
+
+        static bool canRetrieve, canDelete = false;
         public DeleteInventory()
         {
             InitializeComponent();
@@ -41,6 +43,8 @@ namespace E_Pc
             DataConnection.activeItemIdCount = InventoryGrid.CurrentRow.Index;
             DataConnection.InventoryToDeleteDataInsert();
             DataConnection.conn.Close();
+            canDelete = true;
+            canRetrieve = false;
 
         }
 
@@ -58,7 +62,7 @@ namespace E_Pc
 
         private void DeleteBtn_Click(object sender, System.EventArgs e)
         {
-            if(!QuantityToDeleteBox.Text.Equals(""))
+            if(!QuantityToDeleteBox.Text.Equals("") && canDelete)
             {
                 DialogResult deleteDialog = MessageBox.Show("Are you sure you want to decrease the item quantity?", "Decrease Quantity", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -68,23 +72,33 @@ namespace E_Pc
                     DataConnection.DeleteInventory();
                     DataConnection.conn.Close();
 
-                    MessageBox.Show("Item quantity has been decreased!");
-                    MessageBox.Show("Please refresh the Deleted Inventory table");
+                    MessageBox.Show("Item quantity has been decreased!", "Quantity decreased", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("The Inventory and Deleted Inventory tables has been refreshed!", "Table Refresh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearTextBox();
                     QuantityToDeleteBox.Enabled = false;
                     Array.Clear(PageObjects.imageBinary, 0, PageObjects.imageBinary.Length);
                     ShowActiveItemList();
                     ShowDeletedItemList();
+                    canDelete = false;
                 }
+            }
+            else if(QuantityToDeleteBox.Text.Equals("") && canDelete)
+            {
+                MessageBox.Show("Invalid delete quantity! Please enter a valid quantity", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(canRetrieve && !canDelete)
+            {
+                MessageBox.Show("You cannot delete an item that was already been deleted!");
             }
             else
             {
-                MessageBox.Show("Invalid delete quantity! Please enter a valid quantity", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select an item first on inventory table");
             }
         }
 
         void ClearTextBox()
         {
+            ItemIdBox.Clear();
             NameBox.Clear();
             BrandBox.Clear();
             StatusBox.Clear();
@@ -103,6 +117,7 @@ namespace E_Pc
         {
 
             ShowDeletedItemList();
+            ClearTextBox();
         }
 
         private void DeletedInventoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -114,29 +129,43 @@ namespace E_Pc
             DataConnection.deletedItemIdCount = DeletedInventoryGrid.CurrentRow.Index;
             DataConnection.DeletedInventoryDataInsert();
             DataConnection.conn.Close();
-
+            canDelete = false;
+            canRetrieve = true;
         }
 
         private void RetrieveBtn_Click(object sender, EventArgs e)
         {
 
-
-            DialogResult retrieveDialog = MessageBox.Show("Are you sure you want to retrieve the item?", "Retrieve Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(retrieveDialog == DialogResult.Yes)
+            if (canRetrieve)
             {
-                if (StatusBox.Text.Equals("Archived"))
+                DialogResult retrieveDialog = MessageBox.Show("Are you sure you want to retrieve the item?", "Retrieve Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (retrieveDialog == DialogResult.Yes)
                 {
-                    DataConnection.conn.Open();
-                    DataConnection.RetrieveItem();
-                    DataConnection.conn.Close();
-                    MessageBox.Show("The item quantity has been added to the inventory!", "Retrieved Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MessageBox.Show("Please refresh the inventory and deleted inventory");
-                    ClearTextBox();
+                    if (StatusBox.Text.Equals("Archived"))
+                    {
+                        DataConnection.conn.Open();
+                        DataConnection.RetrieveItem();
+                        DataConnection.conn.Close();
+                        MessageBox.Show("The item quantity has been added to the inventory!", "Retrieved Successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("The Inventory and Deleted Inventory tables has been refreshed!", "Table Refresh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearTextBox();
+                        ShowDeletedItemList();
+                        ShowActiveItemList();
+                        canRetrieve = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("The item cannot be retrieved because it was already been retrieved!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("The item cannot be retrieved because it is already been retrieved!");
-                }
+            }
+            else if(canDelete && !canRetrieve)
+            {
+                MessageBox.Show("You cannot retrieved an item that is not in Deleted Inventory table");
+            }
+            else
+            {
+                MessageBox.Show("Please select an item first on Deleted Inventory table");
             }
             
         }
@@ -144,12 +173,15 @@ namespace E_Pc
         private void InventoryRefresh_Click(object sender, EventArgs e)
         {
             ShowActiveItemList();
+            ClearTextBox();
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             ClearTextBox();
             QuantityToDeleteBox.Enabled = false;
+            canDelete = false;
+            canRetrieve = false;
         }
     }
 }
