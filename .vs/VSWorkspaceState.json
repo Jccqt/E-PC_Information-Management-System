@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\E-Pc",
+    "\\E-Pc\\Customer",
     "\\E-Pc\\E-Pc"
   ],
-  "SelectedNode": "\\E-Pc\\E-Pc\\DeleteInventory.cs",
+  "SelectedNode": "\\E-Pc\\Customer\\CpuSelection.cs",
   "PreviewInSolutionExplorer": false
 }

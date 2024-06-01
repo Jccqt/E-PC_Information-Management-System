@@ -34,9 +34,6 @@
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.inventoryLogo = new System.Windows.Forms.PictureBox();
             this.inventoryButton = new System.Windows.Forms.Button();
@@ -56,11 +53,15 @@
             this.EmployeeGrid = new System.Windows.Forms.DataGridView();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.menuButton = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.sidebar.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).BeginInit();
             this.panel4.SuspendLayout();
@@ -73,6 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // RemoveBtn
@@ -165,6 +170,7 @@
             // 
             this.sidebar.BackColor = System.Drawing.Color.White;
             this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel9);
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Controls.Add(this.panel5);
@@ -178,41 +184,11 @@
             this.sidebar.Size = new System.Drawing.Size(232, 552);
             this.sidebar.TabIndex = 26;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.menuButton);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 73);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
-            // 
-            // menuButton
-            // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::E_Pc.Properties.Resources.user_removebg_preview;
-            this.menuButton.Location = new System.Drawing.Point(13, 14);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(52, 47);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 0;
-            this.menuButton.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.inventoryLogo);
             this.panel3.Controls.Add(this.inventoryButton);
-            this.panel3.Location = new System.Drawing.Point(3, 82);
+            this.panel3.Location = new System.Drawing.Point(3, 196);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 68);
             this.panel3.TabIndex = 15;
@@ -245,7 +221,7 @@
             // 
             this.panel4.Controls.Add(this.SalesLogo);
             this.panel4.Controls.Add(this.salesButton);
-            this.panel4.Location = new System.Drawing.Point(3, 156);
+            this.panel4.Location = new System.Drawing.Point(3, 270);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 68);
             this.panel4.TabIndex = 16;
@@ -277,7 +253,7 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 230);
+            this.panel5.Location = new System.Drawing.Point(3, 344);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 68);
             this.panel5.TabIndex = 17;
@@ -309,7 +285,7 @@
             // 
             this.panel6.Controls.Add(this.EmployeeLogo);
             this.panel6.Controls.Add(this.EmployeeManagementButton);
-            this.panel6.Location = new System.Drawing.Point(3, 304);
+            this.panel6.Location = new System.Drawing.Point(3, 418);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(229, 68);
             this.panel6.TabIndex = 18;
@@ -342,7 +318,7 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 378);
+            this.panel7.Location = new System.Drawing.Point(3, 492);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(229, 68);
             this.panel7.TabIndex = 19;
@@ -352,7 +328,7 @@
             this.LogoutLogo.BackColor = System.Drawing.Color.Transparent;
             this.LogoutLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutLogo.Image = global::E_Pc.Properties.Resources.LogOut;
-            this.LogoutLogo.Location = new System.Drawing.Point(3, 13);
+            this.LogoutLogo.Location = new System.Drawing.Point(3, 8);
             this.LogoutLogo.Name = "LogoutLogo";
             this.LogoutLogo.Size = new System.Drawing.Size(62, 43);
             this.LogoutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -363,7 +339,7 @@
             // 
             this.LogoutButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButton.Location = new System.Drawing.Point(-7, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(-7, -5);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(242, 68);
             this.LogoutButton.TabIndex = 14;
@@ -419,6 +395,68 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Employee Management";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(-7, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(242, 68);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Dashboard";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox3);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Location = new System.Drawing.Point(3, 122);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(229, 68);
+            this.panel9.TabIndex = 23;
+            // 
+            // menuButton
+            // 
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
+            this.menuButton.Location = new System.Drawing.Point(49, 4);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(131, 85);
+            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuButton.TabIndex = 2;
+            this.menuButton.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(96, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.menuButton);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(229, 113);
+            this.panel1.TabIndex = 24;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,9 +482,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.sidebar.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -459,6 +494,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,9 +512,6 @@
         private Guna.UI2.WinForms.Guna2Button AddBtn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox menuButton;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox inventoryLogo;
         private System.Windows.Forms.Button inventoryButton;
@@ -494,5 +531,11 @@
         private System.Windows.Forms.DataGridView EmployeeGrid;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox menuButton;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -228,11 +228,9 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.pdb
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\Guna.UI2.dll
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.AssemblyReference.cache
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddEmployee.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddInventory.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AdminHome.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierHomepage.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CustomerOrderCode.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.DeleteInventory.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Employee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Inventory.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Login.resources
@@ -242,10 +240,13 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Properties.Res
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RemoveEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.SummarizationPage.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateEmployee.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateInventory.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.VerificationCodePage.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.GenerateResource.cache
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CoreCompileInputs.cache
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.Up2Date
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.pdb
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddProduct.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Product.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetrieveItem.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EditItem.resources

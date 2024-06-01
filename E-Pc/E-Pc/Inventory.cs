@@ -1,66 +1,197 @@
 ﻿using System;
+using System.Collections;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace E_Pc
 {
     public partial class Inventory : Form
     {
-        static SqlCommand cmd;
-        static string searchType;
+        static Product product;
+        static byte[] imageBinary;
+        public static int itemIdCount;
+        public static ArrayList itemIdList = new ArrayList();
         public Inventory()
         {
             InitializeComponent();
+            SortBox.SelectedItem = "Available";
         }
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            DataConnection.ShowAllInventoryTable();
+
         }
 
-
-        private void ExitBtn_Click(object sender, EventArgs e)
+        private void SortBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DialogResult exitDiag = MessageBox.Show("Are you sure you want to exit the application?", "Exit Application?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (exitDiag == DialogResult.Yes)
+            DataConnection.conn.Open();
+            if (SortBox.SelectedItem.Equals("Available"))
             {
-                Application.Exit();
+                ShowAvailableProducts();
             }
+            else
+            {
+                ShowArchivedProducts();
+            }
+            DataConnection.conn.Close();
         }
 
-        private void AddBtn_Click(object sender, EventArgs e)
+        public void ShowAvailableProducts()
         {
-            PageObjects.addInventoryPage.Refresh();
-            PageObjects.addInventoryPage.Show();
-            this.Hide();
+            TableLabel.Text = "Available Products";
+            InventoryPanel.Controls.Clear();
+            itemIdList.Clear();
+            DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 1", DataConnection.conn);
+            DataConnection.reader = DataConnection.cmd.ExecuteReader();
+     
+            while (DataConnection.reader.Read())
+            {
+                product = new Product();
+
+                if (!DataConnection.reader.GetValue(3).ToString().Equals(""))
+                {
+                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(3);
+                    using (MemoryStream ms = new MemoryStream(imageBinary))
+                    {
+                        product.ItemImage.Image = Image.FromStream(ms);
+                        product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    Array.Clear(imageBinary, 0, imageBinary.Length);
+                }
+                else
+                {
+                    product.ItemImage.Image = Properties.Resources.no_image_icon;
+                    product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+
+                itemIdList.Add(DataConnection.reader.GetString(0));
+                InventoryPanel.Controls.Add(product);
+                product.ItemImage.Tag = DataConnection.reader.GetString(0);
+                product.DeleteBtn.Tag = DataConnection.reader.GetString(0);
+                product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
+                product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
+
+                if (Convert.ToInt32(DataConnection.reader.GetValue(2)) == 0)
+                {
+                    product.OutOfStockPic.Visible = true;
+                    product.DeleteBtn.Visible = false;
+                }
+
+                product.ItemImage.Click += new EventHandler(ViewItem_Click);
+                product.DeleteBtn.Click += new EventHandler(DeleteBtn_Click);
+
+            }
+            DataConnection.reader.Close();
+        }
+
+        private void ViewItem_Click(object sender, EventArgs e)
+        {
+            PictureBox pic = (PictureBox)sender;
+            itemIdCount = itemIdList.IndexOf(pic.Tag);
+            Form form = new Form();
+            form.Controls.Add(new EditItem());
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.AutoSize = true;
+            form.Text = "View/Edit Product";
+            form.ShowDialog();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            PageObjects.deleteInventoryPage.Show();
-            this.Hide();
-        }
+            var localDate = DateTime.Now.ToString("dd/MM/yyyy");
 
-        private void UpdateBtn_Click(object sender, EventArgs e)
-        {
-            PageObjects.updateInventoryPage.Show();
-            this.Hide();
-        }
+            PictureBox delbtn = (PictureBox)sender;
+            itemIdCount = itemIdList.IndexOf(delbtn.Tag);
+            DialogResult deleteDialog = MessageBox.Show("Are you sure you want to delete this item?" +
+                "\nThis item will be sent to the archive.", "Delete item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        private void SearchBox_TextChanged(object sender, EventArgs e)
-        {
-            if (SearchBox.Text.Equals("Search here.."))
+            if(deleteDialog == DialogResult.Yes)
             {
-                SearchBox.Clear();
+                DataConnection.conn.Open();
+                DataConnection.cmd = new SqlCommand("UPDATE Products SET Active_flag = 0, DeletionDate = @delDate WHERE ItemId = @id", DataConnection.conn);
+                DataConnection.cmd.Parameters.AddWithValue("@id", itemIdList[itemIdCount]);
+                DataConnection.cmd.Parameters.AddWithValue("@delDate", Convert.ToDateTime(localDate));
+                DataConnection.cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Item has been sent to the archive!");
+                ShowAvailableProducts();
+                DataConnection.conn.Close();
             }
-            DataConnection.InventorySearch();
         }
 
-        private void EmployeeManagementButton_Click(object sender, EventArgs e)
+        public void ShowArchivedProducts()
         {
-            PageObjects.employeePage.Show();
-            this.Hide();
+            TableLabel.Text = "Archived Products";
+            itemIdList.Clear();
+            InventoryPanel.Controls.Clear();
+            DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 0", DataConnection.conn);
+            DataConnection.reader = DataConnection.cmd.ExecuteReader();
+
+            while (DataConnection.reader.Read())
+            {
+                product = new Product();
+
+                if(!DataConnection.reader.GetValue(3).ToString().Equals("")) 
+                {
+                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(3);
+                    using (MemoryStream ms = new MemoryStream(imageBinary))
+                    {
+                        product.ItemImage.Image = Image.FromStream(ms);
+                        product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    Array.Clear(imageBinary, 0, imageBinary.Length);
+                }
+                else
+                {
+                    product.ItemImage.Image = Properties.Resources.no_image_icon;
+                    product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+
+                itemIdList.Add(DataConnection.reader.GetString(0));
+                InventoryPanel.Controls.Add(product);
+                product.ItemImage.Tag = DataConnection.reader.GetString(0);
+                product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
+                product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
+                product.DeleteBtn.Visible = false;
+
+                product.ItemImage.Click += new EventHandler(RetrieveItem_Click);
+
+            }
+            DataConnection.reader.Close();
+        }
+
+        private void RetrieveItem_Click(object sender, EventArgs e)
+        {
+            PictureBox pic = (PictureBox)sender;
+            itemIdCount = itemIdList.IndexOf(pic.Tag);
+            Form form = new Form();
+            form.Controls.Add(new RetrieveItem());
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.AutoSize = true;
+            form.Text = "View/Edit Product";
+            form.ShowDialog();
+        }
+
+        private void AddProductBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Form();
+            form.Controls.Add(new AddProduct());
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.AutoSize = true;
+            form.Text = "Add Product";
+            form.ShowDialog();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Form();
+            form.Controls.Add(new AddProduct());
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.AutoSize = true;
+            form.ShowDialog();
         }
     }
 }

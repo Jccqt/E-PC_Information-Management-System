@@ -69,17 +69,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddInventory.Designer.cs">
-      <DependentUpon>AddInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminHome.cs">
       <SubType>Form</SubType>
@@ -99,11 +99,11 @@
     <Compile Include="CustomerOrderCode.Designer.cs">
       <DependentUpon>CustomerOrderCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteInventory.cs">
-      <SubType>Form</SubType>
+    <Compile Include="EditItem.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DeleteInventory.Designer.cs">
-      <DependentUpon>DeleteInventory.cs</DependentUpon>
+    <Compile Include="EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
@@ -135,6 +135,12 @@
     <Compile Include="PaymentPage.Designer.cs">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveEmployee.cs">
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="RemoveEmployee.Designer.cs">
       <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetrieveItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RetrieveItem.Designer.cs">
+      <DependentUpon>RetrieveItem.cs</DependentUpon>
     </Compile>
     <Compile Include="SummarizationPage.cs">
       <SubType>Form</SubType>
@@ -155,23 +167,17 @@
     <Compile Include="UpdateEmployee.Designer.cs">
       <DependentUpon>UpdateEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateInventory.Designer.cs">
-      <DependentUpon>UpdateInventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="VerificationCodePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VerificationCodePage.Designer.cs">
       <DependentUpon>VerificationCodePage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddInventory.resx">
-      <DependentUpon>AddInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
@@ -182,8 +188,8 @@
     <EmbeddedResource Include="CustomerOrderCode.resx">
       <DependentUpon>CustomerOrderCode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteInventory.resx">
-      <DependentUpon>DeleteInventory.cs</DependentUpon>
+    <EmbeddedResource Include="EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
@@ -200,6 +206,9 @@
     <EmbeddedResource Include="PaymentPage.resx">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -213,14 +222,14 @@
     <EmbeddedResource Include="RemoveEmployee.resx">
       <DependentUpon>RemoveEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RetrieveItem.resx">
+      <DependentUpon>RetrieveItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SummarizationPage.resx">
       <DependentUpon>SummarizationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateEmployee.resx">
       <DependentUpon>UpdateEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInventory.resx">
-      <DependentUpon>UpdateInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerificationCodePage.resx">
       <DependentUpon>VerificationCodePage.cs</DependentUpon>
@@ -259,6 +268,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\image-removebg-preview %281%291.png" />
+    <None Include="Resources\X.png" />
+    <None Include="Resources\Delete.jpg" />
+    <None Include="Resources\image-Photoroom.png" />
     <None Include="Resources\Refresh-removebg-preview.png" />
     <None Include="Resources\no image icon.jpg" />
     <None Include="Resources\701, 258.png" />

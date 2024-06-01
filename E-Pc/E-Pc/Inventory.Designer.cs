@@ -43,19 +43,24 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.inventoryButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.InventoryGrid = new System.Windows.Forms.DataGridView();
-            this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.InventoryPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.SortBox = new System.Windows.Forms.ComboBox();
+            this.AddBtn = new System.Windows.Forms.PictureBox();
+            this.AddProductBtn = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.TableLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -66,13 +71,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
-            this.panel1.SuspendLayout();
             this.sidebar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LogoutLogo
@@ -80,7 +88,7 @@
             this.LogoutLogo.BackColor = System.Drawing.Color.Transparent;
             this.LogoutLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutLogo.Image = global::E_Pc.Properties.Resources.LogOut;
-            this.LogoutLogo.Location = new System.Drawing.Point(3, 13);
+            this.LogoutLogo.Location = new System.Drawing.Point(3, 8);
             this.LogoutLogo.Name = "LogoutLogo";
             this.LogoutLogo.Size = new System.Drawing.Size(62, 43);
             this.LogoutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,7 +99,7 @@
             // 
             this.LogoutButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButton.Location = new System.Drawing.Point(-7, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(-7, -5);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(242, 68);
             this.LogoutButton.TabIndex = 14;
@@ -102,7 +110,7 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 378);
+            this.panel7.Location = new System.Drawing.Point(3, 492);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(229, 68);
             this.panel7.TabIndex = 19;
@@ -129,13 +137,12 @@
             this.EmployeeManagementButton.TabIndex = 14;
             this.EmployeeManagementButton.Text = "                        Employee Management";
             this.EmployeeManagementButton.UseVisualStyleBackColor = true;
-            this.EmployeeManagementButton.Click += new System.EventHandler(this.EmployeeManagementButton_Click);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.EmployeeLogo);
             this.panel6.Controls.Add(this.EmployeeManagementButton);
-            this.panel6.Location = new System.Drawing.Point(3, 304);
+            this.panel6.Location = new System.Drawing.Point(3, 418);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(229, 68);
             this.panel6.TabIndex = 18;
@@ -167,7 +174,7 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 230);
+            this.panel5.Location = new System.Drawing.Point(3, 344);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 68);
             this.panel5.TabIndex = 17;
@@ -211,7 +218,7 @@
             // 
             this.panel4.Controls.Add(this.SalesLogo);
             this.panel4.Controls.Add(this.salesButton);
-            this.panel4.Location = new System.Drawing.Point(3, 156);
+            this.panel4.Location = new System.Drawing.Point(3, 270);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 68);
             this.panel4.TabIndex = 16;
@@ -232,45 +239,16 @@
             // 
             this.panel3.Controls.Add(this.inventoryLogo);
             this.panel3.Controls.Add(this.inventoryButton);
-            this.panel3.Location = new System.Drawing.Point(3, 82);
+            this.panel3.Location = new System.Drawing.Point(3, 196);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 68);
             this.panel3.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
-            // 
-            // menuButton
-            // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::E_Pc.Properties.Resources.user_removebg_preview;
-            this.menuButton.Location = new System.Drawing.Point(13, 14);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(52, 47);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 0;
-            this.menuButton.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.menuButton);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 73);
-            this.panel1.TabIndex = 0;
             // 
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.White;
             this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel9);
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Controls.Add(this.panel5);
@@ -284,11 +262,73 @@
             this.sidebar.Size = new System.Drawing.Size(232, 552);
             this.sidebar.TabIndex = 18;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.menuButton);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(229, 113);
+            this.panel1.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(96, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name";
+            // 
+            // menuButton
+            // 
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
+            this.menuButton.Location = new System.Drawing.Point(49, 4);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(131, 85);
+            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuButton.TabIndex = 2;
+            this.menuButton.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox3);
+            this.panel9.Controls.Add(this.button3);
+            this.panel9.Location = new System.Drawing.Point(3, 122);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(229, 68);
+            this.panel9.TabIndex = 25;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(-7, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(242, 68);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Dashboard";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
             this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(116, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -299,13 +339,12 @@
             // 
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 21);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // guna2Panel1
             // 
@@ -315,97 +354,20 @@
             this.guna2Panel1.Controls.Add(this.ExitBtn);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
             this.guna2Panel1.TabIndex = 15;
-            // 
-            // InventoryGrid
-            // 
-            this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.InventoryGrid.Location = new System.Drawing.Point(243, 156);
-            this.InventoryGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.InventoryGrid.Name = "InventoryGrid";
-            this.InventoryGrid.ReadOnly = true;
-            this.InventoryGrid.RowHeadersWidth = 51;
-            this.InventoryGrid.RowTemplate.Height = 24;
-            this.InventoryGrid.Size = new System.Drawing.Size(707, 327);
-            this.InventoryGrid.TabIndex = 21;
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.Animated = true;
-            this.AddBtn.AutoRoundedCorners = true;
-            this.AddBtn.BackColor = System.Drawing.Color.Transparent;
-            this.AddBtn.BorderRadius = 28;
-            this.AddBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AddBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AddBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AddBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.AddBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(377, 501);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(135, 59);
-            this.AddBtn.TabIndex = 22;
-            this.AddBtn.Text = "Add";
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
-            // 
-            // UpdateBtn
-            // 
-            this.UpdateBtn.Animated = true;
-            this.UpdateBtn.AutoRoundedCorners = true;
-            this.UpdateBtn.BackColor = System.Drawing.Color.Transparent;
-            this.UpdateBtn.BorderRadius = 28;
-            this.UpdateBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UpdateBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UpdateBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UpdateBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UpdateBtn.FillColor = System.Drawing.Color.White;
-            this.UpdateBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.UpdateBtn.ForeColor = System.Drawing.Color.Black;
-            this.UpdateBtn.Location = new System.Drawing.Point(554, 501);
-            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(135, 59);
-            this.UpdateBtn.TabIndex = 23;
-            this.UpdateBtn.Text = "Update";
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
-            // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.Animated = true;
-            this.DeleteBtn.AutoRoundedCorners = true;
-            this.DeleteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteBtn.BorderRadius = 28;
-            this.DeleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.DeleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DeleteBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(729, 501);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(135, 59);
-            this.DeleteBtn.TabIndex = 24;
-            this.DeleteBtn.Text = "Delete";
-            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // SearchBox
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.Location = new System.Drawing.Point(497, 125);
+            this.SearchBox.Location = new System.Drawing.Point(464, 87);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(237, 22);
             this.SearchBox.TabIndex = 25;
             this.SearchBox.Text = "Search here...";
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // label4
             // 
@@ -413,11 +375,78 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(521, 50);
+            this.label4.Location = new System.Drawing.Point(523, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 45);
             this.label4.TabIndex = 42;
             this.label4.Text = "Inventory";
+            // 
+            // InventoryPanel
+            // 
+            this.InventoryPanel.BackColor = System.Drawing.Color.Transparent;
+            this.InventoryPanel.Location = new System.Drawing.Point(241, 171);
+            this.InventoryPanel.Name = "InventoryPanel";
+            this.InventoryPanel.Size = new System.Drawing.Size(707, 398);
+            this.InventoryPanel.TabIndex = 43;
+            // 
+            // SortBox
+            // 
+            this.SortBox.FormattingEnabled = true;
+            this.SortBox.Items.AddRange(new object[] {
+            "Available",
+            "Archived"});
+            this.SortBox.Location = new System.Drawing.Point(707, 88);
+            this.SortBox.Name = "SortBox";
+            this.SortBox.Size = new System.Drawing.Size(117, 21);
+            this.SortBox.TabIndex = 44;
+            this.SortBox.SelectedIndexChanged += new System.EventHandler(this.SortBox_SelectedIndexChanged);
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__5_1;
+            this.AddBtn.Location = new System.Drawing.Point(563, 7);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(27, 26);
+            this.AddBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddBtn.TabIndex = 45;
+            this.AddBtn.TabStop = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // AddProductBtn
+            // 
+            this.AddProductBtn.AutoSize = true;
+            this.AddProductBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AddProductBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddProductBtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddProductBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AddProductBtn.Location = new System.Drawing.Point(594, 13);
+            this.AddProductBtn.Name = "AddProductBtn";
+            this.AddProductBtn.Size = new System.Drawing.Size(85, 16);
+            this.AddProductBtn.TabIndex = 46;
+            this.AddProductBtn.Text = "Add Product";
+            this.AddProductBtn.Click += new System.EventHandler(this.AddProductBtn_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.AddBtn);
+            this.panel2.Controls.Add(this.TableLabel);
+            this.panel2.Controls.Add(this.AddProductBtn);
+            this.panel2.Location = new System.Drawing.Point(241, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(707, 42);
+            this.panel2.TabIndex = 47;
+            // 
+            // TableLabel
+            // 
+            this.TableLabel.AutoSize = true;
+            this.TableLabel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLabel.Location = new System.Drawing.Point(283, 15);
+            this.TableLabel.Name = "TableLabel";
+            this.TableLabel.Size = new System.Drawing.Size(109, 18);
+            this.TableLabel.TabIndex = 0;
+            this.TableLabel.Text = "<Table Label>";
             // 
             // Inventory
             // 
@@ -426,17 +455,16 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.SortBox);
+            this.Controls.Add(this.InventoryPanel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SearchBox);
-            this.Controls.Add(this.DeleteBtn);
-            this.Controls.Add(this.UpdateBtn);
-            this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.InventoryGrid);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InventoryPage";
@@ -451,14 +479,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.inventoryLogo)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.sidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,18 +512,23 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button inventoryButton;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox menuButton;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox ExitBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button AddBtn;
-        private Guna.UI2.WinForms.Guna2Button UpdateBtn;
-        private Guna.UI2.WinForms.Guna2Button DeleteBtn;
-        public System.Windows.Forms.DataGridView InventoryGrid;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox SearchBox;
+        private System.Windows.Forms.ComboBox SortBox;
+        private System.Windows.Forms.PictureBox AddBtn;
+        private System.Windows.Forms.Label AddProductBtn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label TableLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox menuButton;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.FlowLayoutPanel InventoryPanel;
     }
 }
