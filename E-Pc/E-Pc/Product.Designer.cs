@@ -87,9 +87,9 @@
             // 
             this.ItemImage.BackColor = System.Drawing.Color.Transparent;
             this.ItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemImage.Location = new System.Drawing.Point(0, 0);
+            this.ItemImage.Location = new System.Drawing.Point(-1, 0);
             this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(132, 130);
+            this.ItemImage.Size = new System.Drawing.Size(133, 130);
             this.ItemImage.TabIndex = 0;
             this.ItemImage.TabStop = false;
             // 

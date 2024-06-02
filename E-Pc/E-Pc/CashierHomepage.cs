@@ -10,19 +10,13 @@ namespace E_Pc
             InitializeComponent();
         }
 
-        private void inventoryButton_Click(object sender, EventArgs e)
+        private void OrderButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void CashierHomepage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            using(CashierOrderPage orderPage = new CashierOrderPage())
+            {
+                orderPage.ShowDialog();
+                this.Hide();
+            }
         }
     }
 }

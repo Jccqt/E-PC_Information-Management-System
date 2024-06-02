@@ -58,7 +58,7 @@
             this.ActivityLabel.AutoSize = true;
             this.ActivityLabel.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActivityLabel.ForeColor = System.Drawing.Color.Black;
-            this.ActivityLabel.Location = new System.Drawing.Point(136, 12);
+            this.ActivityLabel.Location = new System.Drawing.Point(138, 10);
             this.ActivityLabel.Name = "ActivityLabel";
             this.ActivityLabel.Size = new System.Drawing.Size(118, 27);
             this.ActivityLabel.TabIndex = 0;
@@ -234,7 +234,7 @@
             // 
             this.QuantityToOrder.AutoSize = true;
             this.QuantityToOrder.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityToOrder.ForeColor = System.Drawing.Color.White;
+            this.QuantityToOrder.ForeColor = System.Drawing.Color.Black;
             this.QuantityToOrder.Location = new System.Drawing.Point(176, 576);
             this.QuantityToOrder.Name = "QuantityToOrder";
             this.QuantityToOrder.Size = new System.Drawing.Size(25, 27);
@@ -264,7 +264,7 @@
             // 
             this.PlusBtn.AutoSize = true;
             this.PlusBtn.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusBtn.ForeColor = System.Drawing.Color.PaleGreen;
+            this.PlusBtn.ForeColor = System.Drawing.Color.ForestGreen;
             this.PlusBtn.Location = new System.Drawing.Point(228, 576);
             this.PlusBtn.Name = "PlusBtn";
             this.PlusBtn.Size = new System.Drawing.Size(39, 27);

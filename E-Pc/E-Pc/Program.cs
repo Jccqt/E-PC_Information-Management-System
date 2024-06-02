@@ -39,6 +39,7 @@ namespace E_Pc
         public static bool isNewImage = false;
         public static Inventory inventoryPage = new Inventory();
         public static AdminHome adminHomePage = new AdminHome();
+ 
         #endregion
 
         #region Employee Objects

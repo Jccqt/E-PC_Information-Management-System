@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Customer
+namespace E_Pc
 {
-    public partial class ListOfItems : UserControl
+    public partial class RetreiveEmployee : UserControl
     {
-        public ListOfItems()
+        public RetreiveEmployee()
         {
             InitializeComponent();
         }

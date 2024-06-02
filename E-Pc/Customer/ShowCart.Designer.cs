@@ -31,10 +31,11 @@
             this.CartPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.TotalAmountLabel = new System.Windows.Forms.Label();
+            this.CheckoutBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.TotalQuantityLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CartPanel
@@ -69,45 +70,46 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Total Amount:";
             // 
-            // label3
+            // TotalAmountLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(754, 440);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 23);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "<total amount>";
+            this.TotalAmountLabel.AutoSize = true;
+            this.TotalAmountLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAmountLabel.ForeColor = System.Drawing.Color.Black;
+            this.TotalAmountLabel.Location = new System.Drawing.Point(754, 440);
+            this.TotalAmountLabel.Name = "TotalAmountLabel";
+            this.TotalAmountLabel.Size = new System.Drawing.Size(145, 23);
+            this.TotalAmountLabel.TabIndex = 5;
+            this.TotalAmountLabel.Text = "<total amount>";
             // 
-            // guna2Button1
+            // CheckoutBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(758, 477);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(140, 45);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Proceed to checkout";
+            this.CheckoutBtn.AutoRoundedCorners = true;
+            this.CheckoutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CheckoutBtn.BorderRadius = 21;
+            this.CheckoutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckoutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CheckoutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CheckoutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CheckoutBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.CheckoutBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckoutBtn.ForeColor = System.Drawing.Color.White;
+            this.CheckoutBtn.Location = new System.Drawing.Point(758, 477);
+            this.CheckoutBtn.Name = "CheckoutBtn";
+            this.CheckoutBtn.Size = new System.Drawing.Size(140, 45);
+            this.CheckoutBtn.TabIndex = 6;
+            this.CheckoutBtn.Text = "Proceed to checkout";
+            this.CheckoutBtn.Click += new System.EventHandler(this.CheckoutBtn_Click);
             // 
-            // label4
+            // TotalQuantityLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(377, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 23);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "<number of items>";
+            this.TotalQuantityLabel.AutoSize = true;
+            this.TotalQuantityLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalQuantityLabel.ForeColor = System.Drawing.Color.Black;
+            this.TotalQuantityLabel.Location = new System.Drawing.Point(466, 61);
+            this.TotalQuantityLabel.Name = "TotalQuantityLabel";
+            this.TotalQuantityLabel.Size = new System.Drawing.Size(176, 23);
+            this.TotalQuantityLabel.TabIndex = 7;
+            this.TotalQuantityLabel.Text = "<number of items>";
             // 
             // button1
             // 
@@ -121,15 +123,27 @@
             this.button1.Text = "<- Continue Shopping";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(346, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 23);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Total items:";
+            // 
             // ShowCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TotalQuantityLabel);
+            this.Controls.Add(this.CheckoutBtn);
+            this.Controls.Add(this.TotalAmountLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CartPanel);
@@ -146,9 +160,10 @@
         private System.Windows.Forms.FlowLayoutPanel CartPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label TotalAmountLabel;
+        private Guna.UI2.WinForms.Guna2Button CheckoutBtn;
+        private System.Windows.Forms.Label TotalQuantityLabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }

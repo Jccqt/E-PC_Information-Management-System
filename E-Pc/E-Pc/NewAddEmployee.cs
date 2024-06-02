@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Customer
+namespace E_Pc
 {
-    public partial class CpuSelection : Form
+    public partial class NewAddEmployee : UserControl
     {
-        public CpuSelection()
+        public NewAddEmployee()
         {
             InitializeComponent();
+        }
+
+        private void NewAddEmployee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

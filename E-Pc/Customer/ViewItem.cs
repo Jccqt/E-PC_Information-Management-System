@@ -125,12 +125,14 @@ namespace Customer
                     {
                         BuyItems.orderQuantityList.Insert(BuyItems.orderIdList.IndexOf(IdLabel.Text), Quantity + Convert.ToInt32(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]));
                         MessageBox.Show("Item has been added to the cart!");
+                        BuyItems.totalOrderQuantity += Quantity;
                         ((Form)this.TopLevelControl).Close();
                         
                     }
                 }
                 else
                 {
+                    BuyItems.totalOrderQuantity += Quantity;
                     BuyItems.orderIdList.Add(IdLabel.Text);
                     BuyItems.orderQuantityList.Add(Quantity);
                     MessageBox.Show("Item has been added to the cart!");

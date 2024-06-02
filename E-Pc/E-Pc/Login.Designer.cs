@@ -143,7 +143,6 @@
             this.passwordTxt.Size = new System.Drawing.Size(195, 46);
             this.passwordTxt.TabIndex = 3;
             this.passwordTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 
             // LoginBtn
             // 
@@ -226,7 +225,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

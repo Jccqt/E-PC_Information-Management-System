@@ -7,24 +7,14 @@ namespace E_Pc
     public partial class Login : Form
     {
         static SqlCommand cmd;
-        static AdminHome home;
         public static bool isLogin = false;
-        static string username, password = "";
+        static string username, password, position;
         public Login()
         {
             InitializeComponent();
             usernameTxt.Focus();
         }
 
-        private void passwordTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
@@ -40,7 +30,8 @@ namespace E_Pc
         private void LogInButton_Click(object sender, EventArgs e)
         {
             DataConnection.conn.Open();
-            cmd = new SqlCommand("SELECT Username, Password FROM Credentials", DataConnection.conn);
+            cmd = new SqlCommand("SELECT Credentials.Username, Credentials.Password, Employees.Position " +
+                "FROM Credentials LEFT JOIN Employees ON Credentials.EmpId = Employees.EmpId", DataConnection.conn);
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -50,18 +41,32 @@ namespace E_Pc
                 if (usernameTxt.Text.Equals(username) && passwordTxt.Text.Equals(password))
                 {
                     isLogin = true;
+                    position = reader.GetString(2);
 
                 }
             }
             DataConnection.conn.Close();
-            if (isLogin)
+            if (isLogin && position.Equals("Admin"))
             {
-                MessageBox.Show("Login successfully!");
-                usernameTxt.ResetText();
-                passwordTxt.ResetText();
-                home = new AdminHome();
-                home.Show();
-                this.Hide();
+                using (AdminHome admin = new AdminHome())
+                {
+                    MessageBox.Show("Login successfully!");
+                    usernameTxt.ResetText();
+                    passwordTxt.ResetText();
+                    admin.ShowDialog();
+                    this.Hide();
+                }
+            }
+            else if (isLogin && position.Equals("Cashier"))
+            {
+                using(CashierHomepage cashier = new CashierHomepage())
+                {
+                    MessageBox.Show("Login successfully!");
+                    usernameTxt.ResetText();
+                    passwordTxt.ResetText();
+                    cashier.ShowDialog();
+                    this.Hide();
+                }
             }
             else
             {

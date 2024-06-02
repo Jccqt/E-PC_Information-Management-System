@@ -83,6 +83,16 @@ namespace E_Pc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _714_7147174_png_file_svg_transparent_background_shopping_cart_icon {
+            get {
+                object obj = ResourceManager.GetObject("714-7147174_png-file-svg-transparent-background-shopping-cart-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_Employee_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Add_Employee-removebg-preview", resourceCulture);
@@ -546,6 +556,16 @@ namespace E_Pc.Properties {
         internal static System.Drawing.Bitmap Unique_code_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Unique_code-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_design__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled design (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

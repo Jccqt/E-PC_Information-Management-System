@@ -55,6 +55,11 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.TableLabel = new System.Windows.Forms.Label();
+            this.AddProductBtn = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.AddBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -73,6 +78,8 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // ExitBtn
@@ -355,7 +362,7 @@
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.Location = new System.Drawing.Point(497, 125);
+            this.SearchBox.Location = new System.Drawing.Point(464, 87);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(237, 22);
             this.SearchBox.TabIndex = 33;
@@ -367,11 +374,64 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(397, 52);
+            this.label4.Location = new System.Drawing.Point(383, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(423, 45);
             this.label4.TabIndex = 41;
             this.label4.Text = "Employee Management";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(241, 171);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(719, 402);
+            this.flowLayoutPanel1.TabIndex = 42;
+            // 
+            // TableLabel
+            // 
+            this.TableLabel.AutoSize = true;
+            this.TableLabel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLabel.Location = new System.Drawing.Point(283, 15);
+            this.TableLabel.Name = "TableLabel";
+            this.TableLabel.Size = new System.Drawing.Size(109, 18);
+            this.TableLabel.TabIndex = 0;
+            this.TableLabel.Text = "<Table Label>";
+            // 
+            // AddProductBtn
+            // 
+            this.AddProductBtn.AutoSize = true;
+            this.AddProductBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AddProductBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddProductBtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddProductBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AddProductBtn.Location = new System.Drawing.Point(594, 13);
+            this.AddProductBtn.Name = "AddProductBtn";
+            this.AddProductBtn.Size = new System.Drawing.Size(85, 16);
+            this.AddProductBtn.TabIndex = 46;
+            this.AddProductBtn.Text = "Add Product";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.AddBtn);
+            this.panel2.Controls.Add(this.TableLabel);
+            this.panel2.Controls.Add(this.AddProductBtn);
+            this.panel2.Location = new System.Drawing.Point(241, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(707, 42);
+            this.panel2.TabIndex = 48;
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__5_1;
+            this.AddBtn.Location = new System.Drawing.Point(563, 7);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(27, 26);
+            this.AddBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddBtn.TabIndex = 45;
+            this.AddBtn.TabStop = false;
             // 
             // Employee
             // 
@@ -380,6 +440,8 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.sidebar);
@@ -409,6 +471,9 @@
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,5 +507,10 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox AddBtn;
+        private System.Windows.Forms.Label TableLabel;
+        private System.Windows.Forms.Label AddProductBtn;
     }
 }

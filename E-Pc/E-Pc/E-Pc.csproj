@@ -111,6 +111,12 @@
     <Compile Include="CustomerOrderCode.Designer.cs">
       <DependentUpon>CustomerOrderCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,12 @@
     </Compile>
     <Compile Include="Cart.Designer.cs">
       <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewAddEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewAddEmployee.Designer.cs">
+      <DependentUpon>NewAddEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="OrdersPage.cs">
       <SubType>Form</SubType>
@@ -173,11 +185,11 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveEmployee.cs">
-      <SubType>Form</SubType>
+    <Compile Include="RetreiveEmployee.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RemoveEmployee.Designer.cs">
-      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    <Compile Include="RetreiveEmployee.Designer.cs">
+      <DependentUpon>RetreiveEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="RetrieveItem.cs">
       <SubType>UserControl</SubType>
@@ -185,23 +197,17 @@
     <Compile Include="RetrieveItem.Designer.cs">
       <DependentUpon>RetrieveItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="SummarizationPage.cs">
-      <SubType>Form</SubType>
+    <Compile Include="SelectedItems.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SummarizationPage.Designer.cs">
-      <DependentUpon>SummarizationPage.cs</DependentUpon>
+    <Compile Include="SelectedItems.Designer.cs">
+      <DependentUpon>SelectedItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateEmployee.cs">
-      <SubType>Form</SubType>
+    <Compile Include="ShowEmployee.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UpdateEmployee.Designer.cs">
-      <DependentUpon>UpdateEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VerificationCodePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VerificationCodePage.Designer.cs">
-      <DependentUpon>VerificationCodePage.cs</DependentUpon>
+    <Compile Include="ShowEmployee.Designer.cs">
+      <DependentUpon>ShowEmployee.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
@@ -224,6 +230,9 @@
     <EmbeddedResource Include="CustomerOrderCode.resx">
       <DependentUpon>CustomerOrderCode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditItem.resx">
       <DependentUpon>EditItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAddEmployee.resx">
+      <DependentUpon>NewAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdersPage.resx">
       <DependentUpon>OrdersPage.cs</DependentUpon>
@@ -264,20 +276,17 @@
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoveEmployee.resx">
-      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="RetreiveEmployee.resx">
+      <DependentUpon>RetreiveEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RetrieveItem.resx">
       <DependentUpon>RetrieveItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SummarizationPage.resx">
-      <DependentUpon>SummarizationPage.cs</DependentUpon>
+    <EmbeddedResource Include="SelectedItems.resx">
+      <DependentUpon>SelectedItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateEmployee.resx">
-      <DependentUpon>UpdateEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VerificationCodePage.resx">
-      <DependentUpon>VerificationCodePage.cs</DependentUpon>
+    <EmbeddedResource Include="ShowEmployee.resx">
+      <DependentUpon>ShowEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -313,6 +322,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\714-7147174_png-file-svg-transparent-background-shopping-cart-icon.png" />
+    <None Include="Resources\Untitled design %282%29.png" />
     <None Include="Resources\image-removebg-preview %281%291.png" />
     <None Include="Resources\X.png" />
     <None Include="Resources\Delete.jpg" />

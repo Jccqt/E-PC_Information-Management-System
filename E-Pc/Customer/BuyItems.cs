@@ -21,7 +21,8 @@ namespace Customer
         static string selectedItem;
         static Items item;
         public static int itemIdIndex;
-        public static int orderIdIndex;
+        public static int totalOrderQuantity;
+        public static decimal totalOrderPrice;
         public static ArrayList itemIdList = new ArrayList();
         public static ArrayList orderIdList = new ArrayList();
         public static ArrayList orderQuantityList = new ArrayList();
@@ -112,6 +113,7 @@ namespace Customer
                     {
                         item.ItemImage.Image = Image.FromStream(ms);
                         item.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                        item.ItemImage.Refresh();
                     }
                     Array.Clear(imageBinary, 0, imageBinary.Length);
 

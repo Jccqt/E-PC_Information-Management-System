@@ -50,7 +50,7 @@
             // 
             this.QuantityLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuantityLabel.ForeColor = System.Drawing.Color.Black;
-            this.QuantityLabel.Location = new System.Drawing.Point(699, 47);
+            this.QuantityLabel.Location = new System.Drawing.Point(732, 47);
             this.QuantityLabel.Name = "QuantityLabel";
             this.QuantityLabel.Size = new System.Drawing.Size(75, 15);
             this.QuantityLabel.TabIndex = 23;
@@ -80,7 +80,7 @@
             // 
             this.OrderQuantity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderQuantity.ForeColor = System.Drawing.Color.Black;
-            this.OrderQuantity.Location = new System.Drawing.Point(608, 47);
+            this.OrderQuantity.Location = new System.Drawing.Point(641, 47);
             this.OrderQuantity.Name = "OrderQuantity";
             this.OrderQuantity.Size = new System.Drawing.Size(96, 15);
             this.OrderQuantity.TabIndex = 17;
@@ -92,7 +92,7 @@
             this.NameLabel.ForeColor = System.Drawing.Color.Black;
             this.NameLabel.Location = new System.Drawing.Point(200, 4);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(136, 28);
+            this.NameLabel.Size = new System.Drawing.Size(607, 28);
             this.NameLabel.TabIndex = 16;
             this.NameLabel.Text = "Item Name";
             // 
@@ -122,7 +122,7 @@
             this.DescriptionLabel.ForeColor = System.Drawing.Color.Black;
             this.DescriptionLabel.Location = new System.Drawing.Point(285, 92);
             this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(381, 41);
+            this.DescriptionLabel.Size = new System.Drawing.Size(522, 30);
             this.DescriptionLabel.TabIndex = 28;
             this.DescriptionLabel.Text = "<description>";
             // 
@@ -152,9 +152,9 @@
             // 
             this.CategoryLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryLabel.ForeColor = System.Drawing.Color.Black;
-            this.CategoryLabel.Location = new System.Drawing.Point(463, 47);
+            this.CategoryLabel.Location = new System.Drawing.Point(456, 47);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(122, 15);
+            this.CategoryLabel.Size = new System.Drawing.Size(179, 15);
             this.CategoryLabel.TabIndex = 32;
             this.CategoryLabel.Text = "<category>";
             // 

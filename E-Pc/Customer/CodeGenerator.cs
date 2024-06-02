@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Customer
 {
@@ -16,5 +17,16 @@ namespace Customer
         {
             InitializeComponent();
         }
+
+        private void CodeGenerator_Load(object sender, EventArgs e)
+        {
+            DataConnection.conn.Open();
+
+            DataConnection.cmd = new SqlCommand("SELECT CartId FROM Carts ORDER BY CartId DESC", DataConnection.conn);
+            OrderCodeLabel.Text = DataConnection.cmd.ExecuteScalar().ToString();
+
+            DataConnection.conn.Close();
+        }
+
     }
 }

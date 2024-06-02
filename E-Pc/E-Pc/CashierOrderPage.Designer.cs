@@ -49,8 +49,11 @@
             this.LogoutLogo = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.OrdersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.SortBox = new System.Windows.Forms.ComboBox();
+            this.TableLabel = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.OrderLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -102,7 +106,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(521, 50);
+            this.label4.Location = new System.Drawing.Point(526, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 45);
             this.label4.TabIndex = 51;
@@ -297,19 +301,21 @@
             this.button1.Text = "Verify";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // flowLayoutPanel1
+            // OrdersPanel
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(243, 95);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(702, 374);
-            this.flowLayoutPanel1.TabIndex = 57;
+            this.OrdersPanel.AutoScroll = true;
+            this.OrdersPanel.BackColor = System.Drawing.Color.Gray;
+            this.OrdersPanel.ForeColor = System.Drawing.Color.Black;
+            this.OrdersPanel.Location = new System.Drawing.Point(242, 148);
+            this.OrdersPanel.Name = "OrdersPanel";
+            this.OrdersPanel.Size = new System.Drawing.Size(702, 321);
+            this.OrdersPanel.TabIndex = 57;
             // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderRadius = 24;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -324,6 +330,37 @@
             this.guna2Button1.TabIndex = 58;
             this.guna2Button1.Text = "Checkout";
             // 
+            // SortBox
+            // 
+            this.SortBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortBox.FormattingEnabled = true;
+            this.SortBox.Items.AddRange(new object[] {
+            "Pending",
+            "Completed",
+            "Canceled"});
+            this.SortBox.Location = new System.Drawing.Point(767, 88);
+            this.SortBox.Name = "SortBox";
+            this.SortBox.Size = new System.Drawing.Size(175, 24);
+            this.SortBox.TabIndex = 59;
+            // 
+            // TableLabel
+            // 
+            this.TableLabel.AutoSize = true;
+            this.TableLabel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLabel.Location = new System.Drawing.Point(299, 9);
+            this.TableLabel.Name = "TableLabel";
+            this.TableLabel.Size = new System.Drawing.Size(109, 18);
+            this.TableLabel.TabIndex = 0;
+            this.TableLabel.Text = "<Table Label>";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.TableLabel);
+            this.panel3.Location = new System.Drawing.Point(242, 115);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(702, 34);
+            this.panel3.TabIndex = 60;
+            // 
             // CashierOrderPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,8 +368,10 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.SortBox);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.OrdersPanel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
@@ -343,7 +382,9 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CashierOrderPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierOrderPage";
+            this.Load += new System.EventHandler(this.CashierOrderPage_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -357,6 +398,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.OrderLogo)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,7 +428,10 @@
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel OrdersPanel;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.ComboBox SortBox;
+        private System.Windows.Forms.Label TableLabel;
+        private System.Windows.Forms.Panel panel3;
     }
 }

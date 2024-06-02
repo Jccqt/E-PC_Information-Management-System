@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Customer
+namespace E_Pc
 {
-    public partial class BuildYourOwn : Form
+    public partial class EditEmployee : UserControl
     {
-        public BuildYourOwn()
+        public EditEmployee()
         {
             InitializeComponent();
+        }
+
+        private void EditEmployee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
