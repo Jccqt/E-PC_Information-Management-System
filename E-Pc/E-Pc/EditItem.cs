@@ -93,11 +93,19 @@ namespace E_Pc
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-            ActivityLabel.Text = "Viewing";
-            DisableTextBox();
-            EditBtn.Visible = true;
-            SaveBtn.Visible = false;
-            CancelBtn.Visible = false;
+            DialogResult cancelDialog = MessageBox.Show("Are you sure you want to cancel the edit?" +
+                "\nEdit progress will be lost.", "Cancel edit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if(cancelDialog == DialogResult.Yes)
+            {
+                ActivityLabel.Text = "Viewing";
+                DisableTextBox();
+                EditBtn.Visible = true;
+                SaveBtn.Visible = false;
+                CancelBtn.Visible = false;
+                EditItem_Load(sender, e);
+            }
+
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -130,8 +138,11 @@ namespace E_Pc
                 PageObjects.inventoryPage.ShowAvailableProducts();
                 DataConnection.conn.Close();
                 isNewImage = false;
-                CancelBtn_Click(sender, e);
-                
+                ActivityLabel.Text = "Viewing";
+                DisableTextBox();
+                EditBtn.Visible = true;
+                SaveBtn.Visible = false;
+                CancelBtn.Visible = false;
             }
         }
 

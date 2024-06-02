@@ -64,7 +64,7 @@
             this.OutOfStockPic.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview__1_1;
             this.OutOfStockPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.OutOfStockPic.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.OutOfStockPic.Location = new System.Drawing.Point(4, 27);
+            this.OutOfStockPic.Location = new System.Drawing.Point(0, 25);
             this.OutOfStockPic.Name = "OutOfStockPic";
             this.OutOfStockPic.Size = new System.Drawing.Size(129, 75);
             this.OutOfStockPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -77,7 +77,7 @@
             this.DeleteBtn.BackColor = System.Drawing.Color.White;
             this.DeleteBtn.BackgroundImage = global::E_Pc.Properties.Resources.image_Photoroom;
             this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteBtn.Location = new System.Drawing.Point(114, 3);
+            this.DeleteBtn.Location = new System.Drawing.Point(110, 3);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(18, 16);
             this.DeleteBtn.TabIndex = 0;
@@ -89,7 +89,7 @@
             this.ItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ItemImage.Location = new System.Drawing.Point(0, 0);
             this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(136, 130);
+            this.ItemImage.Size = new System.Drawing.Size(132, 130);
             this.ItemImage.TabIndex = 0;
             this.ItemImage.TabStop = false;
             // 
@@ -106,7 +106,7 @@
             this.Controls.Add(this.ItemImage);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Product";
-            this.Size = new System.Drawing.Size(135, 198);
+            this.Size = new System.Drawing.Size(131, 198);
             ((System.ComponentModel.ISupportInitialize)(this.OutOfStockPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();

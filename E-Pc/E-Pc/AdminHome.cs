@@ -69,6 +69,7 @@ namespace E_Pc
         {
             PageObjects.inventoryPage.Show();
             this.Hide();
+            GC.Collect();
            
         }
 

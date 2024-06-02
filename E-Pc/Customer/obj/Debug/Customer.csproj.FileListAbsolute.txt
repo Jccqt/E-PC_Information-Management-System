@@ -2,7 +2,6 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\bin\Debug\Customer.exe.co
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\bin\Debug\Customer.exe
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\bin\Debug\Customer.pdb
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.AssemblyReference.cache
-E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Form1.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Properties.Resources.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.GenerateResource.cache
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.CoreCompileInputs.cache
@@ -10,3 +9,13 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.exe
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.pdb
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\bin\Debug\Guna.UI2.dll
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.Up2Date
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.BuildYourOwn.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.BuyItems.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.CpuSelection.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Disclaimer.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Items.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.ListOfItems.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.SelectedItems.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.ShowCart.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Home.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.ViewItem.resources

@@ -30,7 +30,6 @@
         {
             this.ItemQuantity = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
-            this.ItemImage = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.TypeLabel = new System.Windows.Forms.Label();
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.DeletionDateLabel = new System.Windows.Forms.Label();
+            this.ItemImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,18 +58,9 @@
             this.NameLabel.ForeColor = System.Drawing.Color.Black;
             this.NameLabel.Location = new System.Drawing.Point(200, 4);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(136, 28);
+            this.NameLabel.Size = new System.Drawing.Size(431, 28);
             this.NameLabel.TabIndex = 5;
             this.NameLabel.Text = "Item Name";
-            // 
-            // ItemImage
-            // 
-            this.ItemImage.BackColor = System.Drawing.Color.DarkGray;
-            this.ItemImage.Location = new System.Drawing.Point(0, 0);
-            this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(193, 150);
-            this.ItemImage.TabIndex = 4;
-            this.ItemImage.TabStop = false;
             // 
             // label1
             // 
@@ -103,13 +94,13 @@
             // 
             // RetrieveBtn
             // 
-            this.RetrieveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(84)))), ((int)(((byte)(140)))));
+            this.RetrieveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.RetrieveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RetrieveBtn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RetrieveBtn.ForeColor = System.Drawing.Color.White;
-            this.RetrieveBtn.Location = new System.Drawing.Point(509, 113);
+            this.RetrieveBtn.Location = new System.Drawing.Point(543, 117);
             this.RetrieveBtn.Name = "RetrieveBtn";
-            this.RetrieveBtn.Size = new System.Drawing.Size(160, 34);
+            this.RetrieveBtn.Size = new System.Drawing.Size(126, 30);
             this.RetrieveBtn.TabIndex = 10;
             this.RetrieveBtn.Text = "Retrieve";
             this.RetrieveBtn.UseVisualStyleBackColor = false;
@@ -154,6 +145,15 @@
             this.DeletionDateLabel.Size = new System.Drawing.Size(75, 15);
             this.DeletionDateLabel.TabIndex = 14;
             this.DeletionDateLabel.Text = "<date>";
+            // 
+            // ItemImage
+            // 
+            this.ItemImage.BackColor = System.Drawing.Color.DarkGray;
+            this.ItemImage.Location = new System.Drawing.Point(0, 0);
+            this.ItemImage.Name = "ItemImage";
+            this.ItemImage.Size = new System.Drawing.Size(193, 150);
+            this.ItemImage.TabIndex = 4;
+            this.ItemImage.TabStop = false;
             // 
             // RetrieveItem
             // 

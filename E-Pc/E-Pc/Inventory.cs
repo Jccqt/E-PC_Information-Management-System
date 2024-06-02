@@ -82,7 +82,7 @@ namespace E_Pc
 
                 product.ItemImage.Click += new EventHandler(ViewItem_Click);
                 product.DeleteBtn.Click += new EventHandler(DeleteBtn_Click);
-
+                GC.Collect();
             }
             DataConnection.reader.Close();
         }
@@ -158,7 +158,7 @@ namespace E_Pc
                 product.DeleteBtn.Visible = false;
 
                 product.ItemImage.Click += new EventHandler(RetrieveItem_Click);
-
+                GC.Collect();
             }
             DataConnection.reader.Close();
         }
@@ -192,6 +192,23 @@ namespace E_Pc
             form.StartPosition = FormStartPosition.CenterScreen;
             form.AutoSize = true;
             form.ShowDialog();
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult exitDialog = MessageBox.Show("Are you sure you want to close the program?" +
+                "\nAny unsaved progress will be lost.", "Close application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if(exitDialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void DashboardBtn_Click(object sender, EventArgs e)
+        {
+            PageObjects.adminHomePage.Show();
+            this.Hide();
         }
     }
 }

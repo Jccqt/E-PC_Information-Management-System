@@ -49,7 +49,7 @@
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DashboardBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -295,7 +295,7 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.pictureBox3);
-            this.panel9.Controls.Add(this.button3);
+            this.panel9.Controls.Add(this.DashboardBtn);
             this.panel9.Location = new System.Drawing.Point(3, 122);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(229, 68);
@@ -313,16 +313,17 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // DashboardBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-7, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 68);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Dashboard";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DashboardBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DashboardBtn.Location = new System.Drawing.Point(-7, 0);
+            this.DashboardBtn.Name = "DashboardBtn";
+            this.DashboardBtn.Size = new System.Drawing.Size(242, 68);
+            this.DashboardBtn.TabIndex = 14;
+            this.DashboardBtn.Text = "Dashboard";
+            this.DashboardBtn.UseVisualStyleBackColor = true;
+            this.DashboardBtn.Click += new System.EventHandler(this.DashboardBtn_Click);
             // 
             // pictureBox2
             // 
@@ -337,6 +338,7 @@
             // 
             // ExitBtn
             // 
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.ExitBtn.Location = new System.Drawing.Point(925, 7);
             this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -345,6 +347,7 @@
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // guna2Panel1
             // 
@@ -383,10 +386,11 @@
             // 
             // InventoryPanel
             // 
+            this.InventoryPanel.AutoScroll = true;
             this.InventoryPanel.BackColor = System.Drawing.Color.Transparent;
             this.InventoryPanel.Location = new System.Drawing.Point(241, 171);
             this.InventoryPanel.Name = "InventoryPanel";
-            this.InventoryPanel.Size = new System.Drawing.Size(707, 398);
+            this.InventoryPanel.Size = new System.Drawing.Size(719, 398);
             this.InventoryPanel.TabIndex = 43;
             // 
             // SortBox
@@ -528,7 +532,7 @@
         private System.Windows.Forms.PictureBox menuButton;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DashboardBtn;
         private System.Windows.Forms.FlowLayoutPanel InventoryPanel;
     }
 }

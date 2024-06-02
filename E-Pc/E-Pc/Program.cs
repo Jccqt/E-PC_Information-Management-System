@@ -38,6 +38,7 @@ namespace E_Pc
         public static byte[] imageBinary = new byte[0];
         public static bool isNewImage = false;
         public static Inventory inventoryPage = new Inventory();
+        public static AdminHome adminHomePage = new AdminHome();
         #endregion
 
         #region Employee Objects
