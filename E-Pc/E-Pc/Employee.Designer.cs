@@ -405,11 +405,11 @@
             this.AddProductBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddProductBtn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddProductBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.AddProductBtn.Location = new System.Drawing.Point(594, 13);
+            this.AddProductBtn.Location = new System.Drawing.Point(629, 14);
             this.AddProductBtn.Name = "AddProductBtn";
-            this.AddProductBtn.Size = new System.Drawing.Size(85, 16);
+            this.AddProductBtn.Size = new System.Drawing.Size(70, 16);
             this.AddProductBtn.TabIndex = 46;
-            this.AddProductBtn.Text = "Add Product";
+            this.AddProductBtn.Text = "Employee";
             // 
             // panel2
             // 
@@ -426,7 +426,7 @@
             this.AddBtn.BackColor = System.Drawing.Color.Transparent;
             this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__5_1;
-            this.AddBtn.Location = new System.Drawing.Point(563, 7);
+            this.AddBtn.Location = new System.Drawing.Point(600, 8);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(27, 26);
             this.AddBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

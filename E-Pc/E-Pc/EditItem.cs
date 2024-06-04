@@ -156,5 +156,19 @@ namespace E_Pc
                 isNewImage = true;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ActivityLabel.Text = "Editing";
+            EnableTextBox();
+            EditBtn.Visible = false;
+            SaveBtn.Visible = true;
+            CancelBtn.Visible = true;
+        }
+
+        private void MinusBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

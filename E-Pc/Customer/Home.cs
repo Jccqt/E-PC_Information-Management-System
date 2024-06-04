@@ -30,5 +30,14 @@ namespace Customer
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            using (BuyItems buyItemPage = new BuyItems())
+            {
+                buyItemPage.ShowDialog();
+                this.Hide();
+            }
+        }
     }
 }

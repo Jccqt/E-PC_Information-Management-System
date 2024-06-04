@@ -34,7 +34,6 @@
             this.TypeBox = new System.Windows.Forms.TextBox();
             this.CancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.EditBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DescriptionBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.PriceBox = new System.Windows.Forms.TextBox();
@@ -54,7 +53,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectImage
@@ -131,23 +132,6 @@
             this.SaveBtn.TabIndex = 65;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.Visible = false;
-            // 
-            // EditBtn
-            // 
-            this.EditBtn.AutoRoundedCorners = true;
-            this.EditBtn.BorderRadius = 13;
-            this.EditBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.EditBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.EditBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.EditBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EditBtn.FillColor = System.Drawing.Color.Orange;
-            this.EditBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.ForeColor = System.Drawing.Color.Black;
-            this.EditBtn.Location = new System.Drawing.Point(21, 558);
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(89, 28);
-            this.EditBtn.TabIndex = 64;
-            this.EditBtn.Text = "Edit";
             // 
             // DescriptionBox
             // 
@@ -359,11 +343,22 @@
             this.label2.TabIndex = 72;
             this.label2.Text = "Password*";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__6_;
+            this.pictureBox1.Location = new System.Drawing.Point(337, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 74;
+            this.pictureBox1.TabStop = false;
+            // 
             // EditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -373,7 +368,6 @@
             this.Controls.Add(this.TypeBox);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.SaveBtn);
-            this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.DescriptionBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.PriceBox);
@@ -393,6 +387,7 @@
             this.Size = new System.Drawing.Size(380, 608);
             this.Load += new System.EventHandler(this.EditEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,7 +401,6 @@
         public System.Windows.Forms.TextBox TypeBox;
         private Guna.UI2.WinForms.Guna2Button CancelBtn;
         private Guna.UI2.WinForms.Guna2Button SaveBtn;
-        private Guna.UI2.WinForms.Guna2Button EditBtn;
         public System.Windows.Forms.TextBox DescriptionBox;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox PriceBox;
@@ -426,5 +420,6 @@
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -43,14 +43,17 @@
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.DescriptionBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.EditBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.CancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.TypeBox = new System.Windows.Forms.TextBox();
             this.CategoryBox = new System.Windows.Forms.TextBox();
             this.SelectImageBtn = new System.Windows.Forms.Button();
             this.SelectImage = new System.Windows.Forms.OpenFileDialog();
+            this.EditBtn = new System.Windows.Forms.PictureBox();
+            this.MinusBtn = new System.Windows.Forms.Label();
+            this.PlusBtn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // ActivityLabel
@@ -183,7 +186,7 @@
             this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
-            this.QuantityBox.Size = new System.Drawing.Size(146, 28);
+            this.QuantityBox.Size = new System.Drawing.Size(62, 28);
             this.QuantityBox.TabIndex = 37;
             // 
             // QuantityLabel
@@ -218,24 +221,6 @@
             this.label9.Size = new System.Drawing.Size(162, 13);
             this.label9.TabIndex = 42;
             this.label9.Text = "Description (250 max characters)";
-            // 
-            // EditBtn
-            // 
-            this.EditBtn.AutoRoundedCorners = true;
-            this.EditBtn.BorderRadius = 13;
-            this.EditBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.EditBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.EditBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.EditBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EditBtn.FillColor = System.Drawing.Color.Orange;
-            this.EditBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.ForeColor = System.Drawing.Color.Black;
-            this.EditBtn.Location = new System.Drawing.Point(21, 558);
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(89, 28);
-            this.EditBtn.TabIndex = 43;
-            this.EditBtn.Text = "Edit";
-            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // SaveBtn
             // 
@@ -315,18 +300,56 @@
             this.SelectImage.FileName = "openFileDialog1";
             this.SelectImage.Filter = "Image files | *.png; *.jpeg; *.jpg;";
             // 
+            // EditBtn
+            // 
+            this.EditBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__6_;
+            this.EditBtn.Location = new System.Drawing.Point(337, 8);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(31, 31);
+            this.EditBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EditBtn.TabIndex = 49;
+            this.EditBtn.TabStop = false;
+            this.EditBtn.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // MinusBtn
+            // 
+            this.MinusBtn.AutoSize = true;
+            this.MinusBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinusBtn.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinusBtn.ForeColor = System.Drawing.Color.Red;
+            this.MinusBtn.Location = new System.Drawing.Point(323, 405);
+            this.MinusBtn.Name = "MinusBtn";
+            this.MinusBtn.Size = new System.Drawing.Size(36, 27);
+            this.MinusBtn.TabIndex = 53;
+            this.MinusBtn.Text = "[–]";
+            this.MinusBtn.Click += new System.EventHandler(this.MinusBtn_Click);
+            // 
+            // PlusBtn
+            // 
+            this.PlusBtn.AutoSize = true;
+            this.PlusBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PlusBtn.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusBtn.ForeColor = System.Drawing.Color.ForestGreen;
+            this.PlusBtn.Location = new System.Drawing.Point(278, 405);
+            this.PlusBtn.Name = "PlusBtn";
+            this.PlusBtn.Size = new System.Drawing.Size(39, 27);
+            this.PlusBtn.TabIndex = 52;
+            this.PlusBtn.Text = "[+]";
+            // 
             // EditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.MinusBtn);
+            this.Controls.Add(this.PlusBtn);
+            this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.SelectImageBtn);
             this.Controls.Add(this.CategoryBox);
             this.Controls.Add(this.TypeBox);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.SaveBtn);
-            this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.DescriptionBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.PriceBox);
@@ -348,6 +371,7 @@
             this.Size = new System.Drawing.Size(380, 608);
             this.Load += new System.EventHandler(this.EditItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,12 +394,14 @@
         private System.Windows.Forms.Label QuantityLabel;
         public System.Windows.Forms.TextBox DescriptionBox;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Button EditBtn;
         private Guna.UI2.WinForms.Guna2Button SaveBtn;
         private Guna.UI2.WinForms.Guna2Button CancelBtn;
         public System.Windows.Forms.TextBox TypeBox;
         public System.Windows.Forms.TextBox CategoryBox;
         private System.Windows.Forms.Button SelectImageBtn;
         private System.Windows.Forms.OpenFileDialog SelectImage;
+        private System.Windows.Forms.PictureBox EditBtn;
+        private System.Windows.Forms.Label MinusBtn;
+        private System.Windows.Forms.Label PlusBtn;
     }
 }

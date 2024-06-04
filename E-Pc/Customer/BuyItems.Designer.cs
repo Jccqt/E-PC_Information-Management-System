@@ -96,13 +96,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(397, 29);
+            this.label1.Location = new System.Drawing.Point(314, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(400, 76);
+            this.label1.Size = new System.Drawing.Size(562, 33);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Available computer parts \r\n         and peripherals";
+            this.label1.Text = "Available computer parts and peripherals";
             // 
             // sidebar
             // 
@@ -398,14 +398,14 @@
             this.ItemsPanel.BackColor = System.Drawing.Color.Transparent;
             this.ItemsPanel.Location = new System.Drawing.Point(241, 181);
             this.ItemsPanel.Name = "ItemsPanel";
-            this.ItemsPanel.Size = new System.Drawing.Size(707, 398);
+            this.ItemsPanel.Size = new System.Drawing.Size(716, 398);
             this.ItemsPanel.TabIndex = 48;
             // 
             // CartBtn
             // 
             this.CartBtn.BackColor = System.Drawing.Color.Transparent;
             this.CartBtn.Image = global::Customer.Properties.Resources.Untitled_design__2_;
-            this.CartBtn.Location = new System.Drawing.Point(244, 89);
+            this.CartBtn.Location = new System.Drawing.Point(238, 89);
             this.CartBtn.Name = "CartBtn";
             this.CartBtn.Size = new System.Drawing.Size(58, 43);
             this.CartBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -415,6 +415,7 @@
             // 
             // SortBox
             // 
+            this.SortBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SortBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortBox.FormattingEnabled = true;
             this.SortBox.Items.AddRange(new object[] {

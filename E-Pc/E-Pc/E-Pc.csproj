@@ -99,8 +99,14 @@
     <Compile Include="CashierOrderPage.Designer.cs">
       <DependentUpon>CashierOrderPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashierShowCart.cs">
+    <Compile Include="aaaa.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="aaaa.Designer.cs">
+      <DependentUpon>aaaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierShowCart.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CashierShowCart.Designer.cs">
       <DependentUpon>CashierShowCart.cs</DependentUpon>
@@ -224,6 +230,9 @@
     <EmbeddedResource Include="CashierOrderPage.resx">
       <DependentUpon>CashierOrderPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="aaaa.resx">
+      <DependentUpon>aaaa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CashierShowCart.resx">
       <DependentUpon>CashierShowCart.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +331,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\image-removebg-preview.png" />
     <None Include="Resources\714-7147174_png-file-svg-transparent-background-shopping-cart-icon.png" />
     <None Include="Resources\Untitled design %282%29.png" />
     <None Include="Resources\image-removebg-preview %281%291.png" />

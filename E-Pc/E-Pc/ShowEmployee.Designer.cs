@@ -82,12 +82,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ItemQuantity);
             this.Controls.Add(this.ItemName);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.ItemImage);
             this.Name = "ShowEmployee";
-            this.Size = new System.Drawing.Size(131, 198);
+            this.Size = new System.Drawing.Size(129, 196);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             this.ResumeLayout(false);

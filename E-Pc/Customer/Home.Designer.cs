@@ -31,7 +31,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BuyPartsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -61,7 +63,7 @@
             // 
             this.BuyPartsBtn.AutoRoundedCorners = true;
             this.BuyPartsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.BuyPartsBtn.BorderRadius = 48;
+            this.BuyPartsBtn.BorderRadius = 49;
             this.BuyPartsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.BuyPartsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BuyPartsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -71,10 +73,23 @@
             this.BuyPartsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(44)))), ((int)(((byte)(85)))));
             this.BuyPartsBtn.Location = new System.Drawing.Point(380, 352);
             this.BuyPartsBtn.Name = "BuyPartsBtn";
-            this.BuyPartsBtn.Size = new System.Drawing.Size(230, 98);
+            this.BuyPartsBtn.Size = new System.Drawing.Size(246, 100);
             this.BuyPartsBtn.TabIndex = 6;
-            this.BuyPartsBtn.Text = "MAKE A PURCHASE";
+            this.BuyPartsBtn.Text = "    PURCHASE ";
+            this.BuyPartsBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.BuyPartsBtn.Click += new System.EventHandler(this.BuyPartsBtn_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::Customer.Properties.Resources.image_removebg_preview__3_;
+            this.pictureBox2.Location = new System.Drawing.Point(526, 370);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(71, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Home
             // 
@@ -83,6 +98,7 @@
             this.BackgroundImage = global::Customer.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BuyPartsBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -92,6 +108,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +119,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button BuyPartsBtn;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

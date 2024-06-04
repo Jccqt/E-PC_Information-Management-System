@@ -70,11 +70,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.CartIdLabel);
             this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.CartImage);
             this.Name = "Cart";
-            this.Size = new System.Drawing.Size(135, 197);
+            this.Size = new System.Drawing.Size(133, 195);
             ((System.ComponentModel.ISupportInitialize)(this.CartImage)).EndInit();
             this.ResumeLayout(false);
 

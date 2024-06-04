@@ -21,5 +21,10 @@ namespace E_Pc
         {
 
         }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

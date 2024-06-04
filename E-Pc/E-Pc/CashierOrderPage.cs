@@ -59,7 +59,7 @@ namespace E_Pc
             PictureBox pic = (PictureBox)sender;
             cartIdCount = cartIdList.IndexOf(pic.Tag);
             Form form = new Form();
-            form.Controls.Add(new CashierShowCart());
+            form.Controls.Add(new aaaa());
             form.StartPosition = FormStartPosition.CenterScreen;
             form.AutoSize = true;
             form.Text = "View cart";

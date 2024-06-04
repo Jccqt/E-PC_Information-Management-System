@@ -257,20 +257,21 @@
             this.OrdersPanel.AutoScroll = true;
             this.OrdersPanel.BackColor = System.Drawing.Color.Gray;
             this.OrdersPanel.ForeColor = System.Drawing.Color.Black;
-            this.OrdersPanel.Location = new System.Drawing.Point(242, 148);
+            this.OrdersPanel.Location = new System.Drawing.Point(244, 158);
             this.OrdersPanel.Name = "OrdersPanel";
             this.OrdersPanel.Size = new System.Drawing.Size(702, 321);
             this.OrdersPanel.TabIndex = 57;
             // 
             // SortBox
             // 
+            this.SortBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SortBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortBox.FormattingEnabled = true;
             this.SortBox.Items.AddRange(new object[] {
             "Pending",
             "Completed",
             "Canceled"});
-            this.SortBox.Location = new System.Drawing.Point(767, 88);
+            this.SortBox.Location = new System.Drawing.Point(769, 98);
             this.SortBox.Name = "SortBox";
             this.SortBox.Size = new System.Drawing.Size(175, 24);
             this.SortBox.TabIndex = 59;
@@ -288,7 +289,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.TableLabel);
-            this.panel3.Location = new System.Drawing.Point(242, 115);
+            this.panel3.Location = new System.Drawing.Point(244, 125);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(702, 34);
             this.panel3.TabIndex = 60;

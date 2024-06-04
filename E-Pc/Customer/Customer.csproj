@@ -64,6 +64,12 @@
     <Compile Include="CodeGenerator.Designer.cs">
       <DependentUpon>CodeGenerator.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerShowCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerShowCart.Designer.cs">
+      <DependentUpon>CustomerShowCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CodeGenerator.resx">
       <DependentUpon>CodeGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerShowCart.resx">
+      <DependentUpon>CustomerShowCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewItem.resx">
       <DependentUpon>ViewItem.cs</DependentUpon>
@@ -191,6 +200,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no image icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
