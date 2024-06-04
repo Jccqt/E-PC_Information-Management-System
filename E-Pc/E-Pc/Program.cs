@@ -25,7 +25,7 @@ namespace E_Pc
 
     public class DataConnection
     {
-        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True";
+        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True";
         public static SqlConnection conn = new SqlConnection(sqlCon);
         public static SqlCommand cmd;
         public static SqlDataAdapter adapter;
@@ -45,8 +45,6 @@ namespace E_Pc
         #region Employee Objects
         public static Employee employeePage = new Employee();
         public static AddEmployee addEmployeePage = new AddEmployee();
-        public static RemoveEmployee removeEmployeePage = new RemoveEmployee();
-        public static UpdateEmployee updateEmployeePage = new UpdateEmployee();
         public static DataTable employeeTable = new DataTable();
         public static DataTable removedEmployeeTable = new DataTable();
         #endregion

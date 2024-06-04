@@ -23,7 +23,7 @@ namespace Customer
             TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString();
         }
 
-        private void ShowCart_Load(object sender, EventArgs e)
+        public void ShowCart_Load(object sender, EventArgs e)
         {
             CartPanel.Controls.Clear();
             itemPrices.Clear();
@@ -31,10 +31,13 @@ namespace Customer
             BuyItems.totalOrderPrice = 0;
             for(int i = 0; i < BuyItems.orderIdList.Count; i++)
             {
+                
+
                 DataConnection.cmd = new SqlCommand("SELECT ItemName, ItemType, ItemPrice, Category, ItemDescription, ItemImage FROM Products WHERE ItemId = @id", DataConnection.conn);
                 DataConnection.cmd.Parameters.AddWithValue("@id", BuyItems.orderIdList[i]);
                 DataConnection.reader = DataConnection.cmd.ExecuteReader();
 
+                
                 if (DataConnection.reader.Read())
                 {
                     selectedItem = new SelectedItems();
@@ -64,6 +67,7 @@ namespace Customer
                     selectedItem.CategoryLabel.Text = DataConnection.reader.GetString(3);
                     selectedItem.DescriptionLabel.Text = DataConnection.reader.GetString(4);
                     selectedItem.QuantityLabel.Text = BuyItems.orderQuantityList[i].ToString();
+                    selectedItem.IdLabel.Text = BuyItems.orderIdList[i].ToString();
 
                     itemPrices.Add(itemPrice);
                     BuyItems.totalOrderPrice += itemPrice;

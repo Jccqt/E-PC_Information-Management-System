@@ -72,9 +72,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(576, 518);
+            this.button2.Location = new System.Drawing.Point(768, 638);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 35);
+            this.button2.Size = new System.Drawing.Size(91, 43);
             this.button2.TabIndex = 56;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,19 +86,21 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(238, 481);
+            this.label2.Location = new System.Drawing.Point(317, 592);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 30);
+            this.label2.Size = new System.Drawing.Size(188, 38);
             this.label2.TabIndex = 54;
             this.label2.Text = "Verify Code";
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(243, 514);
-            this.textBox1.Multiline = true;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(324, 633);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 42);
+            this.textBox1.Size = new System.Drawing.Size(293, 45);
             this.textBox1.TabIndex = 53;
             // 
             // label4
@@ -106,9 +109,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(526, 48);
+            this.label4.Location = new System.Drawing.Point(701, 59);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 45);
+            this.label4.Size = new System.Drawing.Size(173, 56);
             this.label4.TabIndex = 51;
             this.label4.Text = "Orders";
             // 
@@ -120,18 +124,18 @@
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(960, 33);
+            this.guna2Panel1.Size = new System.Drawing.Size(1280, 41);
             this.guna2Panel1.TabIndex = 49;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(44, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 21);
+            this.pictureBox2.Size = new System.Drawing.Size(155, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -139,10 +143,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(925, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(1233, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox1.Size = new System.Drawing.Size(27, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -152,9 +156,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage5;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(62, 52);
+            this.pictureBox3.Size = new System.Drawing.Size(83, 64);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
@@ -163,9 +168,10 @@
             // 
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-7, 0);
+            this.button3.Location = new System.Drawing.Point(-9, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 68);
+            this.button3.Size = new System.Drawing.Size(323, 84);
             this.button3.TabIndex = 14;
             this.button3.Text = "Dashboard";
             this.button3.UseVisualStyleBackColor = true;
@@ -174,9 +180,10 @@
             // 
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(3, 107);
+            this.panel2.Location = new System.Drawing.Point(4, 133);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(229, 68);
+            this.panel2.Size = new System.Drawing.Size(305, 84);
             this.panel2.TabIndex = 20;
             // 
             // sidebar
@@ -186,29 +193,32 @@
             this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.panel5);
             this.sidebar.Controls.Add(this.panel7);
-            this.sidebar.Location = new System.Drawing.Point(0, 33);
-            this.sidebar.MaximumSize = new System.Drawing.Size(232, 552);
-            this.sidebar.MinimumSize = new System.Drawing.Size(78, 552);
+            this.sidebar.Location = new System.Drawing.Point(0, 41);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebar.MaximumSize = new System.Drawing.Size(309, 679);
+            this.sidebar.MinimumSize = new System.Drawing.Size(104, 679);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(232, 552);
+            this.sidebar.Size = new System.Drawing.Size(309, 679);
             this.sidebar.TabIndex = 50;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.menuButton);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 98);
+            this.panel1.Size = new System.Drawing.Size(305, 121);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 79);
+            this.label1.Location = new System.Drawing.Point(117, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
@@ -216,9 +226,10 @@
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
-            this.menuButton.Location = new System.Drawing.Point(36, 0);
+            this.menuButton.Location = new System.Drawing.Point(48, 0);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(144, 92);
+            this.menuButton.Size = new System.Drawing.Size(192, 113);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
@@ -227,9 +238,10 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 181);
+            this.panel5.Location = new System.Drawing.Point(4, 225);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(229, 68);
+            this.panel5.Size = new System.Drawing.Size(305, 84);
             this.panel5.TabIndex = 17;
             // 
             // OrderLogo
@@ -237,9 +249,10 @@
             this.OrderLogo.BackColor = System.Drawing.Color.Transparent;
             this.OrderLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OrderLogo.Image = global::E_Pc.Properties.Resources.orderIcon;
-            this.OrderLogo.Location = new System.Drawing.Point(3, 7);
+            this.OrderLogo.Location = new System.Drawing.Point(4, 9);
+            this.OrderLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrderLogo.Name = "OrderLogo";
-            this.OrderLogo.Size = new System.Drawing.Size(62, 54);
+            this.OrderLogo.Size = new System.Drawing.Size(83, 66);
             this.OrderLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.OrderLogo.TabIndex = 15;
             this.OrderLogo.TabStop = false;
@@ -249,9 +262,10 @@
             this.OrderButton.BackColor = System.Drawing.Color.DarkGray;
             this.OrderButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OrderButton.Location = new System.Drawing.Point(-7, 0);
+            this.OrderButton.Location = new System.Drawing.Point(-9, 0);
+            this.OrderButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrderButton.Name = "OrderButton";
-            this.OrderButton.Size = new System.Drawing.Size(242, 68);
+            this.OrderButton.Size = new System.Drawing.Size(323, 84);
             this.OrderButton.TabIndex = 14;
             this.OrderButton.Text = "Order";
             this.OrderButton.UseVisualStyleBackColor = false;
@@ -260,9 +274,10 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 255);
+            this.panel7.Location = new System.Drawing.Point(4, 317);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(229, 68);
+            this.panel7.Size = new System.Drawing.Size(305, 84);
             this.panel7.TabIndex = 19;
             // 
             // LogoutLogo
@@ -270,9 +285,10 @@
             this.LogoutLogo.BackColor = System.Drawing.Color.Transparent;
             this.LogoutLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutLogo.Image = global::E_Pc.Properties.Resources.LogOut;
-            this.LogoutLogo.Location = new System.Drawing.Point(3, 13);
+            this.LogoutLogo.Location = new System.Drawing.Point(4, 16);
+            this.LogoutLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogoutLogo.Name = "LogoutLogo";
-            this.LogoutLogo.Size = new System.Drawing.Size(62, 43);
+            this.LogoutLogo.Size = new System.Drawing.Size(83, 53);
             this.LogoutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LogoutLogo.TabIndex = 15;
             this.LogoutLogo.TabStop = false;
@@ -281,9 +297,10 @@
             // 
             this.LogoutButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButton.Location = new System.Drawing.Point(-7, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(-9, 0);
+            this.LogoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(242, 68);
+            this.LogoutButton.Size = new System.Drawing.Size(323, 84);
             this.LogoutButton.TabIndex = 14;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
@@ -294,9 +311,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(469, 518);
+            this.button1.Location = new System.Drawing.Point(625, 638);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 35);
+            this.button1.Size = new System.Drawing.Size(135, 43);
             this.button1.TabIndex = 55;
             this.button1.Text = "Verify";
             this.button1.UseVisualStyleBackColor = false;
@@ -306,16 +324,17 @@
             this.OrdersPanel.AutoScroll = true;
             this.OrdersPanel.BackColor = System.Drawing.Color.Gray;
             this.OrdersPanel.ForeColor = System.Drawing.Color.Black;
-            this.OrdersPanel.Location = new System.Drawing.Point(242, 148);
+            this.OrdersPanel.Location = new System.Drawing.Point(323, 182);
+            this.OrdersPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrdersPanel.Name = "OrdersPanel";
-            this.OrdersPanel.Size = new System.Drawing.Size(702, 321);
+            this.OrdersPanel.Size = new System.Drawing.Size(936, 395);
             this.OrdersPanel.TabIndex = 57;
             // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 24;
+            this.guna2Button1.BorderRadius = 30;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -324,9 +343,10 @@
             this.guna2Button1.FocusedColor = System.Drawing.Color.Gray;
             this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(800, 506);
+            this.guna2Button1.Location = new System.Drawing.Point(1067, 623);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(144, 50);
+            this.guna2Button1.Size = new System.Drawing.Size(192, 62);
             this.guna2Button1.TabIndex = 58;
             this.guna2Button1.Text = "Checkout";
             // 
@@ -338,36 +358,39 @@
             "Pending",
             "Completed",
             "Canceled"});
-            this.SortBox.Location = new System.Drawing.Point(767, 88);
+            this.SortBox.Location = new System.Drawing.Point(1023, 108);
+            this.SortBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SortBox.Name = "SortBox";
-            this.SortBox.Size = new System.Drawing.Size(175, 24);
+            this.SortBox.Size = new System.Drawing.Size(232, 28);
             this.SortBox.TabIndex = 59;
             // 
             // TableLabel
             // 
             this.TableLabel.AutoSize = true;
             this.TableLabel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableLabel.Location = new System.Drawing.Point(299, 9);
+            this.TableLabel.Location = new System.Drawing.Point(399, 11);
+            this.TableLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TableLabel.Name = "TableLabel";
-            this.TableLabel.Size = new System.Drawing.Size(109, 18);
+            this.TableLabel.Size = new System.Drawing.Size(138, 24);
             this.TableLabel.TabIndex = 0;
             this.TableLabel.Text = "<Table Label>";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.TableLabel);
-            this.panel3.Location = new System.Drawing.Point(242, 115);
+            this.panel3.Location = new System.Drawing.Point(323, 142);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(702, 34);
+            this.panel3.Size = new System.Drawing.Size(936, 42);
             this.panel3.TabIndex = 60;
             // 
             // CashierOrderPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(960, 585);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.SortBox);
             this.Controls.Add(this.guna2Button1);
@@ -381,6 +404,7 @@
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CashierOrderPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierOrderPage";

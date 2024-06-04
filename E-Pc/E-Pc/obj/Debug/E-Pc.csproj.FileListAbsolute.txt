@@ -86,10 +86,8 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-P
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.pdb
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\Guna.UI2.dll
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.AssemblyReference.cache
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddInventory.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AdminHome.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CustomerOrderCode.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.DeleteInventory.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Inventory.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Login.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.OrdersPage.resources
@@ -124,8 +122,6 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.EmployeeManag
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.RemoveEmployee.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateEmployeePage.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddEmployee.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RemoveEmployee.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateInventory.resources
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb.mdf
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb_log.ldf
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.exe.config
@@ -156,8 +152,6 @@ E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.SummarizationPage
 E:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.VerificationCodePage.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierHomepage.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentPage.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.SummarizationPage.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.VerificationCodePage.resources
 C:\Users\STI-STUDENT\Documents\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb.mdf
 C:\Users\STI-STUDENT\Documents\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb_log.ldf
 C:\Users\STI-STUDENT\Documents\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.exe.config
@@ -219,7 +213,6 @@ D:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CopyComple
 D:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe
 D:\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.pdb
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Employee.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb.mdf
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-PCdb_log.ldf
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.exe.config
@@ -260,3 +253,17 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Receipt.resour
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetreiveEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.ShowEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\Customer.SelectedItems.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddProduct.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierOrderPage.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierShowCart.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EditEmployee.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EditItem.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Cart.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.NewAddEmployee.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Payment.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Product.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Receipt.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetreiveEmployee.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetrieveItem.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\Customer.SelectedItems.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.ShowEmployee.resources

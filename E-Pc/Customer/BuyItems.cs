@@ -129,6 +129,7 @@ namespace Customer
                 item.ItemImage.Tag = DataConnection.reader.GetString(0);
                 item.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
                 item.ItemPrice.Text = $"Price: P{DataConnection.reader.GetValue(2)}";
+                
 
                 item.ItemImage.Click += new EventHandler(ViewItem_Click);
 
@@ -154,15 +155,14 @@ namespace Customer
         {
             ShowItems();
         }
-
-        private void CartBtn_Click(object sender, EventArgs e)
+        public void CartBtn_Click(object sender, EventArgs e)
         {
-            Form form = new Form();
-            form.Controls.Add(new ShowCart());
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.AutoSize = true;
-            form.Text = "Cart";
-            form.ShowDialog();
+            DataConnection.CartForm = new Form();
+            DataConnection.CartForm.Controls.Add(new ShowCart());
+            DataConnection.CartForm.StartPosition = FormStartPosition.CenterScreen;
+            DataConnection.CartForm.AutoSize = true;
+            DataConnection.CartForm.Text = "Cart";
+            DataConnection.CartForm.ShowDialog();
         }
     }
 }

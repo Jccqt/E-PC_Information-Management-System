@@ -70,7 +70,7 @@ namespace E_Pc
 
             DataConnection.cmd = new SqlCommand("SELECT SUM(OrderPrice) FROM Carts WHERE CartId = @cartId", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
-            TotalAmountLabel.Text = DataConnection.cmd.ExecuteScalar().ToString();
+            TotalAmountLabel.Text = $"P{DataConnection.cmd.ExecuteScalar().ToString()}";
 
             DataConnection.conn.Close();
         }
