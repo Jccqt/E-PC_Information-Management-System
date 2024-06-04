@@ -73,7 +73,7 @@
             this.BuyPartsBtn.Name = "BuyPartsBtn";
             this.BuyPartsBtn.Size = new System.Drawing.Size(230, 98);
             this.BuyPartsBtn.TabIndex = 6;
-            this.BuyPartsBtn.Text = "ORDER";
+            this.BuyPartsBtn.Text = "MAKE A PURCHASE";
             this.BuyPartsBtn.Click += new System.EventHandler(this.BuyPartsBtn_Click);
             // 
             // Home

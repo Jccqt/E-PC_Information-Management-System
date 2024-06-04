@@ -230,10 +230,6 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Login.resource
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.OrdersPage.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentPage.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Properties.Resources.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RemoveEmployee.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.SummarizationPage.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.UpdateEmployee.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.VerificationCodePage.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.GenerateResource.cache
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CoreCompileInputs.cache
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.Up2Date

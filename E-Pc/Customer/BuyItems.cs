@@ -161,8 +161,9 @@ namespace Customer
             DataConnection.CartForm.Controls.Add(new ShowCart());
             DataConnection.CartForm.StartPosition = FormStartPosition.CenterScreen;
             DataConnection.CartForm.AutoSize = true;
-            DataConnection.CartForm.Text = "Cart";
+            DataConnection.CartForm.FormBorderStyle = FormBorderStyle.None;
             DataConnection.CartForm.ShowDialog();
+            
         }
     }
 }

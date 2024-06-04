@@ -97,12 +97,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(74, 94);
+            this.label1.Location = new System.Drawing.Point(55, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 23);
+            this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 42;
-            this.label1.Text = "<Customer code>";
+            this.label1.Text = "<cart code>";
             // 
             // guna2Button2
             // 
@@ -143,6 +143,7 @@
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(668, 275);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -177,7 +178,7 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(873, 28);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(899, 13);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(31, 33);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

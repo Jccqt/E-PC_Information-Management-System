@@ -40,6 +40,7 @@
             this.CodeLabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.CheckoutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // TotalQuantityLabel
@@ -174,10 +175,29 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Total items:";
             // 
+            // CheckoutBtn
+            // 
+            this.CheckoutBtn.AutoRoundedCorners = true;
+            this.CheckoutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CheckoutBtn.BorderRadius = 20;
+            this.CheckoutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CheckoutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CheckoutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CheckoutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CheckoutBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.CheckoutBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckoutBtn.ForeColor = System.Drawing.Color.White;
+            this.CheckoutBtn.Location = new System.Drawing.Point(695, 475);
+            this.CheckoutBtn.Name = "CheckoutBtn";
+            this.CheckoutBtn.Size = new System.Drawing.Size(204, 43);
+            this.CheckoutBtn.TabIndex = 22;
+            this.CheckoutBtn.Text = "Proceed to checkout ->";
+            // 
             // CashierShowCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CheckoutBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CodeLabel);
             this.Controls.Add(this.label10);
@@ -212,5 +232,6 @@
         private System.Windows.Forms.Label CodeLabel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button CheckoutBtn;
     }
 }
