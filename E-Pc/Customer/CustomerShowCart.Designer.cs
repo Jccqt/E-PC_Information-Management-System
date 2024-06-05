@@ -35,11 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CartPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.CheckoutBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.ContinueBtn = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -72,7 +74,7 @@
             this.TotalAmountLabel.BackColor = System.Drawing.Color.Transparent;
             this.TotalAmountLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalAmountLabel.ForeColor = System.Drawing.Color.White;
-            this.TotalAmountLabel.Location = new System.Drawing.Point(764, 440);
+            this.TotalAmountLabel.Location = new System.Drawing.Point(139, 8);
             this.TotalAmountLabel.Name = "TotalAmountLabel";
             this.TotalAmountLabel.Size = new System.Drawing.Size(145, 23);
             this.TotalAmountLabel.TabIndex = 13;
@@ -84,7 +86,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(628, 440);
+            this.label2.Location = new System.Drawing.Point(3, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 23);
             this.label2.TabIndex = 12;
@@ -129,27 +131,29 @@
             this.CheckoutBtn.TabIndex = 37;
             this.CheckoutBtn.Text = "Proceed to checkout";
             this.CheckoutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CheckoutBtn.Click += new System.EventHandler(this.CheckoutBtn_Click);
             // 
-            // guna2Button1
+            // ContinueBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 28;
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Tomato;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(30, 475);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(204, 59);
-            this.guna2Button1.TabIndex = 39;
-            this.guna2Button1.Text = "Continue shopping";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ContinueBtn.AutoRoundedCorners = true;
+            this.ContinueBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ContinueBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.ContinueBtn.BorderRadius = 28;
+            this.ContinueBtn.BorderThickness = 2;
+            this.ContinueBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ContinueBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ContinueBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ContinueBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ContinueBtn.FillColor = System.Drawing.Color.Tomato;
+            this.ContinueBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.ContinueBtn.ForeColor = System.Drawing.Color.White;
+            this.ContinueBtn.Location = new System.Drawing.Point(30, 475);
+            this.ContinueBtn.Name = "ContinueBtn";
+            this.ContinueBtn.Size = new System.Drawing.Size(204, 59);
+            this.ContinueBtn.TabIndex = 39;
+            this.ContinueBtn.Text = "Continue shopping";
+            this.ContinueBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ContinueBtn.Click += new System.EventHandler(this.ContinueBtn_Click);
             // 
             // pictureBox2
             // 
@@ -175,6 +179,16 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.TotalAmountLabel);
+            this.panel1.Location = new System.Drawing.Point(624, 431);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(292, 38);
+            this.panel1.TabIndex = 41;
+            // 
             // CustomerShowCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,21 +196,24 @@
             this.BackgroundImage = global::Customer.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(944, 546);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.ContinueBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CheckoutBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TotalQuantityLabel);
-            this.Controls.Add(this.TotalAmountLabel);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CartPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerShowCart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerShowCart";
+            this.Load += new System.EventHandler(this.CustomerShowCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,7 +228,8 @@
         private System.Windows.Forms.FlowLayoutPanel CartPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button CheckoutBtn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button ContinueBtn;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

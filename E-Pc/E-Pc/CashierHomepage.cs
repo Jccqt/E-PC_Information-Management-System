@@ -14,6 +14,7 @@ namespace E_Pc
         {
             using(CashierOrderPage orderPage = new CashierOrderPage())
             {
+                // will display the Orders page for cashier
                 orderPage.ShowDialog();
                 this.Hide();
             }

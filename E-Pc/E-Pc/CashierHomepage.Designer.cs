@@ -254,6 +254,7 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(-7, 0);
@@ -261,7 +262,7 @@
             this.button3.Size = new System.Drawing.Size(242, 68);
             this.button3.TabIndex = 14;
             this.button3.Text = "Dashboard";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // CashierHomepage
             // 

@@ -28,7 +28,6 @@ namespace Customer
         public static SqlCommand cmd;
         public static SqlDataAdapter adapter;
         public static SqlDataReader reader;
-        public static Form CartForm;
     }
 
     public class PageObjects

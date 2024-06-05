@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.CompilerServices;
 
 namespace Customer
 {
@@ -28,5 +29,17 @@ namespace Customer
             DataConnection.conn.Close();
         }
 
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult closeDialog = MessageBox.Show("Are you sure you want to close the cart code page?", "Close page", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(closeDialog == DialogResult.Yes)
+            {
+                MessageBox.Show("Thankyou for order! You can now proceed to cashier");
+                PageObjects.buyItemsPage.Show();
+                ((Form)this.TopLevelControl).Close(); // will close the cart order page
+            }
+        }
+        
     }
 }

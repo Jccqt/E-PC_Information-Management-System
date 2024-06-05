@@ -25,14 +25,14 @@ namespace Customer
         {
             using(BuyItems items = new BuyItems())
             {
-                using(ShowCart cart = new ShowCart())
+                using(CustomerShowCart cart = new CustomerShowCart())
                 {
                     BuyItems.totalOrderQuantity = Convert.ToInt32(cart.TotalQuantityLabel.Text)
                     - Convert.ToInt32(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]);
                     BuyItems.orderQuantityList.Remove(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]);
                     BuyItems.orderIdList.Remove(IdLabel.Text);
                     this.Dispose();
-                    DataConnection.CartForm.Dispose();
+                    cart.Dispose();
                     items.CartBtn_Click(sender, e);
                 }
             }

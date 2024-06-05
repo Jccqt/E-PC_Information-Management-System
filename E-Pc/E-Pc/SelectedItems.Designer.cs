@@ -41,6 +41,8 @@
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ItemImage = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ItemIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.TypeLabel.ForeColor = System.Drawing.Color.Black;
             this.TypeLabel.Location = new System.Drawing.Point(279, 47);
             this.TypeLabel.Name = "TypeLabel";
-            this.TypeLabel.Size = new System.Drawing.Size(75, 15);
+            this.TypeLabel.Size = new System.Drawing.Size(98, 15);
             this.TypeLabel.TabIndex = 22;
             this.TypeLabel.Text = "<type>";
             // 
@@ -86,11 +88,11 @@
             // 
             // NameLabel
             // 
-            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameLabel.ForeColor = System.Drawing.Color.Black;
             this.NameLabel.Location = new System.Drawing.Point(200, 4);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(607, 28);
+            this.NameLabel.Size = new System.Drawing.Size(372, 23);
             this.NameLabel.TabIndex = 16;
             this.NameLabel.Text = "Item Name";
             // 
@@ -175,11 +177,33 @@
             this.ItemImage.TabIndex = 15;
             this.ItemImage.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(641, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Item Code:";
+            // 
+            // ItemIdLabel
+            // 
+            this.ItemIdLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemIdLabel.ForeColor = System.Drawing.Color.Black;
+            this.ItemIdLabel.Location = new System.Drawing.Point(708, 9);
+            this.ItemIdLabel.Name = "ItemIdLabel";
+            this.ItemIdLabel.Size = new System.Drawing.Size(129, 15);
+            this.ItemIdLabel.TabIndex = 34;
+            this.ItemIdLabel.Text = "<Item Id>";
+            // 
             // SelectedItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ItemIdLabel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -214,5 +238,7 @@
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label CategoryLabel;
         public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label ItemIdLabel;
     }
 }

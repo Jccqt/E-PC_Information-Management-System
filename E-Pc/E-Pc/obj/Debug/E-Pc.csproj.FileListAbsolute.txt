@@ -220,7 +220,6 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.exe
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.pdb
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\Guna.UI2.dll
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.AssemblyReference.cache
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AdminHome.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierHomepage.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CustomerOrderCode.resources
@@ -300,3 +299,4 @@ D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CopyComplete
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.pdb
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.aaaa.resources

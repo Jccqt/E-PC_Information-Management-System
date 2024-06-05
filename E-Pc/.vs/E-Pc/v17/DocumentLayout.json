@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\cashiershowcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\cashiershowcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\cashierorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\cashierorderpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +13,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 620,
+          "DockedHeight": 577,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -27,31 +23,20 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CashierShowCart.cs [Design]",
-              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\CashierShowCart.cs",
-              "RelativeDocumentMoniker": "E-Pc\\CashierShowCart.cs",
-              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\CashierShowCart.cs [Design]",
-              "RelativeToolTip": "E-Pc\\CashierShowCart.cs [Design]",
+              "Title": "AdminHome.cs",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminHome.cs",
+              "RelativeDocumentMoniker": "E-Pc\\AdminHome.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminHome.cs",
+              "RelativeToolTip": "E-Pc\\AdminHome.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAADcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:30:30.356Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CashierOrderPage.cs [Design]",
-              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\CashierOrderPage.cs",
-              "RelativeDocumentMoniker": "E-Pc\\CashierOrderPage.cs",
-              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\CashierOrderPage.cs [Design]",
-              "RelativeToolTip": "E-Pc\\CashierOrderPage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:17:45.382Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-05T03:12:26.884Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 36,
+          "DockedHeight": 79,
           "SelectedChildIndex": -1,
           "Children": [
             {

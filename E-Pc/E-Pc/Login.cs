@@ -12,7 +12,7 @@ namespace E_Pc
         public Login()
         {
             InitializeComponent();
-            usernameTxt.Focus();
+            usernameTxt.Focus(); // will focus the insert mode in username box
         }
 
 
@@ -23,7 +23,7 @@ namespace E_Pc
 
         private void DateTimer_Tick(object sender, EventArgs e)
         {
-            DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt");
+            DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt"); 
         }
 
 
@@ -46,8 +46,9 @@ namespace E_Pc
                 }
             }
             DataConnection.conn.Close();
-            if (isLogin && position.Equals("Admin"))
+            if (isLogin && position.Equals("Admin")) 
             {
+                // will display the admin homepage if the employee position is admin
                 using (AdminHome admin = new AdminHome())
                 {
                     MessageBox.Show("Login successfully!");
@@ -59,6 +60,7 @@ namespace E_Pc
             }
             else if (isLogin && position.Equals("Cashier"))
             {
+                // will display the cashier homepage if the employee position is cashier
                 using(CashierHomepage cashier = new CashierHomepage())
                 {
                     MessageBox.Show("Login successfully!");

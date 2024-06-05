@@ -157,13 +157,9 @@ namespace Customer
         }
         public void CartBtn_Click(object sender, EventArgs e)
         {
-            DataConnection.CartForm = new Form();
-            DataConnection.CartForm.Controls.Add(new ShowCart());
-            DataConnection.CartForm.StartPosition = FormStartPosition.CenterScreen;
-            DataConnection.CartForm.AutoSize = true;
-            DataConnection.CartForm.FormBorderStyle = FormBorderStyle.None;
-            DataConnection.CartForm.ShowDialog();
-            
+            CustomerShowCart cartPage = new CustomerShowCart();
+            cartPage.Show();
+            this.Hide();
         }
     }
 }

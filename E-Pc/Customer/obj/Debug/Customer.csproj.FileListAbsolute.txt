@@ -34,3 +34,4 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Cus
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.Up2Date
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.exe
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.pdb
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.CustomerShowCart.resources

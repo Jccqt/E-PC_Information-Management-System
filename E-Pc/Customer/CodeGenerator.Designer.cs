@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.OrderCodeLabel = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.CloseBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,23 +45,24 @@
             this.OrderCodeLabel.TabIndex = 0;
             this.OrderCodeLabel.Text = "<Code>";
             // 
-            // guna2Button1
+            // CloseBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 23;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(175, 180);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(190, 49);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Okay";
+            this.CloseBtn.AutoRoundedCorners = true;
+            this.CloseBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CloseBtn.BorderRadius = 23;
+            this.CloseBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CloseBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CloseBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CloseBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CloseBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+            this.CloseBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseBtn.ForeColor = System.Drawing.Color.White;
+            this.CloseBtn.Location = new System.Drawing.Point(184, 180);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(190, 49);
+            this.CloseBtn.TabIndex = 1;
+            this.CloseBtn.Text = "Close";
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // label1
             // 
@@ -101,7 +102,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.OrderCodeLabel);
             this.Name = "CodeGenerator";
             this.Size = new System.Drawing.Size(562, 290);
@@ -114,7 +115,7 @@
         #endregion
 
         private System.Windows.Forms.Label OrderCodeLabel;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button CloseBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

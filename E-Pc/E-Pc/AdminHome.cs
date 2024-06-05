@@ -53,6 +53,7 @@ namespace E_Pc
         {
             using(Inventory inventory = new Inventory())
             {
+                // will display the inventory page
                 inventory.ShowDialog();
                 this.Hide();
             }
@@ -67,5 +68,6 @@ namespace E_Pc
         {
             DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt");
         }
+
     }
 }

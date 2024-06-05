@@ -39,14 +39,12 @@ namespace E_Pc
         public static bool isNewImage = false;
         public static Inventory inventoryPage = new Inventory();
         public static AdminHome adminHomePage = new AdminHome();
+        public static CashierOrderPage cashierOrderPage = new CashierOrderPage();
  
         #endregion
 
         #region Employee Objects
-        public static Employee employeePage = new Employee();
-        public static AddEmployee addEmployeePage = new AddEmployee();
-        public static DataTable employeeTable = new DataTable();
-        public static DataTable removedEmployeeTable = new DataTable();
+
         #endregion
     }
 

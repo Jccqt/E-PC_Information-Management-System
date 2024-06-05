@@ -52,18 +52,17 @@ namespace E_Pc
             }
             DataConnection.reader.Close();
             DataConnection.conn.Close();
+            GC.Collect();
         }
 
         private void ViewCartDetails_Click(object sender, EventArgs e)
         {
             PictureBox pic = (PictureBox)sender;
             cartIdCount = cartIdList.IndexOf(pic.Tag);
-            Form form = new Form();
-            form.Controls.Add(new aaaa());
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.AutoSize = true;
-            form.Text = "View cart";
-            form.ShowDialog();
+            CashierShowCart cartPage = new CashierShowCart();
+            cartPage.Show();
+            this.Hide();
+            GC.Collect();
         }
 
         private void CashierOrderPage_Load(object sender, EventArgs e)

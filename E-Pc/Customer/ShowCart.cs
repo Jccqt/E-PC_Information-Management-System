@@ -25,6 +25,7 @@ namespace Customer
 
         public void ShowCart_Load(object sender, EventArgs e)
         {
+            /*
             CartPanel.Controls.Clear();
             itemPrices.Clear();
             DataConnection.conn.Open();
@@ -79,6 +80,7 @@ namespace Customer
 
             DataConnection.conn.Close();
             TotalAmountLabel.Text = BuyItems.totalOrderPrice.ToString();
+            */
         }
 
         private void CheckoutBtn_Click(object sender, EventArgs e)
