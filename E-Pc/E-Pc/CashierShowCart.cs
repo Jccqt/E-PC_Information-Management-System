@@ -15,7 +15,6 @@ namespace E_Pc
 {
     public partial class CashierShowCart : Form
     {
-        static SelectedItems selectedItem;
         public CashierShowCart()
         {
             InitializeComponent();
@@ -36,38 +35,47 @@ namespace E_Pc
 
             while(DataConnection.reader.Read())
             {
-                selectedItem = new SelectedItems();
+                SelectedItems items = new SelectedItems();
 
                 if (!DataConnection.reader.GetValue(9).ToString().Equals(""))
                 {
                     byte[] imageBinary = (byte[])DataConnection.reader.GetValue(9);
                     using (MemoryStream ms = new MemoryStream(imageBinary))
                     {
-                        selectedItem.ItemImage.Image = Image.FromStream(ms);
-                        selectedItem.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                        items.ItemImage.Image = Image.FromStream(ms);
+                        items.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     Array.Clear(imageBinary, 0, imageBinary.Length);
 
                 }
                 else
                 {
-                    selectedItem.ItemImage.Image = Properties.Resources.no_image_icon;
-                    selectedItem.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                    items.ItemImage.Image = Properties.Resources.no_image_icon;
+                    items.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
 
-                selectedItem.ItemIdLabel.Text = DataConnection.reader.GetString(0);
-                selectedItem.QuantityLabel.Text = DataConnection.reader.GetValue(1).ToString();
-                selectedItem.PriceLabel.Text = DataConnection.reader.GetValue(2).ToString();
-                selectedItem.NameLabel.Text = DataConnection.reader.GetString(5);
-                selectedItem.TypeLabel.Text = DataConnection.reader.GetString(6);
-                selectedItem.CategoryLabel.Text = DataConnection.reader.GetString(7);
-                selectedItem.DescriptionLabel.Text = DataConnection.reader.GetString(8);
+                items.ItemIdLabel.Text = DataConnection.reader.GetString(0);
+                items.QuantityLabel.Text = DataConnection.reader.GetValue(1).ToString();
+                items.PriceLabel.Text = DataConnection.reader.GetValue(2).ToString();
+                items.NameLabel.Text = DataConnection.reader.GetString(5);
+                items.TypeLabel.Text = DataConnection.reader.GetString(6);
+                items.CategoryLabel.Text = DataConnection.reader.GetString(7);
+                items.DescriptionLabel.Text = DataConnection.reader.GetString(8);
 
                 DateLabel.Text = DataConnection.reader.GetValue(3).ToString();
                 StatusLabel.Text = DataConnection.reader.GetString(4);
-                CartPanel.Controls.Add(selectedItem);
+                CartPanel.Controls.Add(items);
             }
             DataConnection.reader.Close();
+
+            DataConnection.cmd = new SqlCommand("SELECT SUM(OrderQuantity) FROM Carts WHERE CartId = @cartId", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
+            TotalQuantityLabel.Text = DataConnection.cmd.ExecuteScalar().ToString();
+
+            DataConnection.cmd = new SqlCommand("SELECT SUM(OrderPrice) FROM Carts WHERE CartId = @cartId", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
+            TotalAmountLabel.Text = $"P{DataConnection.cmd.ExecuteScalar()}";
+
             DataConnection.conn.Close();
             GC.Collect();
         }
@@ -76,6 +84,13 @@ namespace E_Pc
         {
             PageObjects.cashierOrderPage.Show();
             this.Close();
+        }
+
+        private void CheckoutBtn_Click(object sender, EventArgs e)
+        {
+            PaymentPage payment = new PaymentPage();
+            payment.Show();
+            this.Hide();
         }
     }
 }

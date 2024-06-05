@@ -28,45 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NameLabel = new System.Windows.Forms.Label();
+            this.ItemImage = new System.Windows.Forms.PictureBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.TypeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.QuantityLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PriceLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.NameLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ItemImage
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 136);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // NameLabel
-            // 
-            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.ForeColor = System.Drawing.Color.Black;
-            this.NameLabel.Location = new System.Drawing.Point(169, 4);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(143, 28);
-            this.NameLabel.TabIndex = 17;
-            this.NameLabel.Text = "Item Name";
+            this.ItemImage.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ItemImage.Location = new System.Drawing.Point(0, 0);
+            this.ItemImage.Name = "ItemImage";
+            this.ItemImage.Size = new System.Drawing.Size(168, 136);
+            this.ItemImage.TabIndex = 0;
+            this.ItemImage.TabStop = false;
             // 
             // CategoryLabel
             // 
             this.CategoryLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryLabel.ForeColor = System.Drawing.Color.Black;
-            this.CategoryLabel.Location = new System.Drawing.Point(415, 49);
+            this.CategoryLabel.Location = new System.Drawing.Point(249, 83);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(179, 15);
+            this.CategoryLabel.Size = new System.Drawing.Size(288, 15);
             this.CategoryLabel.TabIndex = 36;
             this.CategoryLabel.Text = "<category>";
             // 
@@ -74,7 +64,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(354, 49);
+            this.label8.Location = new System.Drawing.Point(181, 83);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 15);
             this.label8.TabIndex = 35;
@@ -100,21 +90,21 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "Item Type:";
             // 
-            // label1
+            // QuantityLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(249, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 15);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "<quantity>";
+            this.QuantityLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityLabel.ForeColor = System.Drawing.Color.Black;
+            this.QuantityLabel.Location = new System.Drawing.Point(462, 49);
+            this.QuantityLabel.Name = "QuantityLabel";
+            this.QuantityLabel.Size = new System.Drawing.Size(75, 15);
+            this.QuantityLabel.TabIndex = 38;
+            this.QuantityLabel.Text = "<quantity>";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(181, 83);
+            this.label3.Location = new System.Drawing.Point(394, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 15);
             this.label3.TabIndex = 37;
@@ -140,40 +130,49 @@
             this.label5.TabIndex = 39;
             this.label5.Text = "Price: ";
             // 
+            // NameLabel
+            // 
+            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.ForeColor = System.Drawing.Color.Black;
+            this.NameLabel.Location = new System.Drawing.Point(171, 0);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(419, 42);
+            this.NameLabel.TabIndex = 41;
+            this.NameLabel.Text = "Item Name";
+            // 
             // PaymentItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TypeLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ItemImage);
             this.Name = "PaymentItems";
             this.Size = new System.Drawing.Size(593, 134);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label NameLabel;
         public System.Windows.Forms.Label CategoryLabel;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label TypeLabel;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label QuantityLabel;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label PriceLabel;
         public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.PictureBox ItemImage;
+        public System.Windows.Forms.Label NameLabel;
     }
 }

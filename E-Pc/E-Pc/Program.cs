@@ -40,7 +40,8 @@ namespace E_Pc
         public static Inventory inventoryPage = new Inventory();
         public static AdminHome adminHomePage = new AdminHome();
         public static CashierOrderPage cashierOrderPage = new CashierOrderPage();
- 
+        public static CashierShowCart cartPage;
+
         #endregion
 
         #region Employee Objects

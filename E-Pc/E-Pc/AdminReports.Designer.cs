@@ -54,11 +54,14 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.DateLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.StockPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.AuditPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.TableLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -77,6 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // LogoutLogo
@@ -344,19 +349,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // DateLabel
-            // 
-            this.DateLabel.AutoSize = true;
-            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.White;
-            this.DateLabel.Location = new System.Drawing.Point(669, 554);
-            this.DateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(57, 25);
-            this.DateLabel.TabIndex = 19;
-            this.DateLabel.Text = "Date";
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
@@ -376,27 +368,63 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(512, 60);
+            this.label4.Location = new System.Drawing.Point(512, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 45);
             this.label4.TabIndex = 52;
             this.label4.Text = "Reports";
             // 
-            // flowLayoutPanel1
+            // StockPanel
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(658, 117);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(262, 205);
-            this.flowLayoutPanel1.TabIndex = 53;
+            this.StockPanel.BackColor = System.Drawing.Color.White;
+            this.StockPanel.Location = new System.Drawing.Point(658, 117);
+            this.StockPanel.Name = "StockPanel";
+            this.StockPanel.Size = new System.Drawing.Size(287, 205);
+            this.StockPanel.TabIndex = 53;
             // 
-            // flowLayoutPanel2
+            // AuditPanel
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(268, 337);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(652, 205);
-            this.flowLayoutPanel2.TabIndex = 54;
+            this.AuditPanel.BackColor = System.Drawing.Color.White;
+            this.AuditPanel.Location = new System.Drawing.Point(268, 337);
+            this.AuditPanel.Name = "AuditPanel";
+            this.AuditPanel.Size = new System.Drawing.Size(677, 236);
+            this.AuditPanel.TabIndex = 54;
+            // 
+            // TableLabel
+            // 
+            this.TableLabel.AutoSize = true;
+            this.TableLabel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableLabel.Location = new System.Drawing.Point(93, 3);
+            this.TableLabel.Name = "TableLabel";
+            this.TableLabel.Size = new System.Drawing.Size(100, 18);
+            this.TableLabel.TabIndex = 0;
+            this.TableLabel.Text = "Stocks sales";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.TableLabel);
+            this.panel2.Location = new System.Drawing.Point(658, 117);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(287, 27);
+            this.panel2.TabIndex = 55;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Location = new System.Drawing.Point(268, 337);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(677, 27);
+            this.panel8.TabIndex = 56;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(285, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Audit Trail";
             // 
             // AdminReports
             // 
@@ -405,11 +433,12 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.AuditPanel);
+            this.Controls.Add(this.StockPanel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -435,6 +464,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,10 +500,13 @@
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label DateLabel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel StockPanel;
+        private System.Windows.Forms.FlowLayoutPanel AuditPanel;
+        private System.Windows.Forms.Label TableLabel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label2;
     }
 }

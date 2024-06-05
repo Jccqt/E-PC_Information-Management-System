@@ -59,8 +59,8 @@ namespace E_Pc
         {
             PictureBox pic = (PictureBox)sender;
             cartIdCount = cartIdList.IndexOf(pic.Tag);
-            CashierShowCart cartPage = new CashierShowCart();
-            cartPage.Show();
+            PageObjects.cartPage = new CashierShowCart();
+            PageObjects.cartPage.Show();
             this.Hide();
             GC.Collect();
         }

@@ -243,7 +243,6 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Cart.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierShowCart.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EditEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.NewAddEmployee.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Payment.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Receipt.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetreiveEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.ShowEmployee.resources
@@ -298,6 +297,7 @@ D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.CopyComplete
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.pdb
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.aaaa.resources
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AdminReports.resources
 D:\E-PC_Information-Management-System\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentItems.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AdminReports.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentItems.resources

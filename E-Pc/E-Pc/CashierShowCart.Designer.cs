@@ -66,6 +66,7 @@
             this.CheckoutBtn.TabIndex = 35;
             this.CheckoutBtn.Text = "Proceed to checkout";
             this.CheckoutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CheckoutBtn.Click += new System.EventHandler(this.CheckoutBtn_Click);
             // 
             // label3
             // 

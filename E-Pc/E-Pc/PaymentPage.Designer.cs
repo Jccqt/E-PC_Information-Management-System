@@ -31,23 +31,27 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.DateLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.ReturnBtn = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PaymentBox = new System.Windows.Forms.TextBox();
+            this.ExchangeBox = new System.Windows.Forms.TextBox();
+            this.PrintBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.CartPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TotalAmountBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CodeLabel = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DateLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TotalQuantityLabel = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -85,66 +89,57 @@
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
             // 
-            // guna2PictureBox1
+            // ReturnBtn
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(897, 44);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(38, 41);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 19;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.ReturnBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ReturnBtn.FillColor = System.Drawing.Color.Transparent;
+            this.ReturnBtn.Image = global::E_Pc.Properties.Resources.Back_removebg_preview;
+            this.ReturnBtn.ImageRotate = 0F;
+            this.ReturnBtn.Location = new System.Drawing.Point(897, 44);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(38, 41);
+            this.ReturnBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ReturnBtn.TabIndex = 19;
+            this.ReturnBtn.TabStop = false;
+            this.ReturnBtn.UseTransparentBackground = true;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // DateLabel
+            // PaymentBox
             // 
-            this.DateLabel.AutoSize = true;
-            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.White;
-            this.DateLabel.Location = new System.Drawing.Point(522, 137);
-            this.DateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(51, 23);
-            this.DateLabel.TabIndex = 22;
-            this.DateLabel.Text = "Date";
+            this.PaymentBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaymentBox.Location = new System.Drawing.Point(664, 335);
+            this.PaymentBox.Name = "PaymentBox";
+            this.PaymentBox.Size = new System.Drawing.Size(262, 38);
+            this.PaymentBox.TabIndex = 24;
+            this.PaymentBox.TextChanged += new System.EventHandler(this.PaymentBox_TextChanged);
             // 
-            // textBox2
+            // ExchangeBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(664, 335);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 47);
-            this.textBox2.TabIndex = 24;
+            this.ExchangeBox.Enabled = false;
+            this.ExchangeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExchangeBox.Location = new System.Drawing.Point(664, 418);
+            this.ExchangeBox.Name = "ExchangeBox";
+            this.ExchangeBox.Size = new System.Drawing.Size(262, 38);
+            this.ExchangeBox.TabIndex = 27;
             // 
-            // textBox3
+            // PrintBtn
             // 
-            this.textBox3.Location = new System.Drawing.Point(664, 418);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 47);
-            this.textBox3.TabIndex = 27;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Green;
-            this.guna2Button1.Location = new System.Drawing.Point(664, 511);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(124, 45);
-            this.guna2Button1.TabIndex = 29;
-            this.guna2Button1.Text = "Print";
+            this.PrintBtn.AutoRoundedCorners = true;
+            this.PrintBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PrintBtn.BorderRadius = 21;
+            this.PrintBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.PrintBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.PrintBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.PrintBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.PrintBtn.FillColor = System.Drawing.Color.White;
+            this.PrintBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PrintBtn.ForeColor = System.Drawing.Color.Green;
+            this.PrintBtn.Location = new System.Drawing.Point(664, 511);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(124, 45);
+            this.PrintBtn.TabIndex = 29;
+            this.PrintBtn.Text = "Print";
+            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // guna2Button2
             // 
@@ -163,19 +158,6 @@
             this.guna2Button2.Size = new System.Drawing.Size(124, 45);
             this.guna2Button2.TabIndex = 30;
             this.guna2Button2.Text = "Clear";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(57, 137);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 23);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "<Customer code>";
             // 
             // label2
             // 
@@ -216,13 +198,13 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Exchange";
             // 
-            // flowLayoutPanel1
+            // CartPanel
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(42, 172);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(612, 393);
-            this.flowLayoutPanel1.TabIndex = 34;
+            this.CartPanel.BackColor = System.Drawing.Color.White;
+            this.CartPanel.Location = new System.Drawing.Point(42, 172);
+            this.CartPanel.Name = "CartPanel";
+            this.CartPanel.Size = new System.Drawing.Size(612, 393);
+            this.CartPanel.TabIndex = 34;
             // 
             // label5
             // 
@@ -237,13 +219,86 @@
             this.label5.TabIndex = 36;
             this.label5.Text = "Total amount";
             // 
-            // textBox1
+            // TotalAmountBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(664, 209);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 47);
-            this.textBox1.TabIndex = 35;
+            this.TotalAmountBox.Enabled = false;
+            this.TotalAmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAmountBox.Location = new System.Drawing.Point(664, 209);
+            this.TotalAmountBox.Name = "TotalAmountBox";
+            this.TotalAmountBox.Size = new System.Drawing.Size(262, 38);
+            this.TotalAmountBox.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(37, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 23);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Total items:";
+            // 
+            // CodeLabel
+            // 
+            this.CodeLabel.AutoSize = true;
+            this.CodeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CodeLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodeLabel.ForeColor = System.Drawing.Color.White;
+            this.CodeLabel.Location = new System.Drawing.Point(146, 90);
+            this.CodeLabel.Name = "CodeLabel";
+            this.CodeLabel.Size = new System.Drawing.Size(76, 23);
+            this.CodeLabel.TabIndex = 41;
+            this.CodeLabel.Text = "<code>";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(38, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(102, 23);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Cart code:";
+            // 
+            // DateLabel
+            // 
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DateLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.ForeColor = System.Drawing.Color.White;
+            this.DateLabel.Location = new System.Drawing.Point(147, 116);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(72, 23);
+            this.DateLabel.TabIndex = 39;
+            this.DateLabel.Text = "<date>";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(38, 116);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 23);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Date:";
+            // 
+            // TotalQuantityLabel
+            // 
+            this.TotalQuantityLabel.AutoSize = true;
+            this.TotalQuantityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TotalQuantityLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalQuantityLabel.ForeColor = System.Drawing.Color.White;
+            this.TotalQuantityLabel.Location = new System.Drawing.Point(146, 139);
+            this.TotalQuantityLabel.Name = "TotalQuantityLabel";
+            this.TotalQuantityLabel.Size = new System.Drawing.Size(176, 23);
+            this.TotalQuantityLabel.TabIndex = 37;
+            this.TotalQuantityLabel.Text = "<number of items>";
             // 
             // PaymentPage
             // 
@@ -252,28 +307,34 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CodeLabel);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.DateLabel);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TotalQuantityLabel);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.TotalAmountBox);
+            this.Controls.Add(this.CartPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.DateLabel);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.PrintBtn);
+            this.Controls.Add(this.ExchangeBox);
+            this.Controls.Add(this.PaymentBox);
+            this.Controls.Add(this.ReturnBtn);
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PaymentPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentPage";
+            this.Load += new System.EventHandler(this.PaymentPage_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReturnBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,19 +344,23 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox ExitBtn;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label DateLabel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2PictureBox ReturnBtn;
+        private System.Windows.Forms.TextBox PaymentBox;
+        private System.Windows.Forms.TextBox ExchangeBox;
+        private Guna.UI2.WinForms.Guna2Button PrintBtn;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel CartPanel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TotalAmountBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CodeLabel;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label TotalQuantityLabel;
+        private System.Windows.Forms.PictureBox ExitBtn;
+        private System.Windows.Forms.Label DateLabel;
     }
 }
