@@ -377,17 +377,17 @@
             // StockPanel
             // 
             this.StockPanel.BackColor = System.Drawing.Color.White;
-            this.StockPanel.Location = new System.Drawing.Point(658, 117);
+            this.StockPanel.Location = new System.Drawing.Point(658, 141);
             this.StockPanel.Name = "StockPanel";
-            this.StockPanel.Size = new System.Drawing.Size(287, 205);
+            this.StockPanel.Size = new System.Drawing.Size(287, 181);
             this.StockPanel.TabIndex = 53;
             // 
             // AuditPanel
             // 
             this.AuditPanel.BackColor = System.Drawing.Color.White;
-            this.AuditPanel.Location = new System.Drawing.Point(268, 337);
+            this.AuditPanel.Location = new System.Drawing.Point(268, 360);
             this.AuditPanel.Name = "AuditPanel";
-            this.AuditPanel.Size = new System.Drawing.Size(677, 236);
+            this.AuditPanel.Size = new System.Drawing.Size(677, 213);
             this.AuditPanel.TabIndex = 54;
             // 
             // TableLabel

@@ -218,7 +218,7 @@
             this.OrderButton.Name = "OrderButton";
             this.OrderButton.Size = new System.Drawing.Size(242, 68);
             this.OrderButton.TabIndex = 14;
-            this.OrderButton.Text = "Order";
+            this.OrderButton.Text = "Orders";
             this.OrderButton.UseVisualStyleBackColor = false;
             // 
             // panel7

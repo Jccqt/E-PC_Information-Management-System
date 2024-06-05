@@ -343,6 +343,16 @@ namespace E_Pc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_removebg_preview__2_ {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview (2)", resourceCulture);
@@ -366,6 +376,16 @@ namespace E_Pc.Properties {
         internal static System.Drawing.Bitmap image_removebg_preview__4_ {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview__4_1 {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview (4)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

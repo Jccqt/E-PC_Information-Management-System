@@ -87,6 +87,18 @@
     <Compile Include="AdminReports.Designer.cs">
       <DependentUpon>AdminReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuditTrail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AuditTrail.Designer.cs">
+      <DependentUpon>AuditTrail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditTrailHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AuditTrailHeader.Designer.cs">
+      <DependentUpon>AuditTrailHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="CashierHomepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +230,12 @@
     <EmbeddedResource Include="AdminReports.resx">
       <DependentUpon>AdminReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrail.resx">
+      <DependentUpon>AuditTrail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditTrailHeader.resx">
+      <DependentUpon>AuditTrailHeader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CashierHomepage.resx">
       <DependentUpon>CashierHomepage.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +340,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\image-removebg-preview %284%291.png" />
+    <None Include="Resources\image-removebg-preview %281%292.png" />
     <None Include="Resources\image-removebg-preview.png" />
     <None Include="Resources\714-7147174_png-file-svg-transparent-background-shopping-cart-icon.png" />
     <None Include="Resources\Untitled design %282%29.png" />
