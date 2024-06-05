@@ -21,6 +21,8 @@ namespace E_Pc
         private void Receipt_Load(object sender, EventArgs e)
         {
             var localDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
+            int actId = 10000;
+
             DataConnection.conn.Open();
             CartIdLabel.Text = CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount].ToString();
 
@@ -41,10 +43,20 @@ namespace E_Pc
             DateLabel.Text = localDate.ToString();
             CashierName.Text = $"{Login.fName} {Login.lName}";
             DataConnection.reader.Close();
+
+            DataConnection.cmd = new SqlCommand($"SELECT COUNT(ActivityId) FROM Audit_Trail WHERE ActivityId LIKE '%{"SALES"}%'", DataConnection.conn);
+            actId = Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
+
+            DataConnection.cmd = new SqlCommand("INSERT INTO Audit_Trail VALUES (@actId, @empId, @type, @description, @date)", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@actId", $"SALES{actId + 1}");
+            DataConnection.cmd.Parameters.AddWithValue("@empId", Login.user);
+            DataConnection.cmd.Parameters.AddWithValue("@type", "SALES");
+            DataConnection.cmd.Parameters.AddWithValue("@description", $"{Login.fName} {Login.lName} Sold and completed the cartID {CartIdLabel.Text}");
+            DataConnection.cmd.Parameters.AddWithValue("@date", localDate);
+            DataConnection.cmd.ExecuteNonQuery();
+
             DataConnection.conn.Close();
-
         }
-
 
     }
 }

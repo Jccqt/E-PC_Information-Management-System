@@ -384,6 +384,7 @@
             // 
             // AuditPanel
             // 
+            this.AuditPanel.AutoScroll = true;
             this.AuditPanel.BackColor = System.Drawing.Color.White;
             this.AuditPanel.Location = new System.Drawing.Point(268, 360);
             this.AuditPanel.Name = "AuditPanel";
@@ -403,7 +404,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.TableLabel);
-            this.panel2.Location = new System.Drawing.Point(658, 117);
+            this.panel2.Location = new System.Drawing.Point(658, 115);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(287, 27);
             this.panel2.TabIndex = 55;
@@ -411,7 +412,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(268, 337);
+            this.panel8.Location = new System.Drawing.Point(268, 334);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(677, 27);
             this.panel8.TabIndex = 56;
@@ -420,7 +421,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(285, 2);
+            this.label2.Location = new System.Drawing.Point(287, 2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 18);
             this.label2.TabIndex = 0;
@@ -445,6 +446,7 @@
             this.Name = "AdminReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminReports";
+            this.Load += new System.EventHandler(this.AdminReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).EndInit();

@@ -46,7 +46,7 @@
             this.inventoryButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.SalesLogo = new System.Windows.Forms.PictureBox();
-            this.salesButton = new System.Windows.Forms.Button();
+            this.ReportsBtn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.OrderLogo = new System.Windows.Forms.PictureBox();
             this.OrderButton = new System.Windows.Forms.Button();
@@ -264,7 +264,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.SalesLogo);
-            this.panel4.Controls.Add(this.salesButton);
+            this.panel4.Controls.Add(this.ReportsBtn);
             this.panel4.Location = new System.Drawing.Point(3, 270);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 68);
@@ -282,16 +282,17 @@
             this.SalesLogo.TabIndex = 15;
             this.SalesLogo.TabStop = false;
             // 
-            // salesButton
+            // ReportsBtn
             // 
-            this.salesButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salesButton.Location = new System.Drawing.Point(-7, 0);
-            this.salesButton.Name = "salesButton";
-            this.salesButton.Size = new System.Drawing.Size(242, 68);
-            this.salesButton.TabIndex = 14;
-            this.salesButton.Text = "Reports";
-            this.salesButton.UseVisualStyleBackColor = true;
+            this.ReportsBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportsBtn.Location = new System.Drawing.Point(-7, 0);
+            this.ReportsBtn.Name = "ReportsBtn";
+            this.ReportsBtn.Size = new System.Drawing.Size(242, 68);
+            this.ReportsBtn.TabIndex = 14;
+            this.ReportsBtn.Text = "Reports";
+            this.ReportsBtn.UseVisualStyleBackColor = true;
+            this.ReportsBtn.Click += new System.EventHandler(this.ReportsBtn_Click);
             // 
             // panel5
             // 
@@ -464,7 +465,7 @@
         private System.Windows.Forms.PictureBox inventoryLogo;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox SalesLogo;
-        private System.Windows.Forms.Button salesButton;
+        private System.Windows.Forms.Button ReportsBtn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox OrderLogo;
         private System.Windows.Forms.Button OrderButton;

@@ -73,5 +73,11 @@ namespace E_Pc
         {
 
         }
+
+        private void ReportsBtn_Click(object sender, EventArgs e)
+        {
+            PageObjects.reportsPage.Show();
+            this.Hide();
+        }
     }
 }
