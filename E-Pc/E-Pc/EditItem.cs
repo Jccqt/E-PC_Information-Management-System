@@ -19,7 +19,7 @@ namespace E_Pc
         public EditItem()
         {
             InitializeComponent();
-            ActivityLabel.Text = "Viewing";
+            ActivityLabel.Text = "Viewing"; // will set the Activity Title to Viewing mode
         }
 
         private void EditItem_Load(object sender, EventArgs e)
@@ -33,6 +33,7 @@ namespace E_Pc
 
             if (DataConnection.reader.Read())
             {
+                // will set the values for labels if the reader retrieves value from database
                 IdLabel.Text = DataConnection.reader.GetString(0);
                 NameBox.Text = DataConnection.reader.GetString(1);
                 BrandBox.Text = DataConnection.reader.GetString(2);
@@ -50,10 +51,11 @@ namespace E_Pc
                         ItemImage.Image = Image.FromStream(ms);
                         ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
-                    Array.Clear(imageBinary, 0, imageBinary.Length);
+                    Array.Clear(imageBinary, 0, imageBinary.Length); // will clear the elements of imageBinary array
                 }
                 else
                 {
+                    // will set the item image to no image
                     ItemImage.Image = Properties.Resources.no_image_icon;
                     ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
@@ -66,7 +68,6 @@ namespace E_Pc
         {
             NameBox.Enabled = true;
             BrandBox.Enabled = true;
-            PriceBox.Enabled = true;
             QuantityBox.Enabled = true;
             DescriptionBox.Enabled = true;
             SelectImageBtn.Visible = true;
@@ -76,7 +77,6 @@ namespace E_Pc
         {
             NameBox.Enabled = false;
             BrandBox.Enabled = false;
-            PriceBox.Enabled = false;
             QuantityBox.Enabled = false;
             DescriptionBox.Enabled = false;
             SelectImageBtn.Visible = false;

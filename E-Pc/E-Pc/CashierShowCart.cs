@@ -68,6 +68,13 @@ namespace E_Pc
             }
             DataConnection.reader.Close();
 
+            if (StatusLabel.Text.Equals("Completed") || StatusLabel.Text.Equals("Cancelled"))
+            {
+                // will hide the checkout button if the order was already completed
+                CheckoutBtn.Visible = false;
+                checkoutArrowBtn.Visible = false;
+            }
+
             DataConnection.cmd = new SqlCommand("SELECT SUM(OrderQuantity) FROM Carts WHERE CartId = @cartId", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
             TotalQuantityLabel.Text = DataConnection.cmd.ExecuteScalar().ToString();

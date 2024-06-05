@@ -49,6 +49,7 @@
             this.SortBox = new System.Windows.Forms.ComboBox();
             this.TableLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.OrderBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -252,6 +253,7 @@
             this.LogoutButton.TabIndex = 14;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // OrdersPanel
             // 
@@ -260,7 +262,7 @@
             this.OrdersPanel.ForeColor = System.Drawing.Color.Black;
             this.OrdersPanel.Location = new System.Drawing.Point(244, 158);
             this.OrdersPanel.Name = "OrdersPanel";
-            this.OrdersPanel.Size = new System.Drawing.Size(702, 321);
+            this.OrdersPanel.Size = new System.Drawing.Size(702, 358);
             this.OrdersPanel.TabIndex = 57;
             // 
             // SortBox
@@ -296,6 +298,26 @@
             this.panel3.Size = new System.Drawing.Size(702, 34);
             this.panel3.TabIndex = 60;
             // 
+            // OrderBtn
+            // 
+            this.OrderBtn.AutoRoundedCorners = true;
+            this.OrderBtn.BackColor = System.Drawing.Color.Transparent;
+            this.OrderBtn.BorderRadius = 28;
+            this.OrderBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.OrderBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.OrderBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.OrderBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.OrderBtn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.OrderBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.OrderBtn.ForeColor = System.Drawing.Color.White;
+            this.OrderBtn.Location = new System.Drawing.Point(733, 522);
+            this.OrderBtn.Name = "OrderBtn";
+            this.OrderBtn.Size = new System.Drawing.Size(211, 59);
+            this.OrderBtn.TabIndex = 61;
+            this.OrderBtn.Text = "Make an order for customer";
+            this.OrderBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.OrderBtn.Click += new System.EventHandler(this.OrderBtn_Click);
+            // 
             // CashierOrderPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,6 +325,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.OrderBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.SortBox);
             this.Controls.Add(this.OrdersPanel);
@@ -357,5 +380,6 @@
         private System.Windows.Forms.ComboBox SortBox;
         private System.Windows.Forms.Label TableLabel;
         private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2Button OrderBtn;
     }
 }

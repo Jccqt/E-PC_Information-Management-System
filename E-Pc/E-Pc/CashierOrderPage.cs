@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
+using System.Management;
 
 namespace E_Pc
 {
@@ -24,10 +25,11 @@ namespace E_Pc
         
         private void ShowOrders()
         {
-            
-            TableLabel.Text = $"{SortBox.SelectedItem} Orders";
-            OrdersPanel.Controls.Clear();
-            cartIdList.Clear();
+            var localDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+
+            TableLabel.Text = $"{SortBox.SelectedItem} Orders"; // will set the table label basted on sortbox selected item
+            OrdersPanel.Controls.Clear(); // will clear and remove all controls in OrdersPanel
+            cartIdList.Clear(); // will clear the cartIdList array
 
             DataConnection.conn.Open();
 
@@ -65,13 +67,24 @@ namespace E_Pc
 
         private void CashierOrderPage_Load(object sender, EventArgs e)
         {
+
             SortBox.SelectedItem = "Pending";
-            ShowOrders();
+            ShowOrders(); // will display the pending carts
         }
 
         private void SortBox_SelectedIndexChanged(object sender, EventArgs e)
         { 
-            ShowOrders();
+            ShowOrders(); // will display the different carts based on selected sort
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderBtn_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

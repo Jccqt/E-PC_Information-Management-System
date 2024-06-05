@@ -186,6 +186,7 @@
             this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
+            this.QuantityBox.ReadOnly = true;
             this.QuantityBox.Size = new System.Drawing.Size(62, 28);
             this.QuantityBox.TabIndex = 37;
             // 

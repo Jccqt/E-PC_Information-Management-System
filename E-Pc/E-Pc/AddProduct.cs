@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace E_Pc
 {
@@ -79,8 +80,6 @@ namespace E_Pc
             BrandBox.Clear();
             PriceBox.Clear();
             QuantityBox.Clear();
-            TypeBox.ResetText();
-            CategoryBox.ResetText();
             DescriptionBox.Clear();
             ItemImage.Image = null;
         }
@@ -88,6 +87,26 @@ namespace E_Pc
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             ClearTextBox();
+        }
+
+        private void PriceBox_TextChanged(object sender, EventArgs e)
+        {
+            if(!PriceBox.Text.Equals("") && !Regex.IsMatch(PriceBox.Text, InputValidation.numberPattern))
+            {
+                // will show an error message if the payment box has a character
+                MessageBox.Show("Please input numbers only!", "Invalid input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PriceBox.Text = PriceBox.Text.Remove(PriceBox.Text.Length - 1);
+            }
+        }
+
+        private void QuantityBox_TextChanged(object sender, EventArgs e)
+        {
+            if(!QuantityBox.Text.Equals("") && !Regex.IsMatch(QuantityBox.Text, InputValidation.numericPattern))
+            {
+                // will show an error message if the payment box has a character
+                MessageBox.Show("Please input numbers only!", "Invalid input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                QuantityBox.Text = QuantityBox.Text.Remove(QuantityBox.Text.Length - 1);
+            }
         }
     }
 }

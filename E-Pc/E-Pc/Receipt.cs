@@ -56,7 +56,14 @@ namespace E_Pc
             DataConnection.cmd.ExecuteNonQuery();
 
             DataConnection.conn.Close();
+
+            CashierOrderPage.cartIdList.Clear();
+            CashierOrderPage.cartIdCount = 0;
         }
 
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            ((Form)this.TopLevelControl).Close();
+        }
     }
 }

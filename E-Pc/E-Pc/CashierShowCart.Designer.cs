@@ -39,7 +39,7 @@
             this.TotalQuantityLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CartPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkoutArrowBtn = new System.Windows.Forms.PictureBox();
             this.BackBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkoutArrowBtn)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -194,17 +194,17 @@
             this.CartPanel.Size = new System.Drawing.Size(886, 283);
             this.CartPanel.TabIndex = 23;
             // 
-            // pictureBox1
+            // checkoutArrowBtn
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pictureBox1.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(866, 479);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 33);
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
+            this.checkoutArrowBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.checkoutArrowBtn.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview;
+            this.checkoutArrowBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkoutArrowBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview;
+            this.checkoutArrowBtn.Location = new System.Drawing.Point(866, 479);
+            this.checkoutArrowBtn.Name = "checkoutArrowBtn";
+            this.checkoutArrowBtn.Size = new System.Drawing.Size(48, 33);
+            this.checkoutArrowBtn.TabIndex = 36;
+            this.checkoutArrowBtn.TabStop = false;
             // 
             // BackBtn
             // 
@@ -320,7 +320,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.checkoutArrowBtn);
             this.Controls.Add(this.CheckoutBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CodeLabel);
@@ -338,7 +338,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierShowCart";
             this.Load += new System.EventHandler(this.CashierShowCart_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkoutArrowBtn)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -363,7 +363,7 @@
         private System.Windows.Forms.Label TotalQuantityLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel CartPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox checkoutArrowBtn;
         private Guna.UI2.WinForms.Guna2Button BackBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;

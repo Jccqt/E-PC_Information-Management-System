@@ -51,13 +51,17 @@
             this.ExchangeLabel = new System.Windows.Forms.Label();
             this.PaymentLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.CloseBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(345, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,7 +71,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 73);
+            this.label1.Location = new System.Drawing.Point(134, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 1;
@@ -76,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(190, 73);
+            this.label4.Location = new System.Drawing.Point(191, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 4;
@@ -85,7 +89,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 103);
+            this.label7.Location = new System.Drawing.Point(4, 128);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(363, 13);
@@ -96,7 +100,7 @@
             // LineLabel
             // 
             this.LineLabel.AutoSize = true;
-            this.LineLabel.Location = new System.Drawing.Point(4, 605);
+            this.LineLabel.Location = new System.Drawing.Point(5, 630);
             this.LineLabel.Name = "LineLabel";
             this.LineLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LineLabel.Size = new System.Drawing.Size(363, 13);
@@ -108,7 +112,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(154, 267);
+            this.label9.Location = new System.Drawing.Point(155, 292);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 17);
             this.label9.TabIndex = 16;
@@ -117,7 +121,7 @@
             // CashierName
             // 
             this.CashierName.AutoSize = true;
-            this.CashierName.Location = new System.Drawing.Point(111, 132);
+            this.CashierName.Location = new System.Drawing.Point(112, 157);
             this.CashierName.Name = "CashierName";
             this.CashierName.Size = new System.Drawing.Size(83, 13);
             this.CashierName.TabIndex = 19;
@@ -126,7 +130,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 132);
+            this.label3.Location = new System.Drawing.Point(11, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 18;
@@ -135,7 +139,7 @@
             // CartIdLabel
             // 
             this.CartIdLabel.AutoSize = true;
-            this.CartIdLabel.Location = new System.Drawing.Point(111, 157);
+            this.CartIdLabel.Location = new System.Drawing.Point(112, 182);
             this.CartIdLabel.Name = "CartIdLabel";
             this.CartIdLabel.Size = new System.Drawing.Size(49, 13);
             this.CartIdLabel.TabIndex = 23;
@@ -144,7 +148,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 157);
+            this.label11.Location = new System.Drawing.Point(11, 182);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 22;
@@ -153,7 +157,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(110, 187);
+            this.label12.Location = new System.Drawing.Point(111, 212);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 25;
@@ -162,7 +166,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 187);
+            this.label13.Location = new System.Drawing.Point(9, 212);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 13);
             this.label13.TabIndex = 24;
@@ -171,7 +175,7 @@
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
-            this.DateLabel.Location = new System.Drawing.Point(107, 214);
+            this.DateLabel.Location = new System.Drawing.Point(108, 239);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(40, 13);
             this.DateLabel.TabIndex = 29;
@@ -180,7 +184,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(10, 214);
+            this.label17.Location = new System.Drawing.Point(11, 239);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(36, 13);
             this.label17.TabIndex = 28;
@@ -189,7 +193,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(159, 550);
+            this.label18.Location = new System.Drawing.Point(160, 575);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(73, 13);
             this.label18.TabIndex = 30;
@@ -198,7 +202,7 @@
             // TotalAmountLabel
             // 
             this.TotalAmountLabel.AutoSize = true;
-            this.TotalAmountLabel.Location = new System.Drawing.Point(251, 550);
+            this.TotalAmountLabel.Location = new System.Drawing.Point(252, 575);
             this.TotalAmountLabel.Name = "TotalAmountLabel";
             this.TotalAmountLabel.Size = new System.Drawing.Size(75, 13);
             this.TotalAmountLabel.TabIndex = 31;
@@ -207,7 +211,7 @@
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(10, 308);
+            this.NameLabel.Location = new System.Drawing.Point(11, 333);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(70, 13);
             this.NameLabel.TabIndex = 32;
@@ -216,7 +220,7 @@
             // QuantityLabel
             // 
             this.QuantityLabel.AutoSize = true;
-            this.QuantityLabel.Location = new System.Drawing.Point(190, 308);
+            this.QuantityLabel.Location = new System.Drawing.Point(191, 333);
             this.QuantityLabel.Name = "QuantityLabel";
             this.QuantityLabel.Size = new System.Drawing.Size(58, 13);
             this.QuantityLabel.TabIndex = 33;
@@ -225,7 +229,7 @@
             // PriceLabel
             // 
             this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Location = new System.Drawing.Point(283, 308);
+            this.PriceLabel.Location = new System.Drawing.Point(284, 333);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(43, 13);
             this.PriceLabel.TabIndex = 34;
@@ -234,7 +238,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(161, 584);
+            this.label10.Location = new System.Drawing.Point(162, 609);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 35;
@@ -243,7 +247,7 @@
             // ExchangeLabel
             // 
             this.ExchangeLabel.AutoSize = true;
-            this.ExchangeLabel.Location = new System.Drawing.Point(252, 584);
+            this.ExchangeLabel.Location = new System.Drawing.Point(253, 609);
             this.ExchangeLabel.Name = "ExchangeLabel";
             this.ExchangeLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ExchangeLabel.Size = new System.Drawing.Size(104, 13);
@@ -253,7 +257,7 @@
             // PaymentLabel
             // 
             this.PaymentLabel.AutoSize = true;
-            this.PaymentLabel.Location = new System.Drawing.Point(250, 567);
+            this.PaymentLabel.Location = new System.Drawing.Point(251, 592);
             this.PaymentLabel.Name = "PaymentLabel";
             this.PaymentLabel.Size = new System.Drawing.Size(97, 13);
             this.PaymentLabel.TabIndex = 38;
@@ -262,11 +266,35 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(159, 567);
+            this.label5.Location = new System.Drawing.Point(160, 592);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 37;
             this.label5.Text = "Payment amount: ";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.CloseBtn);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(374, 33);
+            this.guna2Panel1.TabIndex = 50;
+            // 
+            // CloseBtn
+            // 
+            this.CloseBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
+            this.CloseBtn.Location = new System.Drawing.Point(339, 7);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(20, 21);
+            this.CloseBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CloseBtn.TabIndex = 0;
+            this.CloseBtn.TabStop = false;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // Receipt
             // 
@@ -275,6 +303,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.PaymentLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ExchangeLabel);
@@ -302,6 +331,8 @@
             this.Size = new System.Drawing.Size(374, 726);
             this.Load += new System.EventHandler(this.Receipt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +363,7 @@
         private System.Windows.Forms.Label ExchangeLabel;
         private System.Windows.Forms.Label PaymentLabel;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.PictureBox CloseBtn;
     }
 }

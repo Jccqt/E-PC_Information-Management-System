@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace E_Pc
 {
@@ -16,14 +17,22 @@ namespace E_Pc
         public AdminReports()
         {
             InitializeComponent();
-            AuditTrailHeader header = new AuditTrailHeader();
-            AuditPanel.Controls.Add(header);
+            AuditTrailHeader auditHeader = new AuditTrailHeader();
+            TopSalesHeader salesHeader = new TopSalesHeader();
+            AuditPanel.Controls.Add(auditHeader);
+            SalesPanel.Controls.Add(salesHeader);
         }
 
         private void AdminReports_Load(object sender, EventArgs e)
         {
             DataConnection.conn.Open();
+            ShowAudit();
+            ShowTopSales();
+            DataConnection.conn.Close();
+        }
 
+        private void ShowAudit()
+        {
             DataConnection.cmd = new SqlCommand("SELECT * FROM Audit_Trail", DataConnection.conn);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
 
@@ -40,7 +49,45 @@ namespace E_Pc
                 AuditPanel.Controls.Add(audit);
             }
             DataConnection.reader.Close();
-            DataConnection.conn.Close();
+        }
+
+        private void ShowTopSales()
+        {
+            int counter = 1;
+            DataConnection.cmd = new SqlCommand("SELECT Carts.ItemId, SUM(Carts.OrderQuantity), Products.ItemImage " +
+                "FROM Carts RIGHT JOIN Products ON Carts.ItemId = Products.ItemId " +
+                $"WHERE Carts.Status = @status GROUP BY Carts.ItemId, Products.ItemImage " +
+                $"ORDER BY SUM(Carts.OrderQuantity) DESC", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@status", "Completed");
+            DataConnection.reader = DataConnection.cmd.ExecuteReader();
+
+            while (DataConnection.reader.Read())
+            {
+                TopSales sales = new TopSales();
+
+                if (!DataConnection.reader.GetValue(2).ToString().Equals(""))
+                {
+                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(2);
+                    using (MemoryStream ms = new MemoryStream(imageBinary))
+                    {
+                        sales.ItemImage.Image = Image.FromStream(ms);
+                        sales.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    Array.Clear(imageBinary, 0, imageBinary.Length);
+                }
+                else
+                {
+                    sales.ItemImage.Image = Properties.Resources.no_image_icon;
+                   sales.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+
+                sales.CounterLabel.Text = counter.ToString();
+                sales.IdLabel.Text = DataConnection.reader.GetString(0);
+                sales.QuantityLabel.Text = DataConnection.reader.GetValue(1).ToString();
+                SalesPanel.Controls.Add(sales);
+                counter++;
+            }
+            DataConnection.reader.Close();
         }
     }
 }

@@ -36,7 +36,15 @@ namespace Customer
             if(closeDialog == DialogResult.Yes)
             {
                 MessageBox.Show("Thankyou for order! You can now proceed to cashier");
+                // will clear elements of orders array and will reset the variables for orders
+                BuyItems.itemIdList.Clear();
+                BuyItems.orderIdList.Clear();
+                BuyItems.orderQuantityList.Clear();
+                BuyItems.totalOrderPrice = 0;
+                BuyItems.totalOrderQuantity = 0;
+
                 PageObjects.buyItemsPage.Show();
+               
                 ((Form)this.TopLevelControl).Close(); // will close the cart order page
             }
         }

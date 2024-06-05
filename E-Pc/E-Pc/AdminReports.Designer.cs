@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.DateTimer = new System.Windows.Forms.Timer(this.components);
             this.LogoutLogo = new System.Windows.Forms.PictureBox();
             this.LogoutButton = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -56,7 +54,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.StockPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.SalesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.AuditPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TableLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -374,13 +372,14 @@
             this.label4.TabIndex = 52;
             this.label4.Text = "Reports";
             // 
-            // StockPanel
+            // SalesPanel
             // 
-            this.StockPanel.BackColor = System.Drawing.Color.White;
-            this.StockPanel.Location = new System.Drawing.Point(658, 141);
-            this.StockPanel.Name = "StockPanel";
-            this.StockPanel.Size = new System.Drawing.Size(287, 181);
-            this.StockPanel.TabIndex = 53;
+            this.SalesPanel.AutoScroll = true;
+            this.SalesPanel.BackColor = System.Drawing.Color.White;
+            this.SalesPanel.Location = new System.Drawing.Point(638, 141);
+            this.SalesPanel.Name = "SalesPanel";
+            this.SalesPanel.Size = new System.Drawing.Size(307, 181);
+            this.SalesPanel.TabIndex = 53;
             // 
             // AuditPanel
             // 
@@ -404,9 +403,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.TableLabel);
-            this.panel2.Location = new System.Drawing.Point(658, 115);
+            this.panel2.Location = new System.Drawing.Point(638, 115);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(287, 27);
+            this.panel2.Size = new System.Drawing.Size(307, 27);
             this.panel2.TabIndex = 55;
             // 
             // panel8
@@ -437,7 +436,7 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.AuditPanel);
-            this.Controls.Add(this.StockPanel);
+            this.Controls.Add(this.SalesPanel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.guna2Panel1);
@@ -476,8 +475,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer DateTimer;
         private System.Windows.Forms.PictureBox LogoutLogo;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Panel panel7;
@@ -504,7 +501,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel StockPanel;
+        private System.Windows.Forms.FlowLayoutPanel SalesPanel;
         private System.Windows.Forms.FlowLayoutPanel AuditPanel;
         private System.Windows.Forms.Label TableLabel;
         private System.Windows.Forms.Panel panel2;

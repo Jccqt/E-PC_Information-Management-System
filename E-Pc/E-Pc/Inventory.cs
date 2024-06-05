@@ -44,7 +44,10 @@ namespace E_Pc
             TableLabel.Text = "Available Products";
             InventoryPanel.Controls.Clear();
             itemIdList.Clear();
-            DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 1", DataConnection.conn);
+            DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 1 " +
+                $"AND ItemId LIKE '%{SearchBox.Text}%' " +
+                $"OR ItemName LIKE '%{SearchBox.Text}%' " +
+                $"OR ItemQuantity LIKE '%{SearchBox.Text}%'", DataConnection.conn);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
      
             while (DataConnection.reader.Read())
@@ -209,6 +212,29 @@ namespace E_Pc
         {
             PageObjects.adminHomePage.Show();
             this.Hide();
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            DataConnection.conn.Open();
+            if (SortBox.SelectedItem.Equals("Available"))
+            {
+                ShowAvailableProducts();
+            }
+            else
+            {
+                ShowArchivedProducts();
+            }
+            DataConnection.conn.Close();
+        }
+
+        private void ReportsBtn_Click(object sender, EventArgs e)
+        {
+            using(AdminReports reports = new AdminReports())
+            {
+                reports.ShowDialog();
+                this.Hide();
+            }
         }
     }
 }

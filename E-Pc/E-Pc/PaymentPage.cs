@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Drawing;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace E_Pc
 {
@@ -88,8 +89,9 @@ namespace E_Pc
 
         private void PaymentBox_TextChanged(object sender, EventArgs e)
         {
-            if (!PaymentBox.Text.Equals(""))
+            if (!PaymentBox.Text.Equals("") && Regex.IsMatch(PaymentBox.Text, InputValidation.numberPattern))
             {
+
                 if (totalAmount <= Convert.ToDecimal(PaymentBox.Text))
                 {
                     ExchangeBox.Text = (Convert.ToDecimal(PaymentBox.Text) - totalAmount).ToString();
@@ -102,6 +104,13 @@ namespace E_Pc
                     ExchangeBox.Text = "0.00";
                     isPaid = false;
                 }
+            }
+            else if (!PaymentBox.Text.Equals("") && !Regex.IsMatch(PaymentBox.Text, InputValidation.numberPattern))
+            {
+                // will show an error message if the payment box has a character
+                MessageBox.Show("Please input numbers only!", "Invalid input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PaymentBox.Text = PaymentBox.Text.Remove(PaymentBox.Text.Length - 1); // will remove the character in PaymentBox
+                
             }
             else
             {
@@ -137,6 +146,7 @@ namespace E_Pc
                 Form form = new Form();
                 form.Controls.Add(new Receipt());
                 form.ClientSize = new System.Drawing.Size(374, 726);
+                form.FormBorderStyle = FormBorderStyle.None;
                 form.ShowDialog();
                 form.AutoSize = true;
                 
@@ -144,6 +154,14 @@ namespace E_Pc
             else
             {
                 MessageBox.Show("Insufficient payment! Please re-enter the payment", "Insufficient Payment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PaymentBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

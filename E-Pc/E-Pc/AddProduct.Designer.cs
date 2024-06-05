@@ -103,6 +103,7 @@
             // 
             // CategoryBox
             // 
+            this.CategoryBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoryBox.FormattingEnabled = true;
             this.CategoryBox.Items.AddRange(new object[] {
@@ -209,6 +210,7 @@
             this.PriceBox.Name = "PriceBox";
             this.PriceBox.Size = new System.Drawing.Size(146, 28);
             this.PriceBox.TabIndex = 6;
+            this.PriceBox.TextChanged += new System.EventHandler(this.PriceBox_TextChanged);
             // 
             // label6
             // 
@@ -251,6 +253,7 @@
             this.QuantityBox.Name = "QuantityBox";
             this.QuantityBox.Size = new System.Drawing.Size(146, 28);
             this.QuantityBox.TabIndex = 5;
+            this.QuantityBox.TextChanged += new System.EventHandler(this.QuantityBox_TextChanged);
             // 
             // QuantityLabel
             // 
@@ -286,6 +289,7 @@
             // 
             // TypeBox
             // 
+            this.TypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TypeBox.FormattingEnabled = true;
             this.TypeBox.Items.AddRange(new object[] {

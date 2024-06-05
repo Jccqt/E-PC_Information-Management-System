@@ -38,7 +38,7 @@
             this.OrderButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.SalesLogo = new System.Windows.Forms.PictureBox();
-            this.salesButton = new System.Windows.Forms.Button();
+            this.ReportsBtn = new System.Windows.Forms.Button();
             this.inventoryLogo = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.inventoryButton = new System.Windows.Forms.Button();
@@ -191,16 +191,17 @@
             this.SalesLogo.TabIndex = 15;
             this.SalesLogo.TabStop = false;
             // 
-            // salesButton
+            // ReportsBtn
             // 
-            this.salesButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salesButton.Location = new System.Drawing.Point(-7, 0);
-            this.salesButton.Name = "salesButton";
-            this.salesButton.Size = new System.Drawing.Size(242, 68);
-            this.salesButton.TabIndex = 14;
-            this.salesButton.Text = "Sales";
-            this.salesButton.UseVisualStyleBackColor = true;
+            this.ReportsBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportsBtn.Location = new System.Drawing.Point(-7, 0);
+            this.ReportsBtn.Name = "ReportsBtn";
+            this.ReportsBtn.Size = new System.Drawing.Size(242, 68);
+            this.ReportsBtn.TabIndex = 14;
+            this.ReportsBtn.Text = "Reports";
+            this.ReportsBtn.UseVisualStyleBackColor = true;
+            this.ReportsBtn.Click += new System.EventHandler(this.ReportsBtn_Click);
             // 
             // inventoryLogo
             // 
@@ -218,7 +219,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.SalesLogo);
-            this.panel4.Controls.Add(this.salesButton);
+            this.panel4.Controls.Add(this.ReportsBtn);
             this.panel4.Location = new System.Drawing.Point(3, 270);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 68);
@@ -371,7 +372,7 @@
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(237, 22);
             this.SearchBox.TabIndex = 25;
-            this.SearchBox.Text = "Search here...";
+            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // label4
             // 
@@ -379,7 +380,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(523, 35);
+            this.label4.Location = new System.Drawing.Point(503, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 45);
             this.label4.TabIndex = 42;
@@ -403,7 +404,7 @@
             "Archived"});
             this.SortBox.Location = new System.Drawing.Point(707, 88);
             this.SortBox.Name = "SortBox";
-            this.SortBox.Size = new System.Drawing.Size(117, 21);
+            this.SortBox.Size = new System.Drawing.Size(149, 21);
             this.SortBox.TabIndex = 44;
             this.SortBox.SelectedIndexChanged += new System.EventHandler(this.SortBox_SelectedIndexChanged);
             // 
@@ -513,7 +514,7 @@
         private System.Windows.Forms.Button OrderButton;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox SalesLogo;
-        private System.Windows.Forms.Button salesButton;
+        private System.Windows.Forms.Button ReportsBtn;
         private System.Windows.Forms.PictureBox inventoryLogo;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button inventoryButton;
