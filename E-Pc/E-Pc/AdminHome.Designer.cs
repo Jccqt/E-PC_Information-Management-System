@@ -204,15 +204,17 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox3.BackgroundImage = global::E_Pc.Properties.Resources.Homepage5;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage;
             this.pictureBox3.Location = new System.Drawing.Point(3, 9);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(62, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // button3
             // 

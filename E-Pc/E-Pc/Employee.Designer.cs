@@ -291,7 +291,8 @@
             // 
             // EmployeeLogo
             // 
-            this.EmployeeLogo.BackColor = System.Drawing.Color.Transparent;
+            this.EmployeeLogo.BackColor = System.Drawing.Color.Silver;
+            this.EmployeeLogo.BackgroundImage = global::E_Pc.Properties.Resources.Employee_managemen;
             this.EmployeeLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmployeeLogo.Image = global::E_Pc.Properties.Resources.Employee_managemen;
             this.EmployeeLogo.Location = new System.Drawing.Point(3, 7);

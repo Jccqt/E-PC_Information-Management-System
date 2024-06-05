@@ -138,7 +138,7 @@
             // 
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(3, 107);
+            this.panel2.Location = new System.Drawing.Point(3, 122);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 68);
             this.panel2.TabIndex = 20;
@@ -163,14 +163,14 @@
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 98);
+            this.panel1.Size = new System.Drawing.Size(229, 113);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 79);
+            this.label1.Location = new System.Drawing.Point(96, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 1;
@@ -180,9 +180,9 @@
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
-            this.menuButton.Location = new System.Drawing.Point(36, 0);
+            this.menuButton.Location = new System.Drawing.Point(49, 4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(144, 92);
+            this.menuButton.Size = new System.Drawing.Size(131, 85);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
@@ -191,16 +191,17 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 181);
+            this.panel5.Location = new System.Drawing.Point(3, 196);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 68);
             this.panel5.TabIndex = 17;
             // 
             // OrderLogo
             // 
-            this.OrderLogo.BackColor = System.Drawing.Color.Transparent;
+            this.OrderLogo.BackColor = System.Drawing.Color.Silver;
+            this.OrderLogo.BackgroundImage = global::E_Pc.Properties.Resources.orderIcon;
+            this.OrderLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.OrderLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.OrderLogo.Image = global::E_Pc.Properties.Resources.orderIcon;
             this.OrderLogo.Location = new System.Drawing.Point(3, 7);
             this.OrderLogo.Name = "OrderLogo";
             this.OrderLogo.Size = new System.Drawing.Size(62, 54);
@@ -210,7 +211,7 @@
             // 
             // OrderButton
             // 
-            this.OrderButton.BackColor = System.Drawing.Color.DarkGray;
+            this.OrderButton.BackColor = System.Drawing.Color.Silver;
             this.OrderButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OrderButton.Location = new System.Drawing.Point(-7, 0);
@@ -224,7 +225,7 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 255);
+            this.panel7.Location = new System.Drawing.Point(3, 270);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(229, 68);
             this.panel7.TabIndex = 19;

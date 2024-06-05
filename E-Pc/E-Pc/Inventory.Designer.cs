@@ -204,9 +204,10 @@
             // 
             // inventoryLogo
             // 
-            this.inventoryLogo.BackColor = System.Drawing.Color.Transparent;
+            this.inventoryLogo.BackColor = System.Drawing.Color.Silver;
+            this.inventoryLogo.BackgroundImage = global::E_Pc.Properties.Resources.InventoryManagement;
+            this.inventoryLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inventoryLogo.Image = global::E_Pc.Properties.Resources.InventoryManagement;
             this.inventoryLogo.Location = new System.Drawing.Point(3, 11);
             this.inventoryLogo.Name = "inventoryLogo";
             this.inventoryLogo.Size = new System.Drawing.Size(62, 42);
@@ -225,7 +226,7 @@
             // 
             // inventoryButton
             // 
-            this.inventoryButton.BackColor = System.Drawing.Color.DarkGray;
+            this.inventoryButton.BackColor = System.Drawing.Color.Silver;
             this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryButton.Location = new System.Drawing.Point(-7, 0);

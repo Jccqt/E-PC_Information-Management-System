@@ -146,7 +146,7 @@
             // 
             // OrderLogo
             // 
-            this.OrderLogo.BackColor = System.Drawing.Color.Transparent;
+            this.OrderLogo.BackColor = System.Drawing.Color.Silver;
             this.OrderLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OrderLogo.Image = global::E_Pc.Properties.Resources.orderIcon;
             this.OrderLogo.Location = new System.Drawing.Point(3, 7);
@@ -158,7 +158,7 @@
             // 
             // OrderButton
             // 
-            this.OrderButton.BackColor = System.Drawing.Color.DarkGray;
+            this.OrderButton.BackColor = System.Drawing.Color.Silver;
             this.OrderButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OrderButton.Location = new System.Drawing.Point(-7, 0);

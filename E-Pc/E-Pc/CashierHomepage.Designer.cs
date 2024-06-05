@@ -89,7 +89,7 @@
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.Color.White;
-            this.DateLabel.Location = new System.Drawing.Point(737, 554);
+            this.DateLabel.Location = new System.Drawing.Point(669, 554);
             this.DateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(57, 25);
@@ -125,7 +125,7 @@
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 255);
+            this.panel7.Location = new System.Drawing.Point(3, 270);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(229, 68);
             this.panel7.TabIndex = 19;
@@ -157,7 +157,7 @@
             // 
             this.panel5.Controls.Add(this.OrderLogo);
             this.panel5.Controls.Add(this.OrderButton);
-            this.panel5.Location = new System.Drawing.Point(3, 181);
+            this.panel5.Location = new System.Drawing.Point(3, 196);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 68);
             this.panel5.TabIndex = 17;
@@ -207,14 +207,14 @@
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 98);
+            this.panel1.Size = new System.Drawing.Size(229, 113);
             this.panel1.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 79);
+            this.label1.Location = new System.Drawing.Point(96, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 16);
             this.label1.TabIndex = 1;
@@ -224,9 +224,9 @@
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
-            this.menuButton.Location = new System.Drawing.Point(36, 0);
+            this.menuButton.Location = new System.Drawing.Point(49, 4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(144, 92);
+            this.menuButton.Size = new System.Drawing.Size(131, 85);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 0;
             this.menuButton.TabStop = false;
@@ -235,16 +235,17 @@
             // 
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Location = new System.Drawing.Point(3, 107);
+            this.panel3.Location = new System.Drawing.Point(3, 122);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 68);
             this.panel3.TabIndex = 22;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox4.BackgroundImage = global::E_Pc.Properties.Resources.Homepage5;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::E_Pc.Properties.Resources.Homepage5;
             this.pictureBox4.Location = new System.Drawing.Point(3, 8);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(62, 52);

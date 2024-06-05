@@ -69,5 +69,9 @@ namespace E_Pc
             DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt");
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

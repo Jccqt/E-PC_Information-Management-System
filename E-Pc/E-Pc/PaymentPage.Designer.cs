@@ -218,10 +218,10 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(42, 172);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(595, 393);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(612, 393);
             this.flowLayoutPanel1.TabIndex = 34;
             // 
             // label5

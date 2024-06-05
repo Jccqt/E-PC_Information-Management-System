@@ -52,7 +52,7 @@
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -80,6 +80,12 @@
     </Compile>
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminReports.Designer.cs">
+      <DependentUpon>AdminReports.cs</DependentUpon>
     </Compile>
     <Compile Include="CashierHomepage.cs">
       <SubType>Form</SubType>
@@ -165,6 +171,12 @@
     <Compile Include="Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentItems.Designer.cs">
+      <DependentUpon>PaymentItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +227,9 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminReports.resx">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CashierHomepage.resx">
       <DependentUpon>CashierHomepage.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentItems.resx">
+      <DependentUpon>PaymentItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentPage.resx">
       <DependentUpon>PaymentPage.cs</DependentUpon>

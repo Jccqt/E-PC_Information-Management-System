@@ -140,9 +140,9 @@
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(195, 71);
+            this.label6.Location = new System.Drawing.Point(197, 71);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(668, 15);
+            this.label6.Size = new System.Drawing.Size(652, 15);
             this.label6.TabIndex = 29;
             this.label6.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------------------------------------------" +
