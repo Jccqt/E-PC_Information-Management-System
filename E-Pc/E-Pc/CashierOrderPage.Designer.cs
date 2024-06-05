@@ -276,6 +276,7 @@
             this.SortBox.Name = "SortBox";
             this.SortBox.Size = new System.Drawing.Size(175, 24);
             this.SortBox.TabIndex = 59;
+            this.SortBox.SelectedIndexChanged += new System.EventHandler(this.SortBox_SelectedIndexChanged);
             // 
             // TableLabel
             // 

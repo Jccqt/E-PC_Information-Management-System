@@ -9,6 +9,7 @@ namespace E_Pc
         static SqlCommand cmd;
         public static bool isLogin = false;
         static string username, password, position;
+        public static string user, fName, lName;
         public Login()
         {
             InitializeComponent();
@@ -29,8 +30,10 @@ namespace E_Pc
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
+            user = "";
             DataConnection.conn.Open();
-            cmd = new SqlCommand("SELECT Credentials.Username, Credentials.Password, Employees.Position " +
+            cmd = new SqlCommand("SELECT Credentials.Username, Credentials.Password, Employees.Position, Employees.EmpId, " +
+                "Employees.FirstName, Employees.LastName " +
                 "FROM Credentials LEFT JOIN Employees ON Credentials.EmpId = Employees.EmpId", DataConnection.conn);
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -42,7 +45,9 @@ namespace E_Pc
                 {
                     isLogin = true;
                     position = reader.GetString(2);
-
+                    user = reader.GetValue(3).ToString();
+                    fName = reader.GetString(4);
+                    lName = reader.GetString(5);
                 }
             }
             DataConnection.conn.Close();

@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using System.Drawing;
+using System.Collections;
 
 namespace E_Pc
 {
@@ -11,8 +12,11 @@ namespace E_Pc
         public static decimal totalAmount = 0;
         public static int totalQuantity = 0;
         public static decimal exchange = 0;
-        public static bool isPaid = false;
-        public PaymentPage()
+        public static decimal payment = 0;
+        static bool isPaid = false;
+        static ArrayList itemId = new ArrayList();
+        static ArrayList itemQuantity = new ArrayList()
+;        public PaymentPage()
         {
             InitializeComponent();
         }
@@ -23,7 +27,7 @@ namespace E_Pc
             CodeLabel.Text = CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount].ToString();
 
             DataConnection.cmd = new SqlCommand("SELECT Carts.OrderQuantity, Carts.OrderPrice, Carts.OrderDate, " +
-                "Products.ItemName, Products.ItemType, Products.Category, Products.ItemImage " +
+                "Products.ItemName, Products.ItemType, Products.Category, Products.ItemImage, Carts.ItemId " +
                 "FROM Carts RIGHT JOIN Products ON Carts.ItemId = Products.ItemId WHERE CartId = @cartId", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
@@ -56,6 +60,8 @@ namespace E_Pc
                 items.CategoryLabel.Text = DataConnection.reader.GetString(5);
 
                 DateLabel.Text = DataConnection.reader.GetValue(2).ToString();
+                itemId.Add(DataConnection.reader.GetString(7));
+                itemQuantity.Add(DataConnection.reader.GetValue(0));
                 CartPanel.Controls.Add(items);
             }
             DataConnection.reader.Close();
@@ -89,6 +95,7 @@ namespace E_Pc
                     ExchangeBox.Text = (Convert.ToDecimal(PaymentBox.Text) - totalAmount).ToString();
                     isPaid = true;
                     exchange = Convert.ToDecimal(ExchangeBox.Text);
+                    payment = Convert.ToDecimal(PaymentBox.Text);
                 }
                 else
                 {
@@ -107,6 +114,26 @@ namespace E_Pc
         {
             if (isPaid)
             {
+                DataConnection.conn.Open();
+
+                for (int i = 0; i < itemId.Count; i++)
+                {
+                    DataConnection.cmd = new SqlCommand("SELECT ItemQuantity FROM Products WHERE ItemId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", itemId[i]);
+                    int currentQuantity = Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
+
+                    DataConnection.cmd = new SqlCommand("UPDATE Products SET ItemQuantity = @quantity WHERE ItemId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", itemId[i]);
+                    DataConnection.cmd.Parameters.AddWithValue("@quantity", currentQuantity - Convert.ToInt32(itemQuantity[i]));
+                    DataConnection.cmd.ExecuteNonQuery();
+
+                    DataConnection.cmd = new SqlCommand("UPDATE Carts SET Status = @status WHERE CartId = @cartId", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
+                    DataConnection.cmd.Parameters.AddWithValue("@status", "Completed");
+                    DataConnection.cmd.ExecuteNonQuery();
+                }
+                DataConnection.conn.Close();
+
                 Form form = new Form();
                 form.Controls.Add(new Receipt());
                 form.ClientSize = new System.Drawing.Size(374, 726);

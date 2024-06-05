@@ -20,6 +20,7 @@ namespace E_Pc
 
         private void Receipt_Load(object sender, EventArgs e)
         {
+            var localDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
             DataConnection.conn.Open();
             CartIdLabel.Text = CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount].ToString();
 
@@ -32,10 +33,13 @@ namespace E_Pc
             {
                 NameLabel.Text += $"\n{DataConnection.reader.GetString(2)}";
                 QuantityLabel.Text += $"\n{DataConnection.reader.GetValue(0)}";
-                PriceLabel.Text += $"\n{DataConnection.reader.GetValue(1)}";
+                PriceLabel.Text += $"\nP{DataConnection.reader.GetValue(1)}";
             }
             TotalAmountLabel.Text = $"P{PaymentPage.totalAmount}";
+            PaymentLabel.Text = $"P{PaymentPage.payment}";
             ExchangeLabel.Text = $"P{PaymentPage.exchange}";
+            DateLabel.Text = localDate.ToString();
+            CashierName.Text = $"{Login.fName} {Login.lName}";
             DataConnection.reader.Close();
             DataConnection.conn.Close();
 
