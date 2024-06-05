@@ -174,8 +174,8 @@ namespace E_Pc
             form.Controls.Add(new RetrieveItem());
             form.StartPosition = FormStartPosition.CenterScreen;
             form.AutoSize = true;
-            form.Text = "View/Edit Product";
             form.ShowDialog();
+            GC.Collect();
         }
 
         private void AddProductBtn_Click(object sender, EventArgs e)
@@ -184,8 +184,8 @@ namespace E_Pc
             form.Controls.Add(new AddProduct());
             form.StartPosition = FormStartPosition.CenterScreen;
             form.AutoSize = true;
-            form.Text = "Add Product";
             form.ShowDialog();
+            GC.Collect();
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
@@ -194,17 +194,20 @@ namespace E_Pc
             form.Controls.Add(new AddProduct());
             form.StartPosition = FormStartPosition.CenterScreen;
             form.AutoSize = true;
+            form.FormBorderStyle = FormBorderStyle.FixedDialog;
             form.ShowDialog();
+            GC.Collect();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
+            // will show a warning message before exiting the application
             DialogResult exitDialog = MessageBox.Show("Are you sure you want to close the program?" +
                 "\nAny unsaved progress will be lost.", "Close application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if(exitDialog == DialogResult.Yes)
             {
-                Application.Exit();
+                Application.Exit(); // will terminate the application
             }
         }
 

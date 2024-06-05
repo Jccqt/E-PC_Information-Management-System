@@ -82,5 +82,14 @@ namespace E_Pc
                 this.Hide();
             }
         }
+
+        private void EmployeeManagementButton_Click(object sender, EventArgs e)
+        {
+            using(Employee employee = new Employee())
+            {
+                employee.ShowDialog();
+                this.Hide();
+            }
+        }
     }
 }

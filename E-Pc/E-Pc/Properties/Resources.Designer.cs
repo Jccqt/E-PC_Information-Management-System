@@ -193,6 +193,16 @@ namespace E_Pc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Employee_no_image {
+            get {
+                object obj = ResourceManager.GetObject("Employee-no-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EmployeeManagementHeader_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("EmployeeManagementHeader-removebg-preview", resourceCulture);

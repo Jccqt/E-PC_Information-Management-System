@@ -24,43 +24,52 @@ namespace E_Pc
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            idCount = 2000;
-            var localDate = DateTime.Now.ToString("dd/MM/yyyy");
-
-            DataConnection.conn.Open();
-
-            DataConnection.cmd = new SqlCommand("SELECT COUNT(ItemType) FROM Products WHERE ItemType = @type", DataConnection.conn);
-            DataConnection.cmd.Parameters.AddWithValue("@type", TypeBox.SelectedItem);
-            idCount += Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
-
-            DataConnection.cmd = new SqlCommand("INSERT INTO Products(ItemId, ItemName, ItemBrand, " +
-                "ItemPrice, ItemQuantity, ItemType, Category, ItemDescription, DateCreation, Active_flag) " +
-                "VALUES (@id, @name, @brand, @price, @quantity, @type, @category, @description, @date, @flag)", DataConnection.conn);
-            DataConnection.cmd.Parameters.AddWithValue("@id", $"{TypeBox.SelectedItem.ToString().ToUpper()}{idCount + 1}");
-            DataConnection.cmd.Parameters.AddWithValue("@name", NameBox.Text);
-            DataConnection.cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
-            DataConnection.cmd.Parameters.AddWithValue("@price", Convert.ToDecimal(PriceBox.Text));
-            DataConnection.cmd.Parameters.AddWithValue("@quantity", Convert.ToInt32(QuantityBox.Text));
-            DataConnection.cmd.Parameters.AddWithValue("@type", TypeBox.SelectedItem);
-            DataConnection.cmd.Parameters.AddWithValue("@category", CategoryBox.SelectedItem);
-            DataConnection.cmd.Parameters.AddWithValue("@description", DescriptionBox.Text);
-            DataConnection.cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(localDate));
-            DataConnection.cmd.Parameters.AddWithValue("@flag", 1);
-            DataConnection.cmd.ExecuteNonQuery();
-
-            if (isNewImage)
+            if(!NameBox.Text.Equals("") && !BrandBox.Text.Equals("") && !TypeBox.SelectedItem.Equals("") && !CategoryBox.SelectedItem.Equals("") &&
+                !PriceBox.Text.Equals("") && !QuantityBox.Text.Equals(""))
             {
-                DataConnection.cmd = new SqlCommand("UPDATE Products SET ItemImage = @image WHERE ItemId = @id", DataConnection.conn);
-                DataConnection.cmd.Parameters.AddWithValue("@id", $"{TypeBox.SelectedItem.ToString().ToUpper()}{idCount + 1}");
-                DataConnection.cmd.Parameters.AddWithValue("@image", imageBinary);
-                DataConnection.cmd.ExecuteNonQuery();
-            }
+                idCount = 2000;
+                var localDate = DateTime.Now.ToString("dd/MM/yyyy");
 
-            MessageBox.Show("Item has been added successfully!");
-            ClearTextBox();
-            PageObjects.inventoryPage.ShowAvailableProducts();
-            DataConnection.conn.Close();
-            isNewImage = false;
+                DataConnection.conn.Open();
+
+                DataConnection.cmd = new SqlCommand("SELECT COUNT(ItemType) FROM Products WHERE ItemType = @type", DataConnection.conn);
+                DataConnection.cmd.Parameters.AddWithValue("@type", TypeBox.SelectedItem);
+                idCount += Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
+
+                DataConnection.cmd = new SqlCommand("INSERT INTO Products(ItemId, ItemName, ItemBrand, " +
+                    "ItemPrice, ItemQuantity, ItemType, Category, ItemDescription, DateCreation, Active_flag) " +
+                    "VALUES (@id, @name, @brand, @price, @quantity, @type, @category, @description, @date, @flag)", DataConnection.conn);
+                DataConnection.cmd.Parameters.AddWithValue("@id", $"{TypeBox.SelectedItem.ToString().ToUpper()}{idCount + 1}");
+                DataConnection.cmd.Parameters.AddWithValue("@name", NameBox.Text);
+                DataConnection.cmd.Parameters.AddWithValue("@brand", BrandBox.Text);
+                DataConnection.cmd.Parameters.AddWithValue("@price", Convert.ToDecimal(PriceBox.Text));
+                DataConnection.cmd.Parameters.AddWithValue("@quantity", Convert.ToInt32(QuantityBox.Text));
+                DataConnection.cmd.Parameters.AddWithValue("@type", TypeBox.SelectedItem);
+                DataConnection.cmd.Parameters.AddWithValue("@category", CategoryBox.SelectedItem);
+                DataConnection.cmd.Parameters.AddWithValue("@description", DescriptionBox.Text);
+                DataConnection.cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(localDate));
+                DataConnection.cmd.Parameters.AddWithValue("@flag", 1);
+                DataConnection.cmd.ExecuteNonQuery();
+
+                if (isNewImage)
+                {
+                    DataConnection.cmd = new SqlCommand("UPDATE Products SET ItemImage = @image WHERE ItemId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", $"{TypeBox.SelectedItem.ToString().ToUpper()}{idCount + 1}");
+                    DataConnection.cmd.Parameters.AddWithValue("@image", imageBinary);
+                    DataConnection.cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Item has been added successfully!");
+                ClearTextBox();
+                PageObjects.inventoryPage.ShowAvailableProducts();
+                DataConnection.conn.Close();
+                isNewImage = false;
+            }
+            else
+            {
+                // will show an error message if there is an empty details
+                MessageBox.Show("Cannot be saved because of empty details. Please complete the details first", "Empty details!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void SelectImageBtn_Click(object sender, EventArgs e)

@@ -357,6 +357,7 @@
             this.EmployeeManagementButton.TabIndex = 14;
             this.EmployeeManagementButton.Text = "                        Employee Management";
             this.EmployeeManagementButton.UseVisualStyleBackColor = true;
+            this.EmployeeManagementButton.Click += new System.EventHandler(this.EmployeeManagementButton_Click);
             // 
             // panel7
             // 

@@ -358,6 +358,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>E-PCdb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Employee-no-image.jpg" />
     <None Include="Resources\image-removebg-preview %284%291.png" />
     <None Include="Resources\image-removebg-preview %281%292.png" />
     <None Include="Resources\image-removebg-preview.png" />

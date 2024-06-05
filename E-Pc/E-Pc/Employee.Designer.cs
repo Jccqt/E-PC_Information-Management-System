@@ -42,7 +42,7 @@
             this.inventoryButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.SalesLogo = new System.Windows.Forms.PictureBox();
-            this.salesButton = new System.Windows.Forms.Button();
+            this.ReportsBtn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.OrderLogo = new System.Windows.Forms.PictureBox();
             this.OrderButton = new System.Windows.Forms.Button();
@@ -55,11 +55,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.EmployeePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TableLabel = new System.Windows.Forms.Label();
             this.AddProductBtn = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AddBtn = new System.Windows.Forms.PictureBox();
+            this.SortBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -92,6 +93,7 @@
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ExitBtn.TabIndex = 0;
             this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // pictureBox2
             // 
@@ -219,7 +221,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.SalesLogo);
-            this.panel4.Controls.Add(this.salesButton);
+            this.panel4.Controls.Add(this.ReportsBtn);
             this.panel4.Location = new System.Drawing.Point(3, 270);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 68);
@@ -237,16 +239,16 @@
             this.SalesLogo.TabIndex = 15;
             this.SalesLogo.TabStop = false;
             // 
-            // salesButton
+            // ReportsBtn
             // 
-            this.salesButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salesButton.Location = new System.Drawing.Point(-7, 0);
-            this.salesButton.Name = "salesButton";
-            this.salesButton.Size = new System.Drawing.Size(242, 68);
-            this.salesButton.TabIndex = 14;
-            this.salesButton.Text = "Sales";
-            this.salesButton.UseVisualStyleBackColor = true;
+            this.ReportsBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportsBtn.Location = new System.Drawing.Point(-7, 0);
+            this.ReportsBtn.Name = "ReportsBtn";
+            this.ReportsBtn.Size = new System.Drawing.Size(242, 68);
+            this.ReportsBtn.TabIndex = 14;
+            this.ReportsBtn.Text = "Reports";
+            this.ReportsBtn.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -381,13 +383,13 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Employee Management";
             // 
-            // flowLayoutPanel1
+            // EmployeePanel
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(241, 171);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(719, 402);
-            this.flowLayoutPanel1.TabIndex = 42;
+            this.EmployeePanel.BackColor = System.Drawing.Color.Transparent;
+            this.EmployeePanel.Location = new System.Drawing.Point(241, 171);
+            this.EmployeePanel.Name = "EmployeePanel";
+            this.EmployeePanel.Size = new System.Drawing.Size(719, 402);
+            this.EmployeePanel.TabIndex = 42;
             // 
             // TableLabel
             // 
@@ -433,6 +435,19 @@
             this.AddBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AddBtn.TabIndex = 45;
             this.AddBtn.TabStop = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // SortBox
+            // 
+            this.SortBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SortBox.FormattingEnabled = true;
+            this.SortBox.Items.AddRange(new object[] {
+            "Available",
+            "Archived"});
+            this.SortBox.Location = new System.Drawing.Point(707, 88);
+            this.SortBox.Name = "SortBox";
+            this.SortBox.Size = new System.Drawing.Size(149, 21);
+            this.SortBox.TabIndex = 49;
             // 
             // Employee
             // 
@@ -441,8 +456,9 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.SortBox);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.EmployeePanel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.sidebar);
@@ -453,6 +469,7 @@
             this.Name = "Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeManagementPage";
+            this.Load += new System.EventHandler(this.Employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.sidebar.ResumeLayout(false);
@@ -489,7 +506,7 @@
         private System.Windows.Forms.Button inventoryButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox SalesLogo;
-        private System.Windows.Forms.Button salesButton;
+        private System.Windows.Forms.Button ReportsBtn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox OrderLogo;
         private System.Windows.Forms.Button OrderButton;
@@ -508,10 +525,11 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel EmployeePanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox AddBtn;
         private System.Windows.Forms.Label TableLabel;
         private System.Windows.Forms.Label AddProductBtn;
+        private System.Windows.Forms.ComboBox SortBox;
     }
 }

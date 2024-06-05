@@ -70,7 +70,7 @@ namespace E_Pc
             DataConnection.cmd = new SqlCommand("SELECT SUM(OrderQuantity) FROM Carts WHERE CartId = @cartId", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
             totalQuantity = Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
-            TotalAmountBox.Text = totalQuantity.ToString();
+            TotalQuantityLabel.Text = totalQuantity.ToString();
 
             DataConnection.cmd = new SqlCommand("SELECT SUM(OrderPrice) FROM Carts WHERE CartId = @cartId", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
@@ -108,7 +108,7 @@ namespace E_Pc
             else if (!PaymentBox.Text.Equals("") && !Regex.IsMatch(PaymentBox.Text, InputValidation.numberPattern))
             {
                 // will show an error message if the payment box has a character
-                MessageBox.Show("Please input numbers only!", "Invalid input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please input numbers only! [0-9]", "Invalid input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 PaymentBox.Text = PaymentBox.Text.Remove(PaymentBox.Text.Length - 1); // will remove the character in PaymentBox
                 
             }
@@ -143,12 +143,16 @@ namespace E_Pc
                 }
                 DataConnection.conn.Close();
 
+                // will create form for the receipt
                 Form form = new Form();
                 form.Controls.Add(new Receipt());
                 form.ClientSize = new System.Drawing.Size(374, 726);
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.ShowDialog();
                 form.AutoSize = true;
+
+                this.Close(); // will close the payment page
+                PageObjects.cashierOrderPage.Show(); // will show the order page for cashier
                 
             }
             else

@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.SelectImageBtn = new System.Windows.Forms.Button();
+            this.EmpImage = new System.Windows.Forms.PictureBox();
+            this.PasswordBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UsernameBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.PositionBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,24 +46,26 @@
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AgeBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.BirthdateBox = new System.Windows.Forms.TextBox();
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.LastNameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.FirstNameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.BirthDatePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.BirthDatePicker);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.SelectImageBtn);
+            this.panel2.Controls.Add(this.EmpImage);
+            this.panel2.Controls.Add(this.PasswordBox);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.UsernameBox);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.PositionBox);
             this.panel2.Controls.Add(this.label7);
@@ -74,7 +77,6 @@
             this.panel2.Controls.Add(this.AddBtn);
             this.panel2.Controls.Add(this.AgeBox);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.BirthdateBox);
             this.panel2.Controls.Add(this.QuantityLabel);
             this.panel2.Controls.Add(this.LastNameBox);
             this.panel2.Controls.Add(this.label3);
@@ -86,35 +88,47 @@
             this.panel2.Size = new System.Drawing.Size(870, 363);
             this.panel2.TabIndex = 30;
             // 
-            // button1
+            // label8
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(710, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 20);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Select Image";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(312, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(202, 33);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Add Employee";
             // 
-            // pictureBox1
+            // SelectImageBtn
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox1.Location = new System.Drawing.Point(661, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 155);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.SelectImageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SelectImageBtn.Location = new System.Drawing.Point(710, 251);
+            this.SelectImageBtn.Name = "SelectImageBtn";
+            this.SelectImageBtn.Size = new System.Drawing.Size(103, 20);
+            this.SelectImageBtn.TabIndex = 36;
+            this.SelectImageBtn.Text = "Select Image";
+            this.SelectImageBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // EmpImage
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(467, 192);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 28);
-            this.textBox2.TabIndex = 34;
+            this.EmpImage.BackColor = System.Drawing.Color.Gray;
+            this.EmpImage.Location = new System.Drawing.Point(661, 86);
+            this.EmpImage.Name = "EmpImage";
+            this.EmpImage.Size = new System.Drawing.Size(190, 155);
+            this.EmpImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EmpImage.TabIndex = 35;
+            this.EmpImage.TabStop = false;
+            // 
+            // PasswordBox
+            // 
+            this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordBox.Location = new System.Drawing.Point(467, 192);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordBox.Multiline = true;
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.Size = new System.Drawing.Size(171, 28);
+            this.PasswordBox.TabIndex = 34;
             // 
             // label10
             // 
@@ -127,15 +141,15 @@
             this.label10.TabIndex = 33;
             this.label10.Text = "Password*";
             // 
-            // textBox1
+            // UsernameBox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(466, 139);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 28);
-            this.textBox1.TabIndex = 32;
+            this.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UsernameBox.Location = new System.Drawing.Point(466, 139);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2);
+            this.UsernameBox.Multiline = true;
+            this.UsernameBox.Name = "UsernameBox";
+            this.UsernameBox.Size = new System.Drawing.Size(171, 28);
+            this.UsernameBox.TabIndex = 32;
             // 
             // label9
             // 
@@ -254,10 +268,12 @@
             // AgeBox
             // 
             this.AgeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AgeBox.Enabled = false;
             this.AgeBox.Location = new System.Drawing.Point(467, 86);
             this.AgeBox.Margin = new System.Windows.Forms.Padding(2);
             this.AgeBox.Multiline = true;
             this.AgeBox.Name = "AgeBox";
+            this.AgeBox.ReadOnly = true;
             this.AgeBox.Size = new System.Drawing.Size(171, 28);
             this.AgeBox.TabIndex = 7;
             // 
@@ -271,16 +287,6 @@
             this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Age*";
-            // 
-            // BirthdateBox
-            // 
-            this.BirthdateBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BirthdateBox.Location = new System.Drawing.Point(247, 140);
-            this.BirthdateBox.Margin = new System.Windows.Forms.Padding(2);
-            this.BirthdateBox.Multiline = true;
-            this.BirthdateBox.Name = "BirthdateBox";
-            this.BirthdateBox.Size = new System.Drawing.Size(171, 28);
-            this.BirthdateBox.TabIndex = 5;
             // 
             // QuantityLabel
             // 
@@ -335,18 +341,25 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "First Name*";
             // 
-            // NewAddEmployee
+            // BirthDatePicker
+            // 
+            this.BirthDatePicker.Location = new System.Drawing.Point(246, 147);
+            this.BirthDatePicker.Name = "BirthDatePicker";
+            this.BirthDatePicker.Size = new System.Drawing.Size(198, 20);
+            this.BirthDatePicker.TabIndex = 45;
+            this.BirthDatePicker.ValueChanged += new System.EventHandler(this.BirthDatePicker_ValueChanged);
+            // 
+            // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel2);
-            this.Name = "NewAddEmployee";
+            this.Name = "AddEmployee";
             this.Size = new System.Drawing.Size(874, 392);
-            this.Load += new System.EventHandler(this.NewAddEmployee_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,9 +367,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UsernameBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox PositionBox;
         private System.Windows.Forms.Label label7;
@@ -368,13 +381,14 @@
         private Guna.UI2.WinForms.Guna2Button AddBtn;
         private System.Windows.Forms.TextBox AgeBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox BirthdateBox;
         private System.Windows.Forms.Label QuantityLabel;
         private System.Windows.Forms.TextBox LastNameBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox FirstNameBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button SelectImageBtn;
+        private System.Windows.Forms.PictureBox EmpImage;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker BirthDatePicker;
     }
 }

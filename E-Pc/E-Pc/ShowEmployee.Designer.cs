@@ -28,23 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ItemImage = new System.Windows.Forms.PictureBox();
+            this.IdLabel = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
             this.DeleteBtn = new System.Windows.Forms.PictureBox();
-            this.ItemName = new System.Windows.Forms.Label();
-            this.ItemQuantity = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
+            this.EmpImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // ItemImage
+            // IdLabel
             // 
-            this.ItemImage.BackColor = System.Drawing.Color.Transparent;
-            this.ItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemImage.Location = new System.Drawing.Point(0, 0);
-            this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(131, 130);
-            this.ItemImage.TabIndex = 1;
-            this.ItemImage.TabStop = false;
+            this.IdLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdLabel.ForeColor = System.Drawing.Color.Black;
+            this.IdLabel.Location = new System.Drawing.Point(4, 134);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(122, 21);
+            this.IdLabel.TabIndex = 3;
+            this.IdLabel.Text = "empid empid empid empid";
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.ForeColor = System.Drawing.Color.Black;
+            this.NameLabel.Location = new System.Drawing.Point(3, 155);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(122, 41);
+            this.NameLabel.TabIndex = 4;
+            this.NameLabel.Text = "Name name name name name name";
             // 
             // DeleteBtn
             // 
@@ -57,25 +67,15 @@
             this.DeleteBtn.TabIndex = 2;
             this.DeleteBtn.TabStop = false;
             // 
-            // ItemName
+            // EmpImage
             // 
-            this.ItemName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemName.ForeColor = System.Drawing.Color.Black;
-            this.ItemName.Location = new System.Drawing.Point(4, 134);
-            this.ItemName.Name = "ItemName";
-            this.ItemName.Size = new System.Drawing.Size(127, 33);
-            this.ItemName.TabIndex = 3;
-            this.ItemName.Text = "Name name name name name";
-            // 
-            // ItemQuantity
-            // 
-            this.ItemQuantity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemQuantity.ForeColor = System.Drawing.Color.Black;
-            this.ItemQuantity.Location = new System.Drawing.Point(4, 166);
-            this.ItemQuantity.Name = "ItemQuantity";
-            this.ItemQuantity.Size = new System.Drawing.Size(134, 36);
-            this.ItemQuantity.TabIndex = 4;
-            this.ItemQuantity.Text = "Position position position position";
+            this.EmpImage.BackColor = System.Drawing.Color.Transparent;
+            this.EmpImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmpImage.Location = new System.Drawing.Point(0, 0);
+            this.EmpImage.Name = "EmpImage";
+            this.EmpImage.Size = new System.Drawing.Size(131, 130);
+            this.EmpImage.TabIndex = 1;
+            this.EmpImage.TabStop = false;
             // 
             // ShowEmployee
             // 
@@ -83,23 +83,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.ItemQuantity);
-            this.Controls.Add(this.ItemName);
+            this.Controls.Add(this.NameLabel);
+            this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.DeleteBtn);
-            this.Controls.Add(this.ItemImage);
+            this.Controls.Add(this.EmpImage);
             this.Name = "ShowEmployee";
             this.Size = new System.Drawing.Size(129, 196);
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.PictureBox ItemImage;
+        public System.Windows.Forms.PictureBox EmpImage;
         public System.Windows.Forms.PictureBox DeleteBtn;
-        public System.Windows.Forms.Label ItemName;
-        public System.Windows.Forms.Label ItemQuantity;
+        public System.Windows.Forms.Label IdLabel;
+        public System.Windows.Forms.Label NameLabel;
     }
 }
