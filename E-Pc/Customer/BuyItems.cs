@@ -157,8 +157,8 @@ namespace Customer
         }
         public void CartBtn_Click(object sender, EventArgs e)
         {
-            CustomerShowCart cartPage = new CustomerShowCart();
-            cartPage.Show();
+            PageObjects.cartPage = new CustomerShowCart();
+            PageObjects.cartPage.Show();
             this.Hide();
         }
     }

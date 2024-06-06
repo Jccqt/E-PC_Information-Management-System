@@ -51,12 +51,9 @@ namespace E_Pc
 
         private void inventoryButton_Click_1(object sender, EventArgs e)
         {
-            using(Inventory inventory = new Inventory())
-            {
-                // will display the inventory page
-                inventory.ShowDialog();
-                this.Hide();
-            }
+            PageObjects.inventoryPage = new Inventory();
+            PageObjects.inventoryPage.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -67,11 +64,6 @@ namespace E_Pc
         private void DateTimer_Tick(object sender, EventArgs e)
         {
             DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt");
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ReportsBtn_Click(object sender, EventArgs e)
@@ -85,11 +77,9 @@ namespace E_Pc
 
         private void EmployeeManagementButton_Click(object sender, EventArgs e)
         {
-            using(Employee employee = new Employee())
-            {
-                employee.ShowDialog();
-                this.Hide();
-            }
+            PageObjects.employeePage = new Employee();
+            PageObjects.employeePage.Show();
+            this.Hide();
         }
     }
 }

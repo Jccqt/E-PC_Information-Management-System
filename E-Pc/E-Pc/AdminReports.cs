@@ -89,5 +89,37 @@ namespace E_Pc
             }
             DataConnection.reader.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PageObjects.adminHomePage.Show();
+            this.Hide();
+        }
+
+        private void inventoryButton_Click(object sender, EventArgs e)
+        {
+            PageObjects.inventoryPage = new Inventory();
+            PageObjects.inventoryPage.Show();
+            this.Close();
+        }
+
+        private void EmployeeManagementButton_Click(object sender, EventArgs e)
+        {
+            PageObjects.employeePage = new Employee();
+            PageObjects.employeePage.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // will show a warning message before exiting the application
+            DialogResult exitDialog = MessageBox.Show("Are you sure you want to close the program?" +
+                "\nAny unsaved progress will be lost.", "Close application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (exitDialog == DialogResult.Yes)
+            {
+                Application.Exit(); // will terminate the application
+            }
+        }
     }
 }

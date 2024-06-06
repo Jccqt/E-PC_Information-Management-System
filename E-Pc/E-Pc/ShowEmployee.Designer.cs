@@ -40,9 +40,10 @@
             // 
             this.IdLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdLabel.ForeColor = System.Drawing.Color.Black;
-            this.IdLabel.Location = new System.Drawing.Point(4, 134);
+            this.IdLabel.Location = new System.Drawing.Point(5, 165);
+            this.IdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(122, 21);
+            this.IdLabel.Size = new System.Drawing.Size(163, 26);
             this.IdLabel.TabIndex = 3;
             this.IdLabel.Text = "empid empid empid empid";
             // 
@@ -50,9 +51,10 @@
             // 
             this.NameLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameLabel.ForeColor = System.Drawing.Color.Black;
-            this.NameLabel.Location = new System.Drawing.Point(3, 155);
+            this.NameLabel.Location = new System.Drawing.Point(4, 191);
+            this.NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(122, 41);
+            this.NameLabel.Size = new System.Drawing.Size(163, 50);
             this.NameLabel.TabIndex = 4;
             this.NameLabel.Text = "Name name name name name name";
             // 
@@ -61,9 +63,11 @@
             this.DeleteBtn.BackColor = System.Drawing.Color.White;
             this.DeleteBtn.BackgroundImage = global::E_Pc.Properties.Resources.image_Photoroom;
             this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteBtn.Location = new System.Drawing.Point(110, 3);
+            this.DeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteBtn.Location = new System.Drawing.Point(147, 4);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(18, 16);
+            this.DeleteBtn.Size = new System.Drawing.Size(24, 20);
             this.DeleteBtn.TabIndex = 2;
             this.DeleteBtn.TabStop = false;
             // 
@@ -71,15 +75,17 @@
             // 
             this.EmpImage.BackColor = System.Drawing.Color.Transparent;
             this.EmpImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmpImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmpImage.Location = new System.Drawing.Point(0, 0);
+            this.EmpImage.Margin = new System.Windows.Forms.Padding(4);
             this.EmpImage.Name = "EmpImage";
-            this.EmpImage.Size = new System.Drawing.Size(131, 130);
+            this.EmpImage.Size = new System.Drawing.Size(174, 160);
             this.EmpImage.TabIndex = 1;
             this.EmpImage.TabStop = false;
             // 
             // ShowEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -87,8 +93,9 @@
             this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EmpImage);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShowEmployee";
-            this.Size = new System.Drawing.Size(129, 196);
+            this.Size = new System.Drawing.Size(172, 241);
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpImage)).EndInit();
             this.ResumeLayout(false);

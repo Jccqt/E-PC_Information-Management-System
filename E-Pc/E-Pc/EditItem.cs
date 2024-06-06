@@ -69,6 +69,7 @@ namespace E_Pc
             NameBox.Enabled = true;
             BrandBox.Enabled = true;
             QuantityBox.Enabled = true;
+            PriceBox.Enabled = true;
             DescriptionBox.Enabled = true;
             SelectImageBtn.Visible = true;
         }
@@ -78,6 +79,7 @@ namespace E_Pc
             NameBox.Enabled = false;
             BrandBox.Enabled = false;
             QuantityBox.Enabled = false;
+            PriceBox.Enabled = false;
             DescriptionBox.Enabled = false;
             SelectImageBtn.Visible = false;
         }

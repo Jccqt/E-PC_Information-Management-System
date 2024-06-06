@@ -22,11 +22,6 @@ namespace E_Pc
             Application.Exit(); // will terminate the application
         }
 
-        private void DateTimer_Tick(object sender, EventArgs e)
-        {
-            DateLabel.Text = DateTime.Now.ToString("dd/MM/yyy hh:mm:ss tt"); 
-        }
-
 
         private void LogInButton_Click(object sender, EventArgs e)
         {

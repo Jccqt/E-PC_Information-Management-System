@@ -25,7 +25,7 @@ namespace E_Pc
 
     public class DataConnection
     {
-        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True";
+        public static string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\E-PCdb.mdf;Integrated Security=True";
         public static SqlConnection conn = new SqlConnection(sqlCon);
         public static SqlCommand cmd;
         public static SqlDataAdapter adapter;
@@ -37,10 +37,12 @@ namespace E_Pc
         #region Inventory Objects
         public static byte[] imageBinary = new byte[0];
         public static bool isNewImage = false;
-        public static Inventory inventoryPage = new Inventory();
+        public static Inventory inventoryPage;
         public static AdminHome adminHomePage = new AdminHome();
         public static CashierOrderPage cashierOrderPage = new CashierOrderPage();
         public static CashierShowCart cartPage;
+        public static Employee employeePage;
+        public static AdminReports reportsPage = new AdminReports();
 
         #endregion
 

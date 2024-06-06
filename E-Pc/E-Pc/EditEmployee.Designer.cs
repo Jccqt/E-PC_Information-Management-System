@@ -30,32 +30,32 @@
         {
             this.SelectImage = new System.Windows.Forms.OpenFileDialog();
             this.SelectImageBtn = new System.Windows.Forms.Button();
-            this.CategoryBox = new System.Windows.Forms.TextBox();
-            this.TypeBox = new System.Windows.Forms.TextBox();
+            this.BirthdateBox = new System.Windows.Forms.TextBox();
+            this.ContactBox = new System.Windows.Forms.TextBox();
             this.CancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.DescriptionBox = new System.Windows.Forms.TextBox();
+            this.AddressBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.PriceBox = new System.Windows.Forms.TextBox();
+            this.PositionBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.QuantityBox = new System.Windows.Forms.TextBox();
+            this.UsernameBox = new System.Windows.Forms.TextBox();
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.BrandBox = new System.Windows.Forms.TextBox();
-            this.NameBox = new System.Windows.Forms.TextBox();
+            this.LastNameBox = new System.Windows.Forms.TextBox();
+            this.FirstNameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
-            this.ItemImage = new System.Windows.Forms.PictureBox();
+            this.EmpImage = new System.Windows.Forms.PictureBox();
             this.ActivityLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AgeBox = new System.Windows.Forms.TextBox();
+            this.PasswordBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.EditBtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectImage
@@ -67,40 +67,43 @@
             // 
             this.SelectImageBtn.BackColor = System.Drawing.Color.White;
             this.SelectImageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SelectImageBtn.Location = new System.Drawing.Point(135, 226);
+            this.SelectImageBtn.Location = new System.Drawing.Point(180, 278);
+            this.SelectImageBtn.Margin = new System.Windows.Forms.Padding(4);
             this.SelectImageBtn.Name = "SelectImageBtn";
-            this.SelectImageBtn.Size = new System.Drawing.Size(112, 23);
+            this.SelectImageBtn.Size = new System.Drawing.Size(149, 28);
             this.SelectImageBtn.TabIndex = 69;
             this.SelectImageBtn.Text = "Select Image";
             this.SelectImageBtn.UseVisualStyleBackColor = false;
             this.SelectImageBtn.Visible = false;
+            this.SelectImageBtn.Click += new System.EventHandler(this.SelectImageBtn_Click);
             // 
-            // CategoryBox
+            // BirthdateBox
             // 
-            this.CategoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CategoryBox.Enabled = false;
-            this.CategoryBox.Location = new System.Drawing.Point(153, 342);
-            this.CategoryBox.Margin = new System.Windows.Forms.Padding(2);
-            this.CategoryBox.Multiline = true;
-            this.CategoryBox.Name = "CategoryBox";
-            this.CategoryBox.Size = new System.Drawing.Size(97, 28);
-            this.CategoryBox.TabIndex = 68;
+            this.BirthdateBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BirthdateBox.Enabled = false;
+            this.BirthdateBox.Location = new System.Drawing.Point(204, 421);
+            this.BirthdateBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BirthdateBox.Multiline = true;
+            this.BirthdateBox.Name = "BirthdateBox";
+            this.BirthdateBox.ReadOnly = true;
+            this.BirthdateBox.Size = new System.Drawing.Size(129, 34);
+            this.BirthdateBox.TabIndex = 68;
             // 
-            // TypeBox
+            // ContactBox
             // 
-            this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TypeBox.Enabled = false;
-            this.TypeBox.Location = new System.Drawing.Point(21, 343);
-            this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
-            this.TypeBox.Multiline = true;
-            this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(122, 28);
-            this.TypeBox.TabIndex = 67;
+            this.ContactBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ContactBox.Enabled = false;
+            this.ContactBox.Location = new System.Drawing.Point(28, 422);
+            this.ContactBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ContactBox.Multiline = true;
+            this.ContactBox.Name = "ContactBox";
+            this.ContactBox.Size = new System.Drawing.Size(162, 34);
+            this.ContactBox.TabIndex = 67;
             // 
             // CancelBtn
             // 
             this.CancelBtn.AutoRoundedCorners = true;
-            this.CancelBtn.BorderRadius = 13;
+            this.CancelBtn.BorderRadius = 16;
             this.CancelBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.CancelBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CancelBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -108,17 +111,19 @@
             this.CancelBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CancelBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.Color.White;
-            this.CancelBtn.Location = new System.Drawing.Point(256, 558);
+            this.CancelBtn.Location = new System.Drawing.Point(341, 687);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(99, 28);
+            this.CancelBtn.Size = new System.Drawing.Size(132, 34);
             this.CancelBtn.TabIndex = 66;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.Visible = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // SaveBtn
             // 
             this.SaveBtn.AutoRoundedCorners = true;
-            this.SaveBtn.BorderRadius = 13;
+            this.SaveBtn.BorderRadius = 16;
             this.SaveBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.SaveBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.SaveBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -126,76 +131,76 @@
             this.SaveBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.SaveBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.ForeColor = System.Drawing.Color.White;
-            this.SaveBtn.Location = new System.Drawing.Point(156, 558);
+            this.SaveBtn.Location = new System.Drawing.Point(208, 687);
+            this.SaveBtn.Margin = new System.Windows.Forms.Padding(4);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(94, 28);
+            this.SaveBtn.Size = new System.Drawing.Size(125, 34);
             this.SaveBtn.TabIndex = 65;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.Visible = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // DescriptionBox
+            // AddressBox
             // 
-            this.DescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DescriptionBox.Enabled = false;
-            this.DescriptionBox.Location = new System.Drawing.Point(21, 468);
-            this.DescriptionBox.Margin = new System.Windows.Forms.Padding(2);
-            this.DescriptionBox.Multiline = true;
-            this.DescriptionBox.Name = "DescriptionBox";
-            this.DescriptionBox.Size = new System.Drawing.Size(339, 65);
-            this.DescriptionBox.TabIndex = 62;
+            this.AddressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddressBox.Enabled = false;
+            this.AddressBox.Location = new System.Drawing.Point(28, 576);
+            this.AddressBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddressBox.Multiline = true;
+            this.AddressBox.Name = "AddressBox";
+            this.AddressBox.Size = new System.Drawing.Size(451, 80);
+            this.AddressBox.TabIndex = 62;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(20, 452);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(27, 556);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 13);
+            this.label9.Size = new System.Drawing.Size(58, 16);
             this.label9.TabIndex = 63;
             this.label9.Text = "Address";
             // 
-            // PriceBox
+            // PositionBox
             // 
-            this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PriceBox.Enabled = false;
-            this.PriceBox.Location = new System.Drawing.Point(263, 342);
-            this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PriceBox.Multiline = true;
-            this.PriceBox.Name = "PriceBox";
-            this.PriceBox.Size = new System.Drawing.Size(97, 28);
-            this.PriceBox.TabIndex = 60;
+            this.PositionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PositionBox.Enabled = false;
+            this.PositionBox.Location = new System.Drawing.Point(351, 421);
+            this.PositionBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PositionBox.Multiline = true;
+            this.PositionBox.Name = "PositionBox";
+            this.PositionBox.ReadOnly = true;
+            this.PositionBox.Size = new System.Drawing.Size(129, 34);
+            this.PositionBox.TabIndex = 60;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(264, 327);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(352, 402);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.Size = new System.Drawing.Size(60, 16);
             this.label8.TabIndex = 61;
             this.label8.Text = "Position*";
             // 
-            // QuantityBox
+            // UsernameBox
             // 
-            this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuantityBox.Enabled = false;
-            this.QuantityBox.Location = new System.Drawing.Point(21, 405);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
-            this.QuantityBox.Multiline = true;
-            this.QuantityBox.Name = "QuantityBox";
-            this.QuantityBox.Size = new System.Drawing.Size(165, 28);
-            this.QuantityBox.TabIndex = 59;
+            this.UsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UsernameBox.Enabled = false;
+            this.UsernameBox.Location = new System.Drawing.Point(28, 498);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UsernameBox.Multiline = true;
+            this.UsernameBox.Name = "UsernameBox";
+            this.UsernameBox.Size = new System.Drawing.Size(219, 34);
+            this.UsernameBox.TabIndex = 59;
             // 
             // QuantityLabel
             // 
             this.QuantityLabel.AutoSize = true;
             this.QuantityLabel.ForeColor = System.Drawing.Color.Black;
-            this.QuantityLabel.Location = new System.Drawing.Point(18, 390);
-            this.QuantityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.QuantityLabel.Location = new System.Drawing.Point(24, 480);
             this.QuantityLabel.Name = "QuantityLabel";
-            this.QuantityLabel.Size = new System.Drawing.Size(59, 13);
+            this.QuantityLabel.Size = new System.Drawing.Size(75, 16);
             this.QuantityLabel.TabIndex = 58;
             this.QuantityLabel.Text = "Username*";
             // 
@@ -203,10 +208,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(153, 327);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(204, 402);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 57;
             this.label6.Text = "Birthdate*";
             // 
@@ -214,43 +218,41 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(150, 265);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(200, 326);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 55;
             this.label5.Text = "Last Name*";
             // 
-            // BrandBox
+            // LastNameBox
             // 
-            this.BrandBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BrandBox.Enabled = false;
-            this.BrandBox.Location = new System.Drawing.Point(153, 280);
-            this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
-            this.BrandBox.Multiline = true;
-            this.BrandBox.Name = "BrandBox";
-            this.BrandBox.Size = new System.Drawing.Size(97, 28);
-            this.BrandBox.TabIndex = 54;
+            this.LastNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LastNameBox.Enabled = false;
+            this.LastNameBox.Location = new System.Drawing.Point(204, 345);
+            this.LastNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LastNameBox.Multiline = true;
+            this.LastNameBox.Name = "LastNameBox";
+            this.LastNameBox.Size = new System.Drawing.Size(129, 34);
+            this.LastNameBox.TabIndex = 54;
             // 
-            // NameBox
+            // FirstNameBox
             // 
-            this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NameBox.Enabled = false;
-            this.NameBox.Location = new System.Drawing.Point(21, 280);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(2);
-            this.NameBox.Multiline = true;
-            this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(122, 28);
-            this.NameBox.TabIndex = 52;
+            this.FirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FirstNameBox.Enabled = false;
+            this.FirstNameBox.Location = new System.Drawing.Point(28, 345);
+            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FirstNameBox.Multiline = true;
+            this.FirstNameBox.Name = "FirstNameBox";
+            this.FirstNameBox.Size = new System.Drawing.Size(162, 34);
+            this.FirstNameBox.TabIndex = 52;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(18, 264);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(24, 325);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 53;
             this.label3.Text = "First Name*";
             // 
@@ -259,21 +261,23 @@
             this.IdLabel.AutoSize = true;
             this.IdLabel.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdLabel.ForeColor = System.Drawing.Color.Black;
-            this.IdLabel.Location = new System.Drawing.Point(136, 196);
+            this.IdLabel.Location = new System.Drawing.Point(181, 241);
+            this.IdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(104, 27);
+            this.IdLabel.Size = new System.Drawing.Size(129, 33);
             this.IdLabel.TabIndex = 51;
             this.IdLabel.Text = "<EmpId>";
             // 
-            // ItemImage
+            // EmpImage
             // 
-            this.ItemImage.BackColor = System.Drawing.Color.DarkGray;
-            this.ItemImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ItemImage.Location = new System.Drawing.Point(104, 60);
-            this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(167, 133);
-            this.ItemImage.TabIndex = 50;
-            this.ItemImage.TabStop = false;
+            this.EmpImage.BackColor = System.Drawing.Color.DarkGray;
+            this.EmpImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmpImage.Location = new System.Drawing.Point(139, 74);
+            this.EmpImage.Margin = new System.Windows.Forms.Padding(4);
+            this.EmpImage.Name = "EmpImage";
+            this.EmpImage.Size = new System.Drawing.Size(222, 163);
+            this.EmpImage.TabIndex = 50;
+            this.EmpImage.TabStop = false;
             // 
             // ActivityLabel
             // 
@@ -281,9 +285,10 @@
             this.ActivityLabel.BackColor = System.Drawing.Color.White;
             this.ActivityLabel.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActivityLabel.ForeColor = System.Drawing.Color.Black;
-            this.ActivityLabel.Location = new System.Drawing.Point(136, 12);
+            this.ActivityLabel.Location = new System.Drawing.Point(181, 15);
+            this.ActivityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ActivityLabel.Name = "ActivityLabel";
-            this.ActivityLabel.Size = new System.Drawing.Size(118, 27);
+            this.ActivityLabel.Size = new System.Drawing.Size(150, 33);
             this.ActivityLabel.TabIndex = 49;
             this.ActivityLabel.Text = "<Activity>";
             this.ActivityLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -292,10 +297,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(18, 327);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(24, 402);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.Size = new System.Drawing.Size(108, 16);
             this.label7.TabIndex = 56;
             this.label7.Text = "Contact Number*";
             // 
@@ -303,91 +307,92 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(260, 265);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(347, 326);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.Size = new System.Drawing.Size(37, 16);
             this.label1.TabIndex = 71;
             this.label1.Text = "Age*";
             // 
-            // textBox1
+            // AgeBox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(263, 280);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 28);
-            this.textBox1.TabIndex = 70;
+            this.AgeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AgeBox.Enabled = false;
+            this.AgeBox.Location = new System.Drawing.Point(351, 345);
+            this.AgeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AgeBox.Multiline = true;
+            this.AgeBox.Name = "AgeBox";
+            this.AgeBox.ReadOnly = true;
+            this.AgeBox.Size = new System.Drawing.Size(129, 34);
+            this.AgeBox.TabIndex = 70;
             // 
-            // textBox2
+            // PasswordBox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(206, 405);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 28);
-            this.textBox2.TabIndex = 73;
+            this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordBox.Location = new System.Drawing.Point(275, 498);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordBox.Multiline = true;
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.Size = new System.Drawing.Size(205, 34);
+            this.PasswordBox.TabIndex = 73;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(203, 389);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(271, 479);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 72;
             this.label2.Text = "Password*";
             // 
-            // pictureBox1
+            // EditBtn
             // 
-            this.pictureBox1.Image = global::E_Pc.Properties.Resources.image_removebg_preview__6_;
-            this.pictureBox1.Location = new System.Drawing.Point(337, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 74;
-            this.pictureBox1.TabStop = false;
+            this.EditBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__6_;
+            this.EditBtn.Location = new System.Drawing.Point(449, 10);
+            this.EditBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(41, 38);
+            this.EditBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EditBtn.TabIndex = 74;
+            this.EditBtn.TabStop = false;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // EditEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.EditBtn);
+            this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AgeBox);
             this.Controls.Add(this.SelectImageBtn);
-            this.Controls.Add(this.CategoryBox);
-            this.Controls.Add(this.TypeBox);
+            this.Controls.Add(this.BirthdateBox);
+            this.Controls.Add(this.ContactBox);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.SaveBtn);
-            this.Controls.Add(this.DescriptionBox);
+            this.Controls.Add(this.AddressBox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.PriceBox);
+            this.Controls.Add(this.PositionBox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.QuantityBox);
+            this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.BrandBox);
-            this.Controls.Add(this.NameBox);
+            this.Controls.Add(this.LastNameBox);
+            this.Controls.Add(this.FirstNameBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.IdLabel);
-            this.Controls.Add(this.ItemImage);
+            this.Controls.Add(this.EmpImage);
             this.Controls.Add(this.ActivityLabel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditEmployee";
-            this.Size = new System.Drawing.Size(380, 608);
+            this.Size = new System.Drawing.Size(507, 748);
             this.Load += new System.EventHandler(this.EditEmployee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,29 +402,29 @@
 
         private System.Windows.Forms.OpenFileDialog SelectImage;
         private System.Windows.Forms.Button SelectImageBtn;
-        public System.Windows.Forms.TextBox CategoryBox;
-        public System.Windows.Forms.TextBox TypeBox;
+        public System.Windows.Forms.TextBox BirthdateBox;
+        public System.Windows.Forms.TextBox ContactBox;
         private Guna.UI2.WinForms.Guna2Button CancelBtn;
         private Guna.UI2.WinForms.Guna2Button SaveBtn;
-        public System.Windows.Forms.TextBox DescriptionBox;
+        public System.Windows.Forms.TextBox AddressBox;
         private System.Windows.Forms.Label label9;
-        public System.Windows.Forms.TextBox PriceBox;
+        public System.Windows.Forms.TextBox PositionBox;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox QuantityBox;
+        public System.Windows.Forms.TextBox UsernameBox;
         private System.Windows.Forms.Label QuantityLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox BrandBox;
-        public System.Windows.Forms.TextBox NameBox;
+        public System.Windows.Forms.TextBox LastNameBox;
+        public System.Windows.Forms.TextBox FirstNameBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label IdLabel;
-        public System.Windows.Forms.PictureBox ItemImage;
+        public System.Windows.Forms.PictureBox EmpImage;
         private System.Windows.Forms.Label ActivityLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox AgeBox;
+        public System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox EditBtn;
     }
 }

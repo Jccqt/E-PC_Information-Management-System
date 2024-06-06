@@ -252,8 +252,6 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-P
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EditEmployee.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EditItem.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Cart.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.NewAddEmployee.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Payment.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Product.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Receipt.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetreiveEmployee.resources
@@ -305,3 +303,9 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AuditTrailHead
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.TopSales.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.TopSalesHeader.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddEmployee.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AdminReports.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AuditTrail.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AuditTrailHeader.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentItems.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.TopSales.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.TopSalesHeader.resources

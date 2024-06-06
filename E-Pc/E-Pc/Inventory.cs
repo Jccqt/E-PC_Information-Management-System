@@ -10,7 +10,6 @@ namespace E_Pc
 {
     public partial class Inventory : Form
     {
-        static Product product;
         static byte[] imageBinary;
         public static int itemIdCount;
         public static ArrayList itemIdList = new ArrayList();
@@ -45,14 +44,14 @@ namespace E_Pc
             InventoryPanel.Controls.Clear();
             itemIdList.Clear();
             DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 1 " +
-                $"AND ItemId LIKE '%{SearchBox.Text}%' " +
+                $"AND (ItemId LIKE '%{SearchBox.Text}%' " +
                 $"OR ItemName LIKE '%{SearchBox.Text}%' " +
-                $"OR ItemQuantity LIKE '%{SearchBox.Text}%'", DataConnection.conn);
+                $"OR ItemQuantity LIKE '{SearchBox.Text}')", DataConnection.conn);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
      
             while (DataConnection.reader.Read())
             {
-                product = new Product();
+                Product product = new Product();
 
                 if (!DataConnection.reader.GetValue(3).ToString().Equals(""))
                 {
@@ -98,7 +97,6 @@ namespace E_Pc
             form.Controls.Add(new EditItem());
             form.StartPosition = FormStartPosition.CenterScreen;
             form.AutoSize = true;
-            form.Text = "View/Edit Product";
             form.ShowDialog();
         }
 
@@ -130,12 +128,15 @@ namespace E_Pc
             TableLabel.Text = "Archived Products";
             itemIdList.Clear();
             InventoryPanel.Controls.Clear();
-            DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 0", DataConnection.conn);
+            DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 0 " +
+                $"AND (ItemId LIKE '%{SearchBox.Text}%' " +
+                $"OR ItemName LIKE '%{SearchBox.Text}%' " +
+                $"OR ItemQuantity LIKE '{SearchBox.Text}')", DataConnection.conn);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
 
             while (DataConnection.reader.Read())
             {
-                product = new Product();
+                Product product = new Product();
 
                 if(!DataConnection.reader.GetValue(3).ToString().Equals("")) 
                 {
@@ -214,7 +215,7 @@ namespace E_Pc
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
             PageObjects.adminHomePage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void SearchBox_TextChanged(object sender, EventArgs e)
@@ -233,11 +234,16 @@ namespace E_Pc
 
         private void ReportsBtn_Click(object sender, EventArgs e)
         {
-            using(AdminReports reports = new AdminReports())
-            {
-                reports.ShowDialog();
-                this.Hide();
-            }
+            PageObjects.reportsPage = new AdminReports();
+            PageObjects.reportsPage.Show();
+            this.Close();
+        }
+
+        private void EmployeeManagementButton_Click(object sender, EventArgs e)
+        {
+            PageObjects.employeePage = new Employee();
+            PageObjects.employeePage.Show();
+            this.Close();
         }
     }
 }

@@ -61,9 +61,9 @@ namespace E_Pc
 
                 MessageBox.Show("Item has been added successfully!");
                 ClearTextBox();
-                PageObjects.inventoryPage.ShowAvailableProducts();
                 DataConnection.conn.Close();
                 isNewImage = false;
+                Array.Clear(imageBinary, 0, imageBinary.Length);
             }
             else
             {

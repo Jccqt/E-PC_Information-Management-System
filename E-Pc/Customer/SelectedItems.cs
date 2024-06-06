@@ -42,10 +42,14 @@ namespace Customer
         {
             getPrice();
             QuantityLabel.Text = (Convert.ToInt32(QuantityLabel.Text) + 1).ToString();
-            PriceLabel.Text = (itemPrice * Convert.ToInt32(QuantityLabel.Text)).ToString();
+            PriceLabel.Text = $"P{(itemPrice * Convert.ToInt32(QuantityLabel.Text))}";
 
             BuyItems.orderQuantityList.Insert(BuyItems.orderIdList.IndexOf(IdLabel.Text), Convert.ToInt32(QuantityLabel.Text));
+            BuyItems.totalOrderQuantity++;
+            BuyItems.totalOrderPrice += itemPrice;
 
+            PageObjects.cartPage.TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString();
+            PageObjects.cartPage.TotalAmountLabel.Text = $"P{BuyItems.totalOrderPrice}";
         }
         
         void getPrice()
@@ -55,6 +59,27 @@ namespace Customer
             DataConnection.cmd.Parameters.AddWithValue("@id", IdLabel.Text);
             itemPrice = Convert.ToDecimal(DataConnection.cmd.ExecuteScalar());
             DataConnection.conn.Close();
+        }
+
+        private void MinusBtn_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(QuantityLabel.Text) > 1)
+            {
+                getPrice();
+                QuantityLabel.Text = (Convert.ToInt32(QuantityLabel.Text) - 1).ToString();
+                PriceLabel.Text = $"P{(itemPrice * Convert.ToInt32(QuantityLabel.Text))}";
+
+                BuyItems.orderQuantityList.Insert(BuyItems.orderIdList.IndexOf(IdLabel.Text), Convert.ToInt32(QuantityLabel.Text));
+                BuyItems.totalOrderQuantity--;
+                BuyItems.totalOrderPrice -= itemPrice;
+
+                PageObjects.cartPage.TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString();
+                PageObjects.cartPage.TotalAmountLabel.Text = $"P{BuyItems.totalOrderPrice}";
+            }
+            else
+            {
+                MessageBox.Show("You cannot decrease quantity lower than 1");
+            }
         }
     }
 }
