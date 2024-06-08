@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace E_Pc
@@ -43,7 +44,7 @@ namespace E_Pc
         public static CashierShowCart cartPage;
         public static Employee employeePage;
         public static AdminReports reportsPage = new AdminReports();
-
+        public static Login login;
         #endregion
 
         #region Employee Objects

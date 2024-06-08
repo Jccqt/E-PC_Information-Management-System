@@ -84,7 +84,7 @@
             this.LogoutLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutLogo.Image = global::E_Pc.Properties.Resources.LogOut;
             this.LogoutLogo.Location = new System.Drawing.Point(4, 10);
-            this.LogoutLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogoutLogo.Margin = new System.Windows.Forms.Padding(4);
             this.LogoutLogo.Name = "LogoutLogo";
             this.LogoutLogo.Size = new System.Drawing.Size(83, 53);
             this.LogoutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,19 +96,20 @@
             this.LogoutButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButton.Location = new System.Drawing.Point(-9, -6);
-            this.LogoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(323, 84);
             this.LogoutButton.TabIndex = 14;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
             this.panel7.Location = new System.Drawing.Point(4, 519);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(305, 84);
             this.panel7.TabIndex = 19;
@@ -119,7 +120,7 @@
             this.EmployeeLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmployeeLogo.Image = global::E_Pc.Properties.Resources.Employee_managemen;
             this.EmployeeLogo.Location = new System.Drawing.Point(4, 9);
-            this.EmployeeLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmployeeLogo.Margin = new System.Windows.Forms.Padding(4);
             this.EmployeeLogo.Name = "EmployeeLogo";
             this.EmployeeLogo.Size = new System.Drawing.Size(83, 66);
             this.EmployeeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +132,7 @@
             this.EmployeeManagementButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeManagementButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EmployeeManagementButton.Location = new System.Drawing.Point(-9, 0);
-            this.EmployeeManagementButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmployeeManagementButton.Margin = new System.Windows.Forms.Padding(4);
             this.EmployeeManagementButton.Name = "EmployeeManagementButton";
             this.EmployeeManagementButton.Size = new System.Drawing.Size(323, 84);
             this.EmployeeManagementButton.TabIndex = 14;
@@ -144,7 +145,7 @@
             this.panel6.Controls.Add(this.EmployeeLogo);
             this.panel6.Controls.Add(this.EmployeeManagementButton);
             this.panel6.Location = new System.Drawing.Point(4, 427);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(305, 84);
             this.panel6.TabIndex = 18;
@@ -155,7 +156,7 @@
             this.SalesLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SalesLogo.Image = global::E_Pc.Properties.Resources.sales;
             this.SalesLogo.Location = new System.Drawing.Point(4, 9);
-            this.SalesLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SalesLogo.Margin = new System.Windows.Forms.Padding(4);
             this.SalesLogo.Name = "SalesLogo";
             this.SalesLogo.Size = new System.Drawing.Size(83, 66);
             this.SalesLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -167,7 +168,7 @@
             this.ReportsBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReportsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ReportsBtn.Location = new System.Drawing.Point(-9, 0);
-            this.ReportsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReportsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ReportsBtn.Name = "ReportsBtn";
             this.ReportsBtn.Size = new System.Drawing.Size(323, 84);
             this.ReportsBtn.TabIndex = 14;
@@ -182,7 +183,7 @@
             this.inventoryLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.inventoryLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inventoryLogo.Location = new System.Drawing.Point(4, 14);
-            this.inventoryLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inventoryLogo.Margin = new System.Windows.Forms.Padding(4);
             this.inventoryLogo.Name = "inventoryLogo";
             this.inventoryLogo.Size = new System.Drawing.Size(83, 52);
             this.inventoryLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,7 +195,7 @@
             this.panel4.Controls.Add(this.SalesLogo);
             this.panel4.Controls.Add(this.ReportsBtn);
             this.panel4.Location = new System.Drawing.Point(4, 335);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(305, 84);
             this.panel4.TabIndex = 16;
@@ -205,7 +206,7 @@
             this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryButton.Location = new System.Drawing.Point(-9, 0);
-            this.inventoryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inventoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.inventoryButton.Name = "inventoryButton";
             this.inventoryButton.Size = new System.Drawing.Size(323, 84);
             this.inventoryButton.TabIndex = 14;
@@ -217,7 +218,7 @@
             this.panel3.Controls.Add(this.inventoryLogo);
             this.panel3.Controls.Add(this.inventoryButton);
             this.panel3.Location = new System.Drawing.Point(4, 243);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(305, 84);
             this.panel3.TabIndex = 15;
@@ -233,7 +234,7 @@
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 41);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.sidebar.MaximumSize = new System.Drawing.Size(309, 679);
             this.sidebar.MinimumSize = new System.Drawing.Size(104, 679);
             this.sidebar.Name = "sidebar";
@@ -245,7 +246,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 139);
             this.panel1.TabIndex = 26;
@@ -266,7 +267,7 @@
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
             this.menuButton.Location = new System.Drawing.Point(65, 5);
-            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(175, 105);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,7 +279,7 @@
             this.panel9.Controls.Add(this.pictureBox3);
             this.panel9.Controls.Add(this.DashboardBtn);
             this.panel9.Location = new System.Drawing.Point(4, 151);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(305, 84);
             this.panel9.TabIndex = 25;
@@ -289,7 +290,7 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage;
             this.pictureBox3.Location = new System.Drawing.Point(4, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(83, 62);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -301,7 +302,7 @@
             this.DashboardBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashboardBtn.Location = new System.Drawing.Point(-9, 0);
-            this.DashboardBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DashboardBtn.Margin = new System.Windows.Forms.Padding(4);
             this.DashboardBtn.Name = "DashboardBtn";
             this.DashboardBtn.Size = new System.Drawing.Size(323, 84);
             this.DashboardBtn.TabIndex = 14;
@@ -351,7 +352,7 @@
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.Location = new System.Drawing.Point(619, 107);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(4);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(315, 26);
             this.SearchBox.TabIndex = 25;
@@ -375,7 +376,7 @@
             this.InventoryPanel.AutoScroll = true;
             this.InventoryPanel.BackColor = System.Drawing.Color.Transparent;
             this.InventoryPanel.Location = new System.Drawing.Point(321, 210);
-            this.InventoryPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InventoryPanel.Margin = new System.Windows.Forms.Padding(4);
             this.InventoryPanel.Name = "InventoryPanel";
             this.InventoryPanel.Size = new System.Drawing.Size(959, 490);
             this.InventoryPanel.TabIndex = 43;
@@ -388,7 +389,7 @@
             "Available",
             "Archived"});
             this.SortBox.Location = new System.Drawing.Point(943, 108);
-            this.SortBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SortBox.Margin = new System.Windows.Forms.Padding(4);
             this.SortBox.Name = "SortBox";
             this.SortBox.Size = new System.Drawing.Size(197, 24);
             this.SortBox.TabIndex = 44;
@@ -400,7 +401,7 @@
             this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview__5_1;
             this.AddBtn.Location = new System.Drawing.Point(797, 10);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(4);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(36, 32);
             this.AddBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -429,7 +430,7 @@
             this.panel2.Controls.Add(this.TableLabel);
             this.panel2.Controls.Add(this.AddProductBtn);
             this.panel2.Location = new System.Drawing.Point(321, 158);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(943, 52);
             this.panel2.TabIndex = 47;

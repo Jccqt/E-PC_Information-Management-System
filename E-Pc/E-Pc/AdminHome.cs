@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace E_Pc
@@ -13,6 +14,7 @@ namespace E_Pc
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
+            UserLabel.Text = $"{Login.fName} {Login.lName}";
             DateTimer.Start();
         }
 
@@ -39,13 +41,11 @@ namespace E_Pc
             DialogResult logoutDialog = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (logoutDialog == DialogResult.Yes)
             {
-                using (Login login = new Login())
-                {
-                    // will go back to Login page when the user logs out
-                    Login.isLogin = false;
-                    login.Show();
-                    this.Close();
-                }
+                PageObjects.login = new Login();
+                // will go back to Login page when the user logs out
+                Login.isLogin = false;
+                PageObjects.login.Show();
+                this.Close();
             }
         }
 

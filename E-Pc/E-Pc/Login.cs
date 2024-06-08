@@ -9,7 +9,7 @@ namespace E_Pc
         static SqlCommand cmd;
         public static bool isLogin = false;
         static string username, password, position;
-        public static string user, fName, lName;
+        public static string userId, fName, lName;
         public Login()
         {
             InitializeComponent();
@@ -25,24 +25,22 @@ namespace E_Pc
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            user = "";
+            userId = "";
             DataConnection.conn.Open();
-            cmd = new SqlCommand("SELECT Credentials.Username, Credentials.Password, Employees.Position, Employees.EmpId, " +
-                "Employees.FirstName, Employees.LastName " +
-                "FROM Credentials LEFT JOIN Employees ON Credentials.EmpId = Employees.EmpId", DataConnection.conn);
+            cmd = new SqlCommand("SELECT EmpId, Position, FirstName, LastName, Username, Password FROM Employees WHERE Active_flag = 1", DataConnection.conn);
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                username = (string)reader.GetValue(0);
-                password = (string)reader.GetValue(1);
+                username = (string)reader.GetValue(4);
+                password = (string)reader.GetValue(5);
                 if (usernameTxt.Text.Equals(username) && passwordTxt.Text.Equals(password))
                 {
                     isLogin = true;
-                    position = reader.GetString(2);
-                    user = reader.GetValue(3).ToString();
-                    fName = reader.GetString(4);
-                    lName = reader.GetString(5);
+                    userId = reader.GetValue(0).ToString();
+                    position = reader.GetString(1);
+                    fName = reader.GetString(2);
+                    lName = reader.GetString(3);
                 }
             }
             DataConnection.conn.Close();

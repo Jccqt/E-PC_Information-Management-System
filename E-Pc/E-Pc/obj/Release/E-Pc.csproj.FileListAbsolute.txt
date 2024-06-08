@@ -38,3 +38,7 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-P
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Release\E-Pc.csproj.Up2Date
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Release\E-Pc.exe
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Release\E-Pc.pdb
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Release\E-Pc.exe.manifest
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Release\E-Pc.application
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Release\E-Pc.exe.manifest
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Release\E-Pc.application

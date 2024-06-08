@@ -309,3 +309,7 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-P
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.PaymentItems.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.TopSales.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.TopSalesHeader.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.exe.manifest
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.application
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe.manifest
+C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.application

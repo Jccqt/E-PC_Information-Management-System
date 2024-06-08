@@ -79,12 +79,21 @@ namespace E_Pc
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-
+            // will show a logout prompt when the user click the Logout icon
+            DialogResult logoutDialog = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (logoutDialog == DialogResult.Yes)
+            {
+                PageObjects.login = new Login();
+                // will go back to Login page when the user logs out
+                Login.isLogin = false;
+                PageObjects.login.Show();
+                this.Close();
+            }
         }
 
         private void OrderBtn_Click(object sender, EventArgs e)
         {
-            
+            System.Diagnostics.Process.Start("C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\Customer\\bin\\Debug\\Customer.exe");
         }
     }
 }

@@ -36,7 +36,7 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.NameLabel = new System.Windows.Forms.Label();
+            this.UserLabel = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -161,7 +161,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.NameLabel);
+            this.panel1.Controls.Add(this.UserLabel);
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -169,16 +169,17 @@
             this.panel1.Size = new System.Drawing.Size(305, 139);
             this.panel1.TabIndex = 26;
             // 
-            // NameLabel
+            // UserLabel
             // 
-            this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(128, 113);
-            this.NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(51, 19);
-            this.NameLabel.TabIndex = 1;
-            this.NameLabel.Text = "Name";
+            this.UserLabel.AutoSize = true;
+            this.UserLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLabel.Location = new System.Drawing.Point(61, 113);
+            this.UserLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UserLabel.Name = "UserLabel";
+            this.UserLabel.Size = new System.Drawing.Size(51, 19);
+            this.UserLabel.TabIndex = 1;
+            this.UserLabel.Text = "Name";
+            this.UserLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // menuButton
             // 
@@ -457,7 +458,7 @@
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Timer DateTimer;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label UserLabel;
         private System.Windows.Forms.PictureBox menuButton;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox3;

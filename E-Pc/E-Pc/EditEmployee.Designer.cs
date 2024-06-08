@@ -328,6 +328,7 @@
             // PasswordBox
             // 
             this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordBox.Enabled = false;
             this.PasswordBox.Location = new System.Drawing.Point(275, 498);
             this.PasswordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordBox.Multiline = true;

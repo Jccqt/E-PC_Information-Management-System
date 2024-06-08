@@ -245,5 +245,19 @@ namespace E_Pc
             PageObjects.employeePage.Show();
             this.Close();
         }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            // will show a logout prompt when the user click the Logout icon
+            DialogResult logoutDialog = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (logoutDialog == DialogResult.Yes)
+            {
+                PageObjects.login = new Login();
+                // will go back to Login page when the user logs out
+                Login.isLogin = false;
+                PageObjects.login.Show();
+                this.Close();
+            }
+        }
     }
 }

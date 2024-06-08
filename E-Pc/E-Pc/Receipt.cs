@@ -49,7 +49,7 @@ namespace E_Pc
 
             DataConnection.cmd = new SqlCommand("INSERT INTO Audit_Trail VALUES (@actId, @empId, @type, @description, @date)", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@actId", $"SALES{actId + 1}");
-            DataConnection.cmd.Parameters.AddWithValue("@empId", Login.user);
+            DataConnection.cmd.Parameters.AddWithValue("@empId", Login.userId);
             DataConnection.cmd.Parameters.AddWithValue("@type", "SALES");
             DataConnection.cmd.Parameters.AddWithValue("@description", $"{Login.fName} {Login.lName} Sold and completed the cartID {CartIdLabel.Text}");
             DataConnection.cmd.Parameters.AddWithValue("@date", localDate);

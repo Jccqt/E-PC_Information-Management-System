@@ -27,7 +27,8 @@ namespace E_Pc
         {
             DataConnection.conn.Open();
 
-            DataConnection.cmd = new SqlCommand("SELECT FirstName, LastName, Age, Birthdate, ContactNum, Position, Address, EmpImage " +
+            DataConnection.cmd = new SqlCommand("SELECT FirstName, LastName, Age, Birthdate, ContactNum, Position, Address," +
+                "Username, Password, EmpImage " +
                 "FROM Employees WHERE EmpId = @id", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
@@ -42,10 +43,12 @@ namespace E_Pc
                 ContactBox.Text = DataConnection.reader.GetString(4);
                 PositionBox.Text = DataConnection.reader.GetString(5);
                 AddressBox.Text = DataConnection.reader.GetValue(6).ToString();
+                UsernameBox.Text = DataConnection.reader.GetString(7);
+                PasswordBox.Text = DataConnection.reader.GetString(8);
 
-                if (!DataConnection.reader.GetValue(7).ToString().Equals(""))
+                if (!DataConnection.reader.GetValue(9).ToString().Equals(""))
                 {
-                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(7);
+                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(9);
                     using (MemoryStream ms = new MemoryStream(imageBinary))
                     {
                         EmpImage.Image = Image.FromStream(ms);
@@ -61,18 +64,6 @@ namespace E_Pc
                 
             }
             DataConnection.reader.Close();
-
-            DataConnection.cmd = new SqlCommand("SELECT Username, Password FROM Credentials WHERE EmpId = @id", DataConnection.conn);
-            DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
-            DataConnection.reader = DataConnection.cmd.ExecuteReader();
-
-            if (DataConnection.reader.Read())
-            {
-                UsernameBox.Text = DataConnection.reader.GetString(0);
-                PasswordBox.Text = DataConnection.reader.GetString(1);
-            }
-
-            DataConnection.reader.Close();
             DataConnection.conn.Close();
         }
         
@@ -82,6 +73,8 @@ namespace E_Pc
             LastNameBox.Enabled = false;
             ContactBox.Enabled = false;
             AddressBox.Enabled = false;
+            UsernameBox.Enabled = false;
+            PasswordBox.Enabled = false;
         }
 
         void EnableTextBox()
@@ -90,12 +83,13 @@ namespace E_Pc
             LastNameBox.Enabled = true;
             ContactBox.Enabled = true;
             AddressBox.Enabled = true;
+            UsernameBox.Enabled = true;
+            PasswordBox.Enabled = true;
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
             ActivityLabel.Text = "Editing";
-            DataConnection.conn.Open();
             EnableTextBox();
             EditBtn.Visible = false;
             SaveBtn.Visible = true;
@@ -125,14 +119,16 @@ namespace E_Pc
 
             if(saveDialog == DialogResult.Yes)
             {
-
+                DataConnection.conn.Open();
                 DataConnection.cmd = new SqlCommand("UPDATE Employees SET FirstName = @fName, LastName = @lName, ContactNum = @contact, " +
-                    "Address = @address WHERE EmpId = @id", DataConnection.conn);
+                    "Address = @address, Username = @username, Password = @password WHERE EmpId = @id", DataConnection.conn);
                 DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
                 DataConnection.cmd.Parameters.AddWithValue("@fName", FirstNameBox.Text);
                 DataConnection.cmd.Parameters.AddWithValue("@lName", LastNameBox.Text);
                 DataConnection.cmd.Parameters.AddWithValue("@contact", ContactBox.Text);
                 DataConnection.cmd.Parameters.AddWithValue("@address", AddressBox.Text);
+                DataConnection.cmd.Parameters.AddWithValue("@username", UsernameBox.Text);
+                DataConnection.cmd.Parameters.AddWithValue("@password", PasswordBox.Text);
                 DataConnection.cmd.ExecuteNonQuery();
 
                 if (isNewImage)
@@ -142,12 +138,6 @@ namespace E_Pc
                     DataConnection.cmd.Parameters.AddWithValue("@image", imageBinary);
                 }
 
-                DataConnection.cmd = new SqlCommand("UPDATE Credentials SET Username = @username, Password = @password WHERE EmpId = @id", DataConnection.conn);
-                DataConnection.cmd.Parameters.AddWithValue("@username", UsernameBox.Text);
-                DataConnection.cmd.Parameters.AddWithValue("@password", PasswordBox.Text);
-                DataConnection.cmd.ExecuteNonQuery();
-
-                
                 MessageBox.Show("Employee details has been updated!");
                 isNewImage = false;
                 ActivityLabel.Text = "Viewing";
@@ -155,6 +145,7 @@ namespace E_Pc
                 EditBtn.Visible = true;
                 SaveBtn.Visible = false;
                 CancelBtn.Visible = false;
+                DataConnection.conn.Close();
             }
         }
 

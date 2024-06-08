@@ -57,6 +57,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -101,6 +102,7 @@
             this.LogoutButton.TabIndex = 14;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // panel7
             // 
@@ -362,10 +364,10 @@
             // 
             this.SalesPanel.AutoScroll = true;
             this.SalesPanel.BackColor = System.Drawing.Color.White;
-            this.SalesPanel.Location = new System.Drawing.Point(851, 174);
+            this.SalesPanel.Location = new System.Drawing.Point(357, 174);
             this.SalesPanel.Margin = new System.Windows.Forms.Padding(4);
             this.SalesPanel.Name = "SalesPanel";
-            this.SalesPanel.Size = new System.Drawing.Size(409, 223);
+            this.SalesPanel.Size = new System.Drawing.Size(903, 223);
             this.SalesPanel.TabIndex = 53;
             // 
             // AuditPanel
@@ -382,24 +384,25 @@
             // 
             this.TableLabel.AutoSize = true;
             this.TableLabel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableLabel.Location = new System.Drawing.Point(124, 4);
+            this.TableLabel.Location = new System.Drawing.Point(386, 4);
             this.TableLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TableLabel.Name = "TableLabel";
-            this.TableLabel.Size = new System.Drawing.Size(97, 24);
+            this.TableLabel.Size = new System.Drawing.Size(124, 24);
             this.TableLabel.TabIndex = 0;
-            this.TableLabel.Text = "Top sales";
+            this.TableLabel.Text = "Sales report";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.TableLabel);
-            this.panel2.Location = new System.Drawing.Point(851, 142);
+            this.panel2.Location = new System.Drawing.Point(357, 142);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 33);
+            this.panel2.Size = new System.Drawing.Size(903, 33);
             this.panel2.TabIndex = 55;
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.dateTimePicker1);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Location = new System.Drawing.Point(357, 411);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
@@ -411,12 +414,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(383, 2);
+            this.label2.Location = new System.Drawing.Point(386, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 24);
+            this.label2.Size = new System.Drawing.Size(104, 24);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Audit Trail";
+            this.label2.Text = "Audit trail";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(635, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(249, 22);
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // AdminReports
             // 
@@ -495,5 +505,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

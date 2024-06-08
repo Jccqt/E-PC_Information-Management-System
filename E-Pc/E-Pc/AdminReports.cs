@@ -14,12 +14,11 @@ namespace E_Pc
 {
     public partial class AdminReports : Form
     {
+        static AuditTrailHeader auditHeader = new AuditTrailHeader();
         public AdminReports()
         {
             InitializeComponent();
-            AuditTrailHeader auditHeader = new AuditTrailHeader();
             TopSalesHeader salesHeader = new TopSalesHeader();
-            AuditPanel.Controls.Add(auditHeader);
             SalesPanel.Controls.Add(salesHeader);
         }
 
@@ -33,9 +32,12 @@ namespace E_Pc
 
         private void ShowAudit()
         {
-            DataConnection.cmd = new SqlCommand("SELECT * FROM Audit_Trail", DataConnection.conn);
+            AuditPanel.Controls.Clear();
+            AuditPanel.Controls.Add(auditHeader);
+           
+            DataConnection.cmd = new SqlCommand($"SELECT * FROM Audit_Trail WHERE ActivityDate LIKE '%{DateTrailPicker.Value.Month}'", DataConnection.conn);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
-
+            
             while (DataConnection.reader.Read())
             {
                 AuditTrail audit = new AuditTrail();
@@ -119,6 +121,20 @@ namespace E_Pc
             if (exitDialog == DialogResult.Yes)
             {
                 Application.Exit(); // will terminate the application
+            }
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            // will show a logout prompt when the user click the Logout icon
+            DialogResult logoutDialog = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (logoutDialog == DialogResult.Yes)
+            {
+                PageObjects.login = new Login();
+                // will go back to Login page when the user logs out
+                Login.isLogin = false;
+                PageObjects.login.Show();
+                this.Close();
             }
         }
     }
