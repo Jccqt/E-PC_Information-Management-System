@@ -20,7 +20,7 @@ namespace E_Pc
 
         private void Receipt_Load(object sender, EventArgs e)
         {
-            var localDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm tt");
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
             int actId = 10000;
 
             DataConnection.conn.Open();
@@ -45,7 +45,7 @@ namespace E_Pc
             DataConnection.reader.Close();
 
             DataConnection.cmd = new SqlCommand($"SELECT COUNT(ActivityId) FROM Audit_Trail WHERE ActivityId LIKE '%{"SALES"}%'", DataConnection.conn);
-            actId = Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
+            actId += Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
 
             DataConnection.cmd = new SqlCommand("INSERT INTO Audit_Trail VALUES (@actId, @empId, @type, @description, @date)", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@actId", $"SALES{actId + 1}");

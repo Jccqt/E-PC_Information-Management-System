@@ -1,21 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\",
+  "WorkspaceRootPath": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\e-pc\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_NICOL_ONEDRIVE_DOCUMENTS_JC_E_PC_INFORMATION_MANAGEMENT_SYSTEM_E_PC_E_PC_E_PCDB.MDF/True/SqlTable/dbo.Audit_Trail.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|e:\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\adminreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\e-pc_information-management-system\\e-pc\\e-pc\\topsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\topsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\e-pc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F8B918-0B62-4B4E-A05D-C042CAF57246}|E-Pc\\E-Pc.csproj|solutionrelative:e-pc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B38EC87A-1AF4-47D4-85A0-D4DF0C832797}|Customer\\Customer.csproj|E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\customer\\codegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B38EC87A-1AF4-47D4-85A0-D4DF0C832797}|Customer\\Customer.csproj|solutionrelative:customer\\codegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B38EC87A-1AF4-47D4-85A0-D4DF0C832797}|Customer\\Customer.csproj|E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\customer\\codegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B38EC87A-1AF4-47D4-85A0-D4DF0C832797}|Customer\\Customer.csproj|solutionrelative:customer\\codegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,62 +34,87 @@
       "DocumentGroups": [
         {
           "DockedHeight": 577,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Program.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Program.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Program.cs",
+              "RelativeToolTip": "E-Pc\\Program.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T00:03:14.759Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.Audit_Trail [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_NICOL_ONEDRIVE_DOCUMENTS_JC_E_PC_INFORMATION_MANAGEMENT_SYSTEM_E_PC_E_PC_E_PCDB.MDF/True/SqlTable/dbo.Audit_Trail.sql",
-              "ToolTip": "dbo.Audit_Trail [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-08T07:01:11.127Z",
+              "DocumentIndex": 4,
+              "Title": "CodeGenerator.cs",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\Customer\\CodeGenerator.cs",
+              "RelativeDocumentMoniker": "Customer\\CodeGenerator.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\Customer\\CodeGenerator.cs",
+              "RelativeToolTip": "Customer\\CodeGenerator.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T00:05:07.837Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CodeGenerator.cs [Design]",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\Customer\\CodeGenerator.cs",
+              "RelativeDocumentMoniker": "Customer\\CodeGenerator.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\Customer\\CodeGenerator.cs [Design]",
+              "RelativeToolTip": "Customer\\CodeGenerator.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T00:05:02.869Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminReports.cs",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminReports.cs",
-              "RelativeDocumentMoniker": "E-Pc\\AdminReports.cs",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminReports.cs*",
-              "RelativeToolTip": "E-Pc\\AdminReports.cs*",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACUAAACBAAAA",
+              "Title": "AddProduct.cs",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddProduct.cs",
+              "RelativeDocumentMoniker": "E-Pc\\AddProduct.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AddProduct.cs",
+              "RelativeToolTip": "E-Pc\\AddProduct.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwEkAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T06:55:18.029Z",
+              "WhenOpened": "2024-06-10T00:02:42.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TopSales.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\TopSales.cs",
-              "RelativeDocumentMoniker": "E-Pc\\TopSales.cs",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\TopSales.cs [Design]",
-              "RelativeToolTip": "E-Pc\\TopSales.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "Inventory.cs [Design]",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Inventory.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs [Design]",
+              "RelativeToolTip": "E-Pc\\Inventory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T06:52:53.776Z",
+              "WhenOpened": "2024-06-09T23:26:49.179Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminReports.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminReports.cs",
-              "RelativeDocumentMoniker": "E-Pc\\AdminReports.cs",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\AdminReports.cs [Design]*",
-              "RelativeToolTip": "E-Pc\\AdminReports.cs [Design]*",
+              "DocumentIndex": 1,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "RelativeDocumentMoniker": "E-Pc\\Inventory.cs",
+              "ToolTip": "E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\E-Pc\\Inventory.cs",
+              "RelativeToolTip": "E-Pc\\Inventory.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAmwC4AAABuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T06:51:53.758Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-09T23:26:40.586Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -94,11 +128,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
             }
           ]
         },

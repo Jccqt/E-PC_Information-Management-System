@@ -35,7 +35,10 @@ namespace E_Pc
             AuditPanel.Controls.Clear();
             AuditPanel.Controls.Add(auditHeader);
            
-            DataConnection.cmd = new SqlCommand($"SELECT * FROM Audit_Trail WHERE ActivityDate LIKE '%{DateTrailPicker.Value.Month}'", DataConnection.conn);
+            DataConnection.cmd = new SqlCommand($"SELECT * FROM Audit_Trail WHERE YEAR(ActivityDate) = @year AND MONTH(ActivityDate) = @month AND DAY(ActivityDate) = @day", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@year", AuditDatePicker.Value.Year);
+            DataConnection.cmd.Parameters.AddWithValue("@month", AuditDatePicker.Value.Month);
+            DataConnection.cmd.Parameters.AddWithValue("@day", AuditDatePicker.Value.Day);
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
             
             while (DataConnection.reader.Read())
@@ -136,6 +139,13 @@ namespace E_Pc
                 PageObjects.login.Show();
                 this.Close();
             }
+        }
+
+        private void AuditDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+            DataConnection.conn.Open();
+            ShowAudit();
+            DataConnection.conn.Close();
         }
     }
 }

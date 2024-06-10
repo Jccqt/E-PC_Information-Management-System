@@ -40,3 +40,7 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Cus
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\bin\Debug\Customer.application
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.exe.manifest
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.application
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\bin\Debug\Customer.exe.manifest
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\bin\Debug\Customer.application
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.exe.manifest
+E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.application

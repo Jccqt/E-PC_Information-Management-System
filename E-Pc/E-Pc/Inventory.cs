@@ -13,15 +13,11 @@ namespace E_Pc
         static byte[] imageBinary;
         public static int itemIdCount;
         public static ArrayList itemIdList = new ArrayList();
+        public static ArrayList itemQuantity = new ArrayList();
         public Inventory()
         {
             InitializeComponent();
             SortBox.SelectedItem = "Available";
-        }
-
-        private void Inventory_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void SortBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,50 +39,65 @@ namespace E_Pc
             TableLabel.Text = "Available Products";
             InventoryPanel.Controls.Clear();
             itemIdList.Clear();
+            itemQuantity.Clear();
+
             DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 1 " +
-                $"AND (ItemId LIKE '%{SearchBox.Text}%' " +
-                $"OR ItemName LIKE '%{SearchBox.Text}%' " +
-                $"OR ItemQuantity LIKE '{SearchBox.Text}')", DataConnection.conn);
+                $"AND (ItemId LIKE '%{SearchBox.Text}%' " + // search for item id
+                $"OR ItemName LIKE '%{SearchBox.Text}%' " + // search for item name
+                $"OR ItemQuantity LIKE '{SearchBox.Text}')", DataConnection.conn); // search for item quantity
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
      
             while (DataConnection.reader.Read())
             {
-                Product product = new Product();
-
-                if (!DataConnection.reader.GetValue(3).ToString().Equals(""))
-                {
-                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(3);
-                    using (MemoryStream ms = new MemoryStream(imageBinary))
-                    {
-                        product.ItemImage.Image = Image.FromStream(ms);
-                        product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
-                    Array.Clear(imageBinary, 0, imageBinary.Length);
-                }
-                else
-                {
-                    product.ItemImage.Image = Properties.Resources.no_image_icon;
-                    product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-
                 itemIdList.Add(DataConnection.reader.GetString(0));
-                InventoryPanel.Controls.Add(product);
-                product.ItemImage.Tag = DataConnection.reader.GetString(0);
-                product.DeleteBtn.Tag = DataConnection.reader.GetString(0);
-                product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
-                product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
+                itemQuantity.Add(DataConnection.reader.GetValue(2));
 
-                if (Convert.ToInt32(DataConnection.reader.GetValue(2)) == 0)
+                if (Convert.ToInt32(DataConnection.reader.GetValue(2)) > 0)
                 {
-                    product.OutOfStockPic.Visible = true;
-                    product.DeleteBtn.Visible = false;
-                }
+                    // will display the item to available products table if the item quantity is more than 0
+                    Product product = new Product();
 
-                product.ItemImage.Click += new EventHandler(ViewItem_Click);
-                product.DeleteBtn.Click += new EventHandler(DeleteBtn_Click);
-                GC.Collect();
+                    if (!DataConnection.reader.GetValue(3).ToString().Equals(""))
+                    {
+                        byte[] imageBinary = (byte[])DataConnection.reader.GetValue(3);
+                        using (MemoryStream ms = new MemoryStream(imageBinary))
+                        {
+                            product.ItemImage.Image = Image.FromStream(ms);
+                            product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                        }
+                        Array.Clear(imageBinary, 0, imageBinary.Length);
+                    }
+
+                    InventoryPanel.Controls.Add(product);
+                    product.ItemImage.Tag = DataConnection.reader.GetString(0);
+                    product.DeleteBtn.Tag = DataConnection.reader.GetString(0);
+                    product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
+                    product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
+
+                    if (Convert.ToInt32(DataConnection.reader.GetValue(2)) == 0)
+                    {
+                        product.OutOfStockPic.Visible = true;
+                        product.DeleteBtn.Visible = false;
+                    }
+
+                    product.ItemImage.Click += new EventHandler(ViewItem_Click);
+                    product.DeleteBtn.Click += new EventHandler(DeleteBtn_Click);
+                    GC.Collect();
+                }
             }
             DataConnection.reader.Close();
+
+            for(int i = 0; i < itemQuantity.Count; i++)
+            {
+                // will set the active flag of item to inactive and sent to archive table if the item quantity is less than or equal to 0
+                if (Convert.ToInt32(itemQuantity[i]) <= 0)
+                {
+                    DataConnection.cmd = new SqlCommand("UPDATE Products SET Active_flag = 0 WHERE ItemId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", itemIdList[i]);
+                    DataConnection.cmd.ExecuteNonQuery();
+                }
+                GC.Collect();
+            }
         }
 
         private void ViewItem_Click(object sender, EventArgs e)
@@ -102,25 +113,40 @@ namespace E_Pc
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            var localDate = DateTime.Now.ToString("dd/MM/yyyy");
+            DataConnection.conn.Open();
 
-            PictureBox delbtn = (PictureBox)sender;
-            itemIdCount = itemIdList.IndexOf(delbtn.Tag);
-            DialogResult deleteDialog = MessageBox.Show("Are you sure you want to delete this item?" +
-                "\nThis item will be sent to the archive.", "Delete item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // will get the quantity of specific item from Products table
+            DataConnection.cmd = new SqlCommand("SELECT ItemQuantity FROM Products WHERE ItemId = @id", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@id", itemIdList[itemIdCount]);
+            int quantity = Convert.ToInt32(DataConnection.cmd.ExecuteScalar()); // will insert the quantity to a variable
 
-            if(deleteDialog == DialogResult.Yes)
+            if(quantity <= 0)
             {
-                DataConnection.conn.Open();
-                DataConnection.cmd = new SqlCommand("UPDATE Products SET Active_flag = 0, DeletionDate = @delDate WHERE ItemId = @id", DataConnection.conn);
-                DataConnection.cmd.Parameters.AddWithValue("@id", itemIdList[itemIdCount]);
-                DataConnection.cmd.Parameters.AddWithValue("@delDate", Convert.ToDateTime(localDate));
-                DataConnection.cmd.ExecuteNonQuery();
+                // will remove an item if the quantity is less than or equal to 0
+                var localDate = DateTime.Now.ToString("yyyy-dd-MM");
 
-                MessageBox.Show("Item has been sent to the archive!");
-                ShowAvailableProducts();
-                DataConnection.conn.Close();
+                PictureBox delbtn = (PictureBox)sender;
+                itemIdCount = itemIdList.IndexOf(delbtn.Tag);
+                DialogResult deleteDialog = MessageBox.Show("Are you sure you want to delete this item?" +
+                    "\nThis item will be sent to the archive.", "Delete item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (deleteDialog == DialogResult.Yes)
+                {
+                    DataConnection.cmd = new SqlCommand("UPDATE Products SET Active_flag = 0, DeletionDate = @delDate WHERE ItemId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", itemIdList[itemIdCount]);
+                    DataConnection.cmd.Parameters.AddWithValue("@delDate", Convert.ToDateTime(localDate));
+                    DataConnection.cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Item has been sent to the archive!");
+                    ShowAvailableProducts();
+                }
             }
+            else
+            {
+                // will show an error message if the quantity is more than 0
+                MessageBox.Show("You cannot delete an item that has stock", "An item has stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataConnection.conn.Close();
         }
 
         public void ShowArchivedProducts()
@@ -128,6 +154,7 @@ namespace E_Pc
             TableLabel.Text = "Archived Products";
             itemIdList.Clear();
             InventoryPanel.Controls.Clear();
+
             DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemQuantity, ItemImage FROM Products WHERE Active_flag = 0 " +
                 $"AND (ItemId LIKE '%{SearchBox.Text}%' " +
                 $"OR ItemName LIKE '%{SearchBox.Text}%' " +
@@ -160,6 +187,7 @@ namespace E_Pc
                 product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
                 product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
                 product.DeleteBtn.Visible = false;
+                product.OutOfStockPic.Visible = true;
 
                 product.ItemImage.Click += new EventHandler(RetrieveItem_Click);
                 GC.Collect();
@@ -259,5 +287,6 @@ namespace E_Pc
                 this.Close();
             }
         }
+
     }
 }

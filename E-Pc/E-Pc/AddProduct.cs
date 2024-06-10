@@ -28,7 +28,7 @@ namespace E_Pc
                 !PriceBox.Text.Equals("") && !QuantityBox.Text.Equals(""))
             {
                 idCount = 2000;
-                var localDate = DateTime.Now.ToString("dd/MM/yyyy");
+                var localDate = DateTime.Now.ToString("yyyy-dd-MM");
 
                 DataConnection.conn.Open();
 
@@ -48,7 +48,17 @@ namespace E_Pc
                 DataConnection.cmd.Parameters.AddWithValue("@category", CategoryBox.SelectedItem);
                 DataConnection.cmd.Parameters.AddWithValue("@description", DescriptionBox.Text);
                 DataConnection.cmd.Parameters.AddWithValue("@date", Convert.ToDateTime(localDate));
-                DataConnection.cmd.Parameters.AddWithValue("@flag", 1);
+                
+                if(Convert.ToInt32(QuantityBox.Text) <= 0)
+                {
+                    // will set the active flag to 0 and display to archive table if the item quantity is less than or equal to 0
+                    DataConnection.cmd.Parameters.AddWithValue("@flag", 0);
+                }
+                else
+                {
+                    // will set the active flag to 1 and display to available products table if the item quantity is more than 0
+                    DataConnection.cmd.Parameters.AddWithValue("@flag", 1);
+                }
                 DataConnection.cmd.ExecuteNonQuery();
 
                 if (isNewImage)
@@ -59,11 +69,22 @@ namespace E_Pc
                     DataConnection.cmd.ExecuteNonQuery();
                 }
 
-                MessageBox.Show("Item has been added successfully!");
+                if (Convert.ToInt32(QuantityBox.Text) <= 0)
+                {
+                    MessageBox.Show("Item has been added to archive table successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Item has been added to available products table successfully!");
+                }
+                
                 ClearTextBox();
-                DataConnection.conn.Close();
                 isNewImage = false;
                 Array.Clear(imageBinary, 0, imageBinary.Length);
+                ((Form)this.TopLevelControl).Close();
+                PageObjects.inventoryPage.ShowAvailableProducts();
+                PageObjects.inventoryPage.Show();
+                DataConnection.conn.Close();
             }
             else
             {
