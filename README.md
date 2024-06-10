@@ -58,3 +58,9 @@ May 27, 2024
 
 May 28, 2024
 - Added functionalities to Remove Employee page (New)
+
+June 10. 2024
+- Cannot remove/delete an item if the quantity is less than or equal to 0 (Update)
+- New or added items will be sent to archive table if the item quantity is less than or equal to 0 (Update)
+- New or added items will be sent to available products table if the item quantity is more than 0 (Update)
+- Added date filter in audit trail (New)
