@@ -88,6 +88,12 @@
     <Compile Include="AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddRemoveQuantity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddRemoveQuantity.Designer.cs">
+      <DependentUpon>AddRemoveQuantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </Compile>
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRemoveQuantity.resx">
+      <DependentUpon>AddRemoveQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>

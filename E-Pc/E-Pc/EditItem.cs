@@ -167,10 +167,5 @@ namespace E_Pc
             SaveBtn.Visible = true;
             CancelBtn.Visible = true;
         }
-
-        private void MinusBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

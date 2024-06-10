@@ -334,7 +334,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(512, 52);
+            this.label4.Location = new System.Drawing.Point(510, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 45);
             this.label4.TabIndex = 52;
@@ -344,16 +344,16 @@
             // 
             this.SalesPanel.AutoScroll = true;
             this.SalesPanel.BackColor = System.Drawing.Color.White;
-            this.SalesPanel.Location = new System.Drawing.Point(268, 141);
+            this.SalesPanel.Location = new System.Drawing.Point(326, 143);
             this.SalesPanel.Name = "SalesPanel";
-            this.SalesPanel.Size = new System.Drawing.Size(677, 181);
+            this.SalesPanel.Size = new System.Drawing.Size(540, 181);
             this.SalesPanel.TabIndex = 53;
             // 
             // AuditPanel
             // 
             this.AuditPanel.AutoScroll = true;
             this.AuditPanel.BackColor = System.Drawing.Color.White;
-            this.AuditPanel.Location = new System.Drawing.Point(268, 360);
+            this.AuditPanel.Location = new System.Drawing.Point(258, 363);
             this.AuditPanel.Name = "AuditPanel";
             this.AuditPanel.Size = new System.Drawing.Size(677, 213);
             this.AuditPanel.TabIndex = 54;
@@ -362,7 +362,7 @@
             // 
             this.TableLabel.AutoSize = true;
             this.TableLabel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableLabel.Location = new System.Drawing.Point(290, 3);
+            this.TableLabel.Location = new System.Drawing.Point(220, 5);
             this.TableLabel.Name = "TableLabel";
             this.TableLabel.Size = new System.Drawing.Size(97, 18);
             this.TableLabel.TabIndex = 0;
@@ -370,17 +370,19 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.TableLabel);
-            this.panel2.Location = new System.Drawing.Point(268, 115);
+            this.panel2.Location = new System.Drawing.Point(326, 117);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(677, 27);
+            this.panel2.Size = new System.Drawing.Size(540, 27);
             this.panel2.TabIndex = 55;
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.Silver;
             this.panel8.Controls.Add(this.AuditDatePicker);
             this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(268, 334);
+            this.panel8.Location = new System.Drawing.Point(258, 337);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(677, 27);
             this.panel8.TabIndex = 56;
@@ -398,7 +400,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(290, 2);
+            this.label2.Location = new System.Drawing.Point(290, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 18);
             this.label2.TabIndex = 0;
