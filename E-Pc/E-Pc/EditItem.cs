@@ -14,6 +14,7 @@ namespace E_Pc
 {
     public partial class EditItem : UserControl
     {
+        public static int originalQuantity;
         static bool isNewImage = false;
         static byte[] imageBinary;
         public EditItem()
@@ -39,6 +40,7 @@ namespace E_Pc
                 BrandBox.Text = DataConnection.reader.GetString(2);
                 PriceBox.Text = DataConnection.reader.GetValue(3).ToString();
                 QuantityBox.Text = DataConnection.reader.GetValue(4).ToString();
+                originalQuantity = Convert.ToInt32(DataConnection.reader.GetValue(4));
                 TypeBox.Text = DataConnection.reader.GetString(5);
                 CategoryBox.Text = DataConnection.reader.GetString(6);
                 DescriptionBox.Text = DataConnection.reader.GetString(7);
@@ -105,6 +107,8 @@ namespace E_Pc
                 EditBtn.Visible = true;
                 SaveBtn.Visible = false;
                 CancelBtn.Visible = false;
+                PlusBtn.Visible = false;
+                MinusBtn.Visible = false;
                 EditItem_Load(sender, e);
             }
 
@@ -112,6 +116,8 @@ namespace E_Pc
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            int idCount = 10000;
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
             DialogResult saveDialog = MessageBox.Show("Are you sure you want to save changes?", "Save changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if(saveDialog == DialogResult.Yes)
@@ -133,6 +139,20 @@ namespace E_Pc
                     DataConnection.cmd = new SqlCommand("UPDATE Products SET ItemImage = @image WHERE ItemId = @id", DataConnection.conn);
                     DataConnection.cmd.Parameters.AddWithValue("@id", IdLabel.Text);
                     DataConnection.cmd.Parameters.AddWithValue("@image", imageBinary);
+                    DataConnection.cmd.ExecuteNonQuery();
+                }
+
+                if (QuantityActivityLabel.Visible)
+                {
+                    DataConnection.cmd = new SqlCommand($"SELECT COUNT(ActivityId) FROM Audit_Trail WHERE ActivityId LIKE '%{"INVTRY"}%'", DataConnection.conn);
+                    idCount += Convert.ToInt32(DataConnection.cmd.ExecuteScalar());
+
+                    DataConnection.cmd = new SqlCommand("INSERT INTO Audit_Trail VALUES (@actId, @empId, @type, @description, @date)", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@actId", $"INVTRY{idCount}");
+                    DataConnection.cmd.Parameters.AddWithValue("@empId", Login.userId);
+                    DataConnection.cmd.Parameters.AddWithValue("@type", "INVENTORY");
+                    DataConnection.cmd.Parameters.AddWithValue("@description", $"{Login.fName} {Login.lName} {Remarks.Text}");
+                    DataConnection.cmd.Parameters.AddWithValue("@date", localDate);
                     DataConnection.cmd.ExecuteNonQuery();
                 }
 
@@ -159,13 +179,47 @@ namespace E_Pc
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PlusBtn_Click(object sender, EventArgs e)
+        {
+            using(Form form = new Form())
+            {
+                AddRemoveQuantity addPage = new AddRemoveQuantity();
+                addPage.AddDeleteHeader.Text = "Adding quantity";
+                addPage.AddDeleteLabel.Text = "Quantity to add";
+                form.Controls.Add(addPage);
+                form.StartPosition = FormStartPosition.Manual;
+                form.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width / 2) + 100, (Screen.PrimaryScreen.WorkingArea.Height / 2) - 200);
+                form.ClientSize = new System.Drawing.Size(566, 526);
+                form.ShowDialog();
+                GC.Collect();
+            }
+        }
+
+        private void MinusBtn_Click(object sender, EventArgs e)
+        {
+            using (Form form = new Form())
+            {
+                AddRemoveQuantity removePage = new AddRemoveQuantity();
+                removePage.AddDeleteHeader.Text = "Removing quantity";
+                removePage.AddDeleteLabel.Text = "Quantity to remove";
+                form.Controls.Add(removePage);
+                form.StartPosition = FormStartPosition.Manual;
+                form.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width / 2) + 100, (Screen.PrimaryScreen.WorkingArea.Height / 2) - 200);
+                form.ClientSize = new System.Drawing.Size(566, 526);
+                form.ShowDialog();
+                GC.Collect();
+            }
+        }
+
+        private void EditBtn_Click_1(object sender, EventArgs e)
         {
             ActivityLabel.Text = "Editing";
             EnableTextBox();
             EditBtn.Visible = false;
             SaveBtn.Visible = true;
             CancelBtn.Visible = true;
+            PlusBtn.Visible = true;
+            MinusBtn.Visible = true;
         }
     }
 }

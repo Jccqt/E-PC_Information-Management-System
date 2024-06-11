@@ -222,7 +222,6 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\Guna.UI2.dll
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.csproj.AssemblyReference.cache
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AdminHome.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierHomepage.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CustomerOrderCode.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Employee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Inventory.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Login.resources
@@ -317,3 +316,4 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.exe.manifest
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.application
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe.manifest
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.application
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddRemoveQuantity.resources

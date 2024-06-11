@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AddDeleteHeader = new System.Windows.Forms.Label();
+            this.AddDeleteLabel = new System.Windows.Forms.Label();
+            this.Remarks = new System.Windows.Forms.Label();
+            this.RemarksBox = new System.Windows.Forms.TextBox();
             this.CancelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.CurrentQuantityBox = new System.Windows.Forms.TextBox();
+            this.QuantityToAddRemoveBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,61 +50,44 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // AddDeleteHeader
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(228, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "<Header>";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.AddDeleteHeader.AutoSize = true;
+            this.AddDeleteHeader.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDeleteHeader.Location = new System.Drawing.Point(228, 13);
+            this.AddDeleteHeader.Name = "AddDeleteHeader";
+            this.AddDeleteHeader.Size = new System.Drawing.Size(114, 27);
+            this.AddDeleteHeader.TabIndex = 1;
+            this.AddDeleteHeader.Text = "<Header>";
             // 
-            // panel1
+            // AddDeleteLabel
             // 
-            this.panel1.Location = new System.Drawing.Point(253, 88);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 61);
-            this.panel1.TabIndex = 2;
+            this.AddDeleteLabel.AutoSize = true;
+            this.AddDeleteLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDeleteLabel.Location = new System.Drawing.Point(250, 172);
+            this.AddDeleteLabel.Name = "AddDeleteLabel";
+            this.AddDeleteLabel.Size = new System.Drawing.Size(70, 16);
+            this.AddDeleteLabel.TabIndex = 4;
+            this.AddDeleteLabel.Text = "<Label 1>";
             // 
-            // textBox1
+            // Remarks
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(253, 191);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 59);
-            this.textBox1.TabIndex = 3;
+            this.Remarks.AutoSize = true;
+            this.Remarks.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remarks.Location = new System.Drawing.Point(23, 296);
+            this.Remarks.Name = "Remarks";
+            this.Remarks.Size = new System.Drawing.Size(71, 16);
+            this.Remarks.TabIndex = 5;
+            this.Remarks.Text = "Remarks *";
             // 
-            // label2
+            // RemarksBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(258, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "<Label 1>";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 291);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "<Label 2>";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(26, 315);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(511, 115);
-            this.textBox2.TabIndex = 6;
+            this.RemarksBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RemarksBox.Location = new System.Drawing.Point(26, 315);
+            this.RemarksBox.Multiline = true;
+            this.RemarksBox.Name = "RemarksBox";
+            this.RemarksBox.Size = new System.Drawing.Size(511, 115);
+            this.RemarksBox.TabIndex = 6;
             // 
             // CancelBtn
             // 
@@ -121,7 +105,7 @@
             this.CancelBtn.Size = new System.Drawing.Size(99, 28);
             this.CancelBtn.TabIndex = 47;
             this.CancelBtn.Text = "Cancel";
-            this.CancelBtn.Visible = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // SaveBtn
             // 
@@ -139,24 +123,57 @@
             this.SaveBtn.Size = new System.Drawing.Size(94, 28);
             this.SaveBtn.TabIndex = 46;
             this.SaveBtn.Text = "Save";
-            this.SaveBtn.Visible = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // CurrentQuantityBox
+            // 
+            this.CurrentQuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrentQuantityBox.Enabled = false;
+            this.CurrentQuantityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentQuantityBox.Location = new System.Drawing.Point(253, 115);
+            this.CurrentQuantityBox.Name = "CurrentQuantityBox";
+            this.CurrentQuantityBox.ReadOnly = true;
+            this.CurrentQuantityBox.Size = new System.Drawing.Size(180, 31);
+            this.CurrentQuantityBox.TabIndex = 48;
+            // 
+            // QuantityToAddRemoveBox
+            // 
+            this.QuantityToAddRemoveBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.QuantityToAddRemoveBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityToAddRemoveBox.Location = new System.Drawing.Point(253, 191);
+            this.QuantityToAddRemoveBox.Name = "QuantityToAddRemoveBox";
+            this.QuantityToAddRemoveBox.Size = new System.Drawing.Size(180, 31);
+            this.QuantityToAddRemoveBox.TabIndex = 49;
+            this.QuantityToAddRemoveBox.TextChanged += new System.EventHandler(this.QuantityToAddRemoveBox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(250, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 16);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Current quantity";
             // 
             // AddRemoveQuantity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.QuantityToAddRemoveBox);
+            this.Controls.Add(this.CurrentQuantityBox);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.SaveBtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RemarksBox);
+            this.Controls.Add(this.Remarks);
+            this.Controls.Add(this.AddDeleteLabel);
+            this.Controls.Add(this.AddDeleteHeader);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddRemoveQuantity";
             this.Size = new System.Drawing.Size(566, 526);
+            this.Load += new System.EventHandler(this.AddRemoveQuantity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,13 +183,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label Remarks;
+        private System.Windows.Forms.TextBox RemarksBox;
         private Guna.UI2.WinForms.Guna2Button CancelBtn;
         private Guna.UI2.WinForms.Guna2Button SaveBtn;
+        private System.Windows.Forms.TextBox CurrentQuantityBox;
+        private System.Windows.Forms.TextBox QuantityToAddRemoveBox;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label AddDeleteHeader;
+        public System.Windows.Forms.Label AddDeleteLabel;
     }
 }

@@ -14,7 +14,6 @@ namespace E_Pc
 {
     public partial class AdminReports : Form
     {
-        static AuditTrailHeader auditHeader = new AuditTrailHeader();
         public AdminReports()
         {
             InitializeComponent();
@@ -32,6 +31,7 @@ namespace E_Pc
 
         private void ShowAudit()
         {
+            AuditTrailHeader auditHeader = new AuditTrailHeader();
             AuditPanel.Controls.Clear();
             AuditPanel.Controls.Add(auditHeader);
            

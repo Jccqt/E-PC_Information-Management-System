@@ -45,6 +45,7 @@ namespace E_Pc
         public static Employee employeePage;
         public static AdminReports reportsPage = new AdminReports();
         public static Login login;
+        public static EditItem editItemPage;
         #endregion
 
         #region Employee Objects

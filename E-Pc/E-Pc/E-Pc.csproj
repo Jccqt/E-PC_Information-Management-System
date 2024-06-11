@@ -136,12 +136,6 @@
     <Compile Include="CashierShowCart.Designer.cs">
       <DependentUpon>CashierShowCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerOrderCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerOrderCode.Designer.cs">
-      <DependentUpon>CustomerOrderCode.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,9 +272,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CashierShowCart.resx">
       <DependentUpon>CashierShowCart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerOrderCode.resx">
-      <DependentUpon>CustomerOrderCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditEmployee.resx">
       <DependentUpon>EditEmployee.cs</DependentUpon>

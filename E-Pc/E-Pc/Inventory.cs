@@ -104,11 +104,14 @@ namespace E_Pc
         {
             PictureBox pic = (PictureBox)sender;
             itemIdCount = itemIdList.IndexOf(pic.Tag);
-            Form form = new Form();
-            form.Controls.Add(new EditItem());
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.AutoSize = true;
-            form.ShowDialog();
+            using(Form form = new Form())
+            {
+                PageObjects.editItemPage = new EditItem();
+                form.Controls.Add(PageObjects.editItemPage);
+                form.StartPosition = FormStartPosition.CenterScreen;
+                form.AutoSize = true;
+                form.ShowDialog();
+            }
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)

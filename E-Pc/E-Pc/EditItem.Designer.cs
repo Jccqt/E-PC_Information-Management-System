@@ -52,6 +52,8 @@
             this.EditBtn = new System.Windows.Forms.PictureBox();
             this.MinusBtn = new System.Windows.Forms.Label();
             this.PlusBtn = new System.Windows.Forms.Label();
+            this.QuantityActivityLabel = new System.Windows.Forms.Label();
+            this.Remarks = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +97,7 @@
             this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameBox.Enabled = false;
             this.NameBox.Location = new System.Drawing.Point(21, 271);
-            this.NameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(224, 28);
@@ -117,7 +119,7 @@
             this.BrandBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BrandBox.Enabled = false;
             this.BrandBox.Location = new System.Drawing.Point(258, 270);
-            this.BrandBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BrandBox.Margin = new System.Windows.Forms.Padding(2);
             this.BrandBox.Multiline = true;
             this.BrandBox.Name = "BrandBox";
             this.BrandBox.Size = new System.Drawing.Size(97, 28);
@@ -161,7 +163,7 @@
             this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PriceBox.Enabled = false;
             this.PriceBox.Location = new System.Drawing.Point(21, 405);
-            this.PriceBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PriceBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceBox.Multiline = true;
             this.PriceBox.Name = "PriceBox";
             this.PriceBox.Size = new System.Drawing.Size(146, 28);
@@ -183,10 +185,11 @@
             this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.QuantityBox.Enabled = false;
             this.QuantityBox.Location = new System.Drawing.Point(209, 405);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(2);
             this.QuantityBox.Multiline = true;
             this.QuantityBox.Name = "QuantityBox";
-            this.QuantityBox.Size = new System.Drawing.Size(62, 28);
+            this.QuantityBox.ReadOnly = true;
+            this.QuantityBox.Size = new System.Drawing.Size(64, 28);
             this.QuantityBox.TabIndex = 37;
             // 
             // QuantityLabel
@@ -205,7 +208,7 @@
             this.DescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DescriptionBox.Enabled = false;
             this.DescriptionBox.Location = new System.Drawing.Point(22, 471);
-            this.DescriptionBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DescriptionBox.Margin = new System.Windows.Forms.Padding(2);
             this.DescriptionBox.Multiline = true;
             this.DescriptionBox.Name = "DescriptionBox";
             this.DescriptionBox.Size = new System.Drawing.Size(333, 65);
@@ -265,7 +268,7 @@
             this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TypeBox.Enabled = false;
             this.TypeBox.Location = new System.Drawing.Point(21, 337);
-            this.TypeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TypeBox.Margin = new System.Windows.Forms.Padding(2);
             this.TypeBox.Multiline = true;
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(146, 28);
@@ -276,7 +279,7 @@
             this.CategoryBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CategoryBox.Enabled = false;
             this.CategoryBox.Location = new System.Drawing.Point(209, 337);
-            this.CategoryBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CategoryBox.Margin = new System.Windows.Forms.Padding(2);
             this.CategoryBox.Multiline = true;
             this.CategoryBox.Name = "CategoryBox";
             this.CategoryBox.Size = new System.Drawing.Size(146, 28);
@@ -309,7 +312,7 @@
             this.EditBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EditBtn.TabIndex = 49;
             this.EditBtn.TabStop = false;
-            this.EditBtn.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click_1);
             // 
             // MinusBtn
             // 
@@ -322,6 +325,8 @@
             this.MinusBtn.Size = new System.Drawing.Size(36, 27);
             this.MinusBtn.TabIndex = 53;
             this.MinusBtn.Text = "[–]";
+            this.MinusBtn.Visible = false;
+            this.MinusBtn.Click += new System.EventHandler(this.MinusBtn_Click);
             // 
             // PlusBtn
             // 
@@ -329,11 +334,37 @@
             this.PlusBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusBtn.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlusBtn.ForeColor = System.Drawing.Color.ForestGreen;
-            this.PlusBtn.Location = new System.Drawing.Point(276, 405);
+            this.PlusBtn.Location = new System.Drawing.Point(278, 405);
             this.PlusBtn.Name = "PlusBtn";
             this.PlusBtn.Size = new System.Drawing.Size(39, 27);
             this.PlusBtn.TabIndex = 52;
             this.PlusBtn.Text = "[+]";
+            this.PlusBtn.Visible = false;
+            this.PlusBtn.Click += new System.EventHandler(this.PlusBtn_Click);
+            // 
+            // QuantityActivityLabel
+            // 
+            this.QuantityActivityLabel.AutoSize = true;
+            this.QuantityActivityLabel.ForeColor = System.Drawing.Color.Black;
+            this.QuantityActivityLabel.Location = new System.Drawing.Point(260, 389);
+            this.QuantityActivityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.QuantityActivityLabel.Name = "QuantityActivityLabel";
+            this.QuantityActivityLabel.Size = new System.Drawing.Size(101, 13);
+            this.QuantityActivityLabel.TabIndex = 54;
+            this.QuantityActivityLabel.Text = "(<Quantity Activity>)";
+            this.QuantityActivityLabel.Visible = false;
+            // 
+            // Remarks
+            // 
+            this.Remarks.AutoSize = true;
+            this.Remarks.ForeColor = System.Drawing.Color.Black;
+            this.Remarks.Location = new System.Drawing.Point(20, 542);
+            this.Remarks.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Remarks.Name = "Remarks";
+            this.Remarks.Size = new System.Drawing.Size(45, 13);
+            this.Remarks.TabIndex = 55;
+            this.Remarks.Text = "<blank>";
+            this.Remarks.Visible = false;
             // 
             // EditItem
             // 
@@ -341,6 +372,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.Remarks);
+            this.Controls.Add(this.QuantityActivityLabel);
             this.Controls.Add(this.MinusBtn);
             this.Controls.Add(this.PlusBtn);
             this.Controls.Add(this.EditBtn);
@@ -402,5 +435,7 @@
         private System.Windows.Forms.PictureBox EditBtn;
         private System.Windows.Forms.Label MinusBtn;
         private System.Windows.Forms.Label PlusBtn;
+        public System.Windows.Forms.Label Remarks;
+        public System.Windows.Forms.Label QuantityActivityLabel;
     }
 }
