@@ -25,6 +25,17 @@ namespace Customer
 
         private void CustomerShowCart_Load(object sender, EventArgs e)
         {
+            if(BuyItems.totalOrderQuantity == 0)
+            {
+                CheckoutBtn.Visible = false;
+                CheckoutArrow.Visible = false;
+            }
+            else
+            {
+                CheckoutBtn.Visible = true;
+                CheckoutArrow.Visible = true;
+            }
+
             TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString();
             BuyItems.totalOrderPrice = 0; // will reset the total order price everytime the cart is loaded
             TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString(); // will set the total quantity label to total order quantity from BuyItems class
