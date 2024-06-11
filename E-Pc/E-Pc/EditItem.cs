@@ -109,6 +109,8 @@ namespace E_Pc
                 CancelBtn.Visible = false;
                 PlusBtn.Visible = false;
                 MinusBtn.Visible = false;
+                QuantityActivityLabel.ResetText();
+                Remarks.ResetText();
                 EditItem_Load(sender, e);
             }
 
@@ -165,6 +167,11 @@ namespace E_Pc
                 EditBtn.Visible = true;
                 SaveBtn.Visible = false;
                 CancelBtn.Visible = false;
+                PlusBtn.Visible = false;
+                MinusBtn.Visible = false;
+                QuantityActivityLabel.ResetText();
+                Remarks.ResetText();
+
             }
         }
 

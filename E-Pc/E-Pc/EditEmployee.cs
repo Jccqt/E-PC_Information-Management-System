@@ -27,7 +27,7 @@ namespace E_Pc
         {
             DataConnection.conn.Open();
 
-            DataConnection.cmd = new SqlCommand("SELECT FirstName, LastName, Age, Birthdate, ContactNum, Position, Address," +
+            DataConnection.cmd = new SqlCommand("SELECT FirstName, LastName, Birthdate, ContactNum, Position, Address," +
                 "Username, Password, EmpImage " +
                 "FROM Employees WHERE EmpId = @id", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
@@ -38,17 +38,16 @@ namespace E_Pc
                 IdLabel.Text = Employee.empIdCount.ToString();
                 FirstNameBox.Text = DataConnection.reader.GetString(0);
                 LastNameBox.Text = DataConnection.reader.GetString(1);
-                AgeBox.Text = DataConnection.reader.GetValue(2).ToString();
-                BirthdateBox.Text = Convert.ToDateTime(DataConnection.reader.GetValue(3)).ToString("dd/MM/yyyy");
-                ContactBox.Text = DataConnection.reader.GetString(4);
-                PositionBox.Text = DataConnection.reader.GetString(5);
-                AddressBox.Text = DataConnection.reader.GetValue(6).ToString();
-                UsernameBox.Text = DataConnection.reader.GetString(7);
-                PasswordBox.Text = DataConnection.reader.GetString(8);
+                BirthdateBox.Text = Convert.ToDateTime(DataConnection.reader.GetValue(2)).ToString("yyyy-MM-dd");
+                ContactBox.Text = DataConnection.reader.GetString(3);
+                PositionBox.Text = DataConnection.reader.GetString(4);
+                AddressBox.Text = DataConnection.reader.GetValue(5).ToString();
+                UsernameBox.Text = DataConnection.reader.GetString(6);
+                PasswordBox.Text = DataConnection.reader.GetString(7);
 
-                if (!DataConnection.reader.GetValue(9).ToString().Equals(""))
+                if (!DataConnection.reader.GetValue(8).ToString().Equals(""))
                 {
-                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(9);
+                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(8);
                     using (MemoryStream ms = new MemoryStream(imageBinary))
                     {
                         EmpImage.Image = Image.FromStream(ms);
@@ -64,6 +63,17 @@ namespace E_Pc
                 
             }
             DataConnection.reader.Close();
+
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
+
+            // will get the month difference of employee birth date and current date
+            DataConnection.cmd = new SqlCommand("SELECT DATEDIFF(month, @birthdate, @currentdate)", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@birthdate", Convert.ToDateTime(BirthdateBox.Text));
+            DataConnection.cmd.Parameters.AddWithValue("@currentdate", localDate);
+            int age = Convert.ToInt32(DataConnection.cmd.ExecuteScalar()) / 12; // will divide to 12 the month difference to get the age
+
+            AgeBox.Text = age.ToString();
+
             DataConnection.conn.Close();
         }
         
