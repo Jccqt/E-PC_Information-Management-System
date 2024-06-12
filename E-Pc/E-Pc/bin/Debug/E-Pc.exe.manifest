@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>02k8jnFOI7DrAMji3xKZWI/lusbL4rXyJfFbowFbBWU=</dsig:DigestValue>
+        <dsig:DigestValue>sIul8s4FgYAHjPrjWmCV1wcAR8bULi1V2rONTJh93y8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -80,7 +80,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>nhKnQxyful0Xp66WLhjKE79h+G9NO+dlXxLJgTsvNJs=</dsig:DigestValue>
+      <dsig:DigestValue>bRM4dbO66rAEYV3VTi9j12XxbCLztCVEx3b6lHg/1IE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="E-PCdb_log.ldf" size="8388608" writeableType="applicationData">
@@ -89,7 +89,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>eKsioZCFWDgYwoXGzm/VmrZ6ka8ytb+vjnIxcnGA7qI=</dsig:DigestValue>
+      <dsig:DigestValue>Ba3/6yJxckUVMxM85Oyf5OcI40D12mxnDBJnRoqJrQA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -65,19 +65,26 @@ namespace E_Pc
             PictureBox pic = (PictureBox)sender;
             empIdCount = Convert.ToInt32(pic.Tag);
 
-            DialogResult deleteDialog = MessageBox.Show("Are you sure you want to remove this employee?" +
+            if(empIdCount == Convert.ToInt32(Login.userId))
+            {
+                MessageBox.Show("You cannot remove user that was already logged in");
+            }
+            else
+            {
+                DialogResult deleteDialog = MessageBox.Show("Are you sure you want to remove this employee?" +
                 "\nThis employee will be sent to inactive table", "Remove Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (deleteDialog == DialogResult.Yes)
-            {
-                DataConnection.conn.Open();
-                DataConnection.cmd = new SqlCommand("UPDATE Employees SET Active_flag = 0 WHERE EmpId = @id", DataConnection.conn);
-                DataConnection.cmd.Parameters.AddWithValue("@id", empIdCount);
-                DataConnection.cmd.ExecuteNonQuery();
+                if (deleteDialog == DialogResult.Yes)
+                {
+                    DataConnection.conn.Open();
+                    DataConnection.cmd = new SqlCommand("UPDATE Employees SET Active_flag = 0 WHERE EmpId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", empIdCount);
+                    DataConnection.cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Employee has been sent to inactive table");
-                ShowActiveEmployees();
-                DataConnection.conn.Close();
+                    MessageBox.Show("Employee has been sent to inactive table");
+                    ShowActiveEmployees();
+                    DataConnection.conn.Close();
+                }
             }
         }
 
