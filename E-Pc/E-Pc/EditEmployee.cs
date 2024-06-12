@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Collections;
+using System.Net.NetworkInformation;
 
 namespace E_Pc
 {
     public partial class EditEmployee : UserControl
     {
+        static bool hasSameUsername = false;
         static bool isNewImage = false;
         static byte[] imageBinary;
+        static ArrayList usernames = new ArrayList();
         public EditEmployee()
         {
             InitializeComponent();
@@ -125,38 +129,72 @@ namespace E_Pc
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            DialogResult saveDialog = MessageBox.Show("Are you sure you want to save details?", "Save details", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DataConnection.conn.Open();
 
-            if(saveDialog == DialogResult.Yes)
+            DataConnection.cmd = new SqlCommand("SELECT Username FROM Employees", DataConnection.conn);
+            DataConnection.reader = DataConnection.cmd.ExecuteReader();
+
+            while (DataConnection.reader.Read())
             {
-                DataConnection.conn.Open();
-                DataConnection.cmd = new SqlCommand("UPDATE Employees SET FirstName = @fName, LastName = @lName, ContactNum = @contact, " +
-                    "Address = @address, Username = @username, Password = @password WHERE EmpId = @id", DataConnection.conn);
-                DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
-                DataConnection.cmd.Parameters.AddWithValue("@fName", FirstNameBox.Text);
-                DataConnection.cmd.Parameters.AddWithValue("@lName", LastNameBox.Text);
-                DataConnection.cmd.Parameters.AddWithValue("@contact", ContactBox.Text);
-                DataConnection.cmd.Parameters.AddWithValue("@address", AddressBox.Text);
-                DataConnection.cmd.Parameters.AddWithValue("@username", UsernameBox.Text);
-                DataConnection.cmd.Parameters.AddWithValue("@password", PasswordBox.Text);
-                DataConnection.cmd.ExecuteNonQuery();
-
-                if (isNewImage)
-                {
-                    DataConnection.cmd = new SqlCommand("UPDATE Employees SET EmpImage = @image WHERE EmpId = @id", DataConnection.conn);
-                    DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
-                    DataConnection.cmd.Parameters.AddWithValue("@image", imageBinary);
-                }
-
-                MessageBox.Show("Employee details has been updated!");
-                isNewImage = false;
-                ActivityLabel.Text = "Viewing";
-                DisableTextBox();
-                EditBtn.Visible = true;
-                SaveBtn.Visible = false;
-                CancelBtn.Visible = false;
-                DataConnection.conn.Close();
+                usernames.Add(DataConnection.reader.GetString(0));
             }
+            DataConnection.reader.Close();
+
+            if (usernames.Contains(UsernameBox.Text))
+            {
+                hasSameUsername = true;
+            }
+            else
+            {
+                hasSameUsername = false;
+            }
+            usernames.Clear();
+
+            if(!FirstNameBox.Text.Equals("") && !LastNameBox.Text.Equals("") && !ContactBox.Text.Equals("") 
+                && !UsernameBox.Text.Equals("") && !PasswordBox.Text.Equals("") && !AddressBox.Text.Equals("") && !hasSameUsername)
+            {
+                DialogResult saveDialog = MessageBox.Show("Are you sure you want to save details?", "Save details", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (saveDialog == DialogResult.Yes)
+                {
+                    DataConnection.cmd = new SqlCommand("UPDATE Employees SET FirstName = @fName, LastName = @lName, ContactNum = @contact, " +
+                        "Address = @address, Username = @username, Password = @password WHERE EmpId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
+                    DataConnection.cmd.Parameters.AddWithValue("@fName", FirstNameBox.Text);
+                    DataConnection.cmd.Parameters.AddWithValue("@lName", LastNameBox.Text);
+                    DataConnection.cmd.Parameters.AddWithValue("@contact", ContactBox.Text);
+                    DataConnection.cmd.Parameters.AddWithValue("@address", AddressBox.Text);
+                    DataConnection.cmd.Parameters.AddWithValue("@username", UsernameBox.Text);
+                    DataConnection.cmd.Parameters.AddWithValue("@password", PasswordBox.Text);
+                    DataConnection.cmd.ExecuteNonQuery();
+
+                    if (isNewImage)
+                    {
+                        DataConnection.cmd = new SqlCommand("UPDATE Employees SET EmpImage = @image WHERE EmpId = @id", DataConnection.conn);
+                        DataConnection.cmd.Parameters.AddWithValue("@id", Employee.empIdCount);
+                        DataConnection.cmd.Parameters.AddWithValue("@image", imageBinary);
+                    }
+
+                    MessageBox.Show("Employee details has been updated!");
+                    isNewImage = false;
+                    ActivityLabel.Text = "Viewing";
+                    DisableTextBox();
+                    EditBtn.Visible = true;
+                    SaveBtn.Visible = false;
+                    CancelBtn.Visible = false;
+                }
+            }
+            else if (hasSameUsername)
+            {
+                MessageBox.Show("The employee username already existing! Please use another unique username", "Username already existing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // will show an error message if there is an empty text box
+                MessageBox.Show("You cannot add employee with some empty details", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            hasSameUsername = false;
+            DataConnection.conn.Close();
         }
 
         private void SelectImageBtn_Click(object sender, EventArgs e)

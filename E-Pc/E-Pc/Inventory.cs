@@ -75,11 +75,6 @@ namespace E_Pc
                     product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
                     product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
 
-                    if (Convert.ToInt32(DataConnection.reader.GetValue(2)) == 0)
-                    {
-                        product.OutOfStockPic.Visible = true;
-                    }
-
                     product.ItemImage.Click += new EventHandler(ViewItem_Click);
                     GC.Collect();
                 }

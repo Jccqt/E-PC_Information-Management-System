@@ -210,11 +210,11 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="RetreiveEmployee.cs">
+    <Compile Include="RetrieveEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RetreiveEmployee.Designer.cs">
-      <DependentUpon>RetreiveEmployee.cs</DependentUpon>
+    <Compile Include="RetrieveEmployee.Designer.cs">
+      <DependentUpon>RetrieveEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="RetrieveItem.cs">
       <SubType>UserControl</SubType>
@@ -319,8 +319,8 @@
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RetreiveEmployee.resx">
-      <DependentUpon>RetreiveEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="RetrieveEmployee.resx">
+      <DependentUpon>RetrieveEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RetrieveItem.resx">
       <DependentUpon>RetrieveItem.cs</DependentUpon>

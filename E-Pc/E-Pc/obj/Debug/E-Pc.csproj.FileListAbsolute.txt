@@ -242,7 +242,6 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Cart.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.CashierShowCart.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.EditEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.Receipt.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetreiveEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.ShowEmployee.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\Customer.SelectedItems.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddProduct.resources
@@ -317,3 +316,4 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\bin\Debug\E-Pc.application
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.exe.manifest
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E-Pc.application
 E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.AddRemoveQuantity.resources
+E:\Jc\E-PC_Information-Management-System\E-Pc\E-Pc\obj\Debug\E_Pc.RetrieveEmployee.resources

@@ -50,10 +50,9 @@ namespace E_Pc
                     ItemImage.Image = Properties.Resources.no_image_icon;
                     ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
-
-                DataConnection.reader.Close();
-                DataConnection.conn.Close();
             }
+            DataConnection.reader.Close();
+            DataConnection.conn.Close();
         }
 
         private void RetrieveBtn_Click(object sender, EventArgs e)

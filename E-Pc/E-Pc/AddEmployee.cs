@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
+using System.Collections;
 
 namespace E_Pc
 {
@@ -16,6 +17,8 @@ namespace E_Pc
     {
         static byte[] imageBinary;
         static bool isNewImage = false;
+        static bool hasSameUsername = false;
+        static ArrayList usernames = new ArrayList();
         public AddEmployee()
         {
             InitializeComponent();
@@ -40,12 +43,32 @@ namespace E_Pc
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-           if(!FirstNameBox.Text.Equals("") && !LastNameBox.Text.Equals("") && !ContactBox.Text.Equals("") 
-                && !PositionBox.SelectedItem.Equals("") && !AgeBox.Text.Equals("") && !UsernameBox.Text.Equals("")
-                && !PasswordBox.Text.Equals("") && !AddressBox.Text.Equals(""))
+            DataConnection.conn.Open();
+
+            DataConnection.cmd = new SqlCommand("SELECT Username FROM Employees", DataConnection.conn);
+            DataConnection.reader = DataConnection.cmd.ExecuteReader();
+
+            while (DataConnection.reader.Read())
+            {
+                usernames.Add(DataConnection.reader.GetString(0));
+            }
+            DataConnection.reader.Close();
+
+            if (usernames.Contains(UsernameBox.Text))
+            {
+                hasSameUsername = true;
+            }
+            else
+            {
+                hasSameUsername = false;
+            }
+            usernames.Clear();
+
+            if (!FirstNameBox.Text.Equals("") && !LastNameBox.Text.Equals("") && !ContactBox.Text.Equals("")
+                && !PositionBox.Text.Equals("") && !AgeBox.Text.Equals("") && !UsernameBox.Text.Equals("")
+                && !PasswordBox.Text.Equals("") && !AddressBox.Text.Equals("") && !hasSameUsername)
             {
                 // will only add the employee if there is no empty text box
-                DataConnection.conn.Open();
 
                 int idCount = 0;
 
@@ -77,16 +100,21 @@ namespace E_Pc
                 }
 
                 MessageBox.Show("Employee has been added successfully!");
-                DataConnection.conn.Close();
                 isNewImage = false;
                 ClearTextBox();
                 ((Form)this.TopLevelControl).Close();
+            }
+            else if (hasSameUsername)
+            {
+                MessageBox.Show("The employee username already existing! Please use another unique username", "Username already existing", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 // will show an error message if there is an empty text box
                 MessageBox.Show("You cannot add employee with some empty details", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            DataConnection.conn.Close();
         }
 
         void ClearTextBox()

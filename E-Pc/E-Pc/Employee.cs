@@ -16,7 +16,7 @@ namespace E_Pc
             SortBox.SelectedItem = "Active";
         }
 
-        void ShowActiveEmployees()
+        public void ShowActiveEmployees()
         {
             AddEmployeeLabel.Visible = true;
             AddBtn.Visible = true;
@@ -94,6 +94,7 @@ namespace E_Pc
             while (DataConnection.reader.Read())
             {
                 ShowEmployee employee = new ShowEmployee();
+                employee.DeleteBtn.Visible = false;
 
                 if (!DataConnection.reader.GetValue(3).ToString().Equals(""))
                 {
@@ -111,10 +112,12 @@ namespace E_Pc
                     employee.EmpImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
 
+                employee.EmpImage.Tag = DataConnection.reader.GetValue(0).ToString();
                 employee.IdLabel.Text = DataConnection.reader.GetValue(0).ToString();
                 employee.NameLabel.Text = $"{DataConnection.reader.GetString(1)} {DataConnection.reader.GetString(2)}";
 
                 EmployeePanel.Controls.Add(employee);
+                employee.EmpImage.Click += new EventHandler(RetrieveEmployee_Click);
             }
             DataConnection.reader.Close();
             GC.Collect();
@@ -129,6 +132,18 @@ namespace E_Pc
             form.StartPosition = FormStartPosition.CenterScreen;
             form.AutoSize = true;
             form.ShowDialog();
+        }
+
+        private void RetrieveEmployee_Click(object sender, EventArgs e)
+        {
+            PictureBox pic = (PictureBox)sender;
+            empIdCount = Convert.ToInt32(pic.Tag);
+            Form form = new Form();
+            form.Controls.Add(new RetrieveEmployee());
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.AutoSize = true;
+            form.ShowDialog();
+            GC.Collect();
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
