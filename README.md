@@ -1,5 +1,13 @@
 # E-PC: Computer parts Information Management System
 
+Team
+- Adrianne Villa (Front-end developer)
+- Jose Crisanto Calayag (Back-end developer)
+- Adrian Miravil (Tester)
+- Jean Dyel Flores (Tester)
+
+
+Change log:
 May 14, 2024
 - Login page (New)
 - Login page functionalities (New)
