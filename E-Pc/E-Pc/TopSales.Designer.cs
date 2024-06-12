@@ -46,7 +46,7 @@
             // 
             this.CounterLabel.AutoSize = true;
             this.CounterLabel.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CounterLabel.Location = new System.Drawing.Point(1, 29);
+            this.CounterLabel.Location = new System.Drawing.Point(1, 23);
             this.CounterLabel.Name = "CounterLabel";
             this.CounterLabel.Size = new System.Drawing.Size(55, 30);
             this.CounterLabel.TabIndex = 0;
@@ -57,7 +57,7 @@
             this.ItemImage.BackColor = System.Drawing.Color.Silver;
             this.ItemImage.Location = new System.Drawing.Point(74, 3);
             this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(76, 77);
+            this.ItemImage.Size = new System.Drawing.Size(76, 63);
             this.ItemImage.TabIndex = 1;
             this.ItemImage.TabStop = false;
             // 
@@ -65,7 +65,7 @@
             // 
             this.IdLabel.AutoSize = true;
             this.IdLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLabel.Location = new System.Drawing.Point(151, 34);
+            this.IdLabel.Location = new System.Drawing.Point(156, 30);
             this.IdLabel.Name = "IdLabel";
             this.IdLabel.Size = new System.Drawing.Size(62, 16);
             this.IdLabel.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.QuantityLabel.AutoSize = true;
             this.QuantityLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityLabel.Location = new System.Drawing.Point(285, 32);
+            this.QuantityLabel.Location = new System.Drawing.Point(285, 29);
             this.QuantityLabel.Name = "QuantityLabel";
             this.QuantityLabel.Size = new System.Drawing.Size(35, 18);
             this.QuantityLabel.TabIndex = 3;
@@ -99,9 +99,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview__4_1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(48, -8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -122,7 +122,7 @@
             // 
             this.SalesLabel.AutoSize = true;
             this.SalesLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesLabel.Location = new System.Drawing.Point(416, 32);
+            this.SalesLabel.Location = new System.Drawing.Point(416, 28);
             this.SalesLabel.Name = "SalesLabel";
             this.SalesLabel.Size = new System.Drawing.Size(98, 18);
             this.SalesLabel.TabIndex = 7;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.pictureBox2);
             this.Name = "TopSales";
-            this.Size = new System.Drawing.Size(540, 81);
+            this.Size = new System.Drawing.Size(540, 69);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
