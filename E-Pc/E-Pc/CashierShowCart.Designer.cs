@@ -48,6 +48,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.checkoutArrowBtn)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,11 +81,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(32, 110);
+            this.label3.Location = new System.Drawing.Point(28, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 23);
+            this.label3.Size = new System.Drawing.Size(97, 19);
             this.label3.TabIndex = 34;
             this.label3.Text = "Total items:";
             // 
@@ -92,11 +93,11 @@
             // 
             this.CodeLabel.AutoSize = true;
             this.CodeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CodeLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodeLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CodeLabel.ForeColor = System.Drawing.Color.White;
             this.CodeLabel.Location = new System.Drawing.Point(141, 42);
             this.CodeLabel.Name = "CodeLabel";
-            this.CodeLabel.Size = new System.Drawing.Size(76, 23);
+            this.CodeLabel.Size = new System.Drawing.Size(65, 19);
             this.CodeLabel.TabIndex = 33;
             this.CodeLabel.Text = "<code>";
             // 
@@ -104,23 +105,24 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(33, 42);
+            this.label10.Location = new System.Drawing.Point(29, 42);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 23);
+            this.label10.Size = new System.Drawing.Size(89, 19);
             this.label10.TabIndex = 32;
             this.label10.Text = "Cart code:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // StatusLabel
             // 
             this.StatusLabel.AutoSize = true;
             this.StatusLabel.BackColor = System.Drawing.Color.Transparent;
-            this.StatusLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLabel.ForeColor = System.Drawing.Color.White;
             this.StatusLabel.Location = new System.Drawing.Point(141, 65);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(88, 23);
+            this.StatusLabel.Size = new System.Drawing.Size(74, 19);
             this.StatusLabel.TabIndex = 31;
             this.StatusLabel.Text = "<status>";
             // 
@@ -128,11 +130,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(33, 65);
+            this.label8.Location = new System.Drawing.Point(29, 65);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 23);
+            this.label8.Size = new System.Drawing.Size(64, 19);
             this.label8.TabIndex = 30;
             this.label8.Text = "Status:";
             // 
@@ -140,11 +142,11 @@
             // 
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.Color.White;
             this.DateLabel.Location = new System.Drawing.Point(141, 88);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(72, 23);
+            this.DateLabel.Size = new System.Drawing.Size(60, 19);
             this.DateLabel.TabIndex = 29;
             this.DateLabel.Text = "<date>";
             // 
@@ -152,11 +154,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 88);
+            this.label5.Location = new System.Drawing.Point(30, 88);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 23);
+            this.label5.Size = new System.Drawing.Size(50, 19);
             this.label5.TabIndex = 28;
             this.label5.Text = "Date:";
             // 
@@ -164,11 +166,11 @@
             // 
             this.TotalQuantityLabel.AutoSize = true;
             this.TotalQuantityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TotalQuantityLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalQuantityLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalQuantityLabel.ForeColor = System.Drawing.Color.White;
-            this.TotalQuantityLabel.Location = new System.Drawing.Point(141, 110);
+            this.TotalQuantityLabel.Location = new System.Drawing.Point(141, 114);
             this.TotalQuantityLabel.Name = "TotalQuantityLabel";
-            this.TotalQuantityLabel.Size = new System.Drawing.Size(176, 23);
+            this.TotalQuantityLabel.Size = new System.Drawing.Size(150, 19);
             this.TotalQuantityLabel.TabIndex = 27;
             this.TotalQuantityLabel.Text = "<number of items>";
             // 
@@ -178,7 +180,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(457, 35);
+            this.label1.Location = new System.Drawing.Point(457, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 45);
             this.label1.TabIndex = 24;
@@ -189,9 +191,9 @@
             // 
             this.CartPanel.AutoScroll = true;
             this.CartPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.CartPanel.Location = new System.Drawing.Point(35, 135);
+            this.CartPanel.Location = new System.Drawing.Point(35, 136);
             this.CartPanel.Name = "CartPanel";
-            this.CartPanel.Size = new System.Drawing.Size(886, 283);
+            this.CartPanel.Size = new System.Drawing.Size(886, 278);
             this.CartPanel.TabIndex = 23;
             // 
             // checkoutArrowBtn
@@ -217,7 +219,7 @@
             this.BackBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BackBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BackBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BackBtn.FillColor = System.Drawing.Color.Tomato;
+            this.BackBtn.FillColor = System.Drawing.Color.SteelBlue;
             this.BackBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.BackBtn.ForeColor = System.Drawing.Color.White;
             this.BackBtn.Location = new System.Drawing.Point(35, 466);
@@ -233,7 +235,7 @@
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.TotalAmountLabel);
-            this.panel1.Location = new System.Drawing.Point(629, 419);
+            this.panel1.Location = new System.Drawing.Point(629, 416);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 38);
             this.panel1.TabIndex = 42;
@@ -264,7 +266,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Tomato;
+            this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox2.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview__1_2;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(39, 481);
@@ -309,6 +311,26 @@
             this.guna2Panel1.Size = new System.Drawing.Size(955, 33);
             this.guna2Panel1.TabIndex = 44;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 28;
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Red;
+            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(568, 466);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(132, 59);
+            this.guna2Button1.TabIndex = 45;
+            this.guna2Button1.Text = "Cancel order";
+            // 
             // CashierShowCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +338,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(955, 546);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -372,5 +395,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

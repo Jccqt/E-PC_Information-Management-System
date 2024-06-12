@@ -99,5 +99,10 @@ namespace E_Pc
             payment.Show();
             this.Hide();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

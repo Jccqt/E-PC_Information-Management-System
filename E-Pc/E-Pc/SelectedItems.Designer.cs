@@ -100,7 +100,7 @@
             // 
             this.PriceLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PriceLabel.ForeColor = System.Drawing.Color.Black;
-            this.PriceLabel.Location = new System.Drawing.Point(719, 135);
+            this.PriceLabel.Location = new System.Drawing.Point(719, 129);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(102, 15);
             this.PriceLabel.TabIndex = 26;
@@ -110,7 +110,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(657, 129);
+            this.label5.Location = new System.Drawing.Point(657, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 21);
             this.label5.TabIndex = 25;
@@ -202,6 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ItemIdLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CategoryLabel);
@@ -218,7 +219,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.ItemImage);
             this.Name = "SelectedItems";
-            this.Size = new System.Drawing.Size(851, 150);
+            this.Size = new System.Drawing.Size(849, 148);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             this.ResumeLayout(false);
 

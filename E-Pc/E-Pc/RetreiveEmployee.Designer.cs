@@ -159,6 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.DeletionDateLabel);
             this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.TypeLabel);
@@ -171,7 +172,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.ItemImage);
             this.Name = "RetreiveEmployee";
-            this.Size = new System.Drawing.Size(672, 150);
+            this.Size = new System.Drawing.Size(670, 148);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             this.ResumeLayout(false);
 

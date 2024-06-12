@@ -307,7 +307,7 @@
             this.OrderBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.OrderBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.OrderBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.OrderBtn.FillColor = System.Drawing.Color.MidnightBlue;
+            this.OrderBtn.FillColor = System.Drawing.Color.SteelBlue;
             this.OrderBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.OrderBtn.ForeColor = System.Drawing.Color.White;
             this.OrderBtn.Location = new System.Drawing.Point(733, 522);
