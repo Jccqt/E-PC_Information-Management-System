@@ -59,10 +59,10 @@ namespace E_Pc
         private void ShowTopSales()
         {
             int counter = 1;
-            DataConnection.cmd = new SqlCommand("SELECT Carts.ItemId, SUM(Carts.OrderQuantity), Products.ItemImage " +
+            DataConnection.cmd = new SqlCommand("SELECT Carts.ItemId, SUM(Carts.OrderQuantity), SUM(Carts.OrderPrice), Products.ItemImage " +
                 "FROM Carts RIGHT JOIN Products ON Carts.ItemId = Products.ItemId " +
                 $"WHERE Carts.Status = @status GROUP BY Carts.ItemId, Products.ItemImage " +
-                $"ORDER BY SUM(Carts.OrderQuantity) DESC", DataConnection.conn);
+                $"ORDER BY SUM(Carts.OrderPrice) DESC", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@status", "Completed");
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
 
@@ -70,9 +70,9 @@ namespace E_Pc
             {
                 TopSales sales = new TopSales();
 
-                if (!DataConnection.reader.GetValue(2).ToString().Equals(""))
+                if (!DataConnection.reader.GetValue(3).ToString().Equals(""))
                 {
-                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(2);
+                    byte[] imageBinary = (byte[])DataConnection.reader.GetValue(3);
                     using (MemoryStream ms = new MemoryStream(imageBinary))
                     {
                         sales.ItemImage.Image = Image.FromStream(ms);
@@ -89,6 +89,7 @@ namespace E_Pc
                 sales.CounterLabel.Text = counter.ToString();
                 sales.IdLabel.Text = DataConnection.reader.GetString(0);
                 sales.QuantityLabel.Text = DataConnection.reader.GetValue(1).ToString();
+                sales.SalesLabel.Text = DataConnection.reader.GetValue(2).ToString();
                 SalesPanel.Controls.Add(sales);
                 counter++;
             }

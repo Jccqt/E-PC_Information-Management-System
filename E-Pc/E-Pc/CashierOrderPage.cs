@@ -65,7 +65,7 @@ namespace E_Pc
             GC.Collect();
         }
 
-        private void CashierOrderPage_Load(object sender, EventArgs e)
+        public void CashierOrderPage_Load(object sender, EventArgs e)
         {
 
             SortBox.SelectedItem = "Pending";
@@ -93,7 +93,7 @@ namespace E_Pc
 
         private void OrderBtn_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\E-PC_Information-Management-System\\E-Pc\\Customer\\bin\\Debug\\Customer.exe");
+            System.Diagnostics.Process.Start("E:\\Jc\\E-PC_Information-Management-System\\E-Pc\\Customer\\bin\\Debug\\Customer.exe");
         }
     }
 }

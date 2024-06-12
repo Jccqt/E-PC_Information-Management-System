@@ -36,6 +36,8 @@ namespace E_Pc
 
         public void ShowAvailableProducts()
         {
+            AddBtn.Visible = true;
+            AddProductBtn.Visible = true;
             TableLabel.Text = "Available Products";
             InventoryPanel.Controls.Clear();
             itemIdList.Clear();
@@ -113,6 +115,8 @@ namespace E_Pc
 
         public void ShowArchivedProducts()
         {
+            AddBtn.Visible = false;
+            AddProductBtn.Visible = false;
             TableLabel.Text = "Archived Products";
             itemIdList.Clear();
             InventoryPanel.Controls.Clear();

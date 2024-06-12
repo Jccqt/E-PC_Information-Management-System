@@ -48,7 +48,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.CancelOrderBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.checkoutArrowBtn)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -112,7 +112,6 @@
             this.label10.Size = new System.Drawing.Size(89, 19);
             this.label10.TabIndex = 32;
             this.label10.Text = "Cart code:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // StatusLabel
             // 
@@ -311,25 +310,26 @@
             this.guna2Panel1.Size = new System.Drawing.Size(955, 33);
             this.guna2Panel1.TabIndex = 44;
             // 
-            // guna2Button1
+            // CancelOrderBtn
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 28;
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Red;
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(568, 466);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(132, 59);
-            this.guna2Button1.TabIndex = 45;
-            this.guna2Button1.Text = "Cancel order";
+            this.CancelOrderBtn.AutoRoundedCorners = true;
+            this.CancelOrderBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CancelOrderBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.CancelOrderBtn.BorderRadius = 28;
+            this.CancelOrderBtn.BorderThickness = 2;
+            this.CancelOrderBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CancelOrderBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CancelOrderBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CancelOrderBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CancelOrderBtn.FillColor = System.Drawing.Color.Red;
+            this.CancelOrderBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
+            this.CancelOrderBtn.ForeColor = System.Drawing.Color.White;
+            this.CancelOrderBtn.Location = new System.Drawing.Point(568, 466);
+            this.CancelOrderBtn.Name = "CancelOrderBtn";
+            this.CancelOrderBtn.Size = new System.Drawing.Size(132, 59);
+            this.CancelOrderBtn.TabIndex = 45;
+            this.CancelOrderBtn.Text = "Cancel order";
+            this.CancelOrderBtn.Click += new System.EventHandler(this.CancelOrderBtn_Click);
             // 
             // CashierShowCart
             // 
@@ -338,7 +338,7 @@
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(955, 546);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.CancelOrderBtn);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -395,6 +395,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button CancelOrderBtn;
     }
 }

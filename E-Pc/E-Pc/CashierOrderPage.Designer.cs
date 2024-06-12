@@ -273,7 +273,7 @@
             this.SortBox.Items.AddRange(new object[] {
             "Pending",
             "Completed",
-            "Canceled"});
+            "Cancelled"});
             this.SortBox.Location = new System.Drawing.Point(769, 98);
             this.SortBox.Name = "SortBox";
             this.SortBox.Size = new System.Drawing.Size(175, 24);

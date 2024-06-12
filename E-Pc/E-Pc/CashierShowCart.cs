@@ -22,6 +22,7 @@ namespace E_Pc
 
         private void CashierShowCart_Load(object sender, EventArgs e)
         {
+
             // will get the specific element from cartIdList array and insert it to Code label
             CodeLabel.Text = CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount].ToString();
 
@@ -73,6 +74,7 @@ namespace E_Pc
                 // will hide the checkout button if the order was already completed
                 CheckoutBtn.Visible = false;
                 checkoutArrowBtn.Visible = false;
+                CancelOrderBtn.Visible = false;
             }
 
             DataConnection.cmd = new SqlCommand("SELECT SUM(OrderQuantity) FROM Carts WHERE CartId = @cartId", DataConnection.conn);
@@ -100,9 +102,24 @@ namespace E_Pc
             this.Hide();
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void CancelOrderBtn_Click(object sender, EventArgs e)
         {
+            DialogResult cancelBtn = MessageBox.Show("Are you sure you want to cancel this cart?" +
+                "\nThis cart cant be recovered after the cancellation!", "Cancel cart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if(cancelBtn == DialogResult.Yes)
+            {
+                DataConnection.conn.Open();
+                DataConnection.cmd = new SqlCommand("UPDATE Carts SET Status = 'Cancelled' WHERE CartId = @cartId", DataConnection.conn);
+                DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
+                DataConnection.cmd.ExecuteNonQuery();
+
+                MessageBox.Show("The cart has been successfully cancelled!");
+                DataConnection.conn.Close();
+                PageObjects.cashierOrderPage.Show();
+                PageObjects.cashierOrderPage.CashierOrderPage_Load(sender, e);
+                this.Close();
+            }
         }
     }
 }

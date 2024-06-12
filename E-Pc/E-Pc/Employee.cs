@@ -18,6 +18,8 @@ namespace E_Pc
 
         void ShowActiveEmployees()
         {
+            AddEmployeeLabel.Visible = true;
+            AddBtn.Visible = true;
             EmployeePanel.Controls.Clear();
             TableLabel.Text = $"{SortBox.SelectedItem} Employees";
             DataConnection.cmd = new SqlCommand("SELECT EmpId, FirstName, LastName, EmpImage FROM Employees " +
@@ -81,6 +83,8 @@ namespace E_Pc
 
         void ShowInactiveEmployees()
         {
+            AddEmployeeLabel.Visible = false;
+            AddBtn.Visible = false;
             EmployeePanel.Controls.Clear();
             TableLabel.Text = $"{SortBox.SelectedItem} Employees";
             DataConnection.cmd = new SqlCommand("SELECT EmpId, FirstName, LastName, EmpImage FROM Employees " +
