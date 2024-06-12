@@ -158,6 +158,13 @@ namespace E_Pc
                     DataConnection.cmd.ExecuteNonQuery();
                 }
 
+                if(Convert.ToInt32(QuantityBox.Text) == 0)
+                {
+                    DataConnection.cmd = new SqlCommand("UPDATE Products SET Active_flag = 0 WHERE ItemId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@id", IdLabel.Text);
+                    DataConnection.cmd.ExecuteNonQuery();
+                }
+
                 MessageBox.Show("Item has been updated!");
                 PageObjects.inventoryPage.ShowAvailableProducts();
                 DataConnection.conn.Close();
@@ -171,6 +178,7 @@ namespace E_Pc
                 MinusBtn.Visible = false;
                 QuantityActivityLabel.ResetText();
                 Remarks.ResetText();
+                ((Form)this.TopLevelControl).Close();
 
             }
         }

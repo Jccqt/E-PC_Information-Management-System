@@ -23,7 +23,6 @@ namespace Customer
         {
             InitializeComponent();
             ActivityLabel.Text = "Viewing";
-            Quantity = 0;
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -59,6 +58,7 @@ namespace Customer
 
         private void ViewItem_Load(object sender, EventArgs e)
         {
+            Quantity = 0;
             DataConnection.conn.Open();
 
             DataConnection.cmd = new SqlCommand("SELECT ItemId, ItemName, ItemBrand, ItemPrice, ItemQuantity, " +
@@ -123,19 +123,24 @@ namespace Customer
 
                     if (orderAlreadyExist == DialogResult.Yes)
                     {
-                        BuyItems.orderQuantityList.Insert(BuyItems.orderIdList.IndexOf(IdLabel.Text), Quantity + Convert.ToInt32(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]));
+                        int originalQuantity = Convert.ToInt32(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]);
+                        BuyItems.orderQuantityList.RemoveAt(BuyItems.orderIdList.IndexOf(IdLabel.Text));
+                        BuyItems.orderQuantityList.Insert(BuyItems.orderIdList.IndexOf(IdLabel.Text), Quantity + originalQuantity);
                         MessageBox.Show("Item has been added to the cart!");
                         BuyItems.totalOrderQuantity += Quantity;
+                        Quantity = 0;
                         ((Form)this.TopLevelControl).Close();
                         
                     }
                 }
                 else
                 {
+
                     BuyItems.totalOrderQuantity += Quantity;
                     BuyItems.orderIdList.Add(IdLabel.Text);
                     BuyItems.orderQuantityList.Add(Quantity);
                     MessageBox.Show("Item has been added to the cart!");
+                    Quantity = 0;
                     ((Form)this.TopLevelControl).Close();
                 }
             }

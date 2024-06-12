@@ -70,18 +70,15 @@ namespace E_Pc
 
                     InventoryPanel.Controls.Add(product);
                     product.ItemImage.Tag = DataConnection.reader.GetString(0);
-                    product.DeleteBtn.Tag = DataConnection.reader.GetString(0);
                     product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
                     product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
 
                     if (Convert.ToInt32(DataConnection.reader.GetValue(2)) == 0)
                     {
                         product.OutOfStockPic.Visible = true;
-                        product.DeleteBtn.Visible = false;
                     }
 
                     product.ItemImage.Click += new EventHandler(ViewItem_Click);
-                    product.DeleteBtn.Click += new EventHandler(DeleteBtn_Click);
                     GC.Collect();
                 }
             }
@@ -112,44 +109,6 @@ namespace E_Pc
                 form.AutoSize = true;
                 form.ShowDialog();
             }
-        }
-
-        private void DeleteBtn_Click(object sender, EventArgs e)
-        {
-            DataConnection.conn.Open();
-
-            // will get the quantity of specific item from Products table
-            DataConnection.cmd = new SqlCommand("SELECT ItemQuantity FROM Products WHERE ItemId = @id", DataConnection.conn);
-            DataConnection.cmd.Parameters.AddWithValue("@id", itemIdList[itemIdCount]);
-            int quantity = Convert.ToInt32(DataConnection.cmd.ExecuteScalar()); // will insert the quantity to a variable
-
-            if(quantity <= 0)
-            {
-                // will remove an item if the quantity is less than or equal to 0
-                var localDate = DateTime.Now.ToString("yyyy-dd-MM");
-
-                PictureBox delbtn = (PictureBox)sender;
-                itemIdCount = itemIdList.IndexOf(delbtn.Tag);
-                DialogResult deleteDialog = MessageBox.Show("Are you sure you want to delete this item?" +
-                    "\nThis item will be sent to the archive.", "Delete item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (deleteDialog == DialogResult.Yes)
-                {
-                    DataConnection.cmd = new SqlCommand("UPDATE Products SET Active_flag = 0, DeletionDate = @delDate WHERE ItemId = @id", DataConnection.conn);
-                    DataConnection.cmd.Parameters.AddWithValue("@id", itemIdList[itemIdCount]);
-                    DataConnection.cmd.Parameters.AddWithValue("@delDate", Convert.ToDateTime(localDate));
-                    DataConnection.cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Item has been sent to the archive!");
-                    ShowAvailableProducts();
-                }
-            }
-            else
-            {
-                // will show an error message if the quantity is more than 0
-                MessageBox.Show("You cannot delete an item that has stock", "An item has stock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            DataConnection.conn.Close();
         }
 
         public void ShowArchivedProducts()
@@ -189,7 +148,6 @@ namespace E_Pc
                 product.ItemImage.Tag = DataConnection.reader.GetString(0);
                 product.ItemName.Text = $"Name: {DataConnection.reader.GetString(1)}";
                 product.ItemQuantity.Text = $"Quantity: {DataConnection.reader.GetValue(2).ToString()}";
-                product.DeleteBtn.Visible = false;
                 product.OutOfStockPic.Visible = true;
 
                 product.ItemImage.Click += new EventHandler(RetrieveItem_Click);

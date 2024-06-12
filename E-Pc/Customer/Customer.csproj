@@ -124,12 +124,6 @@
     <Compile Include="SelectedItems.Designer.cs">
       <DependentUpon>SelectedItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowCart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ShowCart.Designer.cs">
-      <DependentUpon>ShowCart.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BuyItems.resx">
       <DependentUpon>BuyItems.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,9 +154,6 @@
     </Compile>
     <EmbeddedResource Include="SelectedItems.resx">
       <DependentUpon>SelectedItems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShowCart.resx">
-      <DependentUpon>ShowCart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Customer_TemporaryKey.pfx" />
     <None Include="packages.config" />

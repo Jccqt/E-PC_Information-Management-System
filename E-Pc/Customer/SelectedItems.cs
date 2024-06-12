@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace Customer
 {
@@ -23,18 +24,15 @@ namespace Customer
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
-            using(BuyItems items = new BuyItems())
+            DialogResult removeItemDialog = MessageBox.Show("Are you sure you want to remove this item from your cart?", "Remove item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(removeItemDialog == DialogResult.Yes)
             {
-                using(CustomerShowCart cart = new CustomerShowCart())
-                {
-                    BuyItems.totalOrderQuantity = Convert.ToInt32(cart.TotalQuantityLabel.Text)
-                    - Convert.ToInt32(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]);
-                    BuyItems.orderQuantityList.Remove(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]);
-                    BuyItems.orderIdList.Remove(IdLabel.Text);
-                    this.Dispose();
-                    cart.Dispose();
-                    items.CartBtn_Click(sender, e);
-                }
+                BuyItems.totalOrderQuantity -= Convert.ToInt32(BuyItems.orderQuantityList[BuyItems.orderIdList.IndexOf(IdLabel.Text)]);
+                BuyItems.orderQuantityList.RemoveAt(this.TabIndex);
+                BuyItems.orderIdList.RemoveAt(this.TabIndex);
+                PageObjects.cartPage.Close();
+                PageObjects.buyItemsPage.CartBtn_Click(sender, e);
             }
         }
 
@@ -44,7 +42,8 @@ namespace Customer
             QuantityLabel.Text = (Convert.ToInt32(QuantityLabel.Text) + 1).ToString();
             PriceLabel.Text = $"P{(itemPrice * Convert.ToInt32(QuantityLabel.Text))}";
 
-            BuyItems.orderQuantityList.Insert(BuyItems.orderIdList.IndexOf(IdLabel.Text), Convert.ToInt32(QuantityLabel.Text));
+            BuyItems.orderQuantityList.RemoveAt(this.TabIndex);
+            BuyItems.orderQuantityList.Insert(this.TabIndex, Convert.ToInt32(QuantityLabel.Text));
             BuyItems.totalOrderQuantity++;
             BuyItems.totalOrderPrice += itemPrice;
 
@@ -69,10 +68,10 @@ namespace Customer
                 QuantityLabel.Text = (Convert.ToInt32(QuantityLabel.Text) - 1).ToString();
                 PriceLabel.Text = $"P{(itemPrice * Convert.ToInt32(QuantityLabel.Text))}";
 
-                BuyItems.orderQuantityList.Insert(BuyItems.orderIdList.IndexOf(IdLabel.Text), Convert.ToInt32(QuantityLabel.Text));
+                BuyItems.orderQuantityList.RemoveAt(this.TabIndex);
+                BuyItems.orderQuantityList.Insert(this.TabIndex, Convert.ToInt32(QuantityLabel.Text));
                 BuyItems.totalOrderQuantity--;
                 BuyItems.totalOrderPrice -= itemPrice;
-
                 PageObjects.cartPage.TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString();
                 PageObjects.cartPage.TotalAmountLabel.Text = $"P{BuyItems.totalOrderPrice}";
             }

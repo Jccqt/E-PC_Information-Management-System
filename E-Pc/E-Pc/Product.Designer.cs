@@ -31,10 +31,8 @@
             this.ItemName = new System.Windows.Forms.Label();
             this.ItemQuantity = new System.Windows.Forms.Label();
             this.OutOfStockPic = new System.Windows.Forms.PictureBox();
-            this.DeleteBtn = new System.Windows.Forms.PictureBox();
             this.ItemImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.OutOfStockPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,17 +70,6 @@
             this.OutOfStockPic.TabStop = false;
             this.OutOfStockPic.Visible = false;
             // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.BackColor = System.Drawing.Color.White;
-            this.DeleteBtn.BackgroundImage = global::E_Pc.Properties.Resources.image_Photoroom;
-            this.DeleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteBtn.Location = new System.Drawing.Point(110, 3);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(18, 16);
-            this.DeleteBtn.TabIndex = 0;
-            this.DeleteBtn.TabStop = false;
-            // 
             // ItemImage
             // 
             this.ItemImage.BackColor = System.Drawing.Color.Transparent;
@@ -100,7 +87,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.OutOfStockPic);
-            this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.ItemQuantity);
             this.Controls.Add(this.ItemName);
             this.Controls.Add(this.ItemImage);
@@ -108,7 +94,6 @@
             this.Name = "Product";
             this.Size = new System.Drawing.Size(131, 198);
             ((System.ComponentModel.ISupportInitialize)(this.OutOfStockPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,7 +104,6 @@
         public System.Windows.Forms.PictureBox ItemImage;
         public System.Windows.Forms.Label ItemName;
         public System.Windows.Forms.Label ItemQuantity;
-        public System.Windows.Forms.PictureBox DeleteBtn;
         public System.Windows.Forms.PictureBox OutOfStockPic;
     }
 }

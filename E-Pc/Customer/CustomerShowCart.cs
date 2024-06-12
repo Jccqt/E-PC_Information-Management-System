@@ -16,7 +16,6 @@ namespace Customer
     public partial class CustomerShowCart : Form
     {
         static ArrayList itemPrices = new ArrayList();
-        static SelectedItems selectedItem;
         public CustomerShowCart()
         {
             InitializeComponent();
@@ -27,16 +26,17 @@ namespace Customer
         {
             if(BuyItems.totalOrderQuantity == 0)
             {
+                // will not show the checkout button if there's no item in the cart
                 CheckoutBtn.Visible = false;
                 CheckoutArrow.Visible = false;
             }
             else
             {
+                // will show the checkout button if there's an item in the cart
                 CheckoutBtn.Visible = true;
                 CheckoutArrow.Visible = true;
             }
 
-            TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString();
             BuyItems.totalOrderPrice = 0; // will reset the total order price everytime the cart is loaded
             TotalQuantityLabel.Text = BuyItems.totalOrderQuantity.ToString(); // will set the total quantity label to total order quantity from BuyItems class
             CartPanel.Controls.Clear(); // will clear the controls inside CartPanel
@@ -53,7 +53,7 @@ namespace Customer
 
                 if (DataConnection.reader.Read())
                 {
-                    selectedItem = new SelectedItems(); // new object for SelectedItems class
+                    SelectedItems selectedItem = new SelectedItems(); // new object for SelectedItems class
 
                     if (!DataConnection.reader.GetValue(5).ToString().Equals(""))
                     {
@@ -72,7 +72,7 @@ namespace Customer
                         selectedItem.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     decimal itemPrice = Convert.ToDecimal(DataConnection.reader.GetValue(2)) * Convert.ToInt32(BuyItems.orderQuantityList[i]);
-
+                    selectedItem.TabIndex = i;
                     selectedItem.NameLabel.Text = DataConnection.reader.GetString(0);
                     selectedItem.TypeLabel.Text = DataConnection.reader.GetString(1);
                     selectedItem.PriceLabel.Text = $"P{itemPrice}";

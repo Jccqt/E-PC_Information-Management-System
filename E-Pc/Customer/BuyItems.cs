@@ -19,7 +19,6 @@ namespace Customer
     {
         static int cartPrice;
         static string selectedItem;
-        static Items item;
         public static int itemIdIndex;
         public static int totalOrderQuantity;
         public static decimal totalOrderPrice;
@@ -104,7 +103,7 @@ namespace Customer
 
             while (DataConnection.reader.Read())
             {
-                item = new Items();
+                Items item = new Items();
 
                 if (!DataConnection.reader.GetValue(3).ToString().Equals(""))
                 {

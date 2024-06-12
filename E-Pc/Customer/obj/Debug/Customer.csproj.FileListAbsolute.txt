@@ -12,7 +12,6 @@ E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.BuyItems.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Items.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.SelectedItems.resources
-E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.ShowCart.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Home.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.ViewItem.resources
 E:\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.CodeGenerator.resources
