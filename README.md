@@ -7,7 +7,8 @@ Team
 - Jean Dyel Flores (Tester)
 
 
-Change log:
+Change logs:
+
 May 14, 2024
 - Login page (New)
 - Login page functionalities (New)
