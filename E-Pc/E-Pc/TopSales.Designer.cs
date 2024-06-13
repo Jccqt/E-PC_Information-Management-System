@@ -46,18 +46,20 @@
             // 
             this.CounterLabel.AutoSize = true;
             this.CounterLabel.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CounterLabel.Location = new System.Drawing.Point(1, 23);
+            this.CounterLabel.Location = new System.Drawing.Point(1, 28);
+            this.CounterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CounterLabel.Name = "CounterLabel";
-            this.CounterLabel.Size = new System.Drawing.Size(55, 30);
+            this.CounterLabel.Size = new System.Drawing.Size(71, 38);
             this.CounterLabel.TabIndex = 0;
             this.CounterLabel.Text = "100";
             // 
             // ItemImage
             // 
             this.ItemImage.BackColor = System.Drawing.Color.Silver;
-            this.ItemImage.Location = new System.Drawing.Point(74, 3);
+            this.ItemImage.Location = new System.Drawing.Point(99, 4);
+            this.ItemImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(76, 63);
+            this.ItemImage.Size = new System.Drawing.Size(101, 78);
             this.ItemImage.TabIndex = 1;
             this.ItemImage.TabStop = false;
             // 
@@ -65,9 +67,10 @@
             // 
             this.IdLabel.AutoSize = true;
             this.IdLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLabel.Location = new System.Drawing.Point(156, 30);
+            this.IdLabel.Location = new System.Drawing.Point(208, 37);
+            this.IdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(62, 16);
+            this.IdLabel.Size = new System.Drawing.Size(77, 19);
             this.IdLabel.TabIndex = 2;
             this.IdLabel.Text = "<item id>";
             this.IdLabel.Click += new System.EventHandler(this.label2_Click);
@@ -76,9 +79,10 @@
             // 
             this.QuantityLabel.AutoSize = true;
             this.QuantityLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityLabel.Location = new System.Drawing.Point(285, 29);
+            this.QuantityLabel.Location = new System.Drawing.Point(422, 33);
+            this.QuantityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.QuantityLabel.Name = "QuantityLabel";
-            this.QuantityLabel.Size = new System.Drawing.Size(35, 18);
+            this.QuantityLabel.Size = new System.Drawing.Size(43, 23);
             this.QuantityLabel.TabIndex = 3;
             this.QuantityLabel.Text = "100";
             // 
@@ -87,9 +91,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview__4_1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(220, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(334, -1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 83);
+            this.pictureBox2.Size = new System.Drawing.Size(47, 102);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -99,9 +104,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview__4_1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(48, -8);
+            this.pictureBox1.Location = new System.Drawing.Point(64, -10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 116);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -111,9 +117,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview__4_1;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(362, -1);
+            this.pictureBox3.Location = new System.Drawing.Point(502, -10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 83);
+            this.pictureBox3.Size = new System.Drawing.Size(47, 102);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -122,15 +129,16 @@
             // 
             this.SalesLabel.AutoSize = true;
             this.SalesLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesLabel.Location = new System.Drawing.Point(416, 28);
+            this.SalesLabel.Location = new System.Drawing.Point(587, 36);
+            this.SalesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SalesLabel.Name = "SalesLabel";
-            this.SalesLabel.Size = new System.Drawing.Size(98, 18);
+            this.SalesLabel.Size = new System.Drawing.Size(120, 23);
             this.SalesLabel.TabIndex = 7;
             this.SalesLabel.Text = "1000000000";
             // 
             // TopSales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ItemImage);
@@ -141,8 +149,9 @@
             this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TopSales";
-            this.Size = new System.Drawing.Size(540, 69);
+            this.Size = new System.Drawing.Size(754, 85);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -234,6 +234,18 @@
     <Compile Include="ShowEmployee.Designer.cs">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="TopEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TopEmployee.Designer.cs">
+      <DependentUpon>TopEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopEmployeeHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TopEmployeeHeader.Designer.cs">
+      <DependentUpon>TopEmployeeHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopSales.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,6 +342,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowEmployee.resx">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopEmployee.resx">
+      <DependentUpon>TopEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopEmployeeHeader.resx">
+      <DependentUpon>TopEmployeeHeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopSales.resx">
       <DependentUpon>TopSales.cs</DependentUpon>

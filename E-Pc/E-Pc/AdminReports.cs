@@ -23,6 +23,23 @@ namespace E_Pc
 
         private void AdminReports_Load(object sender, EventArgs e)
         {
+            #region Add months
+            for(int i = 1; i <= 12; i++)
+            {
+                SalesMonth.Items.Add(i);
+            }
+            #endregion
+
+            #region Add years
+            for (int i = 2024; i <= 2034; i++)
+            {
+                SalesYear.Items.Add(i);
+            }
+            #endregion
+
+            SalesYear.SelectedItem = Convert.ToInt32(DateTime.Now.Year);
+            SalesMonth.SelectedItem = Convert.ToInt32(DateTime.Now.Month);
+
             DataConnection.conn.Open();
             ShowAudit();
             ShowTopSales();
@@ -58,12 +75,18 @@ namespace E_Pc
 
         private void ShowTopSales()
         {
+            TopSalesHeader salesHeader = new TopSalesHeader();
+            SalesPanel.Controls.Clear();
+            SalesPanel.Controls.Add(salesHeader);
+
             int counter = 1;
             DataConnection.cmd = new SqlCommand("SELECT Carts.ItemId, SUM(Carts.OrderQuantity), SUM(Carts.OrderPrice), Products.ItemImage " +
                 "FROM Carts RIGHT JOIN Products ON Carts.ItemId = Products.ItemId " +
-                $"WHERE Carts.Status = @status GROUP BY Carts.ItemId, Products.ItemImage " +
+                $"WHERE Carts.Status = @status AND Month(Carts.OrderDate) = @month AND Year(Carts.OrderDate) = @year GROUP BY Carts.ItemId, Products.ItemImage " +
                 $"ORDER BY SUM(Carts.OrderPrice) DESC", DataConnection.conn);
             DataConnection.cmd.Parameters.AddWithValue("@status", "Completed");
+            DataConnection.cmd.Parameters.AddWithValue("@month", Convert.ToInt32(SalesMonth.SelectedItem));
+            DataConnection.cmd.Parameters.AddWithValue("@year", Convert.ToInt32(SalesYear.SelectedItem));
             DataConnection.reader = DataConnection.cmd.ExecuteReader();
 
             while (DataConnection.reader.Read())
@@ -146,6 +169,20 @@ namespace E_Pc
         {
             DataConnection.conn.Open();
             ShowAudit();
+            DataConnection.conn.Close();
+        }
+
+        private void SalesMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataConnection.conn.Open();
+            ShowTopSales();
+            DataConnection.conn.Close();
+        }
+
+        private void SalesYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataConnection.conn.Open();
+            ShowTopSales();
             DataConnection.conn.Close();
         }
     }
