@@ -6,7 +6,9 @@ Team
 - Adrian Miravil (Tester)
 - Jean Dyel Flores (Tester)
 
-
+Notes:
+- Download the raw file of documentation pdf to read
+  
 Change logs:
 
 May 14, 2024
