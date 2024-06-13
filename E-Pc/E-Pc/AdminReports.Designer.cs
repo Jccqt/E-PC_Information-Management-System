@@ -55,17 +55,17 @@
             this.AuditPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TableLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SalesYear = new System.Windows.Forms.ComboBox();
+            this.SalesMonth = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.AuditDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.EmployeeYear = new System.Windows.Forms.ComboBox();
+            this.EmployeeMonth = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.EmployeePanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.SalesMonth = new System.Windows.Forms.ComboBox();
-            this.SalesYear = new System.Windows.Forms.ComboBox();
-            this.EmployeeMonth = new System.Windows.Forms.ComboBox();
-            this.EmployeeYear = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoutLogo)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeLogo)).BeginInit();
@@ -93,7 +93,7 @@
             this.LogoutLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoutLogo.Image = global::E_Pc.Properties.Resources.LogOut;
             this.LogoutLogo.Location = new System.Drawing.Point(4, 10);
-            this.LogoutLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogoutLogo.Margin = new System.Windows.Forms.Padding(4);
             this.LogoutLogo.Name = "LogoutLogo";
             this.LogoutLogo.Size = new System.Drawing.Size(83, 53);
             this.LogoutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +105,7 @@
             this.LogoutButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButton.Location = new System.Drawing.Point(-9, -6);
-            this.LogoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(323, 84);
             this.LogoutButton.TabIndex = 14;
@@ -118,7 +118,7 @@
             this.panel7.Controls.Add(this.LogoutLogo);
             this.panel7.Controls.Add(this.LogoutButton);
             this.panel7.Location = new System.Drawing.Point(4, 519);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(305, 84);
             this.panel7.TabIndex = 19;
@@ -129,7 +129,7 @@
             this.EmployeeLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EmployeeLogo.Image = global::E_Pc.Properties.Resources.Employee_managemen;
             this.EmployeeLogo.Location = new System.Drawing.Point(4, 9);
-            this.EmployeeLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmployeeLogo.Margin = new System.Windows.Forms.Padding(4);
             this.EmployeeLogo.Name = "EmployeeLogo";
             this.EmployeeLogo.Size = new System.Drawing.Size(83, 66);
             this.EmployeeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,7 +141,7 @@
             this.EmployeeManagementButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeManagementButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EmployeeManagementButton.Location = new System.Drawing.Point(-9, 0);
-            this.EmployeeManagementButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmployeeManagementButton.Margin = new System.Windows.Forms.Padding(4);
             this.EmployeeManagementButton.Name = "EmployeeManagementButton";
             this.EmployeeManagementButton.Size = new System.Drawing.Size(323, 84);
             this.EmployeeManagementButton.TabIndex = 14;
@@ -154,7 +154,7 @@
             this.panel6.Controls.Add(this.EmployeeLogo);
             this.panel6.Controls.Add(this.EmployeeManagementButton);
             this.panel6.Location = new System.Drawing.Point(4, 427);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(305, 84);
             this.panel6.TabIndex = 18;
@@ -166,7 +166,7 @@
             this.SalesLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SalesLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SalesLogo.Location = new System.Drawing.Point(4, 9);
-            this.SalesLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SalesLogo.Margin = new System.Windows.Forms.Padding(4);
             this.SalesLogo.Name = "SalesLogo";
             this.SalesLogo.Size = new System.Drawing.Size(83, 66);
             this.SalesLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,7 +179,7 @@
             this.salesButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salesButton.Location = new System.Drawing.Point(-9, 0);
-            this.salesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.salesButton.Margin = new System.Windows.Forms.Padding(4);
             this.salesButton.Name = "salesButton";
             this.salesButton.Size = new System.Drawing.Size(323, 84);
             this.salesButton.TabIndex = 14;
@@ -191,7 +191,7 @@
             this.panel4.Controls.Add(this.SalesLogo);
             this.panel4.Controls.Add(this.salesButton);
             this.panel4.Location = new System.Drawing.Point(4, 335);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(305, 84);
             this.panel4.TabIndex = 16;
@@ -202,7 +202,7 @@
             this.inventoryLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.inventoryLogo.Image = global::E_Pc.Properties.Resources.InventoryManagement;
             this.inventoryLogo.Location = new System.Drawing.Point(4, 14);
-            this.inventoryLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inventoryLogo.Margin = new System.Windows.Forms.Padding(4);
             this.inventoryLogo.Name = "inventoryLogo";
             this.inventoryLogo.Size = new System.Drawing.Size(83, 52);
             this.inventoryLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +214,7 @@
             this.inventoryButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryButton.Location = new System.Drawing.Point(-9, 0);
-            this.inventoryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inventoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.inventoryButton.Name = "inventoryButton";
             this.inventoryButton.Size = new System.Drawing.Size(323, 84);
             this.inventoryButton.TabIndex = 14;
@@ -227,7 +227,7 @@
             this.panel3.Controls.Add(this.inventoryLogo);
             this.panel3.Controls.Add(this.inventoryButton);
             this.panel3.Location = new System.Drawing.Point(4, 243);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(305, 84);
             this.panel3.TabIndex = 15;
@@ -238,7 +238,7 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.Homepage;
             this.pictureBox3.Location = new System.Drawing.Point(4, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(83, 62);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +251,7 @@
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(-9, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(323, 84);
             this.button3.TabIndex = 14;
@@ -264,7 +264,7 @@
             this.panel9.Controls.Add(this.pictureBox3);
             this.panel9.Controls.Add(this.button3);
             this.panel9.Location = new System.Drawing.Point(4, 151);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(305, 84);
             this.panel9.TabIndex = 25;
@@ -285,7 +285,7 @@
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::E_Pc.Properties.Resources._701__258;
             this.menuButton.Location = new System.Drawing.Point(65, 5);
-            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(175, 105);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,7 +297,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 139);
             this.panel1.TabIndex = 26;
@@ -313,7 +313,7 @@
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 41);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.sidebar.MaximumSize = new System.Drawing.Size(309, 679);
             this.sidebar.MinimumSize = new System.Drawing.Size(104, 679);
             this.sidebar.Name = "sidebar";
@@ -374,7 +374,7 @@
             this.SalesPanel.AutoScroll = true;
             this.SalesPanel.BackColor = System.Drawing.Color.White;
             this.SalesPanel.Location = new System.Drawing.Point(344, 176);
-            this.SalesPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SalesPanel.Margin = new System.Windows.Forms.Padding(4);
             this.SalesPanel.Name = "SalesPanel";
             this.SalesPanel.Size = new System.Drawing.Size(441, 223);
             this.SalesPanel.TabIndex = 53;
@@ -384,7 +384,7 @@
             this.AuditPanel.AutoScroll = true;
             this.AuditPanel.BackColor = System.Drawing.Color.White;
             this.AuditPanel.Location = new System.Drawing.Point(344, 447);
-            this.AuditPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AuditPanel.Margin = new System.Windows.Forms.Padding(4);
             this.AuditPanel.Name = "AuditPanel";
             this.AuditPanel.Size = new System.Drawing.Size(903, 262);
             this.AuditPanel.TabIndex = 54;
@@ -407,10 +407,28 @@
             this.panel2.Controls.Add(this.SalesMonth);
             this.panel2.Controls.Add(this.TableLabel);
             this.panel2.Location = new System.Drawing.Point(344, 144);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(441, 33);
             this.panel2.TabIndex = 55;
+            // 
+            // SalesYear
+            // 
+            this.SalesYear.FormattingEnabled = true;
+            this.SalesYear.Location = new System.Drawing.Point(331, 6);
+            this.SalesYear.Name = "SalesYear";
+            this.SalesYear.Size = new System.Drawing.Size(98, 24);
+            this.SalesYear.TabIndex = 2;
+            this.SalesYear.SelectedIndexChanged += new System.EventHandler(this.SalesYear_SelectedIndexChanged);
+            // 
+            // SalesMonth
+            // 
+            this.SalesMonth.FormattingEnabled = true;
+            this.SalesMonth.Location = new System.Drawing.Point(244, 6);
+            this.SalesMonth.Name = "SalesMonth";
+            this.SalesMonth.Size = new System.Drawing.Size(81, 24);
+            this.SalesMonth.TabIndex = 1;
+            this.SalesMonth.SelectedIndexChanged += new System.EventHandler(this.SalesMonth_SelectedIndexChanged);
             // 
             // panel8
             // 
@@ -419,10 +437,21 @@
             this.panel8.Controls.Add(this.AuditDatePicker);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Location = new System.Drawing.Point(344, 415);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(903, 33);
             this.panel8.TabIndex = 56;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(574, 4);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Date:";
             // 
             // AuditDatePicker
             // 
@@ -444,17 +473,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Audit trail";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(574, 4);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 22);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Date:";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Silver;
@@ -466,6 +484,24 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(441, 33);
             this.panel5.TabIndex = 58;
+            // 
+            // EmployeeYear
+            // 
+            this.EmployeeYear.FormattingEnabled = true;
+            this.EmployeeYear.Location = new System.Drawing.Point(334, 6);
+            this.EmployeeYear.Name = "EmployeeYear";
+            this.EmployeeYear.Size = new System.Drawing.Size(103, 24);
+            this.EmployeeYear.TabIndex = 3;
+            this.EmployeeYear.SelectedIndexChanged += new System.EventHandler(this.EmployeeYear_SelectedIndexChanged);
+            // 
+            // EmployeeMonth
+            // 
+            this.EmployeeMonth.FormattingEnabled = true;
+            this.EmployeeMonth.Location = new System.Drawing.Point(249, 6);
+            this.EmployeeMonth.Name = "EmployeeMonth";
+            this.EmployeeMonth.Size = new System.Drawing.Size(79, 24);
+            this.EmployeeMonth.TabIndex = 2;
+            this.EmployeeMonth.SelectedIndexChanged += new System.EventHandler(this.EmployeeMonth_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -488,40 +524,6 @@
             this.EmployeePanel.Size = new System.Drawing.Size(441, 223);
             this.EmployeePanel.TabIndex = 57;
             // 
-            // SalesMonth
-            // 
-            this.SalesMonth.FormattingEnabled = true;
-            this.SalesMonth.Location = new System.Drawing.Point(244, 6);
-            this.SalesMonth.Name = "SalesMonth";
-            this.SalesMonth.Size = new System.Drawing.Size(81, 24);
-            this.SalesMonth.TabIndex = 1;
-            this.SalesMonth.SelectedIndexChanged += new System.EventHandler(this.SalesMonth_SelectedIndexChanged);
-            // 
-            // SalesYear
-            // 
-            this.SalesYear.FormattingEnabled = true;
-            this.SalesYear.Location = new System.Drawing.Point(331, 6);
-            this.SalesYear.Name = "SalesYear";
-            this.SalesYear.Size = new System.Drawing.Size(98, 24);
-            this.SalesYear.TabIndex = 2;
-            this.SalesYear.SelectedIndexChanged += new System.EventHandler(this.SalesYear_SelectedIndexChanged);
-            // 
-            // EmployeeMonth
-            // 
-            this.EmployeeMonth.FormattingEnabled = true;
-            this.EmployeeMonth.Location = new System.Drawing.Point(249, 6);
-            this.EmployeeMonth.Name = "EmployeeMonth";
-            this.EmployeeMonth.Size = new System.Drawing.Size(79, 24);
-            this.EmployeeMonth.TabIndex = 2;
-            // 
-            // EmployeeYear
-            // 
-            this.EmployeeYear.FormattingEnabled = true;
-            this.EmployeeYear.Location = new System.Drawing.Point(334, 6);
-            this.EmployeeYear.Name = "EmployeeYear";
-            this.EmployeeYear.Size = new System.Drawing.Size(103, 24);
-            this.EmployeeYear.TabIndex = 3;
-            // 
             // AdminReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -540,7 +542,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminReports";

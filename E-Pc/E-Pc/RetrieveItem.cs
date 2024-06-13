@@ -57,20 +57,28 @@ namespace E_Pc
 
         private void RetrieveBtn_Click(object sender, EventArgs e)
         {
-            DialogResult retrieveDialog = MessageBox.Show("Are you sure you want to retrieve the item?", "Retrieve item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            
-            if(retrieveDialog == DialogResult.Yes)
+            if(QuantityBox.Text.Equals("") || Convert.ToInt32(QuantityBox.Text) <= 0)
             {
-                DataConnection.conn.Open();
+                MessageBox.Show("You cannot retrieve empty or 0 amount! Please enter a valid quantity", "Invalid quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult retrieveDialog = MessageBox.Show("Are you sure you want to retrieve the item?", "Retrieve item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                DataConnection.cmd = new SqlCommand("UPDATE Products SET Active_flag = 1, DeletionDate = NULL WHERE ItemId = @id", DataConnection.conn);
-                DataConnection.cmd.Parameters.AddWithValue("@id", Inventory.itemIdList[Inventory.itemIdCount]);
-                DataConnection.cmd.ExecuteNonQuery();
+                if (retrieveDialog == DialogResult.Yes)
+                {
+                    DataConnection.conn.Open();
 
-                MessageBox.Show("Item has been successfully retrieved!");
-                PageObjects.inventoryPage.ShowArchivedProducts();
-                DataConnection.conn.Close();
-                ((Form)this.TopLevelControl).Close();
+                    DataConnection.cmd = new SqlCommand("UPDATE Products SET ItemQuantity = @quantity, Active_flag = 1, DeletionDate = NULL WHERE ItemId = @id", DataConnection.conn);
+                    DataConnection.cmd.Parameters.AddWithValue("@quantity", Convert.ToInt32(QuantityBox.Text));
+                    DataConnection.cmd.Parameters.AddWithValue("@id", Inventory.itemIdList[Inventory.itemIdCount]);
+                    DataConnection.cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Item has been successfully retrieved!");
+                    PageObjects.inventoryPage.ShowArchivedProducts();
+                    DataConnection.conn.Close();
+                    ((Form)this.TopLevelControl).Close();
+                }
             }
         }
     }

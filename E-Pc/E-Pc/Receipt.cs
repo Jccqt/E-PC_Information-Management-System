@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace E_Pc
 {
@@ -38,6 +39,7 @@ namespace E_Pc
                 PriceLabel.Text += $"\nP{DataConnection.reader.GetValue(1)}";
             }
             TotalAmountLabel.Text = $"P{PaymentPage.totalAmount}";
+            decimal totalAmount = PaymentPage.totalAmount;
             PaymentLabel.Text = $"P{PaymentPage.payment}";
             ExchangeLabel.Text = $"P{PaymentPage.exchange}";
             DateLabel.Text = localDate.ToString();
@@ -52,6 +54,14 @@ namespace E_Pc
             DataConnection.cmd.Parameters.AddWithValue("@empId", Login.userId);
             DataConnection.cmd.Parameters.AddWithValue("@type", "SALES");
             DataConnection.cmd.Parameters.AddWithValue("@description", $"{Login.fName} {Login.lName} Sold and completed the cartID {CartIdLabel.Text}");
+            DataConnection.cmd.Parameters.AddWithValue("@date", localDate);
+            DataConnection.cmd.ExecuteNonQuery();
+
+            DataConnection.cmd = new SqlCommand("INSERT INTO Employee_sales (EmpId, CartId, SalesAmount, SalesQuantity, SalesDate) VALUES (@empId, @cartId, @sales, @quantity, @date)", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@empId", Login.userId);
+            DataConnection.cmd.Parameters.AddWithValue("@cartId", CashierOrderPage.cartIdList[CashierOrderPage.cartIdCount]);
+            DataConnection.cmd.Parameters.AddWithValue("@sales", totalAmount);
+            DataConnection.cmd.Parameters.AddWithValue("@quantity", PaymentPage.totalQuantity);
             DataConnection.cmd.Parameters.AddWithValue("@date", localDate);
             DataConnection.cmd.ExecuteNonQuery();
 

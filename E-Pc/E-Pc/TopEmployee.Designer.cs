@@ -32,11 +32,9 @@
             this.CounterLabel = new System.Windows.Forms.Label();
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
-            this.ItemImage = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,22 +77,12 @@
             // 
             this.IdLabel.AutoSize = true;
             this.IdLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLabel.Location = new System.Drawing.Point(209, 38);
+            this.IdLabel.Location = new System.Drawing.Point(178, 38);
             this.IdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IdLabel.Name = "IdLabel";
             this.IdLabel.Size = new System.Drawing.Size(78, 19);
             this.IdLabel.TabIndex = 10;
             this.IdLabel.Text = "<emp id>";
-            // 
-            // ItemImage
-            // 
-            this.ItemImage.BackColor = System.Drawing.Color.Silver;
-            this.ItemImage.Location = new System.Drawing.Point(100, 5);
-            this.ItemImage.Margin = new System.Windows.Forms.Padding(4);
-            this.ItemImage.Name = "ItemImage";
-            this.ItemImage.Size = new System.Drawing.Size(101, 78);
-            this.ItemImage.TabIndex = 9;
-            this.ItemImage.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -139,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ItemImage);
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.SalesLabel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
@@ -148,8 +136,7 @@
             this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.pictureBox2);
             this.Name = "TopEmployee";
-            this.Size = new System.Drawing.Size(754, 85);
-            ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
+            this.Size = new System.Drawing.Size(752, 83);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -159,8 +146,6 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.PictureBox ItemImage;
         public System.Windows.Forms.Label SalesLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;

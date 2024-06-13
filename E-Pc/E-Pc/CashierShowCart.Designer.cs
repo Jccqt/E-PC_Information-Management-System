@@ -61,7 +61,7 @@
             // 
             this.CheckoutBtn.AutoRoundedCorners = true;
             this.CheckoutBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CheckoutBtn.BorderRadius = 28;
+            this.CheckoutBtn.BorderRadius = 35;
             this.CheckoutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.CheckoutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CheckoutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -69,9 +69,10 @@
             this.CheckoutBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.CheckoutBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.CheckoutBtn.ForeColor = System.Drawing.Color.White;
-            this.CheckoutBtn.Location = new System.Drawing.Point(717, 466);
+            this.CheckoutBtn.Location = new System.Drawing.Point(956, 574);
+            this.CheckoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CheckoutBtn.Name = "CheckoutBtn";
-            this.CheckoutBtn.Size = new System.Drawing.Size(204, 59);
+            this.CheckoutBtn.Size = new System.Drawing.Size(272, 73);
             this.CheckoutBtn.TabIndex = 35;
             this.CheckoutBtn.Text = "Proceed to checkout";
             this.CheckoutBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -83,9 +84,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(28, 110);
+            this.label3.Location = new System.Drawing.Point(37, 135);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 19);
+            this.label3.Size = new System.Drawing.Size(121, 24);
             this.label3.TabIndex = 34;
             this.label3.Text = "Total items:";
             // 
@@ -95,9 +97,10 @@
             this.CodeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CodeLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CodeLabel.ForeColor = System.Drawing.Color.White;
-            this.CodeLabel.Location = new System.Drawing.Point(141, 42);
+            this.CodeLabel.Location = new System.Drawing.Point(188, 52);
+            this.CodeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CodeLabel.Name = "CodeLabel";
-            this.CodeLabel.Size = new System.Drawing.Size(65, 19);
+            this.CodeLabel.Size = new System.Drawing.Size(80, 24);
             this.CodeLabel.TabIndex = 33;
             this.CodeLabel.Text = "<code>";
             // 
@@ -107,9 +110,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(29, 42);
+            this.label10.Location = new System.Drawing.Point(39, 52);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 19);
+            this.label10.Size = new System.Drawing.Size(109, 24);
             this.label10.TabIndex = 32;
             this.label10.Text = "Cart code:";
             // 
@@ -119,9 +123,10 @@
             this.StatusLabel.BackColor = System.Drawing.Color.Transparent;
             this.StatusLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLabel.ForeColor = System.Drawing.Color.White;
-            this.StatusLabel.Location = new System.Drawing.Point(141, 65);
+            this.StatusLabel.Location = new System.Drawing.Point(188, 80);
+            this.StatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(74, 19);
+            this.StatusLabel.Size = new System.Drawing.Size(93, 24);
             this.StatusLabel.TabIndex = 31;
             this.StatusLabel.Text = "<status>";
             // 
@@ -131,9 +136,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(29, 65);
+            this.label8.Location = new System.Drawing.Point(39, 80);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 19);
+            this.label8.Size = new System.Drawing.Size(78, 24);
             this.label8.TabIndex = 30;
             this.label8.Text = "Status:";
             // 
@@ -143,9 +149,10 @@
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.Color.White;
-            this.DateLabel.Location = new System.Drawing.Point(141, 88);
+            this.DateLabel.Location = new System.Drawing.Point(188, 108);
+            this.DateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(60, 19);
+            this.DateLabel.Size = new System.Drawing.Size(75, 24);
             this.DateLabel.TabIndex = 29;
             this.DateLabel.Text = "<date>";
             // 
@@ -155,9 +162,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(30, 88);
+            this.label5.Location = new System.Drawing.Point(40, 108);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 19);
+            this.label5.Size = new System.Drawing.Size(60, 24);
             this.label5.TabIndex = 28;
             this.label5.Text = "Date:";
             // 
@@ -167,9 +175,10 @@
             this.TotalQuantityLabel.BackColor = System.Drawing.Color.Transparent;
             this.TotalQuantityLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalQuantityLabel.ForeColor = System.Drawing.Color.White;
-            this.TotalQuantityLabel.Location = new System.Drawing.Point(141, 114);
+            this.TotalQuantityLabel.Location = new System.Drawing.Point(188, 140);
+            this.TotalQuantityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalQuantityLabel.Name = "TotalQuantityLabel";
-            this.TotalQuantityLabel.Size = new System.Drawing.Size(150, 19);
+            this.TotalQuantityLabel.Size = new System.Drawing.Size(188, 24);
             this.TotalQuantityLabel.TabIndex = 27;
             this.TotalQuantityLabel.Text = "<number of items>";
             // 
@@ -179,9 +188,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(457, 38);
+            this.label1.Location = new System.Drawing.Point(609, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 45);
+            this.label1.Size = new System.Drawing.Size(120, 56);
             this.label1.TabIndex = 24;
             this.label1.Text = "Cart";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -190,9 +200,10 @@
             // 
             this.CartPanel.AutoScroll = true;
             this.CartPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.CartPanel.Location = new System.Drawing.Point(35, 136);
+            this.CartPanel.Location = new System.Drawing.Point(47, 167);
+            this.CartPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CartPanel.Name = "CartPanel";
-            this.CartPanel.Size = new System.Drawing.Size(886, 278);
+            this.CartPanel.Size = new System.Drawing.Size(1181, 342);
             this.CartPanel.TabIndex = 23;
             // 
             // checkoutArrowBtn
@@ -201,9 +212,10 @@
             this.checkoutArrowBtn.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview;
             this.checkoutArrowBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkoutArrowBtn.Image = global::E_Pc.Properties.Resources.image_removebg_preview;
-            this.checkoutArrowBtn.Location = new System.Drawing.Point(866, 479);
+            this.checkoutArrowBtn.Location = new System.Drawing.Point(1155, 590);
+            this.checkoutArrowBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkoutArrowBtn.Name = "checkoutArrowBtn";
-            this.checkoutArrowBtn.Size = new System.Drawing.Size(48, 33);
+            this.checkoutArrowBtn.Size = new System.Drawing.Size(64, 41);
             this.checkoutArrowBtn.TabIndex = 36;
             this.checkoutArrowBtn.TabStop = false;
             // 
@@ -212,7 +224,7 @@
             this.BackBtn.AutoRoundedCorners = true;
             this.BackBtn.BackColor = System.Drawing.Color.Transparent;
             this.BackBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.BackBtn.BorderRadius = 28;
+            this.BackBtn.BorderRadius = 35;
             this.BackBtn.BorderThickness = 2;
             this.BackBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.BackBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -221,9 +233,10 @@
             this.BackBtn.FillColor = System.Drawing.Color.SteelBlue;
             this.BackBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.BackBtn.ForeColor = System.Drawing.Color.White;
-            this.BackBtn.Location = new System.Drawing.Point(35, 466);
+            this.BackBtn.Location = new System.Drawing.Point(47, 574);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(204, 59);
+            this.BackBtn.Size = new System.Drawing.Size(272, 73);
             this.BackBtn.TabIndex = 40;
             this.BackBtn.Text = "      Go back to order page";
             this.BackBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -234,9 +247,10 @@
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.TotalAmountLabel);
-            this.panel1.Location = new System.Drawing.Point(629, 416);
+            this.panel1.Location = new System.Drawing.Point(839, 512);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 38);
+            this.panel1.Size = new System.Drawing.Size(389, 47);
             this.panel1.TabIndex = 42;
             // 
             // label4
@@ -245,9 +259,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 8);
+            this.label4.Location = new System.Drawing.Point(4, 10);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 23);
+            this.label4.Size = new System.Drawing.Size(165, 28);
             this.label4.TabIndex = 12;
             this.label4.Text = "Total Amount:";
             // 
@@ -257,9 +272,10 @@
             this.TotalAmountLabel.BackColor = System.Drawing.Color.Transparent;
             this.TotalAmountLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalAmountLabel.ForeColor = System.Drawing.Color.White;
-            this.TotalAmountLabel.Location = new System.Drawing.Point(139, 8);
+            this.TotalAmountLabel.Location = new System.Drawing.Point(185, 10);
+            this.TotalAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalAmountLabel.Name = "TotalAmountLabel";
-            this.TotalAmountLabel.Size = new System.Drawing.Size(145, 23);
+            this.TotalAmountLabel.Size = new System.Drawing.Size(177, 28);
             this.TotalAmountLabel.TabIndex = 13;
             this.TotalAmountLabel.Text = "<total amount>";
             // 
@@ -268,9 +284,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox2.BackgroundImage = global::E_Pc.Properties.Resources.image_removebg_preview__1_2;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(39, 481);
+            this.pictureBox2.Location = new System.Drawing.Point(52, 592);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(52, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
@@ -278,10 +295,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::E_Pc.Properties.Resources.image_removebg_preview__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(33, 7);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(44, 9);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(116, 21);
+            this.pictureBox3.Size = new System.Drawing.Size(155, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -289,10 +306,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::E_Pc.Properties.Resources.image_removebg_preview__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(925, 7);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(1233, 9);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox4.Size = new System.Drawing.Size(27, 26);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -305,9 +322,9 @@
             this.guna2Panel1.Controls.Add(this.pictureBox4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(955, 33);
+            this.guna2Panel1.Size = new System.Drawing.Size(1273, 41);
             this.guna2Panel1.TabIndex = 44;
             // 
             // CancelOrderBtn
@@ -315,7 +332,7 @@
             this.CancelOrderBtn.AutoRoundedCorners = true;
             this.CancelOrderBtn.BackColor = System.Drawing.Color.Transparent;
             this.CancelOrderBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.CancelOrderBtn.BorderRadius = 28;
+            this.CancelOrderBtn.BorderRadius = 35;
             this.CancelOrderBtn.BorderThickness = 2;
             this.CancelOrderBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.CancelOrderBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -324,20 +341,21 @@
             this.CancelOrderBtn.FillColor = System.Drawing.Color.Red;
             this.CancelOrderBtn.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold);
             this.CancelOrderBtn.ForeColor = System.Drawing.Color.White;
-            this.CancelOrderBtn.Location = new System.Drawing.Point(568, 466);
+            this.CancelOrderBtn.Location = new System.Drawing.Point(757, 574);
+            this.CancelOrderBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CancelOrderBtn.Name = "CancelOrderBtn";
-            this.CancelOrderBtn.Size = new System.Drawing.Size(132, 59);
+            this.CancelOrderBtn.Size = new System.Drawing.Size(176, 73);
             this.CancelOrderBtn.TabIndex = 45;
             this.CancelOrderBtn.Text = "Cancel order";
             this.CancelOrderBtn.Click += new System.EventHandler(this.CancelOrderBtn_Click);
             // 
             // CashierShowCart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::E_Pc.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(955, 546);
+            this.ClientSize = new System.Drawing.Size(1273, 672);
             this.Controls.Add(this.CancelOrderBtn);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox2);
@@ -357,6 +375,7 @@
             this.Controls.Add(this.CartPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CashierShowCart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierShowCart";
@@ -383,7 +402,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label TotalQuantityLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel CartPanel;
         private System.Windows.Forms.PictureBox checkoutArrowBtn;
@@ -396,5 +414,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button CancelOrderBtn;
+        public System.Windows.Forms.Label TotalQuantityLabel;
     }
 }

@@ -69,6 +69,11 @@ namespace E_Pc
                         }
                         Array.Clear(imageBinary, 0, imageBinary.Length);
                     }
+                    else
+                    {
+                        product.ItemImage.Image = Properties.Resources.no_image_icon;
+                        product.ItemImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
 
                     InventoryPanel.Controls.Add(product);
                     product.ItemImage.Tag = DataConnection.reader.GetString(0);

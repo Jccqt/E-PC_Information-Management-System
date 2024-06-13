@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="E-Pc.exe" size="8074168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="E-Pc.exe" size="8077240">
       <assemblyIdentity name="E-Pc" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kB95MoY/bUdmQ1wwpUulrmd6Iq0CCZ0n3S0VPL+uaI8=</dsig:DigestValue>
+        <dsig:DigestValue>fzn5ysra06a+h494MD7ef4O7fY+Ns74rkwCWD2J+1WA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -80,7 +80,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Qh2+PP5iQJ65nsih3p4IYOdCWpyPnBZn4zi0Ee0xDH4=</dsig:DigestValue>
+      <dsig:DigestValue>x+VLdUxoWS3anBJnqyVtKSZOJKRQMZCwbYrNMfjPkXs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="E-PCdb_log.ldf" size="8388608" writeableType="applicationData">
@@ -89,7 +89,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>j8sYXZ0gM9QEPOdmaEc1NCw05Mq219NJMBQEQdtgA9M=</dsig:DigestValue>
+      <dsig:DigestValue>dxRj88RSS1WaCTkbogH3GdwYwfB47pPykzHmqI/1bsM=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

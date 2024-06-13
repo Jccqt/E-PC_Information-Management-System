@@ -27,6 +27,7 @@ namespace E_Pc
             for(int i = 1; i <= 12; i++)
             {
                 SalesMonth.Items.Add(i);
+                EmployeeMonth.Items.Add(i);
             }
             #endregion
 
@@ -34,15 +35,19 @@ namespace E_Pc
             for (int i = 2024; i <= 2034; i++)
             {
                 SalesYear.Items.Add(i);
+                EmployeeYear.Items.Add(i);
             }
             #endregion
 
             SalesYear.SelectedItem = Convert.ToInt32(DateTime.Now.Year);
             SalesMonth.SelectedItem = Convert.ToInt32(DateTime.Now.Month);
+            EmployeeYear.SelectedItem = Convert.ToInt32(DateTime.Now.Year);
+            EmployeeMonth.SelectedItem = Convert.ToInt32(DateTime.Now.Month);
 
             DataConnection.conn.Open();
             ShowAudit();
             ShowTopSales();
+            ShowTopEmployee();
             DataConnection.conn.Close();
         }
 
@@ -73,6 +78,35 @@ namespace E_Pc
             DataConnection.reader.Close();
         }
 
+        private void ShowTopEmployee()
+        {
+            TopEmployeeHeader employeeHeader = new TopEmployeeHeader();
+            EmployeePanel.Controls.Clear();
+            EmployeePanel.Controls.Add(employeeHeader);
+
+            int counter = 1;
+
+            DataConnection.cmd = new SqlCommand("SELECT EmpId, SUM(SalesAmount), SUM(SalesQuantity) FROM Employee_sales " +
+                "WHERE Month(SalesDate) = @month AND Year(SalesDate) = @year " +
+                "GROUP BY EmpId ORDER BY SUM(SalesAmount) DESC", DataConnection.conn);
+            DataConnection.cmd.Parameters.AddWithValue("@month", Convert.ToInt32(EmployeeMonth.SelectedItem));
+            DataConnection.cmd.Parameters.AddWithValue("@year", Convert.ToInt32(EmployeeYear.SelectedItem));
+            DataConnection.reader = DataConnection.cmd.ExecuteReader();
+
+            while (DataConnection.reader.Read())
+            {
+                TopEmployee employee = new TopEmployee();
+                
+                employee.IdLabel.Text = DataConnection.reader.GetValue(0).ToString();
+                employee.QuantityLabel.Text = DataConnection.reader.GetValue(2).ToString();
+                employee.SalesLabel.Text = DataConnection.reader.GetValue(1).ToString();
+                employee.CounterLabel.Text = counter.ToString();
+
+                EmployeePanel.Controls.Add(employee);
+                counter++;
+            }
+            DataConnection.reader.Close();
+        }
         private void ShowTopSales()
         {
             TopSalesHeader salesHeader = new TopSalesHeader();
@@ -183,6 +217,20 @@ namespace E_Pc
         {
             DataConnection.conn.Open();
             ShowTopSales();
+            DataConnection.conn.Close();
+        }
+
+        private void EmployeeMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataConnection.conn.Open();
+            ShowTopEmployee();
+            DataConnection.conn.Close();
+        }
+
+        private void EmployeeYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataConnection.conn.Open();
+            ShowTopEmployee();
             DataConnection.conn.Close();
         }
     }

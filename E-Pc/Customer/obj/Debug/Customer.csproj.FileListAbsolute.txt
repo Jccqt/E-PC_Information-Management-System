@@ -27,7 +27,6 @@ C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Cus
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Items.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.Properties.Resources.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.SelectedItems.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.ShowCart.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.GenerateResource.cache
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.CoreCompileInputs.cache
 C:\Users\Nicol\OneDrive\Documents\Jc\E-PC_Information-Management-System\E-Pc\Customer\obj\Debug\Customer.csproj.Up2Date

@@ -102,7 +102,7 @@ namespace Customer
         private void CheckoutBtn_Click(object sender, EventArgs e)
         {
             DialogResult checkoutDialog = MessageBox.Show("Are you sure you want to proceed to checkout?", "Checkout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            var localDate = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss tt");
 
             if (checkoutDialog == DialogResult.Yes)
             {
